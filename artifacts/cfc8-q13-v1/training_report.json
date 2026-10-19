@@ -1,0 +1,54 @@
+{
+  "config": {
+    "seed": 20261019,
+    "epochs": 500,
+    "train_trajectories": 32,
+    "validation_trajectories": 8,
+    "length": 256,
+    "warmup": 8,
+    "normalization": {
+      "mean": -0.0005245348865703381,
+      "std": 0.5816095898913318
+    },
+    "generator": {
+      "families": [
+        "sinusoidal_mixture",
+        "linear_frequency_sweep"
+      ],
+      "frequency_cycles_per_sample": [
+        0.02,
+        0.12
+      ],
+      "amplitude": [
+        0.3,
+        1.0
+      ],
+      "noise_std": 0.005
+    },
+    "input_size": 1,
+    "hidden_size": 8,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0,
+    "optimizer": "Adam",
+    "learning_rate": 0.003
+  },
+  "parameter_count": 329,
+  "best_epoch": 500,
+  "training_loss": 0.009534251876175404,
+  "validation_mse": 0.004482813271718724,
+  "persistence_mse": 0.08500119069950338,
+  "linear_mse": 0.029984208972854403,
+  "provenance": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1",
+    "ncps_cell_sha256": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d",
+    "sources": {
+      "model/train.py": "8ea304c5545ddd8ebda83495141194f9e73b1077ac69cae65cdc60fd21905563",
+      "model/data.py": "a21427dad2e2c2e7a5acc978a6114d792bed1f543647cc8ebedfca4a2b51d809",
+      "model/network.py": "f416369b51d7ba2d067bf4edc1a78a982ef29df7a56aaf3a100c9010ab9bc56a"
+    }
+  }
+}

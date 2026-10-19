@@ -1,0 +1,42 @@
+{
+  "split": "validation",
+  "warmup": 8,
+  "trajectories": 8,
+  "length": 1024,
+  "raw_float_mse": 0.004287388978581008,
+  "raw_integer_mse": 0.0042968332297951325,
+  "normalized_float_mse": 0.012674468886173046,
+  "normalized_integer_mse": 0.012702388178955814,
+  "integer_epsilon_normalized_mse": 1e-06,
+  "meets_precision_target": true,
+  "input_clipping_count": 0,
+  "output_clipping_count": 0,
+  "manifest_sha256": "bd1caf3197965b0b3525062bbd8b94cb38665357259e19f708e64c76ac67b84e",
+  "checkpoint_sha256": "d428e6b5c6ec43ed52a079cc31f54567f0da4fb85e4bbe254f96612ef923c19d",
+  "sources": {
+    "model/integer.py": "04ba6013efa810baca16835ecc6c7347b3497bcf41c7b68c5b3e81d94c015968",
+    "model/export_integer.py": "b056a57961600e680ea6ad901399eb51483a1113322caf5d4d31feed3ee639d3",
+    "model/data.py": "a21427dad2e2c2e7a5acc978a6114d792bed1f543647cc8ebedfca4a2b51d809",
+    "model/network.py": "f416369b51d7ba2d067bf4edc1a78a982ef29df7a56aaf3a100c9010ab9bc56a",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "runtime_sources": {
+    "model/integer.py": "04ba6013efa810baca16835ecc6c7347b3497bcf41c7b68c5b3e81d94c015968",
+    "model/evaluate_integer.py": "404761c8cb758acb33a7e1458d63af17982998e7c07ff259204d7fde60666175",
+    "model/data.py": "a21427dad2e2c2e7a5acc978a6114d792bed1f543647cc8ebedfca4a2b51d809",
+    "model/network.py": "f416369b51d7ba2d067bf4edc1a78a982ef29df7a56aaf3a100c9010ab9bc56a",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  },
+  "runtime_versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  }
+}

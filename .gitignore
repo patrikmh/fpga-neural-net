@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+.tools/
+build/
+.DS_Store
+.env
+.env.*
+
+# Local session history and machine-specific diagnostics.
+TASKS.md
+reports/*
+!reports/float-heldout-2026-10-19.json
+!reports/float-test-spec-2026-10-19.json
+!reports/integer-heldout-2026-10-19.json
+!reports/integer-validation-2026-10-19.json
+!reports/numeric-calibration-2026-10-19.json
+!reports/probe-summary-2026-10-19.json
+!reports/rtl-summary-2026-10-19.json

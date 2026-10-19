@@ -1,0 +1,29 @@
+{
+  "checkpoint_sha256": "d428e6b5c6ec43ed52a079cc31f54567f0da4fb85e4bbe254f96612ef923c19d",
+  "seed": 20261019,
+  "trajectories": 16,
+  "length": 1024,
+  "warmup": 8,
+  "generator": {
+    "families": [
+      "sinusoidal_mixture",
+      "linear_frequency_sweep"
+    ],
+    "frequency_cycles_per_sample": [
+      0.02,
+      0.12
+    ],
+    "amplitude": [
+      0.3,
+      1.0
+    ],
+    "noise_std": 0.005
+  },
+  "float_required_improvement": 0.2,
+  "integer_epsilon_normalized_mse": 1e-06,
+  "sources": {
+    "model/data.py": "a21427dad2e2c2e7a5acc978a6114d792bed1f543647cc8ebedfca4a2b51d809",
+    "model/network.py": "f416369b51d7ba2d067bf4edc1a78a982ef29df7a56aaf3a100c9010ab9bc56a",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  }
+}

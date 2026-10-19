@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "d428e6b5c6ec43ed52a079cc31f54567f0da4fb85e4bbe254f96612ef923c19d",
+  "splits_used": [
+    "train32x256",
+    "validation8x1024"
+  ],
+  "test_used": false,
+  "observed_absolute_maxima": {
+    "input_abs": 2.9926884174346924,
+    "hidden_abs": 0.9879036545753479,
+    "ff_affine_abs": 3.5370538234710693,
+    "gate_affine_abs": 5.132359504699707,
+    "output_abs": 3.250476837158203,
+    "parameter_abs": 1.0521923303604126
+  },
+  "candidate": "signed16 fractional_bits13;48bitaccumulator;4096entryactivationtables[-8,8) nearest index; calibration does not yet establish integer accuracy"
+}

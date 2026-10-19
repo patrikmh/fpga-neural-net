@@ -1,0 +1,19 @@
+{
+  "scope": "Neural core simulation only; not synthesized timing or physical neural inference",
+  "continuous_steps_verified": 10000,
+  "all_hidden_and_output_values_exact": true,
+  "cycle_counter_matches_measured_clock_edges": true,
+  "representative_compute_cycles": 1052,
+  "simulation_clock_mhz": 50,
+  "representative_compute_us": 21.04,
+  "physical_neural_inference_verified": false,
+  "source_sha256": {
+    "rtl/cfc_core.sv": "2c7e1532b41bac6391a264bedcc95e8cb796a4db026f53d0ac5ad2d57780ee73",
+    "rtl/cfc_top.sv": "b5055d98452c523d05892373942eb690b416498bc51074d7b1e3b6d8a4cfdac2",
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "host/cfc_protocol.py": "1cd98c80566795c4ec658ca9303b093ec21e3d0f6e839833066e8b367812e77c",
+    "tests/integration/test_cfc_uart.py": "eeadf83881bf105051b7cc2132605485592d3456b273d36c0427c7e8119a32ec",
+    "tests/integration/test_cfc_core.py": "6a9ca154973a0ebba072ba86493daa5bdcea157fe56ed3dacb004a0a5ce6529d"
+  },
+  "model_manifest_sha256": "bd1caf3197965b0b3525062bbd8b94cb38665357259e19f708e64c76ac67b84e"
+}

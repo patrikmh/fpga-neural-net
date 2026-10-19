@@ -1,0 +1,136 @@
+{
+  "scope": "Physical UART/multiplication/ROM/RAM probe; not neural FPGA inference",
+  "board": "Tang Primer 25K",
+  "fpga": "Gowin GW5A-25",
+  "idcode": "0x1281b",
+  "programming": "SRAM only; flash was not written",
+  "count_verified": 1000,
+  "elapsed_s": 6.032914374998654,
+  "roundtrip_ms": {
+    "min": 3.6078749981243163,
+    "mean": 6.001632476007217,
+    "p95": 6.042500011972152,
+    "max": 10.148125002160668
+  },
+  "transport": {
+    "backend": "libftdi 1.5",
+    "interface": "B",
+    "usb_requested_baudrate": 460800,
+    "fpga_baudrate": 115200
+  },
+  "probe_build": {
+    "clock_mhz": 50,
+    "timing": {
+      "constrained_mhz": 50,
+      "achieved_mhz": 82.37232208251953
+    },
+    "utilization": {
+      "ADC": {
+        "available": 1,
+        "used": 0
+      },
+      "ALU": {
+        "available": 17280,
+        "used": 124
+      },
+      "BSRAM": {
+        "available": 56,
+        "used": 3
+      },
+      "BUFG": {
+        "available": 5,
+        "used": 0
+      },
+      "CLKDIV": {
+        "available": 16,
+        "used": 0
+      },
+      "CLKDIV2": {
+        "available": 16,
+        "used": 0
+      },
+      "DCS": {
+        "available": 8,
+        "used": 0
+      },
+      "DFF": {
+        "available": 23040,
+        "used": 308
+      },
+      "GND": {
+        "available": 1,
+        "used": 1
+      },
+      "GSR": {
+        "available": 1,
+        "used": 1
+      },
+      "IOB": {
+        "available": 240,
+        "used": 4
+      },
+      "IOLOGICI": {
+        "available": 230,
+        "used": 0
+      },
+      "IOLOGICO": {
+        "available": 230,
+        "used": 0
+      },
+      "LUT4": {
+        "available": 23040,
+        "used": 2370
+      },
+      "MULT12X12": {
+        "available": 56,
+        "used": 0
+      },
+      "MULTADDALU12X12": {
+        "available": 28,
+        "used": 0
+      },
+      "MULTALU27X18": {
+        "available": 28,
+        "used": 0
+      },
+      "MUX2_LUT5": {
+        "available": 11520,
+        "used": 809
+      },
+      "MUX2_LUT6": {
+        "available": 5760,
+        "used": 323
+      },
+      "MUX2_LUT7": {
+        "available": 2880,
+        "used": 136
+      },
+      "MUX2_LUT8": {
+        "available": 2880,
+        "used": 49
+      },
+      "OSCA": {
+        "available": 1,
+        "used": 0
+      },
+      "PINCFG": {
+        "available": 1,
+        "used": 1
+      },
+      "PLLA": {
+        "available": 6,
+        "used": 0
+      },
+      "VCC": {
+        "available": 1,
+        "used": 1
+      }
+    },
+    "bitstream_sha256": "15b1cb4fd68aab522f3b4a855d481987d944be954d82065adb1db968e051b8d4"
+  },
+  "tools": {
+    "yosys": "Yosys 0.70+157 (git sha1 af9f71e51, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)",
+    "nextpnr-himbaechel": "\"nextpnr-himbaechel\" -- Next Generation Place and Route (Version nextpnr-0.11.1-65-ge677d5c3)"
+  },
+  "note": "Summary of local physical evidence; machine paths and USB serial omitted."
+}

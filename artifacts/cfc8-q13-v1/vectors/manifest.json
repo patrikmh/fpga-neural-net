@@ -1,0 +1,50 @@
+{
+  "count": 10000,
+  "seed": 20261019,
+  "initial_hidden": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "numeric": {
+    "word_bits": 16,
+    "fractional_bits": 13,
+    "accumulator_bits": 48,
+    "accumulator_fractional_bits": 26,
+    "rounding": "half_away_from_zero",
+    "activation_entries": 4096,
+    "activation_fractional_bits": 8,
+    "activation_zero_index": 2048
+  },
+  "export_manifest_sha256": "bd1caf3197965b0b3525062bbd8b94cb38665357259e19f708e64c76ac67b84e",
+  "checkpoint_sha256": "d428e6b5c6ec43ed52a079cc31f54567f0da4fb85e4bbe254f96612ef923c19d",
+  "split": "validation",
+  "trajectory_id": 0,
+  "generator": {
+    "families": [
+      "sinusoidal_mixture",
+      "linear_frequency_sweep"
+    ],
+    "frequency_cycles_per_sample": [
+      0.02,
+      0.12
+    ],
+    "amplitude": [
+      0.3,
+      1.0
+    ],
+    "noise_std": 0.005
+  },
+  "layout": "ten signed 16-bit words, most significant first: input,h0,h1,h2,h3,h4,h5,h6,h7,output",
+  "sources": {
+    "model/data.py": "a21427dad2e2c2e7a5acc978a6114d792bed1f543647cc8ebedfca4a2b51d809",
+    "model/integer.py": "04ba6013efa810baca16835ecc6c7347b3497bcf41c7b68c5b3e81d94c015968",
+    "model/export_vectors.py": "f87836cecb05d71266e5012f61aa70195e689b67af2d445a8de3cfd77c4bcc55"
+  },
+  "vectors_sha256": "dc279288efb2f73ffa68034ca37dae55e7b6bae9eada55db76c3394b760751e5"
+}
