@@ -1,0 +1,10 @@
+{
+  "accepted": false,
+  "deployed": false,
+  "float_validation_rmse_deg": 6.160520967421703,
+  "integer_validation_rmse_deg": 6.281096511783243,
+  "integer_p95_deg": 8.865078388940532,
+  "integer_max_deg": 176.6052816563932,
+  "reason": "Misses the predeclared 5-degree aggregate and per-family gate. Preserved for reproducible comparison and further approved work; not selected as the delivered model.",
+  "confirmation_generated": false
+}

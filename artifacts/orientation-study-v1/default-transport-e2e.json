@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-10-20T22:28:59.224509+00:00",
+  "url": "http://127.0.0.1:8766/",
+  "source_commit": "60680a3",
+  "test_source_sha256": "7eff0f1b46131bc37486e3afbc4735e70d11b5ee7581c223848d4439df772068",
+  "result": {
+    "verified_steps": 3,
+    "states": 96,
+    "illustration": "isolated",
+    "reset": "verified",
+    "page_errors": []
+  },
+  "transport": {
+    "usb_requested_baudrate": 460800,
+    "fpga_nominal_baudrate": 115200
+  },
+  "new_accuracy_model_deployed": false,
+  "higher_sampling_rate_verified": false,
+  "final_state": "disconnected"
+}

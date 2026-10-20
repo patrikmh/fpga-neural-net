@@ -1,0 +1,303 @@
+{
+  "created_at_utc": "2026-10-20T22:28:59.223811+00:00",
+  "split": "validation",
+  "confirmation_generated": false,
+  "deployed": false,
+  "candidates": [
+    {
+      "candidate": "scratch-refine-s31",
+      "checkpoint_sha256": "7aa5e8a7191e8883285e89f0f2920a7cd3759f6040b22843c507666745eccd6d",
+      "selected_epoch": 10,
+      "config": {
+        "input_size": 9,
+        "hidden_size": 96,
+        "output_size": 4,
+        "mode": "default",
+        "backbone_layers": 0,
+        "dt": 1.0,
+        "warmup": 32,
+        "epochs": 100,
+        "chunk_size": 128,
+        "batch_size": 16,
+        "seed": 31,
+        "learning_rate": 5e-05,
+        "method": "chronological_detached_tbptt"
+      },
+      "initial_checkpoint_sha256": "715ac6bf8e4d5ca81c238f616dabacd2b58e8c9b159c7526f6947bfde633c556",
+      "float": {
+        "sample_count": 50400,
+        "full_rmse_deg": 6.160520967421703,
+        "p50_deg": 3.0650034760639793,
+        "p95_deg": 8.841610811016254,
+        "max_deg": 173.90305261855357,
+        "above_5_deg_count": 8589,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 2.4492559693275537,
+            "p50_deg": 2.0200414888046803,
+            "p95_deg": 4.008408686181938,
+            "max_deg": 4.429194621860686
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 1040,
+            "full_rmse_deg": 5.654721456230204,
+            "p50_deg": 3.1805530892817218,
+            "p95_deg": 8.234721411770296,
+            "max_deg": 160.7843426931773
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2420,
+            "full_rmse_deg": 5.804369322334549,
+            "p50_deg": 3.4280934304196826,
+            "p95_deg": 8.740895786067934,
+            "max_deg": 162.99389425933978
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 1892,
+            "full_rmse_deg": 6.8721972630166865,
+            "p50_deg": 2.9895428911841133,
+            "p95_deg": 11.390356221864938,
+            "max_deg": 148.64180486305503
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3237,
+            "full_rmse_deg": 8.418287530579054,
+            "p50_deg": 4.067992551965318,
+            "p95_deg": 10.31853706551895,
+            "max_deg": 173.90305261855357
+          }
+        }
+      },
+      "integer": {
+        "sample_count": 50400,
+        "full_rmse_deg": 6.281096511783243,
+        "p50_deg": 3.201467924672115,
+        "p95_deg": 8.865078388940532,
+        "max_deg": 176.6052816563932,
+        "above_5_deg_count": 9892,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 2.4549805841549346,
+            "p50_deg": 1.9849940278150706,
+            "p95_deg": 4.061727833589236,
+            "max_deg": 4.402935268195327
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 1170,
+            "full_rmse_deg": 5.762098336973618,
+            "p50_deg": 3.175428917188115,
+            "p95_deg": 8.216184858887196,
+            "max_deg": 163.12084035588424
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2704,
+            "full_rmse_deg": 5.90532855514214,
+            "p50_deg": 3.568340465373142,
+            "p95_deg": 8.820349080889043,
+            "max_deg": 162.3253866394615
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2546,
+            "full_rmse_deg": 7.094959184370841,
+            "p50_deg": 3.296482301539828,
+            "p95_deg": 11.361817242827895,
+            "max_deg": 141.25266931623227
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3472,
+            "full_rmse_deg": 8.533510934315427,
+            "p50_deg": 4.133317716560784,
+            "p95_deg": 10.287983690731362,
+            "max_deg": 176.6052816563932
+          }
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 2025,
+          "full_rmse_deg": 4.39327047987145,
+          "p50_deg": 2.1767661221334227,
+          "p95_deg": 8.181520278788142,
+          "max_deg": 33.44168489572022
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 7867,
+          "full_rmse_deg": 7.260140432631915,
+          "p50_deg": 3.639809695481395,
+          "p95_deg": 9.745226517270803,
+          "max_deg": 176.6052816563932
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 357,
+          "full_rmse_deg": 20.23102820654751,
+          "p50_deg": 4.371144815583507,
+          "p95_deg": 30.05741541447114,
+          "max_deg": 176.82645231597016
+        },
+        "input_clipping_count": 0
+      },
+      "accuracy_gate_passed": false
+    },
+    {
+      "candidate": "warm-refine-s37",
+      "checkpoint_sha256": "a5da5e1c7d75ce628af3a2204726370849cf5824c7c1406bd588cb00c66f2d1e",
+      "selected_epoch": 1,
+      "config": {
+        "input_size": 9,
+        "hidden_size": 96,
+        "output_size": 4,
+        "mode": "default",
+        "backbone_layers": 0,
+        "dt": 1.0,
+        "warmup": 32,
+        "epochs": 100,
+        "chunk_size": 128,
+        "batch_size": 16,
+        "seed": 37,
+        "learning_rate": 0.0001,
+        "method": "chronological_detached_tbptt"
+      },
+      "initial_checkpoint_sha256": "07ee197bcfe9b3948a3dc9b4658e565fc9a12274ee83caf157ef1ef42e79be49",
+      "float": {
+        "sample_count": 50400,
+        "full_rmse_deg": 7.348006973731751,
+        "p50_deg": 3.5131238052968876,
+        "p95_deg": 11.31492529953391,
+        "max_deg": 179.88669358916312,
+        "above_5_deg_count": 15688,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 1.6919642715286776,
+            "p50_deg": 1.390230174020016,
+            "p95_deg": 2.8113411967698014,
+            "max_deg": 2.8177900906401696
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2873,
+            "full_rmse_deg": 6.893298356164651,
+            "p50_deg": 3.6536056675894653,
+            "p95_deg": 11.314922255056102,
+            "max_deg": 179.72859714916518
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4504,
+            "full_rmse_deg": 9.726523360311312,
+            "p50_deg": 4.5602650413886945,
+            "p95_deg": 13.981813849925775,
+            "max_deg": 179.88669358916312
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2360,
+            "full_rmse_deg": 6.337410796869568,
+            "p50_deg": 3.3628703574657557,
+            "p95_deg": 7.68110766313442,
+            "max_deg": 177.21403162669668
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 5951,
+            "full_rmse_deg": 9.209652263786062,
+            "p50_deg": 5.482423781172438,
+            "p95_deg": 16.070654738074932,
+            "max_deg": 174.71599332010075
+          }
+        }
+      },
+      "integer": {
+        "sample_count": 50400,
+        "full_rmse_deg": 7.332411150027442,
+        "p50_deg": 3.510098887800316,
+        "p95_deg": 11.32826371659407,
+        "max_deg": 176.1881735999626,
+        "above_5_deg_count": 15622,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 1.6940386665766394,
+            "p50_deg": 1.393948868552497,
+            "p95_deg": 2.836135644665072,
+            "max_deg": 2.9746196911712777
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2735,
+            "full_rmse_deg": 6.846791774444342,
+            "p50_deg": 3.654568691159054,
+            "p95_deg": 11.288938567160606,
+            "max_deg": 176.1881735999626
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4518,
+            "full_rmse_deg": 9.707433206484215,
+            "p50_deg": 4.568151817297606,
+            "p95_deg": 13.985198636700055,
+            "max_deg": 165.3666216042693
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2410,
+            "full_rmse_deg": 6.263339930865428,
+            "p50_deg": 3.3463666364637956,
+            "p95_deg": 7.693476373539899,
+            "max_deg": 174.83539625854334
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 5959,
+            "full_rmse_deg": 9.252526963530157,
+            "p50_deg": 5.478330024435039,
+            "p95_deg": 16.07522373478876,
+            "max_deg": 172.11711783027346
+          }
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 1659,
+          "full_rmse_deg": 3.2597855054504326,
+          "p50_deg": 2.2709884087460637,
+          "p95_deg": 5.386933319501044,
+          "max_deg": 13.92960847291616
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 13963,
+          "full_rmse_deg": 9.063363087994677,
+          "p50_deg": 4.760808281196937,
+          "p95_deg": 14.079329069243979,
+          "max_deg": 176.1881735999626
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 409,
+          "full_rmse_deg": 32.378274803191104,
+          "p50_deg": 5.1834672620683815,
+          "p95_deg": 81.93322170586931,
+          "max_deg": 179.7780915216289
+        },
+        "input_clipping_count": 0
+      },
+      "accuracy_gate_passed": false
+    }
+  ],
+  "decision": "The current four-output candidates still miss the predeclared 5-degree gate; a six-output architecture choice has been requested and remains unanswered."
+}

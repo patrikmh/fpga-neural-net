@@ -1,0 +1,82 @@
+{
+  "numeric": {
+    "word_bits": 16,
+    "input_fractional_bits": 11,
+    "state_fractional_bits": 13,
+    "weight_fractional_bits": 13,
+    "output_fractional_bits": 13,
+    "accumulator_bits": 48,
+    "accumulator_fractional_bits": 26,
+    "rounding": "half_away_from_zero",
+    "activation_entries": 4096,
+    "activation_fractional_bits": 8,
+    "activation_zero_index": 2048
+  },
+  "checkpoint_sha256": "7aa5e8a7191e8883285e89f0f2920a7cd3759f6040b22843c507666745eccd6d",
+  "config": {
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0,
+    "warmup": 32,
+    "epochs": 100,
+    "chunk_size": 128,
+    "batch_size": 16,
+    "seed": 31,
+    "learning_rate": 5e-05,
+    "method": "chronological_detached_tbptt"
+  },
+  "normalization": {
+    "mean": [
+      -0.381380871447044,
+      0.002052241040742994,
+      -0.31111604780262814,
+      -0.10143525138573962,
+      0.005895032531390047,
+      0.1984073285905302,
+      1.2989134167013945,
+      0.10713828204554254,
+      1.780535106397448
+    ],
+    "std": [
+      5.5553209734702325,
+      5.693464478887733,
+      5.719853348939012,
+      2.073689344601997,
+      1.9838388574458148,
+      1.9977098905366093,
+      25.455309385296257,
+      25.801623336464115,
+      26.578835515533882
+    ]
+  },
+  "files": {
+    "weights.hex": "c6578b3832677d5c3c310a886c50691f5c006c2de23e7820e467923cafcc3aa7",
+    "tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+    "sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+    "float_checkpoint.pt": "7aa5e8a7191e8883285e89f0f2920a7cd3759f6040b22843c507666745eccd6d"
+  },
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_train.py": "302f4028f30499c7465a1102775424ce34a190f7baad9492753711c3f0355803",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "weight_order": "ff1,ff2,time_a,time_b: H rows of 9 inputs,H hidden,bias; readout: 4 rows of H hidden,bias",
+  "vector_order": "nine inputs, H new hidden states, four raw outputs; signed16 words, most significant first"
+}
