@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "priority": "orientation accuracy first; speed secondary; eventual model must physically fit Tang Primer25K",
+  "baseline_commit": "d8d5095",
+  "training_prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "training_trials": [
+    1,
+    6,
+    10,
+    28
+  ],
+  "validation_trials": [
+    2,
+    30
+  ],
+  "new_unopened_holdout_trials": [
+    4,
+    8,
+    12,
+    31
+  ],
+  "previously_inspected_test_trials": [
+    3,
+    7,
+    11,
+    29
+  ],
+  "previous_tests_usage": "regression only, never width/checkpoint selection",
+  "width_candidates": [
+    32,
+    64,
+    96,
+    104
+  ],
+  "width_fit_status": "provisional; H104 estimated 54 BSRAM including activation ROM; actual synthesis/routing required",
+  "screening": {
+    "epochs": 50,
+    "seeds": [
+      7
+    ]
+  },
+  "refinement": {
+    "selected_width": "lowest screening validation full-orientation mean-trial RMSE; tie smaller width",
+    "epochs": 200,
+    "seeds": [
+      7,
+      17
+    ]
+  },
+  "shared": {
+    "updates_per_epoch": 16,
+    "batch_size": 16,
+    "window": 256,
+    "warmup": 32,
+    "validation_every": 10,
+    "learning_rate": 0.003,
+    "gradient_clip": 1.0,
+    "model": "CfCCell(9,H,default,backbone_layers=0)+Linear(H,4), unit wxyz quaternion output",
+    "normalization": "nine-channel population moments from training only",
+    "loss": "1-squared normalized quaternion dot",
+    "dt": 1.0
+  },
+  "selection": "validation only, equal-trial mean full orientation RMSE degrees; report inclination and heading separately and compare causal baseline on same validation masks",
+  "max_runs": 6,
+  "max_total_epochs": 600,
+  "hardware_choice": "best validation-ranked physically feasible candidate; no selection using test results",
+  "architecture_change_if_direct_model_poor": "present physics-filter residual alternative to user before changing approach"
+}

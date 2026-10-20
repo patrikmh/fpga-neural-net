@@ -49,7 +49,10 @@ inriktning. Fullständiga feldefinitioner finns i den frysta specifikationen.
 
 ## Reproducera
 
-Behåll projektets låsta `.venv`. HDF5-konvertering använder separat miljö:
+Den publicerade H8-körningen hör till Git-version `d8d5095`. Checka ut den
+versionen för reproduktion: senare breddstudier ändrar källhashar, vilket den
+frysta utvärderingen avsiktligt avvisar. Behåll projektets låsta `.venv`.
+HDF5-konvertering använder separat miljö:
 
 ```sh
 uv venv build/broad-analysis-env --python .venv/bin/python

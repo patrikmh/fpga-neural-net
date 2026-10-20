@@ -130,12 +130,12 @@ def train(args):
     torch.manual_seed(args.seed)
     torch.use_deterministic_algorithms(True)
     rng = np.random.default_rng(args.seed)
-    network = BroadPredictor()
+    network = BroadPredictor(hidden_size=args.hidden_size)
     optimizer = torch.optim.Adam(network.parameters(), lr=0.003)
     config = {'seed': args.seed, 'epochs': args.epochs, 'updates_per_epoch': args.updates_per_epoch,
               'batch_size': args.batch_size, 'window': args.window, 'warmup': args.warmup,
               'validation_every': args.validation_every, 'learning_rate': 0.003, 'gradient_clip': 1.0,
-              'input_size': 9, 'hidden_size': 8, 'output_size': 4, 'mode': 'default',
+              'input_size': 9, 'hidden_size': args.hidden_size, 'output_size': 4, 'mode': 'default',
               'backbone_layers': 0, 'dt': 1.0, 'loss': '1-squared_normalized_quaternion_dot'}
     mean, std = np.asarray(normalization['mean']), np.asarray(normalization['std'])
     best_score = float('inf')
@@ -211,6 +211,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--prepared-dir', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--hidden-size', type=positive_integer, default=8)
     for name, default in (('epochs', 50), ('updates-per-epoch', 16), ('batch-size', 16),
                           ('window', 256), ('warmup', 32), ('validation-every', 10)):
         parser.add_argument('--' + name, type=positive_integer, default=default)

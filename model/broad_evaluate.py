@@ -136,7 +136,7 @@ def evaluate(checkpoint_path, prepared, spec_path, output):
         raise ValueError('Invalid frozen training normalization')
     torch.set_num_threads(1)
     torch.use_deterministic_algorithms(True)
-    network = BroadPredictor().eval()
+    network = BroadPredictor(hidden_size=checkpoint['config'].get('hidden_size', 8)).eval()
     network.load_state_dict(checkpoint['state_dict'])
     results, saved_trials = [], []
     for entry in trials:
