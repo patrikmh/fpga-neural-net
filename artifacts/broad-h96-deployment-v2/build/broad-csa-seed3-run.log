@@ -1,0 +1,7 @@
+yosys: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed3/yosys.log)
+yosys: completed
+nextpnr: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed3/nextpnr.log)
+nextpnr: completed
+gowin_pack: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed3/gowin_pack.log)
+gowin_pack: completed
+Verified BROAD H96: 50.56 MHz; report: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed3/report.json

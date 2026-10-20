@@ -1,0 +1,248 @@
+[
+  {
+    "cell": "core.weight_banks[0].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[10].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[11].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[12].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[13].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[14].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[15].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[16].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[17].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[18].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[19].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[1].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[20].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[21].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[22].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[23].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[24].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[25].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[26].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[27].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[28].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[29].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[2].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[30].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[31].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[32].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[33].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[34].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[35].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[36].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[37].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[38].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[39].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[3].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[40].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[4].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[5].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[6].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[7].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[8].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  },
+  {
+    "cell": "core.weight_banks[9].memory.0.0",
+    "width": 18,
+    "words": 1024,
+    "match": true
+  }
+]

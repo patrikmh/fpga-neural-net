@@ -1,0 +1,686 @@
+Info: Using uarch 'gowin' for device 'GW5A-LV25MG121NC1/I0'
+
+Info: Reading constraints...
+Info: Create constant nets...
+Info: Modify LUTs...
+Info: Pack IOBs...
+Info: Pack I3C IOs...
+Info: Pack MIPI IOs...
+Info: Pack diff IOBs...
+Info: Pack FFs into IO cells...
+Info: Pack IODELAY...
+Info: Pack Input Edge Monitors...
+Info: Pack IO logic...
+Info: Pack DESER16 logic...
+Info: Pack GSR...
+Info: Pack PINCFG...
+Info: Pack HCLK cells...
+Info: Pack DLLDLYs...
+Info: Pack wide LUTs...
+Info: Packed MUX2_LUT8:49, MUX2_LU7:37, MUX2_LUT6:69, MUX2_LUT5:597
+Info: Pack ALUs...
+Info: Pack SSRAMs...
+Info: Constrained 340 LUTFF pairs.
+Info: Pack PLL...
+Info: Pack ADC...
+Info: Pack GW JTAG...
+Info: Pack BSRAMs...
+Info: Pack DSP...
+Info: Pack INV...
+Info: Pack buffered nets...
+Info: Pack EMCU and UserFlash cells...
+Info: Pack UserFlash cells...
+Info: Pack DQCE cells...
+Info: Pack DCS cells...
+Info: Checksum: 0x046f42fb
+
+Info: Device utilisation:
+Info: 	                 VCC:       1/      1   100%
+Info: 	                 IOB:       4/    240     1%
+Info: 	                LUT4:    8474/  23040    36%
+Info: 	            IOLOGICI:       0/    230     0%
+Info: 	            IOLOGICO:       0/    230     0%
+Info: 	           MUX2_LUT5:    1275/  11520    11%
+Info: 	           MUX2_LUT6:     339/   5760     5%
+Info: 	           MUX2_LUT7:     135/   2880     4%
+Info: 	           MUX2_LUT8:      49/   2880     1%
+Info: 	                 ALU:    1132/  17280     6%
+Info: 	                 GND:       1/      1   100%
+Info: 	                 DFF:    4218/  23040    18%
+Info: 	               BSRAM:      48/     56    85%
+Info: 	           MULT12X12:       0/     56     0%
+Info: 	        MULTALU27X18:       0/     28     0%
+Info: 	     MULTADDALU12X12:       0/     28     0%
+Info: 	                 GSR:       1/      1   100%
+Info: 	              PINCFG:       1/      1   100%
+Info: 	                OSCA:       0/      1     0%
+Info: 	                PLLA:       0/      6     0%
+Info: 	                 ADC:       0/      1     0%
+Info: 	                BUFG:       0/      5     0%
+Info: 	                 DCS:       0/      8     0%
+Info: 	              CLKDIV:       0/     16     0%
+Info: 	             CLKDIV2:       0/     16     0%
+
+Info: Running custom HCLK placer...
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 9513 cells, random placement wirelen = 585097.
+Info:     at initial placer iter 0, wirelen = 1931
+Info:     at initial placer iter 1, wirelen = 2287
+Info:     at initial placer iter 2, wirelen = 2576
+Info:     at initial placer iter 3, wirelen = 1980
+Info: Running main analytical placer, max placement attempts per cell = 30724960.
+Info:     at iteration #1, type ALL: wirelen solved = 1739, spread = 116362, legal = 251578; time = 2.27s
+Info:     at iteration #2, type ALL: wirelen solved = 5566, spread = 96519, legal = 212418; time = 1.87s
+Info:     at iteration #3, type ALL: wirelen solved = 13168, spread = 96648, legal = 208735; time = 1.92s
+Info:     at iteration #4, type ALL: wirelen solved = 17330, spread = 87746, legal = 190577; time = 1.69s
+Info:     at iteration #5, type ALL: wirelen solved = 20814, spread = 88671, legal = 180781; time = 1.72s
+Info:     at iteration #6, type ALL: wirelen solved = 23871, spread = 87396, legal = 165790; time = 1.43s
+Info:     at iteration #7, type ALL: wirelen solved = 26911, spread = 101206, legal = 161970; time = 1.41s
+Info:     at iteration #8, type ALL: wirelen solved = 30117, spread = 94315, legal = 153718; time = 1.19s
+Info:     at iteration #9, type ALL: wirelen solved = 34499, spread = 94815, legal = 169481; time = 1.13s
+Info:     at iteration #10, type ALL: wirelen solved = 33810, spread = 88558, legal = 162214; time = 1.21s
+Info:     at iteration #11, type ALL: wirelen solved = 36967, spread = 95348, legal = 160259; time = 1.05s
+Info:     at iteration #12, type ALL: wirelen solved = 39749, spread = 97667, legal = 161247; time = 1.55s
+Info:     at iteration #13, type ALL: wirelen solved = 40970, spread = 94396, legal = 179280; time = 1.45s
+Info: HeAP Placer Time: 21.01s
+Info:   of which solving equations: 2.65s
+Info:   of which spreading cells: 0.15s
+Info:   of which strict legalisation: 17.82s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 4867, wirelen = 153718
+Info:   at iteration #5: temp = 0.000000, timing cost = 2470, wirelen = 110901
+Info:   at iteration #10: temp = 0.000000, timing cost = 2840, wirelen = 102464
+Info:   at iteration #15: temp = 0.000000, timing cost = 2319, wirelen = 99150
+Info:   at iteration #20: temp = 0.000000, timing cost = 2269, wirelen = 96986
+Info:   at iteration #25: temp = 0.000000, timing cost = 2324, wirelen = 95946
+Info:   at iteration #30: temp = 0.000000, timing cost = 2332, wirelen = 95592
+Info:   at iteration #35: temp = 0.000000, timing cost = 2329, wirelen = 95421
+Info:   at iteration #39: temp = 0.000000, timing cost = 2324, wirelen = 95312 
+Info: SA placement time 17.63s
+
+Info: Max frequency for clock 'core.clk': 38.14 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: times are in ps
+Info:          * represents 29 endpoint(s)
+Info:          + represents [1,29) endpoint(s)
+Info: [ -6216,  -4918) |***+
+Info: [ -4918,  -3620) |********+
+Info: [ -3620,  -2322) |******+
+Info: [ -2322,  -1024) |****+
+Info: [ -1024,    274) |***********+
+Info: [   274,   1572) |************+
+Info: [  1572,   2870) |******+
+Info: [  2870,   4168) |*+
+Info: [  4168,   5466) |***********+
+Info: [  5466,   6764) |**************************+
+Info: [  6764,   8062) |***********************+
+Info: [  8062,   9360) |***************************+
+Info: [  9360,  10658) |**********************************+
+Info: [ 10658,  11956) |***************************+
+Info: [ 11956,  13254) |*********************************************************+
+Info: [ 13254,  14552) |******************+
+Info: [ 14552,  15850) |******************************+
+Info: [ 15850,  17148) |*******************+
+Info: [ 17148,  18446) |******************+
+Info: [ 18446,  19744) |************************************************************ 
+Info: Checksum: 0x357888fe
+Info: Routing globals...
+Warning: Failed to route net 'rst_IBUF_I_O[0]' from X2Y0/F5 to X2Y1/A5 using dedicated routing.
+Info:     'core.clk' net was routed using global resources only.
+Info: Running router2...
+Info: Setting up routing resources...
+Info: Running main router loop...
+Info:     iter=1 wires=143820 overused=13224 overuse=16404 archfail=NA
+Info:     iter=2 wires=146884 overused=4914 overuse=5012 archfail=NA
+Info:     iter=3 wires=149720 overused=2165 overuse=2188 archfail=NA
+Info:     iter=4 wires=151645 overused=1111 overuse=1116 archfail=NA
+Info:     iter=5 wires=152481 overused=667 overuse=668 archfail=NA
+Info:     iter=6 wires=153074 overused=442 overuse=442 archfail=NA
+Info:     iter=7 wires=153475 overused=310 overuse=310 archfail=NA
+Info:     iter=8 wires=153722 overused=229 overuse=229 archfail=NA
+Info:     iter=9 wires=153885 overused=169 overuse=169 archfail=NA
+Info:     iter=10 wires=154076 overused=133 overuse=133 archfail=NA
+Info:     iter=11 wires=154125 overused=104 overuse=104 archfail=NA
+Info:     iter=12 wires=154221 overused=86 overuse=86 archfail=NA
+Info:     iter=13 wires=154405 overused=65 overuse=65 archfail=NA
+Info:     iter=14 wires=154444 overused=50 overuse=50 archfail=NA
+Info:     iter=15 wires=154475 overused=42 overuse=42 archfail=NA
+Info:     iter=16 wires=154514 overused=38 overuse=38 archfail=NA
+Info:     iter=17 wires=154530 overused=23 overuse=23 archfail=NA
+Info:     iter=18 wires=154547 overused=21 overuse=21 archfail=NA
+Info:     iter=19 wires=154547 overused=23 overuse=23 archfail=NA
+Info:     iter=20 wires=154563 overused=22 overuse=22 archfail=NA
+Info:     iter=21 wires=154573 overused=19 overuse=19 archfail=NA
+Info:     iter=22 wires=154596 overused=16 overuse=16 archfail=NA
+Info:     iter=23 wires=154620 overused=16 overuse=16 archfail=NA
+Info:     iter=24 wires=154617 overused=14 overuse=14 archfail=NA
+Info:     iter=25 wires=154628 overused=14 overuse=14 archfail=NA
+Info:     iter=26 wires=154632 overused=9 overuse=9 archfail=NA
+Info:     iter=27 wires=154620 overused=7 overuse=7 archfail=NA
+Info:     iter=28 wires=154622 overused=8 overuse=8 archfail=NA
+Info:     iter=29 wires=154628 overused=9 overuse=9 archfail=NA
+Info:     iter=30 wires=154630 overused=9 overuse=9 archfail=NA
+Info:     iter=31 wires=154647 overused=6 overuse=6 archfail=NA
+Info:     iter=32 wires=154665 overused=5 overuse=5 archfail=NA
+Info:     iter=33 wires=154667 overused=6 overuse=6 archfail=NA
+Info:     iter=34 wires=154669 overused=6 overuse=6 archfail=NA
+Info:     iter=35 wires=154671 overused=4 overuse=4 archfail=NA
+Info:     iter=36 wires=154673 overused=4 overuse=4 archfail=NA
+Info:     iter=37 wires=154673 overused=3 overuse=3 archfail=NA
+Info:     iter=38 wires=154673 overused=2 overuse=2 archfail=NA
+Info:     iter=39 wires=154673 overused=2 overuse=2 archfail=NA
+Info:     iter=40 wires=154678 overused=2 overuse=2 archfail=NA
+Info:     iter=41 wires=154675 overused=2 overuse=2 archfail=NA
+Info:     iter=42 wires=154673 overused=2 overuse=2 archfail=NA
+Info:     iter=43 wires=154672 overused=2 overuse=2 archfail=NA
+Info:     iter=44 wires=154674 overused=2 overuse=2 archfail=NA
+Info:     iter=45 wires=154678 overused=2 overuse=2 archfail=NA
+Info:     iter=46 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=47 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=48 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=49 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=50 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=51 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=52 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=53 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=54 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=55 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=56 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=57 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=58 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=59 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=60 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=61 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=62 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=63 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=64 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=65 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=66 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=67 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=68 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=69 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=70 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=71 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=72 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=73 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=74 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=75 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=76 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=77 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=78 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=79 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=80 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=81 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=82 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=83 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=84 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=85 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=86 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=87 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=88 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=89 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=90 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=91 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=92 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=93 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=94 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=95 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=96 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=97 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=98 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=99 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=100 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=101 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=102 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=103 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=104 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=105 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=106 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=107 wires=154675 overused=1 overuse=1 archfail=NA
+Info:     iter=108 wires=154676 overused=1 overuse=1 archfail=NA
+Info:     iter=109 wires=154678 overused=0 overuse=0 archfail=0
+Info: Checksum: 0xf190b2ba
+Info: Router2 time 32.85s
+
+Info: Critical path report for clock 'core.clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.23  0.23 Source core.mul_b_DFFRE_Q_5.Q
+Info:    routing  1.41  1.64 Net core.mul_b[0] (15,12) -> (35,14)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT4_F_I2_LUT4_F_1.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  2.21 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT4_F_I2_LUT4_F_1.F
+Info:    routing  1.36  3.57 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT4_F_I0_LUT1_I0_F_MUX2_LUT5_I1_O_LUT2_I1_F_MUX2_LUT8_O_I1_MUX2_LUT7_O_I0_MUX2_LUT6_O_I0_MUX2_LUT5_O_I1_LUT4_F_I2_LUT4_I1_F[3] (35,14) -> (40,17)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_1_F_LUT3_F_I2_MUX2_LUT5_O_S0_LUT4_I0_F_LUT2_F.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  4.14 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_1_F_LUT3_F_I2_MUX2_LUT5_O_S0_LUT4_I0_F_LUT2_F.F
+Info:    routing  1.29  5.42 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_1_F_LUT3_F_I2_LUT3_I2_F_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_1_I2_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_I1_O_LUT4_F_I3[1] (40,17) -> (36,6)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT2_F_1.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  5.99 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT2_F_1.F
+Info:    routing  0.67  6.66 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_I1_LUT3_F_I1[0] (36,6) -> (39,10)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT4_F_I2_LUT4_I2_F_MUX2_LUT5_I0_O_MUX2_LUT5_O_S0_LUT3_I2_F_LUT3_I1_F_LUT2_F.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  7.23 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT4_F_I2_LUT4_I2_F_MUX2_LUT5_I0_O_MUX2_LUT5_O_S0_LUT3_I2_F_LUT3_I1_F_LUT2_F.F
+Info:    routing  1.05  8.28 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_I1_LUT3_F_I1[3] (39,10) -> (37,4)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_F_LUT3_F_I2_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_I0_O_LUT2_F.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  8.85 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_F_LUT3_F_I2_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_I0_O_LUT2_F.F
+Info:    routing  0.14  8.99 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_LUT3_F_I2_LUT3_F_1_I2_LUT3_I2_F_LUT3_F_2_I2_LUT3_F_I1_MUX2_LUT5_O_1_S0_LUT3_I2_F_LUT3_F_I2_LUT4_I2_F_LUT3_I2_F_LUT3_F_I2_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_I0_O[3] (37,4) -> (37,4)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1_MUX2_LUT5_O_I0_LUT4_F.I3
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.37  9.36 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1_MUX2_LUT5_O_I0_LUT4_F.F
+Info:    routing  0.00  9.36 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1_MUX2_LUT5_O_I0 (37,4) -> (37,4)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1_MUX2_LUT5_O.I0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:151.9-151.11
+Info:      logic  0.27  9.63 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1_MUX2_LUT5_O.O
+Info:    routing  0.94  10.56 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_I1 (37,4) -> (35,11)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN.I1
+Info:      logic  0.57  11.13 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN.COUT
+Info:    routing  0.00  11.13 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT (35,11) -> (36,11)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  11.17 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  11.17 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT (36,11) -> (36,11)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.47  11.64 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.SUM
+Info:    routing  0.40  12.04 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM[4] (36,11) -> (35,11)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_I0_MUX2_LUT5_O.S0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.10  12.14 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_I0_MUX2_LUT5_O.O
+Info:    routing  0.47  12.62 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_I0 (35,11) -> (35,14)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.I0
+Info:      logic  0.55  13.17 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  13.17 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,14) -> (35,14)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:81.27-81.108
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  13.20 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  13.20 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,14) -> (35,14)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:81.27-81.108
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.47  13.67 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.SUM
+Info:    routing  0.40  14.07 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM (35,14) -> (35,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.I1
+Info:      logic  0.57  14.64 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.64 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,15) -> (35,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.68 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.68 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,15) -> (35,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.71 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.71 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,15) -> (35,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.75 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.75 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (35,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.78 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.78 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.82 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.82 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.85 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.85 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.89 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.89 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.92 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.92 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (36,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.96 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.96 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN (36,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  14.99 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  14.99 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN (37,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.03 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  15.03 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN (37,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.06 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT.COUT
+Info:    routing  0.00  15.06 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN (37,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.10 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1.COUT
+Info:    routing  0.00  15.10 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT (37,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.13 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.13 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT (37,15) -> (37,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.17 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.17 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT (37,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.20 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.20 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.24 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.24 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.27 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.27 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.31 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.31 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.34 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.34 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (38,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.38 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.38 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (38,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.41 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.41 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.45 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.45 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.48 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.48 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.52 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.52 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.55 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.55 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (39,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  15.59 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  15.59 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (39,15) -> (40,15)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:108.44-108.91
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.47  16.06 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.SUM
+Info:    routing  2.00  18.06 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM (40,15) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.I0
+Info:      logic  0.55  18.60 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.60 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.64 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.64 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.67 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.67 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.71 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.71 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.74 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.74 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (41,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.78 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.78 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (41,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.81 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.81 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.85 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.85 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.88 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.88 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.92 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.92 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.95 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.95 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (42,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.99 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.99 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (42,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  19.02 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  19.02 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (43,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  19.06 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  19.06 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (43,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  19.09 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  19.09 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (43,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  19.13 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  19.13 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (43,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:95.17-95.35
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  19.16 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  19.16 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC (43,16) -> (43,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC.CIN
+Info:      logic  0.47  19.63 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC.SUM
+Info:    routing  0.40  20.04 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (43,16) -> (42,17)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC.I0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.55  20.59 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC.COUT
+Info:    routing  0.00  20.59 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC (42,17) -> (42,17)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:      logic  0.47  21.06 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.SUM
+Info:    routing  1.88  22.94 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM[2] (42,17) -> (59,12)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_SUM_LUT3_I0.I2
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.46  23.40 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_SUM_LUT3_I0.F
+Info:    routing  0.00  23.40 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_1_I0_ALU_I1_SUM_ALU_I1_CIN_ALU_COUT_SUM_LUT3_I0_F (59,12) -> (59,12)
+Info:                          Sink core.new_hidden[0]_DFFRE_Q_14.D
+Info:      setup  0.04  23.44 Source core.new_hidden[0]_DFFRE_Q_14.D
+Info: 11.02 ns logic, 12.42 ns routing
+
+ERROR: Max frequency for clock 'core.clk': 42.67 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: times are in ps
+Info:          * represents 46 endpoint(s)
+Info:          + represents [1,46) endpoint(s)
+Info: [ -3436,  -2310) |+
+Info: [ -2310,  -1184) |+
+Info: [ -1184,    -58) |+
+Info: [   -58,   1068) |+
+Info: [  1068,   2194) |+
+Info: [  2194,   3320) |+
+Info: [  3320,   4446) |+
+Info: [  4446,   5572) |+
+Info: [  5572,   6698) |*+
+Info: [  6698,   7824) |*+
+Info: [  7824,   8950) |****+
+Info: [  8950,  10076) |***********+
+Info: [ 10076,  11202) |**********************+
+Info: [ 11202,  12328) |************************************************************ 
+Info: [ 12328,  13454) |***********************+
+Info: [ 13454,  14580) |**************+
+Info: [ 14580,  15706) |**********************+
+Info: [ 15706,  16832) |*********+
+Info: [ 16832,  17958) |*****+
+Info: [ 17958,  19084) |***+
+
+1 warning, 1 error
+
+Info: Program finished normally.

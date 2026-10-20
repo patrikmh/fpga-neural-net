@@ -1,0 +1,8 @@
+Loading frozen H96 bitstream to SRAM on serial2023112818
+Verifying RESET+1000 continuous steps for trial04
+Traceback (most recent call last):
+  File "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-h96-final-v1/run-physical-attempt2.py", line 72, in <module>
+    subprocess.run(command, cwd=root, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=120)
+  File "/Users/patrikandersson/.local/share/uv/python/cpython-3.11.14-macos-aarch64-none/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['make', 'broad-verify', 'USB_SERIAL=2023112818', 'BROAD_EXPORT_DIR=/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-integer-v1/export', 'BROAD_VECTORS_DIR=/Users/patrikandersson/Downloads/tang-cfc/build/broad-h96-final-v1/usb-vectors/04', 'BROAD_COUNT=1000', 'BROAD_EXPECTED_CYCLES=124046', 'BROAD_OUTPUT=/Users/patrikandersson/Downloads/tang-cfc/build/broad-h96-physical-v2/usb-04.json']' returned non-zero exit status 2.

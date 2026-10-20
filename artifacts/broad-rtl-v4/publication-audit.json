@@ -1,0 +1,11 @@
+{
+  "source": "build/broad-rtl-v4",
+  "files": {
+    "report.json": "fc27fd4e09cef53decd24f3ff7868c62ccb20aafcd088b99952c3834bc3d524c",
+    "simulation-freeze.json": "caf7959d25d64121a4d044896d5cdc78027d5073de99dfa9347a8643e2a6fc5b",
+    "stage-manifest.json": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+    "compile.log": "a01cf49bc58985da6d0afbcbf7e640f43a90fb1d41e5a2c6be2d80b3badc6d2d",
+    "replay.log": "dc339580b12c2ce4210608cdbfbd8fa284cce986c4a761e1ea6eeafc10c99a59"
+  },
+  "scope": "10000old-validation stationary-prefix numerical steps, all96hidden/4raw andRESET; simulation only"
+}

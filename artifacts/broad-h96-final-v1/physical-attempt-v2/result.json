@@ -1,0 +1,18 @@
+{
+  "physical_verification": false,
+  "programming_returncode": 0,
+  "failure_stage": "First STEP state/output differs from golden; RESET/CRC/sequence/cycles valid",
+  "first_trial_attempted": 4,
+  "first_mismatch_index": 0,
+  "full_prefixes_verified": 0,
+  "note": "Subsequent debugging uses only old validation02 vectors; model/precision/heldout results remain frozen",
+  "files": {
+    "program.log": "71e82077f62c3f3e0fec079eebd9fec62777223bc91964d07facbe91a5c715c5",
+    "conditional-diagnostic.json": "c94457e446cb4d5e2265b246961dd20b6641a4aeb3210d420bde53b3ad01db73",
+    "usb-04.log": "66dc8205b397d46d3aaefcac8b41e3db33972bc7db1792a2564cf97372873f57",
+    "driver.log": "a83449974b6f9d6ac28088c5203b1bf08dbaf825ee72ba37470fc5733107f943",
+    "first-step-diagnostic.json": "c10409af7e18f6d23fed3f3501bee78e7ae53967a0b86a9c94b2374bd45b9a21",
+    "preflight.json": "05a580f9d5c1330875236166d9f41396f5bb6d6a29327ac25023bebdc46ee3c3",
+    "old-validation-diagnostic.json": "34f87a4a6237a04e1d9ba2757285104ddf9c5b6a695b4cf33ab36f4b6380a3cc"
+  }
+}

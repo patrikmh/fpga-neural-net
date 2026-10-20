@@ -1,0 +1,31 @@
+{
+  "scope": "Frozen historical evidence from the originally physically loaded H96 design; not evidence about the subsequent CSA RTL or routing-seed variants.",
+  "original_core_sha256": "7ed85265a63e07bc327daa652b4067f5e7f1b72683f3296470a4605c643a07d8",
+  "original_bitstream_sha256": "a034a0563d656b1d64cea44e289beb5be7341a1394361f876c40e22eea924b4c",
+  "source_binding_report": "artifacts/broad-capacity-v1/final/report.json",
+  "result": "Physical numerical equivalence failed; root cause unresolved. No successful full-trial physical proof or orientation-accuracy claim.",
+  "all_copies_byte_identical": true,
+  "files": [
+    {
+      "file": "broad-h96-physical-first-step-diagnostic.json",
+      "source": "build/broad-h96-physical-first-step-diagnostic.json",
+      "sha256": "c10409af7e18f6d23fed3f3501bee78e7ae53967a0b86a9c94b2374bd45b9a21",
+      "bytes": 4321,
+      "scope": "Original loaded design: first STEP of new test trial 04 after RESET; one hidden mismatch at lane 9, actual minus expected +512. Failed numerical equivalence, not full-trial accuracy."
+    },
+    {
+      "file": "broad-h96-physical-validation-diagnostic-v1.json",
+      "source": "build/broad-h96-physical-validation-diagnostic-v1.json",
+      "sha256": "34f87a4a6237a04e1d9ba2757285104ddf9c5b6a695b4cf33ab36f4b6380a3cc",
+      "bytes": 151602,
+      "scope": "Original loaded design: separate old validation-02 RESET plus 16 continuous STEP diagnostic. Mismatches retained; not a passing physical proof."
+    },
+    {
+      "file": "broad-h96-physical-conditional-diagnostic-v1.json",
+      "source": "build/broad-h96-physical-conditional-diagnostic-v1.json",
+      "sha256": "c94457e446cb4d5e2265b246961dd20b6641a4aeb3210d420bde53b3ad01db73",
+      "bytes": 3489,
+      "scope": "Conditional analysis of the separate 16-step old validation-02 physical diagnostic, using each observed physical prior state. Not an independent successful sequence proof."
+    }
+  ]
+}

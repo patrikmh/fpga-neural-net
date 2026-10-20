@@ -1,0 +1,480 @@
+[timestamp] [threadID] facility level [function call] <message>
+--------------------------------------------------------------------------------
+[ 0.000075] [003aad92] libusb: debug [libusb_init_context] libusb v1.0.30.12037
+[ 0.000087] [003aad92] libusb: debug [usbi_add_event_source] add fd 3 events 1
+[ 0.000147] [003aad93] libusb: debug [darwin_event_thread_main] creating hotplug event source
+[ 0.000267] [003aad93] libusb: debug [darwin_event_thread_main] darwin event thread ready to receive events
+[ 0.000354] [003aad92] libusb: debug [darwin_get_cached_device] finding cached device for sessionID 0x222cc6d5720
+[ 0.000369] [003aad92] libusb: debug [darwin_get_cached_device] caching new device with sessionID 0x222cc6d5720
+[ 0.001418] [003aad92] libusb: debug [darwin_cache_device_descriptor] cached device descriptor:
+[ 0.001423] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDescriptorType:    0x01
+[ 0.001426] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bcdUSB:             0x0200
+[ 0.001429] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceClass:       0x00
+[ 0.001431] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceSubClass:    0x00
+[ 0.001433] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceProtocol:    0x00
+[ 0.001435] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bMaxPacketSize0:    0x40
+[ 0.001437] [003aad92] libusb: debug [darwin_cache_device_descriptor]   idVendor:           0x18d1
+[ 0.001439] [003aad92] libusb: debug [darwin_cache_device_descriptor]   idProduct:          0x0002
+[ 0.001440] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bcdDevice:          0x0409
+[ 0.001442] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iManufacturer:      0x01
+[ 0.001444] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iProduct:           0x02
+[ 0.001446] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iSerialNumber:      0x03
+[ 0.001448] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bNumConfigurations: 0x01
+[ 0.001456] [003aad92] libusb: debug [darwin_check_configuration] active config: 1, first config: 1
+[ 0.001458] [003aad92] libusb: debug [process_new_device] allocating new device in context 0x14a605390 for with session 0x222cc6d5720
+[ 0.001461] [003aad92] libusb: debug [process_new_device] found device with address 1 port = 1 parent = 0x0 at 0x600001653d3a
+[ 0.001507] [003aad92] libusb: debug [darwin_get_cached_device] finding cached device for sessionID 0x23e6173d131
+[ 0.001517] [003aad92] libusb: debug [darwin_get_cached_device] matching sessionID/locationID 0x23e6173d131/0x1100000 against cached device with sessionID/locationID 0x222cc6d5720/0x100000
+[ 0.001519] [003aad92] libusb: debug [darwin_get_cached_device] caching new device with sessionID 0x23e6173d131
+[ 0.001597] [003aad92] libusb: debug [darwin_cache_device_descriptor] cached device descriptor:
+[ 0.001600] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDescriptorType:    0x01
+[ 0.001602] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bcdUSB:             0x0200
+[ 0.001604] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceClass:       0x00
+[ 0.001605] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceSubClass:    0x00
+[ 0.001607] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bDeviceProtocol:    0x00
+[ 0.001609] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bMaxPacketSize0:    0x40
+[ 0.001610] [003aad92] libusb: debug [darwin_cache_device_descriptor]   idVendor:           0x0403
+[ 0.001612] [003aad92] libusb: debug [darwin_cache_device_descriptor]   idProduct:          0x6010
+[ 0.001613] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bcdDevice:          0x0700
+[ 0.001615] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iManufacturer:      0x01
+[ 0.001617] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iProduct:           0x02
+[ 0.001618] [003aad92] libusb: debug [darwin_cache_device_descriptor]   iSerialNumber:      0x03
+[ 0.001641] [003aad92] libusb: debug [darwin_cache_device_descriptor]   bNumConfigurations: 0x01
+[ 0.001648] [003aad92] libusb: debug [darwin_check_configuration] active config: 1, first config: 1
+[ 0.001651] [003aad92] libusb: debug [process_new_device] allocating new device in context 0x14a605390 for with session 0x23e6173d131
+[ 0.001653] [003aad92] libusb: debug [process_new_device] found device with address 1 port = 1 parent = 0x0 at 0x60000165c03a
+[ 0.001657] [003aad92] libusb: debug [libusb_init_context] installing new context as implicit default
+[ 0.001660] [003aad92] libusb: debug [libusb_get_device_list]  
+[ 0.001672] [003aad92] libusb: debug [libusb_get_device_descriptor]  
+[ 0.001674] [003aad92] libusb: debug [libusb_open] open 1.1
+[ 0.001697] [003aad92] libusb: debug [darwin_open] device open for access
+[ 0.001700] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.001732] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.001735] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.001738] [003aad92] libusb: debug [handle_events] event sources modified, reallocating event data
+[ 0.001741] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.001800] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.004259] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.004262] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.004265] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.004268] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.004270] [003aad92] libusb: debug [sync_transfer_cb] actual_length=4
+[ 0.004283] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.004286] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.004301] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.004306] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.004310] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.004303] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.004326] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.004329] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.004332] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.004334] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.004337] [003aad92] libusb: debug [sync_transfer_cb] actual_length=22
+[ 0.004339] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.004342] [003aad92] libusb: debug [libusb_close]  
+[ 0.004353] [003aad92] libusb: debug [libusb_open] open 1.1
+[ 0.004368] [003aad92] libusb: debug [darwin_open] device open for access
+[ 0.004371] [003aad92] libusb: debug [libusb_get_device_descriptor]  
+[ 0.004373] [003aad92] libusb: debug [libusb_get_config_descriptor] index 0
+[ 0.004376] [003aad92] libusb: debug [libusb_detach_kernel_driver] interface 0
+[ 0.004378] [003aad92] libusb: debug [darwin_detach_kernel_driver] attempting to detach kernel driver from device
+[ 0.004388] [003aad92] libusb: info [darwin_detach_kernel_driver] no capture entitlements. may not be able to detach the kernel driver for this device
+[ 0.004390] [003aad92] libusb: warning [darwin_detach_kernel_driver] USB device capture requires either an entitlement (com.apple.vm.device-access) or root privilege
+[ 0.004392] [003aad92] libusb: debug [libusb_get_configuration]  
+[ 0.004394] [003aad92] libusb: debug [libusb_get_configuration] active config 1
+[ 0.004395] [003aad92] libusb: debug [libusb_claim_interface] interface 0
+[ 0.004536] [003aad92] libusb: debug [get_endpoints] building table of endpoints.
+[ 0.004674] [003aad92] libusb: debug [get_endpoints] interface: 0 pipe 1: dir: 1 number: 1
+[ 0.004773] [003aad92] libusb: debug [get_endpoints] interface: 0 pipe 2: dir: 0 number: 2
+[ 0.004790] [003aad92] libusb: debug [darwin_claim_interface] interface opened
+[ 0.004794] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.004807] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.004810] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.004812] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.004913] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.004927] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.004930] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.004932] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.004934] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.004936] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.004938] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.004941] [003aad92] libusb: debug [libusb_get_device_descriptor]  
+[ 0.004943] [003aad92] libusb: debug [libusb_get_config_descriptor] index 0
+[ 0.004946] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.004966] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.004969] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.004971] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005115] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005122] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005125] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005126] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005128] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.005130] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.005133] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.005135] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.005180] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.005183] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.005185] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005229] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005268] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005272] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005275] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005278] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.005280] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.005283] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.005335] [003aad92] libusb: debug [libusb_get_device_descriptor]  
+[ 0.005373] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b904248
+[ 0.005481] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005482] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.005516] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.005519] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005523] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005525] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005527] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005529] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b904248 has callback 0x102fcd8a8
+[ 0.005531] [003aad92] libusb: debug [sync_transfer_cb] actual_length=4
+[ 0.005534] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b904248
+[ 0.005536] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.005545] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.005548] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.005550] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005554] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005560] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005562] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005564] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005566] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.005568] [003aad92] libusb: debug [sync_transfer_cb] actual_length=26
+[ 0.005570] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.005573] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.005672] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.005763] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.005779] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005712] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005801] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005847] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005851] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005853] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.005856] [003aad92] libusb: debug [sync_transfer_cb] actual_length=4
+[ 0.005858] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.005861] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.005872] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.005876] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.005879] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.005872] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.005928] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.005939] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.005942] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.005945] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.005948] [003aad92] libusb: debug [sync_transfer_cb] actual_length=14
+[ 0.005951] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.005962] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.006016] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006035] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006037] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006053] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006060] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006063] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006065] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006067] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.006069] [003aad92] libusb: debug [sync_transfer_cb] actual_length=4
+[ 0.006072] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.006075] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.006083] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006086] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006088] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006088] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006124] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006126] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006128] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006130] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.006132] [003aad92] libusb: debug [sync_transfer_cb] actual_length=22
+[ 0.006134] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.006138] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.006149] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006160] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006162] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006195] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006203] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006206] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006208] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006210] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.006212] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006215] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.006218] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a704ae8
+[ 0.006229] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006254] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006258] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006276] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006299] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006301] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006303] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006307] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a704ae8 has callback 0x102fcd8a8
+[ 0.006322] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006327] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a704ae8
+[ 0.006343] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.006382] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006386] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006389] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006405] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006413] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006417] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006419] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006422] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.006424] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006427] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.006430] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.006442] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006445] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006447] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006499] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006507] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006510] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006513] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006515] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.006518] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006521] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.006524] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.006543] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006546] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006548] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006596] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006603] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006606] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006608] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006617] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.006619] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006622] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.006625] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.006637] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006640] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006643] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006701] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006708] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006710] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006712] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006715] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.006724] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006726] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.006728] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.006730] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x81 to pipeRef and interface
+[ 0.006732] [003aad92] libusb: debug [ep_to_pipeRef] pipe 1 on interface 0 matches
+[ 0.006763] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006765] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006768] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006799] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006807] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006809] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006811] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.006813] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.006814] [003aad92] libusb: debug [sync_transfer_cb] actual_length=2
+[ 0.006817] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.006819] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.006826] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006839] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006841] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.006899] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.006905] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.006907] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.006910] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.006912] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.006914] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.006926] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.006928] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.006936] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.006939] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.006941] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007000] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007009] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007013] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007016] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.007018] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.007021] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.007024] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+Jtag frequency : requested 6.00MHz    -> real 6.00MHz   [ 0.007047] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.007049] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007051] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007076] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007079] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007098] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007099] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007112] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007115] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007117] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007120] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.007122] [003aad92] libusb: debug [sync_transfer_cb] actual_length=4
+[ 0.007125] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.007128] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05728
+[ 0.007130] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x81 to pipeRef and interface
+[ 0.007132] [003aad92] libusb: debug [ep_to_pipeRef] pipe 1 on interface 0 matches
+[ 0.007153] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007156] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007159] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007200] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007208] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007221] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007223] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007226] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05728 has callback 0x102fcd8a8
+[ 0.007229] [003aad92] libusb: debug [sync_transfer_cb] actual_length=2
+[ 0.007231] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05728
+[ 0.007235] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a704ac8
+[ 0.007238] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007240] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007259] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007262] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007265] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007308] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007316] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007319] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007322] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007324] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a704ac8 has callback 0x102fcd8a8
+[ 0.007327] [003aad92] libusb: debug [sync_transfer_cb] actual_length=6
+[ 0.007330] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a704ac8
+[ 0.007335] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05928
+[ 0.007338] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007340] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007354] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007357] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007372] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007380] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007385] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007387] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007403] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007406] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05928 has callback 0x102fcd8a8
+[ 0.007408] [003aad92] libusb: debug [sync_transfer_cb] actual_length=14
+[ 0.007411] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05928
+[ 0.007414] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05928
+[ 0.007416] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x81 to pipeRef and interface
+[ 0.007418] [003aad92] libusb: debug [ep_to_pipeRef] pipe 1 on interface 0 matches
+[ 0.007437] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007440] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007443] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007576] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007582] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007584] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007586] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007588] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05928 has callback 0x102fcd8a8
+[ 0.007590] [003aad92] libusb: debug [sync_transfer_cb] actual_length=6
+[ 0.007592] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05928
+[ 0.007610] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.007613] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007615] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007633] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007635] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007638] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007674] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007683] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007686] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007695] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007698] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.007700] [003aad92] libusb: debug [sync_transfer_cb] actual_length=8
+[ 0.007703] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.007706] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05928
+[ 0.007708] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x81 to pipeRef and interface
+[ 0.007710] [003aad92] libusb: debug [ep_to_pipeRef] pipe 1 on interface 0 matches
+[ 0.007723] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007726] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007728] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007780] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007787] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007789] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007792] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007794] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05928 has callback 0x102fcd8a8
+[ 0.007797] [003aad92] libusb: debug [sync_transfer_cb] actual_length=6
+[ 0.007810] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05928
+[ 0.007813] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14b804148
+[ 0.007816] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007818] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007834] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007837] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007839] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007881] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007889] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007891] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.007894] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.007897] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14b804148 has callback 0x102fcd8a8
+[ 0.007899] [003aad92] libusb: debug [sync_transfer_cb] actual_length=3
+[ 0.007902] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14b804148
+[ 0.007907] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.007909] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x02 to pipeRef and interface
+[ 0.007912] [003aad92] libusb: debug [ep_to_pipeRef] pipe 2 on interface 0 matches
+[ 0.007925] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.007928] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.007930] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.007983] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.007995] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.007997] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008000] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.008003] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.008005] [003aad92] libusb: debug [sync_transfer_cb] actual_length=17
+[ 0.008007] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.008010] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.008013] [003aad92] libusb: debug [ep_to_pipeRef] converting ep address 0x81 to pipeRef and interface
+[ 0.008015] [003aad92] libusb: debug [ep_to_pipeRef] pipe 1 on interface 0 matches
+[ 0.008028] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.008031] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.008033] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.008067] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.008076] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.008079] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008081] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type bulk with kernel status 0
+[ 0.008083] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.008085] [003aad92] libusb: debug [sync_transfer_cb] actual_length=7
+[ 0.008087] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.008090] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05928
+[ 0.008101] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.008103] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.008122] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.008157] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.008163] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.008166] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008168] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.008170] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05928 has callback 0x102fcd8a8
+[ 0.008172] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.008175] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05928
+[ 0.008177] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.008187] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.008190] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.008192] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.008247] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.008254] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.008257] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008259] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.008261] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.008264] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.008267] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.008269] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14ba05928
+[ 0.008278] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.008281] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.008283] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.008326] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.008333] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.008335] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008337] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.008339] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14ba05928 has callback 0x102fcd8a8
+[ 0.008342] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.008344] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14ba05928
+[ 0.008346] [003aad92] libusb: debug [libusb_submit_transfer] transfer 0x14a605788
+[ 0.008354] [003aad92] libusb: debug [libusb_get_next_timeout] no URB with timeout or all handled by OS; no timeout!
+[ 0.008357] [003aad92] libusb: debug [libusb_handle_events_timeout_completed] doing our own event handling
+[ 0.008369] [003aad92] libusb: debug [usbi_wait_for_events] poll() 1 fds with timeout in 60000ms
+[ 0.008418] [003aad93] libusb: debug [darwin_async_io_callback] an async io operation has completed
+[ 0.008424] [003aad92] libusb: debug [usbi_wait_for_events] poll() returned 1
+[ 0.008427] [003aad92] libusb: debug [handle_event_trigger] event triggered
+[ 0.008429] [003aad92] libusb: debug [darwin_handle_transfer_completion] handling transfer completion type control with kernel status 0
+[ 0.008431] [003aad92] libusb: debug [usbi_handle_transfer_completion] transfer 0x14a605788 has callback 0x102fcd8a8
+[ 0.008433] [003aad92] libusb: debug [sync_transfer_cb] actual_length=0
+[ 0.008435] [003aad92] libusb: debug [libusb_free_transfer] transfer 0x14a605788
+[ 0.008438] [003aad92] libusb: debug [libusb_release_interface] interface 0
+[ 0.008605] [003aad92] libusb: debug [libusb_close]  
+[ 0.008648] [003aad92] libusb: debug [libusb_exit]  
+[ 0.008652] [003aad92] libusb: debug [libusb_unref_device] destroy device 1.1
+[ 0.008654] [003aad92] libusb: debug [libusb_unref_device] destroy device 0.1
+[ 0.008663] [003aad93] libusb: debug [darwin_event_thread_main] darwin event thread exiting
+[ 0.008817] [003aad92] libusb: debug [usbi_remove_event_source] remove fd 3
+
+index 0:
+	idcode 0x1281b
+	manufacturer Gowin
+	family GW5A
+	model  GW5A-25
+	irlength 8

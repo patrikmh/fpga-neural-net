@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "sources_after": {
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "scripts/build_broad.py": "974b78d216263e8b63808f335a04ac05e9b46464300145b912092ab5f9501f96",
+    "scripts/build.py": "5bc781d311b63635f5bbbadcaa9c91dbd125ce0d8c706ba82fe6f31ba1c9a763",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b"
+  },
+  "sources_unchanged": true
+}

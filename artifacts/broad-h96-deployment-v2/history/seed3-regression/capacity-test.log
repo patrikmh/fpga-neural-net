@@ -1,0 +1,7 @@
+test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream (integration.test_broad_capacity.BroadCapacityTracerTests.test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream) ... Persistent H96 capacity evidence: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 79.390s
+
+OK

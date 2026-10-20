@@ -87,6 +87,154 @@ endmodule
 
 
 class BroadRtlTracerTests(unittest.TestCase):
+    def test_production_blend_value_matches_valid_activation_domain_reference(self):
+        import random
+
+        endpoints=(-8192,-8191,-1,0,1,8191,8192)
+        cases={(f1,f2,gate) for f1 in endpoints for f2 in endpoints for gate in (0,1,4096,8191,8192)}
+        cases.update(((0,1,4096),(0,-1,4096),(1,-2,4096),(-1,2,4096),
+                      (924,-128,3793),(1332,-1580,3176),(2567,-64,593),
+                      (702,-3710,520),(7719,-702,1279),(7923,797,444)))
+        rng=random.Random(20261021)
+        cases.update((rng.randrange(-8192,8193),rng.randrange(-8192,8193),rng.randrange(8193)) for _ in range(2048))
+        rows=[]
+        for f1,f2,gate in sorted(cases):
+            product=(f2-f1)*gate
+            rounded=(abs(product)+4096)//8192
+            if product<0:
+                rounded=-rounded
+            self.assertTrue(-32768<=rounded<=32767)
+            total=f1+rounded
+            self.assertTrue(-(1<<16)<=total<(1<<16))
+            expected=min(32767,max(-32768,total))
+            rows.append("".join(f"{value&65535:04x}" for value in (f1,f2-f1,gate,expected)))
+        core=ROOT/"rtl/broad_core.sv"
+        before=hashlib.sha256(core.read_bytes()).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            workspace=Path(directory)
+            banks=workspace/"banks"
+            banks.mkdir()
+            (banks/"weights_000.hex").write_text("0000\n"*1024)
+            table=workspace/"activation.hex"
+            table.write_text("0000\n"*4096)
+            vectors=workspace/"blend.hex"
+            vectors.write_text("\n".join(rows)+"\n")
+            testbench=workspace/"blend_tb.sv"
+            testbench.write_text(f"""`timescale 1ns/1ps
+module broad_blend_tb;
+    reg [63:0] vectors [0:{len(rows)-1}];
+    integer index;
+    broad_core #(.HIDDEN_SIZE(1),.WEIGHTS_DIR({json.dumps(str(banks))}),
+                 .TANH_FILE({json.dumps(str(table))}),.SIGMOID_FILE({json.dumps(str(table))}))
+        dut(.clk(1'b0),.reset(1'b0),.start(1'b0),.input_values(144'b0),
+            .hidden_values(),.output_values(),.busy(),.done(),.cycles());
+    initial begin
+        $readmemh({json.dumps(str(vectors))},vectors);
+        for(index=0;index<{len(rows)};index=index+1) begin
+            dut.f1=$signed(vectors[index][63:48]);
+            dut.mul_a=$signed(vectors[index][47:32]);
+            dut.mul_b=$signed(vectors[index][31:16]);
+            #1;
+            if(dut.blend_value!==vectors[index][15:0])
+                $fatal(1,"Production blend_value mismatch row %0d f1=%0d delta=%0d gate=%0d got=%0d expected=%0d",
+                       index,dut.f1,dut.mul_a,dut.mul_b,dut.blend_value,$signed(vectors[index][15:0]));
+        end
+        $display("PASS: {len(rows)} valid activation triples matched production blend_value");
+        $finish;
+    end
+endmodule
+""")
+            simulation=workspace/"blend.vvp"
+            compiled=subprocess.run([executable("iverilog"),"-g2012","-s","broad_blend_tb","-o",str(simulation),
+                                     str(core),str(testbench)],cwd=ROOT,capture_output=True,text=True,timeout=30)
+            self.assertEqual(compiled.returncode,0,compiled.stdout+compiled.stderr)
+            simulated=subprocess.run([executable("vvp"),str(simulation)],cwd=ROOT,capture_output=True,text=True,timeout=10)
+            self.assertEqual(simulated.returncode,0,simulated.stdout+simulated.stderr)
+            self.assertIn(f"PASS: {len(rows)} valid activation triples",simulated.stdout)
+        self.assertEqual(hashlib.sha256(core.read_bytes()).hexdigest(),before)
+
+    def test_production_round_shift_matches_full_signed48_reference_at_boundaries_and_random_values(self):
+        import random
+
+        minimum,maximum=-(1<<47),(1<<47)-1
+        values={minimum,minimum+1,minimum+2,maximum,maximum-1,maximum-2,0,-1,1,
+                -3990236,-9248512,-1560183,-2294240,-10770459,-3163944,-3701173,-3634404,-3508388}
+        for bits in (13,18):
+            half=1<<(bits-1)
+            largest=maximum>>bits
+            for quotient in (0,1,2,3,2047,2048,2049,largest-1,largest):
+                base=quotient<<bits
+                for sign in (-1,1):
+                    for candidate in (base,base-1,base+1,base+half-1,base+half,base+half+1):
+                        value=sign*candidate
+                        if minimum<=value<=maximum:
+                            values.add(value)
+            for index in (-2049,-2048,-2047,2046,2047,2048):
+                for delta in (-half-1,-half,-half+1,half-1,half,half+1):
+                    values.add((index<<18)+delta)
+        rng=random.Random(20261020)
+        values.update(rng.randrange(minimum,maximum+1) for _ in range(2048))
+        values=sorted(values)
+        def reference(value,bits):
+            rounded=(abs(value)+(1<<(bits-1)))//(1<<bits)
+            return -rounded if value<0 else rounded
+        mask=(1<<48)-1
+        rows=[]
+        for value in values:
+            expected13,expected18=reference(value,13),reference(value,18)
+            index=min(4095,max(0,expected18+2048))
+            rows.append(f"{value&mask:012x}{expected13&mask:012x}{expected18&mask:012x}{index:03x}")
+        core=ROOT/"rtl/broad_core.sv"
+        before=hashlib.sha256(core.read_bytes()).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            workspace=Path(directory)
+            banks=workspace/"banks"
+            banks.mkdir()
+            (banks/"weights_000.hex").write_text("0000\n"*1024)
+            table=workspace/"activation.hex"
+            table.write_text("0000\n"*4096)
+            vectors=workspace/"rounding.hex"
+            vectors.write_text("\n".join(rows)+"\n")
+            testbench=workspace/"rounding_tb.sv"
+            testbench.write_text(f"""`timescale 1ns/1ps
+module broad_rounding_tb;
+    reg [155:0] vectors [0:{len(values)-1}];
+    reg signed [47:0] value,actual;
+    reg [11:0] actual_index;
+    integer index;
+    broad_core #(.HIDDEN_SIZE(1),.WEIGHTS_DIR({json.dumps(str(banks))}),
+                 .TANH_FILE({json.dumps(str(table))}),.SIGMOID_FILE({json.dumps(str(table))}))
+        dut(.clk(1'b0),.reset(1'b1),.start(1'b0),.input_values(144'b0),
+            .hidden_values(),.output_values(),.busy(),.done(),.cycles());
+    initial begin
+        $readmemh({json.dumps(str(vectors))},vectors);
+        for(index=0;index<{len(values)};index=index+1) begin
+            value=$signed(vectors[index][155:108]);
+            actual=dut.round_shift(value,13);
+            if(actual!==vectors[index][107:60])
+                $fatal(1,"Full signed48 round_shift13 mismatch value=%0d got=%0d expected=%0d",value,actual,$signed(vectors[index][107:60]));
+            actual=dut.round_shift(value,18);
+            if(actual!==vectors[index][59:12])
+                $fatal(1,"Full signed48 round_shift18 mismatch value=%0d got=%0d expected=%0d",value,actual,$signed(vectors[index][59:12]));
+            actual_index=dut.lookup_index(value);
+            if(actual_index!==vectors[index][11:0])
+                $fatal(1,"Activation clamp mismatch value=%0d",value);
+            #1;
+        end
+        $display("PASS: {len(values)} signed48 values, production round_shift13/18 and activation clamping");
+        $finish;
+    end
+endmodule
+""")
+            simulation=workspace/"rounding.vvp"
+            compiled=subprocess.run([executable("iverilog"),"-g2012","-s","broad_rounding_tb","-o",str(simulation),
+                                     str(core),str(testbench)],cwd=ROOT,capture_output=True,text=True,timeout=30)
+            self.assertEqual(compiled.returncode,0,compiled.stdout+compiled.stderr)
+            simulated=subprocess.run([executable("vvp"),str(simulation)],cwd=ROOT,capture_output=True,text=True,timeout=10)
+            self.assertEqual(simulated.returncode,0,simulated.stdout+simulated.stderr)
+            self.assertIn(f"PASS: {len(values)} signed48 values",simulated.stdout)
+        self.assertEqual(hashlib.sha256(core.read_bytes()).hexdigest(),before)
+
     def test_clocked_broad_core_matches_recurrent_hidden_raw_outputs_and_reset(self):
         with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory)

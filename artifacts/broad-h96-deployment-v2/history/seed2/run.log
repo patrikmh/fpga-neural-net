@@ -1,0 +1,4 @@
+yosys: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed2/yosys.log)
+yosys: completed
+nextpnr: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed2/nextpnr.log)
+BROAD build failed: nextpnr failed with status 1; see /Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed2/nextpnr.log

@@ -32,11 +32,11 @@ class BroadCapacityTracerTests(unittest.TestCase):
         for name in ("yosys","nextpnr-himbaechel","gowin_pack"):
             self.assertTrue(os.access(TOOL_BIN/name,os.X_OK),f"Real FPGA tool must exist: {name}")
         SCRATCH.mkdir(parents=True,exist_ok=True)
-        output = Path(tempfile.mkdtemp(prefix="h96-heap-seed1-",dir=SCRATCH))
+        output = Path(tempfile.mkdtemp(prefix="h96-heap-seed3-",dir=SCRATCH))
         print(f"Persistent H96 capacity evidence: {output}",flush=True)
         command = [str(ROOT/".venv/bin/python"),str(ROOT/"scripts/build_broad.py"),
                    "--export-dir",str(EXPORT),"--build-dir",str(output),
-                   "--placer","heap","--seed","1","--heap-beta","0.9","--stage-timeout","1200"]
+                   "--placer","heap","--seed","3","--heap-beta","0.9","--stage-timeout","1200"]
         result = subprocess.run(
             command,cwd=ROOT,env={**os.environ,"PATH":str(TOOL_BIN)+os.pathsep+os.environ.get("PATH","")},
             capture_output=True,text=True,timeout=3700,
@@ -54,7 +54,7 @@ class BroadCapacityTracerTests(unittest.TestCase):
         self.assertEqual(report["top"],"broad_top")
         self.assertEqual(report["hidden_size"],96)
         self.assertEqual(report["clock_mhz"],50)
-        self.assertEqual(report["placement"],{"placer":"heap","seed":1,"heap_beta":.9})
+        self.assertEqual(report["placement"],{"placer":"heap","seed":3,"heap_beta":.9})
         self.assertEqual(report["router"],"router2")
         self.assertEqual(report["stage_timeout_s"],1200)
         self.assertEqual(report["timing"]["constrained_mhz"],50)

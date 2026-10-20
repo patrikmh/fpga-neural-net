@@ -1,0 +1,13 @@
+Working directory: /Users/patrikandersson/Downloads/tang-cfc
+1. Downloaded diagnostic source snapshots only:
+ https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack.cc
+ https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_luts.cc
+2. .venv/bin/python build/broad-post-synth-v1/post-route/adapt.py
+3. .tools/tang-toolchain/oss-cad-suite/bin/yosys -Q -T -p 'read_json build/broad-post-synth-v1/post-route/adapted.json; write_verilog -noattr -noexpr build/broad-post-synth-v1/post-route/netlist.v'
+4. .tools/tang-toolchain/oss-cad-suite/bin/verilator --cc --exe --build -j 4 -Wno-fatal -Wno-PINCONNECTEMPTY -Wno-PINMISSING -Wno-SPECIFYIGN --top-module broad_top --Mdir build/broad-post-synth-v1/post-route/obj build/broad-post-synth-v1/post-route/netlist.v build/broad-post-synth-v1/cells_logic.v build/broad-post-synth-v1/rom_models.sv build/broad-post-synth-v1/post-route/alu_model.sv /Users/patrikandersson/Downloads/tang-cfc/build/broad-post-synth-v1/replay.cpp
+5. build/broad-post-synth-v1/post-route/obj/Vbroad_top > build/broad-post-synth-v1/post-route/replay.log 2>&1
+6. PYTHONPATH=. .venv/bin/python build/broad-post-synth-v1/post-route/audit.py
+No optimization pass rerun; Yosys used only as JSON-to-Verilog writer.
+Structural adapter: RAM scalar ports regrouped preserving order, SP width9/18 mapped to library SPX9; constants renamed; inactive GSR/input-only PINCFG removed; portless dummy ALUs removed; cell names made unique against wire names for Yosys import; I/O NET metadata removed.
+Actual raw ALU LUTs are preserved and evaluated, with embedded CIN_NETTYPE constants. Missing ALU data inputs exhaustively proven irrelevant to raw truth table. ALU I2 must be VCC. Observed widths/modes/connections asserted.
+Not modeled: actual bitstream reconstruction, routing PIPs, global clock skew, propagation delays, analog behavior, or configuration-state correctness.

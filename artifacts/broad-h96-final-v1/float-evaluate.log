@@ -1,0 +1,5 @@
+trial 4: full RMSE 18.59866 deg
+trial 8: full RMSE 40.99766 deg
+trial 12: full RMSE 6.10567 deg
+trial 31: full RMSE 32.85014 deg
+{"output_dir": "/Users/patrikandersson/Downloads/tang-cfc/build/broad-h96-final-v1/float", "mean_trial_metrics": {"cfc": {"full_rmse_deg": 24.638032371161934, "inclination_rmse_deg": 10.43570193287137, "heading_rmse_deg": 22.446177646272723}, "baselines": {"accelerometer_only": {"incl_rmse_deg": 18.785511510532444}, "gyro_only_acc_initialization": {"incl_rmse_deg": 29.28141806791448}, "gyro_acc_complementary": {"incl_rmse_deg": 4.195668904311191}}}}

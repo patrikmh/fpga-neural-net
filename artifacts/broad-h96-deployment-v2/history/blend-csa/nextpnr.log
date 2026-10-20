@@ -1,0 +1,532 @@
+Info: Using uarch 'gowin' for device 'GW5A-LV25MG121NC1/I0'
+
+Info: Reading constraints...
+Info: Create constant nets...
+Info: Modify LUTs...
+Info: Pack IOBs...
+Info: Pack I3C IOs...
+Info: Pack MIPI IOs...
+Info: Pack diff IOBs...
+Info: Pack FFs into IO cells...
+Info: Pack IODELAY...
+Info: Pack Input Edge Monitors...
+Info: Pack IO logic...
+Info: Pack DESER16 logic...
+Info: Pack GSR...
+Info: Pack PINCFG...
+Info: Pack HCLK cells...
+Info: Pack DLLDLYs...
+Info: Pack wide LUTs...
+Info: Packed MUX2_LUT8:55, MUX2_LU7:44, MUX2_LUT6:76, MUX2_LUT5:576
+Info: Pack ALUs...
+Info: Pack SSRAMs...
+Info: Constrained 341 LUTFF pairs.
+Info: Pack PLL...
+Info: Pack ADC...
+Info: Pack GW JTAG...
+Info: Pack BSRAMs...
+Info: Pack DSP...
+Info: Pack INV...
+Info: Pack buffered nets...
+Info: Pack EMCU and UserFlash cells...
+Info: Pack UserFlash cells...
+Info: Pack DQCE cells...
+Info: Pack DCS cells...
+Info: Checksum: 0x51eab85c
+
+Info: Device utilisation:
+Info: 	                 VCC:       1/      1   100%
+Info: 	                 IOB:       4/    240     1%
+Info: 	                LUT4:    8545/  23040    37%
+Info: 	            IOLOGICI:       0/    230     0%
+Info: 	            IOLOGICO:       0/    230     0%
+Info: 	           MUX2_LUT5:    1344/  11520    11%
+Info: 	           MUX2_LUT6:     384/   5760     6%
+Info: 	           MUX2_LUT7:     154/   2880     5%
+Info: 	           MUX2_LUT8:      55/   2880     1%
+Info: 	                 ALU:    1016/  17280     5%
+Info: 	                 GND:       1/      1   100%
+Info: 	                 DFF:    4218/  23040    18%
+Info: 	               BSRAM:      48/     56    85%
+Info: 	           MULT12X12:       0/     56     0%
+Info: 	        MULTALU27X18:       0/     28     0%
+Info: 	     MULTADDALU12X12:       0/     28     0%
+Info: 	                 GSR:       1/      1   100%
+Info: 	              PINCFG:       1/      1   100%
+Info: 	                OSCA:       0/      1     0%
+Info: 	                PLLA:       0/      6     0%
+Info: 	                 ADC:       0/      1     0%
+Info: 	                BUFG:       0/      5     0%
+Info: 	                 DCS:       0/      8     0%
+Info: 	              CLKDIV:       0/     16     0%
+Info: 	             CLKDIV2:       0/     16     0%
+
+Info: Running custom HCLK placer...
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 9558 cells, random placement wirelen = 588613.
+Info:     at initial placer iter 0, wirelen = 1992
+Info:     at initial placer iter 1, wirelen = 1861
+Info:     at initial placer iter 2, wirelen = 1801
+Info:     at initial placer iter 3, wirelen = 1936
+Info: Running main analytical placer, max placement attempts per cell = 31094498.
+Info:     at iteration #1, type ALL: wirelen solved = 1692, spread = 118297, legal = 255282; time = 2.18s
+Info:     at iteration #2, type ALL: wirelen solved = 4291, spread = 99102, legal = 217433; time = 1.80s
+Info:     at iteration #3, type ALL: wirelen solved = 12478, spread = 98238, legal = 214521; time = 1.97s
+Info:     at iteration #4, type ALL: wirelen solved = 17628, spread = 88642, legal = 189898; time = 1.62s
+Info:     at iteration #5, type ALL: wirelen solved = 21508, spread = 92646, legal = 185101; time = 1.41s
+Info:     at iteration #6, type ALL: wirelen solved = 22454, spread = 97371, legal = 180998; time = 1.48s
+Info:     at iteration #7, type ALL: wirelen solved = 25119, spread = 100432, legal = 178007; time = 1.29s
+Info:     at iteration #8, type ALL: wirelen solved = 28031, spread = 100752, legal = 175266; time = 1.25s
+Info:     at iteration #9, type ALL: wirelen solved = 30796, spread = 105138, legal = 180041; time = 1.57s
+Info:     at iteration #10, type ALL: wirelen solved = 32262, spread = 101222, legal = 173163; time = 1.26s
+Info:     at iteration #11, type ALL: wirelen solved = 34355, spread = 100419, legal = 174591; time = 1.22s
+Info:     at iteration #12, type ALL: wirelen solved = 36108, spread = 103867, legal = 175784; time = 1.36s
+Info:     at iteration #13, type ALL: wirelen solved = 38669, spread = 99445, legal = 157773; time = 1.07s
+Info:     at iteration #14, type ALL: wirelen solved = 40408, spread = 108763, legal = 173355; time = 1.48s
+Info:     at iteration #15, type ALL: wirelen solved = 44392, spread = 109339, legal = 173981; time = 1.71s
+Info:     at iteration #16, type ALL: wirelen solved = 48481, spread = 99734, legal = 160631; time = 1.22s
+Info:     at iteration #17, type ALL: wirelen solved = 48865, spread = 101667, legal = 165111; time = 0.96s
+Info:     at iteration #18, type ALL: wirelen solved = 51382, spread = 102333, legal = 154606; time = 0.80s
+Info:     at iteration #19, type ALL: wirelen solved = 53138, spread = 101322, legal = 156812; time = 0.97s
+Info:     at iteration #20, type ALL: wirelen solved = 56482, spread = 101582, legal = 159802; time = 0.81s
+Info:     at iteration #21, type ALL: wirelen solved = 59041, spread = 109217, legal = 164128; time = 0.77s
+Info:     at iteration #22, type ALL: wirelen solved = 62359, spread = 110125, legal = 161866; time = 0.75s
+Info:     at iteration #23, type ALL: wirelen solved = 65201, spread = 115789, legal = 160444; time = 0.64s
+Info: HeAP Placer Time: 30.90s
+Info:   of which solving equations: 3.89s
+Info:   of which spreading cells: 0.27s
+Info:   of which strict legalisation: 26.10s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 4132, wirelen = 154606
+Info:   at iteration #5: temp = 0.000000, timing cost = 2980, wirelen = 113769
+Info:   at iteration #10: temp = 0.000000, timing cost = 2935, wirelen = 106976
+Info:   at iteration #15: temp = 0.000000, timing cost = 2937, wirelen = 104366
+Info:   at iteration #20: temp = 0.000000, timing cost = 2738, wirelen = 102079
+Info:   at iteration #25: temp = 0.000000, timing cost = 2796, wirelen = 101406
+Info:   at iteration #29: temp = 0.000000, timing cost = 2691, wirelen = 101212 
+Info: SA placement time 14.41s
+
+Info: Max frequency for clock 'core.clk': 41.49 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: times are in ps
+Info:          * represents 29 endpoint(s)
+Info:          + represents [1,29) endpoint(s)
+Info: [ -4105,  -2912) |****+
+Info: [ -2912,  -1719) |*******+
+Info: [ -1719,   -526) |*******+
+Info: [  -526,    667) |********+
+Info: [   667,   1860) |**********+
+Info: [  1860,   3053) |*************+
+Info: [  3053,   4246) |***+
+Info: [  4246,   5439) |*********+
+Info: [  5439,   6632) |******************+
+Info: [  6632,   7825) |***********************+
+Info: [  7825,   9018) |*******************+
+Info: [  9018,  10211) |*************************************+
+Info: [ 10211,  11404) |***********************************+
+Info: [ 11404,  12597) |**************************************************+
+Info: [ 12597,  13790) |***********+
+Info: [ 13790,  14983) |******************+
+Info: [ 14983,  16176) |*****************************+
+Info: [ 16176,  17369) |***********************+
+Info: [ 17369,  18562) |******************************+
+Info: [ 18562,  19755) |************************************************************ 
+Info: Checksum: 0xf0df7394
+Info: Routing globals...
+Warning: Failed to route net 'rst_IBUF_I_O[0]' from X2Y0/F5 to X2Y1/A5 using dedicated routing.
+Info:     'core.clk' net was routed using global resources only.
+Info: Running router2...
+Info: Setting up routing resources...
+Info: Running main router loop...
+Info:     iter=1 wires=142417 overused=12829 overuse=15721 archfail=NA
+Info:     iter=2 wires=146685 overused=5023 overuse=5107 archfail=NA
+Info:     iter=3 wires=149606 overused=2646 overuse=2670 archfail=NA
+Info:     iter=4 wires=151414 overused=1574 overuse=1582 archfail=NA
+Info:     iter=5 wires=152547 overused=1033 overuse=1042 archfail=NA
+Info:     iter=6 wires=153467 overused=745 overuse=747 archfail=NA
+Info:     iter=7 wires=154172 overused=525 overuse=525 archfail=NA
+Info:     iter=8 wires=154622 overused=407 overuse=407 archfail=NA
+Info:     iter=9 wires=154900 overused=349 overuse=351 archfail=NA
+Info:     iter=10 wires=155218 overused=302 overuse=303 archfail=NA
+Info:     iter=11 wires=155329 overused=274 overuse=274 archfail=NA
+Info:     iter=12 wires=155564 overused=256 overuse=256 archfail=NA
+Info:     iter=13 wires=155786 overused=216 overuse=216 archfail=NA
+Info:     iter=14 wires=155874 overused=202 overuse=202 archfail=NA
+Info:     iter=15 wires=156049 overused=179 overuse=179 archfail=NA
+Info:     iter=16 wires=156156 overused=158 overuse=158 archfail=NA
+Info:     iter=17 wires=156245 overused=163 overuse=163 archfail=NA
+Info:     iter=18 wires=156299 overused=150 overuse=150 archfail=NA
+Info:     iter=19 wires=156390 overused=133 overuse=133 archfail=NA
+Info:     iter=20 wires=156418 overused=128 overuse=128 archfail=NA
+Info:     iter=21 wires=156486 overused=122 overuse=122 archfail=NA
+Info:     iter=22 wires=156562 overused=123 overuse=123 archfail=NA
+Info:     iter=23 wires=156579 overused=112 overuse=112 archfail=NA
+Info:     iter=24 wires=156699 overused=97 overuse=97 archfail=NA
+Info:     iter=25 wires=156803 overused=88 overuse=88 archfail=NA
+Info:     iter=26 wires=156821 overused=90 overuse=90 archfail=NA
+Info:     iter=27 wires=156854 overused=82 overuse=82 archfail=NA
+Info:     iter=28 wires=156896 overused=79 overuse=79 archfail=NA
+Info:     iter=29 wires=157042 overused=88 overuse=88 archfail=NA
+Info:     iter=30 wires=157118 overused=75 overuse=75 archfail=NA
+Info:     iter=31 wires=157141 overused=71 overuse=71 archfail=NA
+Info:     iter=32 wires=157195 overused=64 overuse=64 archfail=NA
+Info:     iter=33 wires=157174 overused=61 overuse=61 archfail=NA
+Info:     iter=34 wires=157221 overused=45 overuse=45 archfail=NA
+Info:     iter=35 wires=157229 overused=49 overuse=49 archfail=NA
+Info:     iter=36 wires=157231 overused=46 overuse=46 archfail=NA
+Info:     iter=37 wires=157270 overused=46 overuse=46 archfail=NA
+Info:     iter=38 wires=157292 overused=40 overuse=40 archfail=NA
+Info:     iter=39 wires=157317 overused=42 overuse=42 archfail=NA
+Info:     iter=40 wires=157343 overused=39 overuse=39 archfail=NA
+Info:     iter=41 wires=157392 overused=43 overuse=43 archfail=NA
+Info:     iter=42 wires=157392 overused=41 overuse=41 archfail=NA
+Info:     iter=43 wires=157403 overused=32 overuse=32 archfail=NA
+Info:     iter=44 wires=157438 overused=35 overuse=35 archfail=NA
+Info:     iter=45 wires=157466 overused=32 overuse=32 archfail=NA
+Info:     iter=46 wires=157433 overused=32 overuse=32 archfail=NA
+Info:     iter=47 wires=157469 overused=32 overuse=32 archfail=NA
+Info:     iter=48 wires=157477 overused=28 overuse=28 archfail=NA
+Info:     iter=49 wires=157456 overused=27 overuse=27 archfail=NA
+Info:     iter=50 wires=157483 overused=24 overuse=24 archfail=NA
+Info:     iter=51 wires=157520 overused=31 overuse=31 archfail=NA
+Info:     iter=52 wires=157532 overused=33 overuse=33 archfail=NA
+Info:     iter=53 wires=157507 overused=29 overuse=29 archfail=NA
+Info:     iter=54 wires=157511 overused=30 overuse=30 archfail=NA
+Info:     iter=55 wires=157559 overused=26 overuse=26 archfail=NA
+Info:     iter=56 wires=157558 overused=29 overuse=29 archfail=NA
+Info:     iter=57 wires=157556 overused=27 overuse=27 archfail=NA
+Info:     iter=58 wires=157556 overused=23 overuse=23 archfail=NA
+Info:     iter=59 wires=157571 overused=21 overuse=21 archfail=NA
+Info:     iter=60 wires=157563 overused=22 overuse=22 archfail=NA
+Info:     iter=61 wires=157587 overused=18 overuse=18 archfail=NA
+Info:     iter=62 wires=157585 overused=19 overuse=19 archfail=NA
+Info:     iter=63 wires=157574 overused=20 overuse=20 archfail=NA
+Info:     iter=64 wires=157603 overused=24 overuse=24 archfail=NA
+Info:     iter=65 wires=157612 overused=24 overuse=24 archfail=NA
+Info:     iter=66 wires=157637 overused=26 overuse=26 archfail=NA
+Info:     iter=67 wires=157645 overused=22 overuse=22 archfail=NA
+Info:     iter=68 wires=157691 overused=20 overuse=20 archfail=NA
+Info:     iter=69 wires=157722 overused=21 overuse=21 archfail=NA
+Info:     iter=70 wires=157650 overused=21 overuse=21 archfail=NA
+Info:     iter=71 wires=157668 overused=21 overuse=21 archfail=NA
+Info:     iter=72 wires=157687 overused=21 overuse=21 archfail=NA
+Info:     iter=73 wires=157680 overused=20 overuse=20 archfail=NA
+Info:     iter=74 wires=157647 overused=18 overuse=18 archfail=NA
+Info:     iter=75 wires=157666 overused=13 overuse=13 archfail=NA
+Info:     iter=76 wires=157673 overused=12 overuse=12 archfail=NA
+Info:     iter=77 wires=157702 overused=13 overuse=13 archfail=NA
+Info:     iter=78 wires=157738 overused=18 overuse=18 archfail=NA
+Info:     iter=79 wires=157735 overused=19 overuse=19 archfail=NA
+Info:     iter=80 wires=157732 overused=17 overuse=17 archfail=NA
+Info:     iter=81 wires=157772 overused=14 overuse=14 archfail=NA
+Info:     iter=82 wires=157759 overused=13 overuse=13 archfail=NA
+Info:     iter=83 wires=157749 overused=14 overuse=14 archfail=NA
+Info:     iter=84 wires=157778 overused=15 overuse=15 archfail=NA
+Info:     iter=85 wires=157806 overused=19 overuse=19 archfail=NA
+Info:     iter=86 wires=157835 overused=22 overuse=22 archfail=NA
+Info:     iter=87 wires=157828 overused=18 overuse=18 archfail=NA
+Info:     iter=88 wires=157863 overused=23 overuse=23 archfail=NA
+Info:     iter=89 wires=157894 overused=21 overuse=21 archfail=NA
+Info:     iter=90 wires=157888 overused=21 overuse=21 archfail=NA
+Info:     iter=91 wires=157879 overused=22 overuse=22 archfail=NA
+Info:     iter=92 wires=157912 overused=30 overuse=30 archfail=NA
+Info:     iter=93 wires=157908 overused=24 overuse=24 archfail=NA
+Info:     iter=94 wires=157916 overused=22 overuse=22 archfail=NA
+Info:     iter=95 wires=157942 overused=21 overuse=21 archfail=NA
+Info:     iter=96 wires=157934 overused=21 overuse=21 archfail=NA
+Info:     iter=97 wires=157931 overused=23 overuse=23 archfail=NA
+Info:     iter=98 wires=157939 overused=28 overuse=28 archfail=NA
+Info:     iter=99 wires=157911 overused=18 overuse=18 archfail=NA
+Info:     iter=100 wires=157913 overused=15 overuse=15 archfail=NA
+Info:     iter=101 wires=157930 overused=15 overuse=15 archfail=NA
+Info:     iter=102 wires=157918 overused=20 overuse=20 archfail=NA
+Info:     iter=103 wires=157944 overused=20 overuse=20 archfail=NA
+Info:     iter=104 wires=157938 overused=19 overuse=19 archfail=NA
+Info:     iter=105 wires=157953 overused=26 overuse=26 archfail=NA
+Info:     iter=106 wires=157989 overused=20 overuse=20 archfail=NA
+Info:     iter=107 wires=157994 overused=19 overuse=19 archfail=NA
+Info:     iter=108 wires=158001 overused=22 overuse=22 archfail=NA
+Info:     iter=109 wires=158007 overused=18 overuse=18 archfail=NA
+Info:     iter=110 wires=158006 overused=18 overuse=18 archfail=NA
+Info:     iter=111 wires=158039 overused=23 overuse=23 archfail=NA
+Info:     iter=112 wires=158022 overused=20 overuse=20 archfail=NA
+Info:     iter=113 wires=158033 overused=17 overuse=17 archfail=NA
+Info:     iter=114 wires=158026 overused=15 overuse=15 archfail=NA
+Info:     iter=115 wires=158007 overused=15 overuse=15 archfail=NA
+Info:     iter=116 wires=158007 overused=16 overuse=16 archfail=NA
+Info:     iter=117 wires=158021 overused=11 overuse=11 archfail=NA
+Info:     iter=118 wires=158022 overused=11 overuse=11 archfail=NA
+Info:     iter=119 wires=158018 overused=10 overuse=10 archfail=NA
+Info:     iter=120 wires=158016 overused=7 overuse=7 archfail=NA
+Info:     iter=121 wires=158046 overused=11 overuse=11 archfail=NA
+Info:     iter=122 wires=158028 overused=10 overuse=10 archfail=NA
+Info:     iter=123 wires=158049 overused=11 overuse=11 archfail=NA
+Info:     iter=124 wires=158076 overused=15 overuse=15 archfail=NA
+Info:     iter=125 wires=158089 overused=21 overuse=21 archfail=NA
+Info:     iter=126 wires=158081 overused=22 overuse=22 archfail=NA
+Info:     iter=127 wires=158105 overused=22 overuse=22 archfail=NA
+Info:     iter=128 wires=158125 overused=19 overuse=19 archfail=NA
+Info:     iter=129 wires=158157 overused=20 overuse=20 archfail=NA
+Info:     iter=130 wires=158175 overused=20 overuse=20 archfail=NA
+Info:     iter=131 wires=158198 overused=16 overuse=16 archfail=NA
+Info:     iter=132 wires=158218 overused=16 overuse=16 archfail=NA
+Info:     iter=133 wires=158219 overused=18 overuse=18 archfail=NA
+Info:     iter=134 wires=158214 overused=16 overuse=16 archfail=NA
+Info:     iter=135 wires=158227 overused=20 overuse=20 archfail=NA
+Info:     iter=136 wires=158237 overused=24 overuse=24 archfail=NA
+Info:     iter=137 wires=158253 overused=22 overuse=22 archfail=NA
+Info:     iter=138 wires=158296 overused=20 overuse=20 archfail=NA
+Info:     iter=139 wires=158286 overused=19 overuse=19 archfail=NA
+Info:     iter=140 wires=158296 overused=14 overuse=14 archfail=NA
+Info:     iter=141 wires=158295 overused=13 overuse=13 archfail=NA
+Info:     iter=142 wires=158299 overused=14 overuse=14 archfail=NA
+Info:     iter=143 wires=158318 overused=15 overuse=15 archfail=NA
+Info:     iter=144 wires=158307 overused=16 overuse=16 archfail=NA
+Info:     iter=145 wires=158302 overused=20 overuse=20 archfail=NA
+Info:     iter=146 wires=158320 overused=18 overuse=18 archfail=NA
+Info:     iter=147 wires=158352 overused=18 overuse=18 archfail=NA
+Info:     iter=148 wires=158342 overused=18 overuse=18 archfail=NA
+Info:     iter=149 wires=158364 overused=20 overuse=20 archfail=NA
+Info:     iter=150 wires=158372 overused=19 overuse=19 archfail=NA
+Info:     iter=151 wires=158373 overused=19 overuse=19 archfail=NA
+Info:     iter=152 wires=158388 overused=21 overuse=21 archfail=NA
+Info:     iter=153 wires=158397 overused=23 overuse=23 archfail=NA
+Info:     iter=154 wires=158402 overused=15 overuse=15 archfail=NA
+Info:     iter=155 wires=158378 overused=12 overuse=12 archfail=NA
+Info:     iter=156 wires=158397 overused=13 overuse=13 archfail=NA
+Info:     iter=157 wires=158399 overused=12 overuse=12 archfail=NA
+Info:     iter=158 wires=158397 overused=13 overuse=13 archfail=NA
+Info:     iter=159 wires=158408 overused=12 overuse=12 archfail=NA
+Info:     iter=160 wires=158404 overused=8 overuse=8 archfail=NA
+Info:     iter=161 wires=158404 overused=8 overuse=8 archfail=NA
+Info:     iter=162 wires=158403 overused=6 overuse=6 archfail=NA
+Info:     iter=163 wires=158400 overused=6 overuse=6 archfail=NA
+Info:     iter=164 wires=158404 overused=3 overuse=3 archfail=NA
+Info:     iter=165 wires=158415 overused=3 overuse=3 archfail=NA
+Info:     iter=166 wires=158408 overused=6 overuse=6 archfail=NA
+Info:     iter=167 wires=158406 overused=7 overuse=7 archfail=NA
+Info:     iter=168 wires=158406 overused=8 overuse=8 archfail=NA
+Info:     iter=169 wires=158410 overused=5 overuse=5 archfail=NA
+Info:     iter=170 wires=158420 overused=6 overuse=6 archfail=NA
+Info:     iter=171 wires=158432 overused=6 overuse=6 archfail=NA
+Info:     iter=172 wires=158429 overused=5 overuse=5 archfail=NA
+Info:     iter=173 wires=158429 overused=5 overuse=5 archfail=NA
+Info:     iter=174 wires=158439 overused=5 overuse=5 archfail=NA
+Info:     iter=175 wires=158449 overused=7 overuse=7 archfail=NA
+Info:     iter=176 wires=158452 overused=6 overuse=6 archfail=NA
+Info:     iter=177 wires=158464 overused=5 overuse=5 archfail=NA
+Info:     iter=178 wires=158467 overused=4 overuse=4 archfail=NA
+Info:     iter=179 wires=158466 overused=4 overuse=4 archfail=NA
+Info:     iter=180 wires=158481 overused=6 overuse=6 archfail=NA
+Info:     iter=181 wires=158473 overused=5 overuse=5 archfail=NA
+Info:     iter=182 wires=158477 overused=9 overuse=9 archfail=NA
+Info:     iter=183 wires=158464 overused=11 overuse=11 archfail=NA
+Info:     iter=184 wires=158453 overused=10 overuse=10 archfail=NA
+Info:     iter=185 wires=158454 overused=7 overuse=7 archfail=NA
+Info:     iter=186 wires=158460 overused=6 overuse=6 archfail=NA
+Info:     iter=187 wires=158450 overused=6 overuse=6 archfail=NA
+Info:     iter=188 wires=158463 overused=8 overuse=8 archfail=NA
+Info:     iter=189 wires=158451 overused=4 overuse=4 archfail=NA
+Info:     iter=190 wires=158451 overused=4 overuse=4 archfail=NA
+Info:     iter=191 wires=158464 overused=2 overuse=2 archfail=NA
+Info:     iter=192 wires=158464 overused=3 overuse=3 archfail=NA
+Info:     iter=193 wires=158460 overused=2 overuse=2 archfail=NA
+Info:     iter=194 wires=158464 overused=1 overuse=1 archfail=NA
+Info:     iter=195 wires=158468 overused=2 overuse=2 archfail=NA
+Info:     iter=196 wires=158468 overused=2 overuse=2 archfail=NA
+Info:     iter=197 wires=158471 overused=3 overuse=3 archfail=NA
+Info:     iter=198 wires=158456 overused=4 overuse=4 archfail=NA
+Info:     iter=199 wires=158477 overused=4 overuse=4 archfail=NA
+Info:     iter=200 wires=158470 overused=5 overuse=5 archfail=NA
+Info:     iter=201 wires=158465 overused=5 overuse=5 archfail=NA
+Info:     iter=202 wires=158464 overused=4 overuse=4 archfail=NA
+Info:     iter=203 wires=158477 overused=5 overuse=5 archfail=NA
+Info:     iter=204 wires=158487 overused=3 overuse=3 archfail=NA
+Info:     iter=205 wires=158478 overused=1 overuse=1 archfail=NA
+Info:     iter=206 wires=158478 overused=1 overuse=1 archfail=NA
+Info:     iter=207 wires=158480 overused=1 overuse=1 archfail=NA
+Info:     iter=208 wires=158471 overused=1 overuse=1 archfail=NA
+Info:     iter=209 wires=158476 overused=2 overuse=2 archfail=NA
+Info:     iter=210 wires=158480 overused=1 overuse=1 archfail=NA
+Info:     iter=211 wires=158478 overused=2 overuse=2 archfail=NA
+Info:     iter=212 wires=158479 overused=2 overuse=2 archfail=NA
+Info:     iter=213 wires=158484 overused=2 overuse=2 archfail=NA
+Info:     iter=214 wires=158505 overused=3 overuse=3 archfail=NA
+Info:     iter=215 wires=158506 overused=3 overuse=3 archfail=NA
+Info:     iter=216 wires=158498 overused=4 overuse=4 archfail=NA
+Info:     iter=217 wires=158494 overused=3 overuse=3 archfail=NA
+Info:     iter=218 wires=158506 overused=2 overuse=2 archfail=NA
+Info:     iter=219 wires=158521 overused=2 overuse=2 archfail=NA
+Info:     iter=220 wires=158520 overused=2 overuse=2 archfail=NA
+Info:     iter=221 wires=158517 overused=3 overuse=3 archfail=NA
+Info:     iter=222 wires=158529 overused=5 overuse=5 archfail=NA
+Info:     iter=223 wires=158521 overused=3 overuse=3 archfail=NA
+Info:     iter=224 wires=158518 overused=6 overuse=6 archfail=NA
+Info:     iter=225 wires=158529 overused=3 overuse=3 archfail=NA
+Info:     iter=226 wires=158546 overused=1 overuse=1 archfail=NA
+Info:     iter=227 wires=158547 overused=2 overuse=2 archfail=NA
+Info:     iter=228 wires=158545 overused=2 overuse=2 archfail=NA
+Info:     iter=229 wires=158545 overused=3 overuse=3 archfail=NA
+Info:     iter=230 wires=158534 overused=2 overuse=2 archfail=NA
+Info:     iter=231 wires=158535 overused=2 overuse=2 archfail=NA
+Info:     iter=232 wires=158535 overused=2 overuse=2 archfail=NA
+Info:     iter=233 wires=158543 overused=1 overuse=1 archfail=NA
+Info:     iter=234 wires=158547 overused=2 overuse=2 archfail=NA
+Info:     iter=235 wires=158548 overused=4 overuse=4 archfail=NA
+Info:     iter=236 wires=158544 overused=3 overuse=3 archfail=NA
+Info:     iter=237 wires=158563 overused=1 overuse=1 archfail=NA
+Info:     iter=238 wires=158563 overused=1 overuse=1 archfail=NA
+Info:     iter=239 wires=158564 overused=1 overuse=1 archfail=NA
+Info:     iter=240 wires=158564 overused=1 overuse=1 archfail=NA
+Info:     iter=241 wires=158564 overused=2 overuse=2 archfail=NA
+Info:     iter=242 wires=158568 overused=2 overuse=2 archfail=NA
+Info:     iter=243 wires=158566 overused=2 overuse=2 archfail=NA
+Info:     iter=244 wires=158568 overused=2 overuse=2 archfail=NA
+Info:     iter=245 wires=158568 overused=4 overuse=4 archfail=NA
+Info:     iter=246 wires=158571 overused=3 overuse=3 archfail=NA
+Info:     iter=247 wires=158567 overused=3 overuse=3 archfail=NA
+Info:     iter=248 wires=158566 overused=4 overuse=4 archfail=NA
+Info:     iter=249 wires=158569 overused=2 overuse=2 archfail=NA
+Info:     iter=250 wires=158567 overused=2 overuse=2 archfail=NA
+Info:     iter=251 wires=158567 overused=1 overuse=1 archfail=NA
+Info:     iter=252 wires=158571 overused=2 overuse=2 archfail=NA
+Info:     iter=253 wires=158579 overused=3 overuse=3 archfail=NA
+Info:     iter=254 wires=158573 overused=2 overuse=2 archfail=NA
+Info:     iter=255 wires=158577 overused=1 overuse=1 archfail=NA
+Info:     iter=256 wires=158577 overused=1 overuse=1 archfail=NA
+Info:     iter=257 wires=158576 overused=1 overuse=1 archfail=NA
+Info:     iter=258 wires=158563 overused=1 overuse=1 archfail=NA
+Info:     iter=259 wires=158566 overused=2 overuse=2 archfail=NA
+Info:     iter=260 wires=158569 overused=1 overuse=1 archfail=NA
+Info:     iter=261 wires=158573 overused=2 overuse=2 archfail=NA
+Info:     iter=262 wires=158573 overused=2 overuse=2 archfail=NA
+Info:     iter=263 wires=158571 overused=1 overuse=1 archfail=NA
+Info:     iter=264 wires=158571 overused=0 overuse=0 archfail=0
+Info: Checksum: 0x6530c08d
+Info: Router2 time 53.99s
+
+Info: Critical path report for clock 'core.clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.23  0.23 Source core.column_DFFRE_Q.Q
+Info:    routing  3.01  3.24 Net core.column[0] (37,11) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN_ALU_COUT_CIN_ALU_COUT.I0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.55  3.79 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN_ALU_COUT_CIN_ALU_COUT.COUT
+Info:    routing  0.00  3.79 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN_ALU_COUT_CIN (42,14) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN_ALU_COUT.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:68.60-68.85
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  3.82 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN_ALU_COUT.COUT
+Info:    routing  0.00  3.82 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_CIN (42,14) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:68.60-68.85
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  3.86 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1.COUT
+Info:    routing  0.00  3.86 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_1_COUT (42,14) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:68.60-68.85
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  3.89 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM.COUT
+Info:    routing  0.00  3.89 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT (42,14) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:68.60-68.85
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  3.93 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT_ALU_CIN.COUT
+Info:    routing  0.00  3.93 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT_ALU_CIN_COUT (42,14) -> (42,14)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT_ALU_CIN_SUM_ALU_SUM_1.CIN
+Info:                          Defined in:
+Info:                               rtl/broad_core.sv:68.60-68.85
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.47  4.39 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I3_ALU_SUM_COUT_ALU_CIN_SUM_ALU_SUM_1.SUM
+Info:    routing  1.21  5.61 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_1_I3_LUT4_F_3_I2_LUT4_F_I3[1] (42,14) -> (40,17)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I2_LUT4_I0.I2
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.46  6.07 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_I2_LUT4_I0.F
+Info:    routing  10.35  16.43 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_1_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_MUX2_LUT5_O_1_S0[2] (40,17) -> (4,23)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3_LUT4_F_2_I3_LUT4_F_1.I3
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.37  16.80 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3_LUT4_F_2_I3_LUT4_F_1.F
+Info:    routing  0.40  17.20 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3_LUT4_F_2_I3[1] (4,23) -> (6,24)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3_LUT4_F_2.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.57  17.77 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3_LUT4_F_2.F
+Info:    routing  0.55  18.32 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F_I3[0] (6,24) -> (4,23)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F.I0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.55  18.86 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0_LUT4_F.F
+Info:    routing  0.64  19.51 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_S0[3] (4,23) -> (6,19)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_I1_LUT4_F.I3
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.37  19.88 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_I1_LUT4_F.F
+Info:    routing  0.00  19.88 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O_I1 (6,19) -> (6,19)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O.I1
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.27  20.15 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3_MUX2_LUT5_O.O
+Info:    routing  0.84  20.98 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2_I3[3] (6,19) -> (18,19)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2.I3
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.37  21.35 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3_LUT4_F_2.F
+Info:    routing  0.17  21.52 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F_I3[3] (18,19) -> (18,19)
+Info:                          Sink core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F.I3
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.37  21.89 Source core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_F.F
+Info:    routing  1.44  23.33 Net core.mul_a_DFFRE_Q_15_D_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM[2] (18,19) -> (21,8)
+Info:                          Sink core.mul_a_DFFRE_Q_11_D_LUT3_F.I2
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.46  23.79 Source core.mul_a_DFFRE_Q_11_D_LUT3_F.F
+Info:    routing  0.00  23.79 Net core.mul_a_DFFRE_Q_11_D (21,8) -> (21,8)
+Info:                          Sink core.mul_a_DFFRE_Q_11.D
+Info:      setup  0.04  23.83 Source core.mul_a_DFFRE_Q_11.D
+Info: 5.21 ns logic, 18.61 ns routing
+
+ERROR: Max frequency for clock 'core.clk': 41.97 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: times are in ps
+Info:          * represents 44 endpoint(s)
+Info:          + represents [1,44) endpoint(s)
+Info: [ -3827,  -2679) |+
+Info: [ -2679,  -1531) |+
+Info: [ -1531,   -383) | 
+Info: [  -383,    765) |+
+Info: [   765,   1913) |+
+Info: [  1913,   3061) |+
+Info: [  3061,   4209) |+
+Info: [  4209,   5357) |+
+Info: [  5357,   6505) |+
+Info: [  6505,   7653) |*+
+Info: [  7653,   8801) |***+
+Info: [  8801,   9949) |****+
+Info: [  9949,  11097) |**************+
+Info: [ 11097,  12245) |***************************+
+Info: [ 12245,  13393) |************************************************************ 
+Info: [ 13393,  14541) |**********************+
+Info: [ 14541,  15689) |*****************************+
+Info: [ 15689,  16837) |****************+
+Info: [ 16837,  17985) |*****+
+Info: [ 17985,  19133) |***+
+
+1 warning, 1 error
+
+Info: Program finished normally.

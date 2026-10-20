@@ -1,0 +1,2 @@
+unable to open ftdi device: -9 (unable to fetch serial number)
+JTAG init failed with: unable to open ftdi device

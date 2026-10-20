@@ -1,0 +1,6 @@
+/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/lib/python3.11/site-packages/apycula/bitmatrix.py:60: UserWarning: Numpy is not available, performance will be degraded.
+  warnings.warn("Numpy is not available, performance will be degraded.")
+/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/lib/python3.11/site-packages/apycula/chipdb.py:261: UserWarning: Msgspec is not available, performance will be degraded.
+  warnings.warn("Msgspec is not available, performance will be degraded.")
+/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/lib/python3.11/site-packages/apycula/crc16.py:19: UserWarning: fastcrc is not available, performance will be degraded.
+  warnings.warn("fastcrc is not available, performance will be degraded.")

@@ -1,0 +1,16 @@
+[
+  "/Users/patrikandersson/Downloads/tang-cfc/.venv/bin/python",
+  "/Users/patrikandersson/Downloads/tang-cfc/scripts/build_broad.py",
+  "--export-dir",
+  "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-integer-v1/export",
+  "--build-dir",
+  "/Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7",
+  "--placer",
+  "heap",
+  "--seed",
+  "1",
+  "--heap-beta",
+  "0.9",
+  "--stage-timeout",
+  "1200"
+]

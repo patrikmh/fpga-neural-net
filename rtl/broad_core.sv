@@ -72,11 +72,13 @@ module broad_core #(
     end endgenerate
 
     function automatic signed [47:0] round_shift(input signed [47:0] value, input integer bits);
-        reg [47:0] magnitude;
+        reg signed [47:0] quotient;
+        reg [47:0] remainder, half;
         begin
-            magnitude = value < 0 ? -value : value;
-            magnitude = (magnitude + (48'd1 << (bits - 1))) >> bits;
-            round_shift = value < 0 ? -$signed(magnitude) : $signed(magnitude);
+            quotient = value >>> bits;
+            remainder = value & ((48'd1 << bits) - 48'd1);
+            half = 48'd1 << (bits - 1);
+            round_shift = quotient + ((value < 0 ? remainder > half : remainder >= half) ? 48'sd1 : 48'sd0);
         end
     endfunction
     function automatic [11:0] lookup_index(input signed [47:0] value);
@@ -103,7 +105,15 @@ module broad_core #(
         OUT_BIAS_WAIT=15, OUT_BIAS_USE=16, OUT_WEIGHT_WAIT=17,
         OUT_WEIGHT_LOAD=18, OUT_MAC=19, OUT_DONE=20, COMPLETE=21;
     reg [4:0] state = IDLE;
-    wire signed [15:0] blend_value = sat16(extended_f1 + round_shift(extended_product, 13));
+    wire [16:0] blend_a = {f1[15], f1};
+    wire [16:0] blend_q = 17'($signed(product) >>> 13);
+    wire blend_increment = product[12] && (!product[31] || (|product[11:0]));
+    wire [16:0] blend_c = {16'b0, blend_increment};
+    wire [16:0] blend_xor = blend_a ^ blend_q ^ blend_c;
+    wire [16:0] blend_carry = ((blend_a & blend_q) | (blend_a & blend_c) | (blend_q & blend_c)) << 1;
+    wire signed [16:0] blend_sum = $signed(blend_xor + blend_carry);
+    wire signed [47:0] extended_blend_sum = {{31{blend_sum[16]}}, blend_sum};
+    wire signed [15:0] blend_value = sat16(extended_blend_sum);
     genvar write_lane;
     generate for (write_lane = 0; write_lane < HIDDEN_SIZE; write_lane = write_lane + 1) begin : hidden_writes
         always @(posedge clk) begin

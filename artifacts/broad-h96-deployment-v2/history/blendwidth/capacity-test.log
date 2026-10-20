@@ -1,0 +1,76 @@
+test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream (integration.test_broad_capacity.BroadCapacityTracerTests.test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream) ... Persistent H96 capacity evidence: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-xnac089b
+FAIL
+
+======================================================================
+FAIL: test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream (integration.test_broad_capacity.BroadCapacityTracerTests.test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/patrikandersson/Downloads/tang-cfc/tests/integration/test_broad_capacity.py", line 50, in test_public_h96_export_routes_at_50mhz_with_48_bsrams_and_bound_bitstream
+    self.assertEqual(result.returncode,0,
+AssertionError: 1 != 0 : Public H96 must build and route legally; evidence retained in /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-xnac089b
+yosys: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-xnac089b/yosys.log)
+yosys: completed
+nextpnr: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-xnac089b/nextpnr.log)
+BROAD build failed: nextpnr failed with status 1; see /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-xnac089b/nextpnr.log
+
+Last placement/routing diagnostics:
+tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.04  18.31 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN.COUT
+Info:    routing  0.00  18.31 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_TAIL_ALULC (35,16) -> (35,16)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_TAIL_ALULC.CIN
+Info:      logic  0.47  18.78 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_TAIL_ALULC.SUM
+Info:    routing  1.14  19.92 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT3_I0_F[0] (35,16) -> (41,21)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC.I0
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.55  20.47 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC.COUT
+Info:    routing  0.00  20.47 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_HEAD_ALULC (41,21) -> (41,21)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:      logic  0.47  20.94 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_SUM_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN.SUM
+Info:    routing  1.54  22.48 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT3_I0_F[2] (41,21) -> (20,26)
+Info:                          Sink core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT3_I0_F_LUT3_I1.I2
+Info:                          Defined in:
+Info:                               /Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/libexec/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.46  22.94 Source core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT3_I0_F_LUT3_I1.F
+Info:    routing  0.00  22.94 Net core.mul_b_DFFRE_Q_2_D_LUT2_I1_F_ALU_SUM_COUT_ALU_CIN_I0_LUT3_F_I2_ALU_SUM_CIN_ALU_COUT_SUM_ALU_I1_CIN_ALU_COUT_SUM_ALU_I0_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT3_I0_F_LUT3_I1_F (20,26) -> (20,26)
+Info:                          Sink core.new_hidden[0]_DFFRE_Q_11.D
+Info:      setup  0.04  22.97 Source core.new_hidden[0]_DFFRE_Q_11.D
+Info: 11.71 ns logic, 11.27 ns routing
+
+ERROR: Max frequency for clock 'core.clk': 43.53 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: times are in ps
+Info:          * represents 36 endpoint(s)
+Info:          + represents [1,36) endpoint(s)
+Info: [ -2974,  -1850) |+
+Info: [ -1850,   -726) |+
+Info: [  -726,    398) |+
+Info: [   398,   1522) |+
+Info: [  1522,   2646) |+
+Info: [  2646,   3770) |+
+Info: [  3770,   4894) |+
+Info: [  4894,   6018) |+
+Info: [  6018,   7142) |*+
+Info: [  7142,   8266) |***+
+Info: [  8266,   9390) |*******+
+Info: [  9390,  10514) |****************+
+Info: [ 10514,  11638) |*******************************+
+Info: [ 11638,  12762) |************************************************************ 
+Info: [ 12762,  13886) |*******************************************+
+Info: [ 13886,  15010) |******************************************+
+Info: [ 15010,  16134) |*********+
+Info: [ 16134,  17258) |*****+
+Info: [ 17258,  18382) |*******+
+Info: [ 18382,  19506) |**+
+
+1 warning, 1 error
+
+Info: Program finished normally.
+
+
+----------------------------------------------------------------------
+Ran 1 test in 77.293s
+
+FAILED (failures=1)

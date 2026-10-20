@@ -1,0 +1,38 @@
+[
+  {
+    "id": "04",
+    "file": "04_undisturbed_slow_rotation_with_breaks_A.hdf5",
+    "split": "test",
+    "rate_hz": 285.7142857142857,
+    "sha256": "3344d72a076342a1245aee89c7e3ec90338952440c0a5088d476f5935959e937",
+    "bytes": 4311328,
+    "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/04_undisturbed_slow_rotation_with_breaks_A.hdf5"
+  },
+  {
+    "id": "08",
+    "file": "08_undisturbed_fast_rotation_with_breaks_A.hdf5",
+    "split": "test",
+    "rate_hz": 285.7142857142857,
+    "sha256": "434003d6e1bcd95bd24cbad1d4157b999c8be5063918d81f7f489e47fe3f0306",
+    "bytes": 4311746,
+    "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/08_undisturbed_fast_rotation_with_breaks_A.hdf5"
+  },
+  {
+    "id": "12",
+    "file": "12_undisturbed_slow_translation_C.hdf5",
+    "split": "test",
+    "rate_hz": 285.7142857142857,
+    "sha256": "c44a879cbc7a8e3816132b0d71f4b86a05c417df70e3c1bbc0310d71e1d00942",
+    "bytes": 3684594,
+    "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/12_undisturbed_slow_translation_C.hdf5"
+  },
+  {
+    "id": "31",
+    "file": "31_disturbed_stationary_magnet_D.hdf5",
+    "split": "test",
+    "rate_hz": 285.7142857142857,
+    "sha256": "b65d5da814f8fdd9e7a1ecea502888d1ffef472bd3e3605767293bdc65285ae1",
+    "bytes": 3925668,
+    "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/31_disturbed_stationary_magnet_D.hdf5"
+  }
+]

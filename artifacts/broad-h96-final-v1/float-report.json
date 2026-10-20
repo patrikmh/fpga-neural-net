@@ -1,0 +1,204 @@
+{
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "training_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "selection_sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+    "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "spec": {
+    "schema": 1,
+    "repository": "https://github.com/dlaidig/broad",
+    "source_revision": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+    "license": "CC-BY-4.0",
+    "training_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+    "warmup": 32,
+    "baseline_tau_s": 0.5,
+    "heading_epsilon": 1e-12,
+    "training_trial_ids": [
+      1,
+      6,
+      10,
+      28
+    ],
+    "validation_trial_ids": [
+      2,
+      30
+    ],
+    "scoring": "Full continuous native-rate trials; movement and valid reference; initial32samples excluded; equal-trial mean RMSE for full orientation/inclination/heading. No reference labels initialize inference.",
+    "trials": [
+      {
+        "id": "04",
+        "file": "04_undisturbed_slow_rotation_with_breaks_A.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "3344d72a076342a1245aee89c7e3ec90338952440c0a5088d476f5935959e937"
+      },
+      {
+        "id": "08",
+        "file": "08_undisturbed_fast_rotation_with_breaks_A.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "434003d6e1bcd95bd24cbad1d4157b999c8be5063918d81f7f489e47fe3f0306"
+      },
+      {
+        "id": "12",
+        "file": "12_undisturbed_slow_translation_C.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "c44a879cbc7a8e3816132b0d71f4b86a05c417df70e3c1bbc0310d71e1d00942"
+      },
+      {
+        "id": "31",
+        "file": "31_disturbed_stationary_magnet_D.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "b65d5da814f8fdd9e7a1ecea502888d1ffef472bd3e3605767293bdc65285ae1"
+      }
+    ],
+    "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+    "selection_sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+    "sources": {
+      "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+      "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+      "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+      "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+      "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+    },
+    "versions": {
+      "python": "3.11.14",
+      "torch": "2.14.1",
+      "numpy": "2.4.6",
+      "ncps": "1.0.1"
+    },
+    "integer_export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+    "build_report_sha256": "7c812592b48ba21c59fe18ffbdd770dd63f458b118cfaf06965c1040f5e7efdd",
+    "rtl_report_sha256": "75e3b34c53d9107271ffe7519a1972c0f4c79809150ad791c15c9d0877d49a76",
+    "frozen_at_utc": "2026-10-20T19:50:03.970246+00:00",
+    "selection_frozen_at_utc": "2026-10-20T19:49:48.226868+00:00",
+    "scope": "One fixed held-out evaluation; raw hashes recorded before parsing; no test-driven tuning"
+  },
+  "spec_sha256": "1dfdb33e96077898a1a0f88d7465d5d90dcb99e1b20a1c379903f8e0805c1200",
+  "prepared_manifest_sha256": "28deb5a63b4b7e388adbe055d8fb9c33d076fbe794f6193c5f5f1ee00b9a4ab2",
+  "trials": [
+    {
+      "trial_id": 4,
+      "predictions_file": "predictions/04.npz",
+      "cfc": {
+        "full_rmse_deg": 18.598660191370037,
+        "inclination_rmse_deg": 8.075992169179768,
+        "heading_rmse_deg": 16.779542026070757,
+        "samples": 30403,
+        "heading_samples": 30403,
+        "heading_singular_samples": 0
+      },
+      "baselines": {
+        "accelerometer_only": {
+          "incl_rmse_deg": 5.321502043043302
+        },
+        "gyro_only_acc_initialization": {
+          "incl_rmse_deg": 19.383427739911433
+        },
+        "gyro_acc_complementary": {
+          "incl_rmse_deg": 0.7920633225121572
+        }
+      }
+    },
+    {
+      "trial_id": 8,
+      "predictions_file": "predictions/08.npz",
+      "cfc": {
+        "full_rmse_deg": 40.99766074492485,
+        "inclination_rmse_deg": 16.17408207578301,
+        "heading_rmse_deg": 38.05634289904016,
+        "samples": 31417,
+        "heading_samples": 31417,
+        "heading_singular_samples": 0
+      },
+      "baselines": {
+        "accelerometer_only": {
+          "incl_rmse_deg": 20.645795175851894
+        },
+        "gyro_only_acc_initialization": {
+          "incl_rmse_deg": 32.02672333336201
+        },
+        "gyro_acc_complementary": {
+          "incl_rmse_deg": 3.0426049619032365
+        }
+      }
+    },
+    {
+      "trial_id": 12,
+      "predictions_file": "predictions/12.npz",
+      "cfc": {
+        "full_rmse_deg": 6.105665871043535,
+        "inclination_rmse_deg": 3.5790211405287184,
+        "heading_rmse_deg": 4.948275393107963,
+        "samples": 36809,
+        "heading_samples": 36809,
+        "heading_singular_samples": 0
+      },
+      "baselines": {
+        "accelerometer_only": {
+          "incl_rmse_deg": 5.990445431364893
+        },
+        "gyro_only_acc_initialization": {
+          "incl_rmse_deg": 55.168535589997646
+        },
+        "gyro_acc_complementary": {
+          "incl_rmse_deg": 2.8569166436806146
+        }
+      }
+    },
+    {
+      "trial_id": 31,
+      "predictions_file": "predictions/31.npz",
+      "cfc": {
+        "full_rmse_deg": 32.850142677309314,
+        "inclination_rmse_deg": 13.913712345993986,
+        "heading_rmse_deg": 30.000550266872015,
+        "samples": 27045,
+        "heading_samples": 27045,
+        "heading_singular_samples": 0
+      },
+      "baselines": {
+        "accelerometer_only": {
+          "incl_rmse_deg": 43.18430339186968
+        },
+        "gyro_only_acc_initialization": {
+          "incl_rmse_deg": 10.546985608386827
+        },
+        "gyro_acc_complementary": {
+          "incl_rmse_deg": 10.091090689148754
+        }
+      }
+    }
+  ],
+  "mean_trial_metrics": {
+    "cfc": {
+      "full_rmse_deg": 24.638032371161934,
+      "inclination_rmse_deg": 10.43570193287137,
+      "heading_rmse_deg": 22.446177646272723
+    },
+    "baselines": {
+      "accelerometer_only": {
+        "incl_rmse_deg": 18.785511510532444
+      },
+      "gyro_only_acc_initialization": {
+        "incl_rmse_deg": 29.28141806791448
+      },
+      "gyro_acc_complementary": {
+        "incl_rmse_deg": 4.195668904311191
+      }
+    }
+  }
+}

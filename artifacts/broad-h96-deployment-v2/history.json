@@ -1,0 +1,277 @@
+{
+  "scope": "Historical implementation and routing-seed capacity attempts; seed4 not run. Capacity PASS alone is not full physical equivalence.",
+  "original_frozen_study": "artifacts/broad-h96-final-v1/selection.json",
+  "cause": "Not established by these timing reports.",
+  "all_published_copies_byte_identical": true,
+  "attempts": [
+    {
+      "variant": "roundshift",
+      "description": "Bit-exact round-shift implementation rewrite.",
+      "core_sha256": "052c9e965d0c3da7e6a0688a31d964f075aa9b92becc4e4ade22070c6cb41d02",
+      "core_identity_provenance": "Recorded by the build orchestration for this attempt; the working RTL has since changed.",
+      "build_directory": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k",
+      "result": "FAIL: strict post-route 50 MHz timing requirement",
+      "achieved_mhz": 42.669395446777344,
+      "constrained_mhz": 50,
+      "packed_bitstream_generated": false,
+      "hardware_loaded": false,
+      "expected_cycles_per_step": 124046,
+      "cycle_schedule": "Implementation-only variant; intended cycle schedule unchanged. This failed timing build supplies no physical equivalence proof.",
+      "files": [
+        {
+          "file": "history/roundshift/capacity-test.log",
+          "source": "build/broad-roundshift-capacity.log",
+          "sha256": "cea45cc1105ef0b565fcd1ee77e29c77eac3bba29820a381c4670183b81746d8",
+          "bytes": 6728
+        },
+        {
+          "file": "history/roundshift/nextpnr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k/nextpnr.log",
+          "sha256": "5151dbcc5f0af849a6730ba527f87181be83a2e347bff0d41a8caa4e1c6810a2",
+          "bytes": 91285
+        },
+        {
+          "file": "history/roundshift/test-command.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k/test-command.json",
+          "sha256": "4c1c80f60ddf5bb17b80ba255701a80a83b091048d39a4b6ea05cd9e131f8b9b",
+          "bytes": 452
+        },
+        {
+          "file": "history/roundshift/test.stdout.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k/test.stdout.log",
+          "sha256": "2c9b01d8fd00d4c730565a2ced131fe44d5e205486f6ab257d774c149f27bab6",
+          "bytes": 275
+        },
+        {
+          "file": "history/roundshift/test.stderr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k/test.stderr.log",
+          "sha256": "e81e4185a3c8654559a7dea5949597175395527b5de421b87f71d82ec08f1fda",
+          "bytes": 161
+        },
+        {
+          "file": "history/roundshift/timing.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-um1z1q4k/timing.json",
+          "sha256": "c6fd6c0bb72d815af469c84263d5700aba785f8711cb9e576fd6d017d8428523",
+          "bytes": 112036
+        }
+      ]
+    },
+    {
+      "variant": "blendwidth",
+      "description": "Bit-exact round-shift variant with explicit blend width handling.",
+      "core_sha256": "bec2d30ca4ef1ae45297b220c345d734e15fc3295bb89223e3a7f7d70cb46581",
+      "core_identity_provenance": "Recorded by the build orchestration for this attempt; the working RTL has since changed.",
+      "build_directory": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b",
+      "result": "FAIL: strict post-route 50 MHz timing requirement",
+      "achieved_mhz": 43.5274658203125,
+      "constrained_mhz": 50,
+      "packed_bitstream_generated": false,
+      "hardware_loaded": false,
+      "expected_cycles_per_step": 124046,
+      "cycle_schedule": "Implementation-only variant; intended cycle schedule unchanged. This failed timing build supplies no physical equivalence proof.",
+      "files": [
+        {
+          "file": "history/blendwidth/capacity-test.log",
+          "source": "build/broad-blendwidth-capacity.log",
+          "sha256": "98ac7062430aa09193c5dc75320e83b6947b90fdccf435c31f006ec23c8456ae",
+          "bytes": 6728
+        },
+        {
+          "file": "history/blendwidth/nextpnr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b/nextpnr.log",
+          "sha256": "d4a7b163077bf82bee9a8363226b24655aef33335be759fea843f99cba435b31",
+          "bytes": 77692
+        },
+        {
+          "file": "history/blendwidth/test-command.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b/test-command.json",
+          "sha256": "c97ac323fba81bbf167030c7f0b403968e146b3afde6a2baa5e44d8945373bba",
+          "bytes": 452
+        },
+        {
+          "file": "history/blendwidth/test.stdout.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b/test.stdout.log",
+          "sha256": "1a60547e6b0cec42b9f56962a0dd86ae5a0c259a6c3f3e792a19a8f77be90e9c",
+          "bytes": 275
+        },
+        {
+          "file": "history/blendwidth/test.stderr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b/test.stderr.log",
+          "sha256": "518a45fcd865886072a50bc74fa87b16fdbfa8c0b996065db3844747cc0ed1fc",
+          "bytes": 161
+        },
+        {
+          "file": "history/blendwidth/timing.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-xnac089b/timing.json",
+          "sha256": "e1bd6d88ec299d8bb2e97b53f15745624fcd7511fb749fe44a99841386e2275d",
+          "bytes": 96865
+        }
+      ]
+    },
+    {
+      "variant": "blend-csa",
+      "description": "Implementation-only carry-save blend arithmetic variant.",
+      "core_sha256": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+      "core_identity_provenance": "Recorded by the build orchestration for this attempt.",
+      "build_directory": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7",
+      "result": "FAIL: strict post-route 50 MHz timing requirement",
+      "achieved_mhz": 41.96919631958008,
+      "constrained_mhz": 50,
+      "capacity_test_seconds": 117.797,
+      "packed_bitstream_generated": false,
+      "hardware_loaded": false,
+      "expected_cycles_per_step": 124046,
+      "cycle_schedule": "Implementation-only variant; intended cycle schedule unchanged. This failed timing build supplies no physical equivalence proof.",
+      "critical_path": {
+        "source": "core.column_DFFRE_Q.Q (column bit 0)",
+        "destination": "core.mul_a_DFFRE_Q_11.D",
+        "description": "Column through selection logic into multiplier operand register; reported critical path moved away from blend arithmetic.",
+        "logic_ns": 5.21,
+        "routing_ns": 18.61,
+        "logic_plus_routing_ns": 23.82,
+        "limitation": "Reported timing path, not an established cause of the original physical mismatch."
+      },
+      "files": [
+        {
+          "file": "history/blend-csa/capacity-test.log",
+          "source": "build/broad-blend-csa-capacity.log",
+          "sha256": "2552f852fecc2aae385f4b7b4038ae38c37f42bcfeef91185f50713609302992",
+          "bytes": 6729
+        },
+        {
+          "file": "history/blend-csa/nextpnr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7/nextpnr.log",
+          "sha256": "853dc50bf455d8810a0d8d68fad3a2f8f3f4aaf092abc0058eb36903675c4db0",
+          "bytes": 37564
+        },
+        {
+          "file": "history/blend-csa/test-command.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7/test-command.json",
+          "sha256": "c69a1967bd727e78d73cb406472b0376bc274affa2e985410b22f3793de8320f",
+          "bytes": 452
+        },
+        {
+          "file": "history/blend-csa/test.stdout.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7/test.stdout.log",
+          "sha256": "35fdfb5287f8aa0bf61b5b0fab692c7a84449e338c3ed33a398d53ffff5aee1b",
+          "bytes": 275
+        },
+        {
+          "file": "history/blend-csa/test.stderr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7/test.stderr.log",
+          "sha256": "5f6dfff565b638251a6a338efd93bbfd0fe8ccb2358355a479d0daa0890597aa",
+          "bytes": 161
+        },
+        {
+          "file": "history/blend-csa/timing.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed1-_3b2mxu7/timing.json",
+          "sha256": "9e2fec9ebd773dc805774a1084aca60be2b604bbf1da0633ca0c89d87c7f96a6",
+          "bytes": 17634
+        }
+      ]
+    },
+    {
+      "variant": "blend-csa-seed2",
+      "core_sha256": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+      "description": "Same CSA RTL as seed1; routing placement seed2.",
+      "result": "FAIL: strict post-route 50 MHz timing requirement",
+      "achieved_mhz": 46.598323822021484,
+      "constrained_mhz": 50,
+      "packed_bitstream_generated": false,
+      "hardware_loaded": false,
+      "files": [
+        {
+          "file": "history/seed2/nextpnr.log",
+          "source": "build/broad-csa-seed2/nextpnr.log",
+          "sha256": "4c79496243f9b47bfecd20fb4de272e38bd5411d464476a579198dc22f017f01",
+          "bytes": 49796
+        },
+        {
+          "file": "history/seed2/timing.json",
+          "source": "build/broad-csa-seed2/timing.json",
+          "sha256": "767f4b20ad6db168f373bfa2850e2ae38a5daf20f6caf22e51c25030cf49898f",
+          "bytes": 60438
+        },
+        {
+          "file": "history/seed2/command.json",
+          "source": "build/broad-csa-seed2-command.json",
+          "sha256": "a288366cdb321c83451e2d94a2027da81f2b0c6e3bd18f570846133241c7ec8e",
+          "bytes": 1156
+        },
+        {
+          "file": "history/seed2/result.json",
+          "source": "build/broad-csa-seed2-result.json",
+          "sha256": "9b8502f4b3346822a35228d24f9767b653f5738220d8af5c859139102fa8f75d",
+          "bytes": 737
+        },
+        {
+          "file": "history/seed2/run.log",
+          "source": "build/broad-csa-seed2-run.log",
+          "sha256": "179da87b9179b509a17120df5eb768e108b7f5a4b31036bf679825e53833dd61",
+          "bytes": 343
+        }
+      ]
+    },
+    {
+      "variant": "blend-csa-seed3-regression",
+      "core_sha256": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+      "description": "Pinned seed3 capacity regression; same CSA RTL as seeds1/2.",
+      "result": "PASS: strict post-route 50 MHz timing and packed-bitstream capacity test",
+      "capacity_test_seconds": 79.39,
+      "achieved_mhz": 50.556114196777344,
+      "constrained_mhz": 50,
+      "packed_bitstream_generated": true,
+      "bitstream_sha256": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988",
+      "bitstream_byte_identical_to_published_build": true,
+      "public_build_report": "artifacts/broad-h96-deployment-v2/build/report.json",
+      "public_build_report_sha256": "8c1fd433eed915e07817a8c3e2314dabf698537fbc07024bfd0cab9eb58f72e8",
+      "report_byte_identical_to_published_build": true,
+      "physical_equivalence": "Not established by this capacity regression. Full physical verification is recorded separately.",
+      "files": [
+        {
+          "file": "history/seed3-regression/report.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/report.json",
+          "sha256": "8c1fd433eed915e07817a8c3e2314dabf698537fbc07024bfd0cab9eb58f72e8",
+          "bytes": 12927
+        },
+        {
+          "file": "history/seed3-regression/timing.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/timing.json",
+          "sha256": "f44a7e35cae69a08e67a3e6627bb8419fd6f4c92c87e45e639fa380240171fc6",
+          "bytes": 79084
+        },
+        {
+          "file": "history/seed3-regression/nextpnr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/nextpnr.log",
+          "sha256": "2d0bfdbe6ab5156ff04c959499603996c0356551b1ffa7fe9260ffc7cbc22c74",
+          "bytes": 63384
+        },
+        {
+          "file": "history/seed3-regression/test-command.json",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/test-command.json",
+          "sha256": "3ddbb5e160c14a634dfedfa4d77436d5f420a1131104fcf9e750b28f78adb125",
+          "bytes": 452
+        },
+        {
+          "file": "history/seed3-regression/test.stdout.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/test.stdout.log",
+          "sha256": "778fd5d0054391d94320a64b94708aef91b9d9cab8f7c9d7d608d6f0979de7c4",
+          "bytes": 599
+        },
+        {
+          "file": "history/seed3-regression/test.stderr.log",
+          "source": "build/broad-capacity-scratch/h96-heap-seed3-ifsn91vw/test.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "history/seed3-regression/capacity-test.log",
+          "source": "build/broad-csa-seed3-capacity-regression.log",
+          "sha256": "26847b60084fac75386302be60d91570922d34749430a2a38437f93b71f14a7d",
+          "bytes": 441
+        }
+      ]
+    }
+  ],
+  "seed4": "NOT RUN"
+}

@@ -1,0 +1,73 @@
+{
+  "started_at_utc": "2026-10-20T20:26:37.749596+00:00",
+  "parent_selection_sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+  "parent_cpu_report_sha256": "67a7181825c25f8222ca32b576a573a645c7e7b4d8682f98b1a84ee14160479e",
+  "implementation_repair_only": true,
+  "model_reselected": false,
+  "source_changes_from_selection": {
+    "rtl/broad_core.sv": {
+      "before": "7ed85265a63e07bc327daa652b4067f5e7f1b72683f3296470a4605c643a07d8",
+      "after": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885"
+    }
+  },
+  "quick_diagnostic": true,
+  "programming_scope": "SRAM only",
+  "usb_serial": "2023112818",
+  "programming_command": [
+    "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+    "-b",
+    "tangprimer25k",
+    "--usb-serial-num",
+    "2023112818",
+    "--write-sram",
+    "/Users/patrikandersson/Downloads/tang-cfc/build/broad-csa-seed3/broad.fs"
+  ],
+  "frozen_files": {
+    "Makefile": "8c14c67ef1e12bb9b7552d7f8e4fc0b15b1798085cc34662835129c74c1fafa3",
+    "artifacts/broad-h96-final-v1/freeze-selection.py": "0809e4c755f3dc9159bcb3fdf5624036dd222238fc2a51a63605e6e7cebac2e1",
+    "artifacts/broad-h96-final-v1/run-physical.py": "df261985d7aad81e50f58097cc7ac1ea373b79afaea37724a27169d53f648381",
+    "artifacts/broad-h96-final-v1/run-study.py": "15c10d6f91166bcbd8bbccd78c86299d4a13e6af3249b437c586370465c28bad",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "experiments/broad-h96-final-study-v1.json": "7f8d238898226f019286c2f957cc431fbce713e828d3afee3c408030134fb6f9",
+    "host/broad_protocol.py": "81c35dd24941cede0b3aae688357ca39eeb011bf33c0eb3e55c7ef90f95c4fbe",
+    "host/ftdi.py": "87779727687970e29a20f824c980278c927355b6cb07228769f06bd21ad28248",
+    "host/verify_broad.py": "73a5f8e85fca760c20b255bc0d13c8e5ec31a2799ddb7728db56ead4ba646b02",
+    "host/verify_probe.py": "966dbda1d5ea35b76d76d3c1738a026287b41ab0ec2ddcf697fa331ebe414412",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "scripts/build.py": "5bc781d311b63635f5bbbadcaa9c91dbd125ce0d8c706ba82fe6f31ba1c9a763",
+    "scripts/build_broad.py": "974b78d216263e8b63808f335a04ac05e9b46464300145b912092ab5f9501f96",
+    "tests/integration/test_broad_integer.py": "ce9d9147d6ee009b29adcc3ef7e7b8d2385c81cf4522621d5f52d3b2266ac9d5",
+    "tests/integration/test_broad_train.py": "6724f25c1df4a489502a729840dd5270f8c88676b74a0415d507865ebfa8d25c",
+    "tests/integration/test_model_integer.py": "a9b3cdb1ba792619137259f3bfa80d3d9600b2f5abb33b9e21d2bd6a3f4e82f3",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "artifacts/broad-integer-v1/export/manifest.json": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+    "artifacts/broad-h96-final-v1/selection.json": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+    "artifacts/broad-h96-final-v1/report.json": "67a7181825c25f8222ca32b576a573a645c7e7b4d8682f98b1a84ee14160479e",
+    "build/broad-csa-seed3/report.json": "8c1fd433eed915e07817a8c3e2314dabf698537fbc07024bfd0cab9eb58f72e8",
+    "build/broad-csa-seed3/broad.fs": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988",
+    "artifacts/broad-h96-deployment-v2/run-physical.py": "7d29c8248f526ab42f707bca7973a44c3b5201e9a68886355c904467da54581e",
+    "build/broad-usb-vectors-v1/manifest.json": "2ab3a4e52eef94e790582523328d7527a22d7deed00b877ab9238aafa38df75b",
+    "build/broad-usb-vectors-v1/vectors.hex": "6c69c2722da998c353e5276a22924c6837e7c9c65ecb76d5d27b0930cd4684d8",
+    ".tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader": "06457ddf53f3f688d0eb35945b7f482dd2726ffcd6a3a47124cb29436a21e461",
+    ".tools/tang-toolchain/oss-cad-suite/libexec/openFPGALoader": "4b98617b7e186831a37c4d216e13d884a0465a2a18757aceb6ab77e2a56541ba"
+  },
+  "loader_version": "openFPGALoader v1.2.0",
+  "vector_provenance": "Original numerical vectors preserved; older RTL fields describe their original packaging, not this deployment",
+  "scope": "RESET plus continuous bit-exact state/raw/cycle verification; movement window resets at index11449; no physical full-trial accuracy claim",
+  "completed_at_utc": "2026-10-20T20:26:42.372952+00:00",
+  "results": [
+    {
+      "label": "validation-prefix",
+      "report": "validation-prefix.json",
+      "sha256": "4c2047169cafe3601f44c1dd726fedd73f71a8408c58a68e97c5e5522daf9ee1",
+      "count_verified": 16
+    }
+  ],
+  "total_verified_steps": 16,
+  "physical_verification": true,
+  "remaining_stability_gate": "Earlier scalar 600s USB endurance gate remains open"
+}

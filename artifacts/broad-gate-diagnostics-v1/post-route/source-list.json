@@ -1,0 +1,290 @@
+[
+  {
+    "name": "CMakeLists.txt",
+    "path": "himbaechel/uarch/gowin/CMakeLists.txt",
+    "sha": "c8e05042736297521ec03b97550943faad49d152",
+    "size": 1797,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/CMakeLists.txt?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/CMakeLists.txt",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/c8e05042736297521ec03b97550943faad49d152",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/CMakeLists.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/CMakeLists.txt?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/c8e05042736297521ec03b97550943faad49d152",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/CMakeLists.txt"
+    }
+  },
+  {
+    "name": "constids.inc",
+    "path": "himbaechel/uarch/gowin/constids.inc",
+    "sha": "e8342c6623d36d49226f2cb3b03cc37fca421279",
+    "size": 14211,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/constids.inc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/constids.inc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/e8342c6623d36d49226f2cb3b03cc37fca421279",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/constids.inc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/constids.inc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/e8342c6623d36d49226f2cb3b03cc37fca421279",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/constids.inc"
+    }
+  },
+  {
+    "name": "cst.cc",
+    "path": "himbaechel/uarch/gowin/cst.cc",
+    "sha": "2e2cac44b132b19b97f6187743553957671b7f01",
+    "size": 15190,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/cst.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/cst.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2e2cac44b132b19b97f6187743553957671b7f01",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/cst.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/cst.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2e2cac44b132b19b97f6187743553957671b7f01",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/cst.cc"
+    }
+  },
+  {
+    "name": "cst.h",
+    "path": "himbaechel/uarch/gowin/cst.h",
+    "sha": "255e57b035d8ffa14a44ba9abde1214d0c3f9994",
+    "size": 200,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/cst.h?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/cst.h",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/255e57b035d8ffa14a44ba9abde1214d0c3f9994",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/cst.h",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/cst.h?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/255e57b035d8ffa14a44ba9abde1214d0c3f9994",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/cst.h"
+    }
+  },
+  {
+    "name": "globals.cc",
+    "path": "himbaechel/uarch/gowin/globals.cc",
+    "sha": "78da1802e372cb02c66efaf6450d7aa09f2d04ba",
+    "size": 60933,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/globals.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/globals.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/78da1802e372cb02c66efaf6450d7aa09f2d04ba",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/globals.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/globals.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/78da1802e372cb02c66efaf6450d7aa09f2d04ba",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/globals.cc"
+    }
+  },
+  {
+    "name": "globals.h",
+    "path": "himbaechel/uarch/gowin/globals.h",
+    "sha": "77e82769ee6272b47c5e1857792479b4017427b7",
+    "size": 167,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/globals.h?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/globals.h",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/77e82769ee6272b47c5e1857792479b4017427b7",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/globals.h",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/globals.h?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/77e82769ee6272b47c5e1857792479b4017427b7",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/globals.h"
+    }
+  },
+  {
+    "name": "gowin.cc",
+    "path": "himbaechel/uarch/gowin/gowin.cc",
+    "sha": "d61528270fc571bb44acf10ddf854cb495642169",
+    "size": 69032,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/d61528270fc571bb44acf10ddf854cb495642169",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/gowin.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/d61528270fc571bb44acf10ddf854cb495642169",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin.cc"
+    }
+  },
+  {
+    "name": "gowin.h",
+    "path": "himbaechel/uarch/gowin/gowin.h",
+    "sha": "2c982191e22824382098429acad5339b0e67bd16",
+    "size": 11367,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin.h?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin.h",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2c982191e22824382098429acad5339b0e67bd16",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/gowin.h",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin.h?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2c982191e22824382098429acad5339b0e67bd16",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin.h"
+    }
+  },
+  {
+    "name": "gowin_arch_gen.py",
+    "path": "himbaechel/uarch/gowin/gowin_arch_gen.py",
+    "sha": "2930f16c2aa7fbf6ed0690f8857d4220b3eac382",
+    "size": 95844,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_arch_gen.py?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_arch_gen.py",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2930f16c2aa7fbf6ed0690f8857d4220b3eac382",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/gowin_arch_gen.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_arch_gen.py?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2930f16c2aa7fbf6ed0690f8857d4220b3eac382",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_arch_gen.py"
+    }
+  },
+  {
+    "name": "gowin_utils.cc",
+    "path": "himbaechel/uarch/gowin/gowin_utils.cc",
+    "sha": "3a3cc0d75aab1a67111896c98b943a42e1d7086c",
+    "size": 30411,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_utils.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_utils.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/3a3cc0d75aab1a67111896c98b943a42e1d7086c",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/gowin_utils.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_utils.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/3a3cc0d75aab1a67111896c98b943a42e1d7086c",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_utils.cc"
+    }
+  },
+  {
+    "name": "gowin_utils.h",
+    "path": "himbaechel/uarch/gowin/gowin_utils.h",
+    "sha": "d7286ff8b0100bd2a0745b774760462ce48f5582",
+    "size": 9692,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_utils.h?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_utils.h",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/d7286ff8b0100bd2a0745b774760462ce48f5582",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/gowin_utils.h",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/gowin_utils.h?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/d7286ff8b0100bd2a0745b774760462ce48f5582",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/gowin_utils.h"
+    }
+  },
+  {
+    "name": "pack.cc",
+    "path": "himbaechel/uarch/gowin/pack.cc",
+    "sha": "5f4b366d3c5d8076f957d0939ba4521571746cc4",
+    "size": 21205,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/5f4b366d3c5d8076f957d0939ba4521571746cc4",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/5f4b366d3c5d8076f957d0939ba4521571746cc4",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack.cc"
+    }
+  },
+  {
+    "name": "pack.h",
+    "path": "himbaechel/uarch/gowin/pack.h",
+    "sha": "2cbd8a86309d0385c1c472c6e2f9cc1f0e7be367",
+    "size": 4545,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack.h?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack.h",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2cbd8a86309d0385c1c472c6e2f9cc1f0e7be367",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack.h",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack.h?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/2cbd8a86309d0385c1c472c6e2f9cc1f0e7be367",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack.h"
+    }
+  },
+  {
+    "name": "pack_bsram.cc",
+    "path": "himbaechel/uarch/gowin/pack_bsram.cc",
+    "sha": "bca4ae01de3360039d5908d441c30662dcef7819",
+    "size": 25058,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_bsram.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_bsram.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/bca4ae01de3360039d5908d441c30662dcef7819",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_bsram.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_bsram.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/bca4ae01de3360039d5908d441c30662dcef7819",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_bsram.cc"
+    }
+  },
+  {
+    "name": "pack_dsp.cc",
+    "path": "himbaechel/uarch/gowin/pack_dsp.cc",
+    "sha": "98e6828e61dcc18a4aad63be0daf1941f8c2069f",
+    "size": 48278,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_dsp.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_dsp.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/98e6828e61dcc18a4aad63be0daf1941f8c2069f",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_dsp.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_dsp.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/98e6828e61dcc18a4aad63be0daf1941f8c2069f",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_dsp.cc"
+    }
+  },
+  {
+    "name": "pack_io.cc",
+    "path": "himbaechel/uarch/gowin/pack_io.cc",
+    "sha": "26807fa7003691009e8d47894bb1f184a1d2c1d3",
+    "size": 36671,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_io.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_io.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/26807fa7003691009e8d47894bb1f184a1d2c1d3",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_io.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_io.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/26807fa7003691009e8d47894bb1f184a1d2c1d3",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_io.cc"
+    }
+  },
+  {
+    "name": "pack_iologic.cc",
+    "path": "himbaechel/uarch/gowin/pack_iologic.cc",
+    "sha": "f4470a6e42da69f569ac5bcbd1882e7db1ce4755",
+    "size": 31940,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_iologic.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_iologic.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/f4470a6e42da69f569ac5bcbd1882e7db1ce4755",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_iologic.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_iologic.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/f4470a6e42da69f569ac5bcbd1882e7db1ce4755",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_iologic.cc"
+    }
+  },
+  {
+    "name": "pack_luts.cc",
+    "path": "himbaechel/uarch/gowin/pack_luts.cc",
+    "sha": "39671a5c45e8ff31a7bb1834abd3afa4a5ede5ac",
+    "size": 25472,
+    "url": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_luts.cc?ref=main",
+    "html_url": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_luts.cc",
+    "git_url": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/39671a5c45e8ff31a7bb1834abd3afa4a5ede5ac",
+    "download_url": "https://raw.githubusercontent.com/YosysHQ/nextpnr/main/himbaechel/uarch/gowin/pack_luts.cc",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/YosysHQ/nextpnr/contents/himbaechel/uarch/gowin/pack_luts.cc?ref=main",
+      "git": "https://api.github.com/repos/YosysHQ/nextpnr/git/blobs/39671a5c45e8ff31a7bb1834abd3afa4a5ede5ac",
+      "html": "https://github.com/YosysHQ/nextpnr/blob/main/himbaechel/uarch/gowin/pack_luts.cc"
+    }
+  }
+]

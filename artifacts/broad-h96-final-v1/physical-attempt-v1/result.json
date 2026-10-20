@@ -1,0 +1,22 @@
+{
+  "physical_verification": false,
+  "programming_returncode": 1,
+  "failure_stage": "FTDI serial descriptor read before programming",
+  "usb_steps_verified": 0,
+  "subsequent_isolated_serial_qualified_detect": {
+    "returncode": 0,
+    "idcode": "0x1281b",
+    "family": "GW5A",
+    "model": "GW5A-25"
+  },
+  "recovery_cause": "unknown",
+  "files": {
+    "program.log": "6c1fe15f81b51005acbf2f000a42f9dcec50749318e143ade2f4a7e77f594f40",
+    "isolated-detect-failure.log": "4c6fa64760b6419bcf5df032d237270a351c0bb65c17be3a5a6ee02010a01501",
+    "subsequent-detect-success.log": "95029aeb7cab73ab135159d046baafccfe8461029c5162795b925a3187bdd388",
+    "device-registry.log": "4e5496653d5dac43024db27de56a3f25e14fde6d767ac2123e80055fdbfc265c",
+    "usb-scan.log": "238d617a1dba8df9349da218a24570b103ec418461148c04f6c9c9492f4f2bc3",
+    "driver.log": "03296d6738e7e8edc3d7d457cf28f74fda0a4870ea0f5bd09f259f22997a8363",
+    "preflight.json": "f736e9b772ea996afbf4e2187b8783f9d7309b9004eb1525d3cb6a4aad72e381"
+  }
+}

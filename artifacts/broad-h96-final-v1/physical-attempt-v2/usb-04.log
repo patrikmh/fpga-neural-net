@@ -1,0 +1,3 @@
+DYLD_FALLBACK_LIBRARY_PATH="/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/lib" .venv/bin/python -m host.verify_broad --usb-serial "2023112818" --export-dir "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-integer-v1/export" --vectors-dir "/Users/patrikandersson/Downloads/tang-cfc/build/broad-h96-final-v1/usb-vectors/04" --count "1000" --expected-cycles "124046" --output "/Users/patrikandersson/Downloads/tang-cfc/build/broad-h96-physical-v2/usb-04.json"
+BROAD verification failed: BROAD state/output mismatch at index 0
+make: *** [broad-verify] Error 1

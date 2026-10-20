@@ -1,0 +1,52 @@
+{
+  "count_requested": 16,
+  "count_verified": 16,
+  "hidden_size": 96,
+  "reset_verified": true,
+  "expected_cycles": 124046,
+  "transport": "libftdi",
+  "usb_serial": "2023112818",
+  "usb_requested_baudrate": 460800,
+  "baudrate": 115200,
+  "clock_mhz": 50,
+  "elapsed_s": 0.4599964579974767,
+  "compute_us": {
+    "min": 2480.92,
+    "mean": 2480.92,
+    "p95": 2480.92,
+    "max": 2480.92
+  },
+  "roundtrip_ms": {
+    "min": 23.64270899852272,
+    "mean": 24.125591186020756,
+    "p95": 27.79325000301469,
+    "max": 27.79325000301469
+  },
+  "export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+  "vectors_manifest_sha256": "2ab3a4e52eef94e790582523328d7527a22d7deed00b877ab9238aafa38df75b",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "provenance": {
+    "export/float_checkpoint.pt": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+    "export/weights.hex": "54be02d467f95721a225bf86e0b84c680ff6caffdc533e69dfcd93132e579d81",
+    "export/sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+    "export/manifest.json": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+    "export/tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+    "vectors/manifest.json": "2ab3a4e52eef94e790582523328d7527a22d7deed00b877ab9238aafa38df75b",
+    "vectors/vectors.hex": "6c69c2722da998c353e5276a22924c6837e7c9c65ecb76d5d27b0930cd4684d8",
+    "host/verify_broad.py": "73a5f8e85fca760c20b255bc0d13c8e5ec31a2799ddb7728db56ead4ba646b02",
+    "host/broad_protocol.py": "81c35dd24941cede0b3aae688357ca39eeb011bf33c0eb3e55c7ef90f95c4fbe",
+    "host/ftdi.py": "87779727687970e29a20f824c980278c927355b6cb07228769f06bd21ad28248",
+    "host/verify_probe.py": "966dbda1d5ea35b76d76d3c1738a026287b41ab0ec2ddcf697fa331ebe414412",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "libftdi": "baf44acf9b1a0ca4aee9f7b7e0f4e02145ca053b2813d122bbad863a44d6b8e8"
+  }
+}

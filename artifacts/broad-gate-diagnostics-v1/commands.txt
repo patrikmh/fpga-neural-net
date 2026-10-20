@@ -1,0 +1,9 @@
+Working directory: /Users/patrikandersson/Downloads/tang-cfc
+Only diagnostic files in this directory were created. Production/export/netlist frozen.
+1. yosys -Q -T -p 'read_json build/broad-fpga-v1/synth.json; write_verilog -noattr -noexpr build/broad-post-synth-v1/netlist.v'
+2. cells_logic.v is installed cells_sim.v with only SP and SPX9 module declarations removed. rom_models.sv preserves their parameter/port declarations and adds restricted synchronous-read INIT-based models. Unsupported width/mode/control operation causes fatal. No original .hex content is used for simulation ROMs.
+3. verilator --cc --exe --build -j 4 -Wno-fatal --top-module broad_top --Mdir build/broad-post-synth-v1/obj build/broad-post-synth-v1/netlist.v build/broad-post-synth-v1/cells_logic.v build/broad-post-synth-v1/rom_models.sv /Users/patrikandersson/Downloads/tang-cfc/build/broad-post-synth-v1/replay.cpp
+4. build/broad-post-synth-v1/obj/Vbroad_top > build/broad-post-synth-v1/replay.log 2>&1
+5. PYTHONPATH=. .venv/bin/python build/broad-post-synth-v1/audit.py
+Tool directory: .tools/tang-toolchain/oss-cad-suite/bin/
+Simulator receives actual UART top ports; RESET followed by old validation02 first sample. All requests/replies include actual CRC and sequence. Entire flow completed within diagnostic time budget.

@@ -1,0 +1,8 @@
+
+-- Running command `read_json build/broad-post-synth-v1/post-route/adapted.json; write_verilog -noattr -noexpr build/broad-post-synth-v1/post-route/netlist.v' --
+
+1. Executing JSON frontend.
+Importing module broad_top from JSON tree.
+
+2. Executing Verilog backend.
+Dumping module `\broad_top'.

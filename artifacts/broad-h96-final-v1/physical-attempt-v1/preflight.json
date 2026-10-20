@@ -1,0 +1,21 @@
+{
+  "started_at_utc": "2026-10-20T19:50:59.046931+00:00",
+  "selection_sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+  "cpu_report_sha256": "67a7181825c25f8222ca32b576a573a645c7e7b4d8682f98b1a84ee14160479e",
+  "recipe_sha256": "df261985d7aad81e50f58097cc7ac1ea373b79afaea37724a27169d53f648381",
+  "loader_sha256": "06457ddf53f3f688d0eb35945b7f482dd2726ffcd6a3a47124cb29436a21e461",
+  "loader_binary_sha256": "4b98617b7e186831a37c4d216e13d884a0465a2a18757aceb6ab77e2a56541ba",
+  "loader_version": "openFPGALoader v1.2.0",
+  "bitstream_sha256": "a034a0563d656b1d64cea44e289beb5be7341a1394361f876c40e22eea924b4c",
+  "programming_command": [
+    "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+    "-b",
+    "tangprimer25k",
+    "--usb-serial-num",
+    "2023112818",
+    "--write-sram",
+    "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-capacity-v1/final/broad.fs"
+  ],
+  "programming_scope": "SRAM only",
+  "usb_serial": "2023112818"
+}

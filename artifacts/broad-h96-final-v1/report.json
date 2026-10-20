@@ -1,0 +1,192 @@
+{
+  "split": "new_test",
+  "test_used_for_selection": false,
+  "trials": [
+    {
+      "trial_id": 4,
+      "float": {
+        "full_rmse_deg": 18.598660191370037,
+        "inclination_rmse_deg": 8.075992169179768,
+        "heading_rmse_deg": 16.779542026070757,
+        "samples": 30403,
+        "heading_samples": 30403,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 18.595792271111648,
+        "inclination_rmse_deg": 8.072469779065525,
+        "heading_rmse_deg": 16.77804140117007,
+        "samples": 30403,
+        "heading_samples": 30403,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 38,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0,
+      "predictions_file": "integer/04.npz",
+      "predictions_sha256": "d3847d09fb991092b51b87b0e8a2bdc8dad2c0cbe617ee593c41535f4e14db8e",
+      "usb_vectors_directory": "usb-vectors/04",
+      "usb_vectors_manifest_sha256": "52d98f29a7deb70701ecdb61a0f77643b9aec47de77d7f23bb3bacacd017b5ab"
+    },
+    {
+      "trial_id": 8,
+      "float": {
+        "full_rmse_deg": 40.99766074492485,
+        "inclination_rmse_deg": 16.17408207578301,
+        "heading_rmse_deg": 38.05634289904016,
+        "samples": 31417,
+        "heading_samples": 31417,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 40.999315604478355,
+        "inclination_rmse_deg": 16.1733830561288,
+        "heading_rmse_deg": 38.05858626847293,
+        "samples": 31417,
+        "heading_samples": 31417,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 6725,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0,
+      "predictions_file": "integer/08.npz",
+      "predictions_sha256": "62350f139fd748d75b9dcdf6cf1fd5beb8da7226a6ac2e44787be3d083a0ca3f",
+      "usb_vectors_directory": "usb-vectors/08",
+      "usb_vectors_manifest_sha256": "31ae6e057282fa5a60b010e14c0d8fbe4e681e90802dadc23500bd6582db5c0e"
+    },
+    {
+      "trial_id": 12,
+      "float": {
+        "full_rmse_deg": 6.105665871043535,
+        "inclination_rmse_deg": 3.5790211405287184,
+        "heading_rmse_deg": 4.948275393107963,
+        "samples": 36809,
+        "heading_samples": 36809,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 6.110075607216684,
+        "inclination_rmse_deg": 3.580858267900646,
+        "heading_rmse_deg": 4.952392027032341,
+        "samples": 36809,
+        "heading_samples": 36809,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 0,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0,
+      "predictions_file": "integer/12.npz",
+      "predictions_sha256": "b51c34993da9c15b197f3dcb2868b81ab0ddfcba49cc15ffbb2418b82cf6fd4c",
+      "usb_vectors_directory": "usb-vectors/12",
+      "usb_vectors_manifest_sha256": "b2a37e1317f0632e2314a8543f46fad31eb438b213863725a066281d55e73619"
+    },
+    {
+      "trial_id": 31,
+      "float": {
+        "full_rmse_deg": 32.850142677309314,
+        "inclination_rmse_deg": 13.913712345993986,
+        "heading_rmse_deg": 30.000550266872015,
+        "samples": 27045,
+        "heading_samples": 27045,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 32.850166932099356,
+        "inclination_rmse_deg": 13.910667464571665,
+        "heading_rmse_deg": 30.002020605778412,
+        "samples": 27045,
+        "heading_samples": 27045,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 9013,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0,
+      "predictions_file": "integer/31.npz",
+      "predictions_sha256": "2c83addc28195c29b6168545fb6d3a1f6ab7472d45fd7414afd33bbefe97b142",
+      "usb_vectors_directory": "usb-vectors/31",
+      "usb_vectors_manifest_sha256": "237930a3f25c75fb3b5b4365869d05734dc0813eb7ea1154cd645f3f6b862b7b"
+    }
+  ],
+  "mean_trial_metrics": {
+    "float": {
+      "full_rmse_deg": 24.638032371161934,
+      "inclination_rmse_deg": 10.43570193287137,
+      "heading_rmse_deg": 22.446177646272723
+    },
+    "integer": {
+      "full_rmse_deg": 24.63883760372651,
+      "inclination_rmse_deg": 10.434344641916658,
+      "heading_rmse_deg": 22.447760075613438
+    }
+  },
+  "baselines": {
+    "accelerometer_only": {
+      "incl_rmse_deg": 18.785511510532444
+    },
+    "gyro_only_acc_initialization": {
+      "incl_rmse_deg": 29.28141806791448
+    },
+    "gyro_acc_complementary": {
+      "incl_rmse_deg": 4.195668904311191
+    }
+  },
+  "input_clipping_count": 0,
+  "state_clipping_count": 0,
+  "raw_clipping_count": 0,
+  "zero_quaternion_count": 0,
+  "lut_clamp_count": 15776,
+  "integer_minus_float_full_rmse_deg": 0.0008052325645770964,
+  "independent_scalar_checked_steps": 144,
+  "selection_sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3",
+  "test_spec_sha256": "1dfdb33e96077898a1a0f88d7465d5d90dcb99e1b20a1c379903f8e0805c1200",
+  "prepared_manifest_sha256": "28deb5a63b4b7e388adbe055d8fb9c33d076fbe794f6193c5f5f1ee00b9a4ab2",
+  "float_report_sha256": "225fe247b3b9954e6aaabdeead04a4c00ea5859fbc27aeec50a1e4fa71b1250e",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "integer_export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+  "recipe_sha256": "15c10d6f91166bcbd8bbccd78c86299d4a13e6af3249b437c586370465c28bad",
+  "physical_verification": "not yet run",
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+    "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  },
+  "project_sources": {
+    "Makefile": "8c14c67ef1e12bb9b7552d7f8e4fc0b15b1798085cc34662835129c74c1fafa3",
+    "artifacts/broad-h96-final-v1/freeze-selection.py": "0809e4c755f3dc9159bcb3fdf5624036dd222238fc2a51a63605e6e7cebac2e1",
+    "artifacts/broad-h96-final-v1/run-physical.py": "df261985d7aad81e50f58097cc7ac1ea373b79afaea37724a27169d53f648381",
+    "artifacts/broad-h96-final-v1/run-study.py": "15c10d6f91166bcbd8bbccd78c86299d4a13e6af3249b437c586370465c28bad",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "experiments/broad-h96-final-study-v1.json": "7f8d238898226f019286c2f957cc431fbce713e828d3afee3c408030134fb6f9",
+    "host/broad_protocol.py": "81c35dd24941cede0b3aae688357ca39eeb011bf33c0eb3e55c7ef90f95c4fbe",
+    "host/ftdi.py": "87779727687970e29a20f824c980278c927355b6cb07228769f06bd21ad28248",
+    "host/verify_broad.py": "73a5f8e85fca760c20b255bc0d13c8e5ec31a2799ddb7728db56ead4ba646b02",
+    "host/verify_probe.py": "966dbda1d5ea35b76d76d3c1738a026287b41ab0ec2ddcf697fa331ebe414412",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "rtl/broad_core.sv": "7ed85265a63e07bc327daa652b4067f5e7f1b72683f3296470a4605c643a07d8",
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "scripts/build.py": "5bc781d311b63635f5bbbadcaa9c91dbd125ce0d8c706ba82fe6f31ba1c9a763",
+    "scripts/build_broad.py": "974b78d216263e8b63808f335a04ac05e9b46464300145b912092ab5f9501f96",
+    "tests/integration/test_broad_integer.py": "ce9d9147d6ee009b29adcc3ef7e7b8d2385c81cf4522621d5f52d3b2266ac9d5",
+    "tests/integration/test_broad_train.py": "6724f25c1df4a489502a729840dd5270f8c88676b74a0415d507865ebfa8d25c",
+    "tests/integration/test_model_integer.py": "a9b3cdb1ba792619137259f3bfa80d3d9600b2f5abb33b9e21d2bd6a3f4e82f3"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+Loading frozen H96 bitstream to SRAM on serial2023112818
+Traceback (most recent call last):
+  File "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-h96-final-v1/run-physical.py", line 54, in <module>
+    subprocess.run(command, cwd=root, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=120)
+  File "/Users/patrikandersson/.local/share/uv/python/cpython-3.11.14-macos-aarch64-none/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader', '-b', 'tangprimer25k', '--usb-serial-num', '2023112818', '--write-sram', '/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-capacity-v1/final/broad.fs']' returned non-zero exit status 1.

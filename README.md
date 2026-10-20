@@ -5,7 +5,7 @@ Modellen tränas på datorn. FPGA:n kör inferens med fasta vikter.
 
 ## Status
 
-**Neuronnätet kör nu på det fysiska kortet.** RESET och 10 000 sammanhängande
+**Den skalära åttaneuronsmodellen har verifierats på det fysiska kortet.** RESET och 10 000 sammanhängande
 USB-steg är verifierade mot heltalsreferensen, inklusive alla åtta tillstånd.
 Beräkningen tar 1 052 cykler vid 50 MHz: **21,04 µs**. USB tur och retur tog
 i snitt **5,89 ms**, med cirka **165 sampel/s** över hela körningen.
@@ -15,7 +15,7 @@ Långprovet på 600 sekunder är ännu inte godkänt: USB-läsfel avbröt längr
 körningar. Som längst matchade 90 047 steg exakt före avbrottet. Se
 [den fysiska resultatrapporten](reports/cfc-summary-2026-10-20.json).
 
-Den lokala appen visar signal, nästa-värdesprognos, heltalsreferens, åtta
+Den lokala appen visar den skalära modellens signal, nästa-värdesprognos, heltalsreferens, åtta
 interna tillstånd och verifieringsstatus. Live och sparad verifierad körning
 är tydligt separerade. Se [appens startguide](docs/dashboard.md).
 
@@ -25,13 +25,20 @@ testinspelningar, jämfört med baslinjens 4,67° lutningsfel. Åtta-neuronsmode
 är därför inte redo för FPGA-steget. Checkpoint och frysta rapporter finns
 i `artifacts/broad-cfc8-v1/`. En [större CPU-studie](docs/broad-width-study.md) har därefter valt 96 neuroner
 med 41 092 parametrar: 26,43° valideringsfel, 23,8 % lägre än H8 på samma
-valideringsmått. Faktisk FPGA-passning och ett nytt sluttest återstår.
+valideringsmått. [H96:s nya sluttest och hårdvarustatus](docs/broad-h96-results.md)
+redovisar 24,64° fullständigt orienteringsfel och 10,43° lutningsfel på fyra
+nya inspelningar. Det kausala gyro/accelerometer-filtret når 4,20° lutningsfel.
 Noggrannhet har högsta prioritet.
 Ett efterföljande [försök med sammanhängande träning](docs/broad-stateful-study.md)
 förbättrade inte modellen; samma H96-checkpoint är fortsatt vald.
 [Heltalskontrollen](docs/broad-integer.md) passerar med 26,43630° fel,
 cirka 0,0024° mer än flyttalsmodellen. [RTL-kärnan](docs/broad-rtl.md) matchar
-10 000 sammanhängande steg exakt. Faktisk FPGA-passning och USB-prov återstår.
+10 000 sammanhängande steg exakt. Den nya implementationen matchar även
+**15 000 steg på kortet**, varav 1 000 rörelseprov, för alla 96 tillstånd och
+fyra råutgångar. Den använder 48 av 56 blockminnen och 11 361 LUT4;
+rapporterad Fmax är 50,56 MHz och kortets klocka 50 MHz. Alla 94 tester
+passerar. [Verifiering och begränsningar](artifacts/broad-h96-deployment-v2/)
+beskriver den bitexakta ändringen och bevarar det tidigare byggets fysiska fel.
 
 ### Tidigare milstolpar
 

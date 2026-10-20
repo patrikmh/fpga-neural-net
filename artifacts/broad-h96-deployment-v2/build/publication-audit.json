@@ -1,0 +1,15 @@
+{
+  "source": "build/broad-csa-seed3",
+  "files": {
+    "report.json": "8c1fd433eed915e07817a8c3e2314dabf698537fbc07024bfd0cab9eb58f72e8",
+    "timing.json": "f44a7e35cae69a08e67a3e6627bb8419fd6f4c92c87e45e639fa380240171fc6",
+    "broad.fs": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988",
+    "yosys.log": "2909051531633e1e8418603db2578c533d8409a386d3640b419b06a5bd8acb14",
+    "nextpnr.log": "cdeb00902a4d69eadb69d78e1781625f28889f79cdc1e2a7336b0d68b982303a",
+    "gowin_pack.log": "1b7ca0654a3b7e3acb3fc5912fd6a1dffef6ca7a6083447dc6acc07db4db26e4",
+    "broad-csa-seed3-command.json": "315115fc33de2ffb42e592c43e2cfd16418d03511332e435c477361f2ea83f5c",
+    "broad-csa-seed3-result.json": "e8cfd8a47a432ee67157084a4f25c94b8ffd17086032f5a1167f998dfd6d8636",
+    "broad-csa-seed3-run.log": "fae129439de7b36514aeb50a0ddd08c421216a70baf4faea0cf52b176be05826"
+  },
+  "physical_scope": "Physical evidence is separate; this audit establishes identical build copies only"
+}

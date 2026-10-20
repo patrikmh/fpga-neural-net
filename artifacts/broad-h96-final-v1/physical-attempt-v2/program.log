@@ -1,0 +1,11 @@
+write to ram
+Jtag frequency : requested 6.00MHz    -> real 6.00MHz   
+Parse file Parse /Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-capacity-v1/final/broad.fs: 
+Done
+DONE
+Erase SRAM Load SRAM Load SRAM: [======================                            ] 43.61%
+Load SRAM: [============================================      ] 87.21%
+Load SRAM: [==================================================] 100.00%
+
+Done
+DONE
