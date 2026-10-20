@@ -1,0 +1,13 @@
+{
+  "command": "make check",
+  "exit_code": 0,
+  "tests": 106,
+  "duration_s": 344.351,
+  "python_compileall": true,
+  "javascript_syntax": true,
+  "vendor_hashes_verified": true,
+  "browser_preflight": true,
+  "no_webgl_warning_regression": true,
+  "independent_smoke": "PASS; desktop 1200x760 and mobile 390x844, no horizontal overflow, reduced motion, console zero errors/warnings, no USB mutations by smoke reviewer",
+  "guide_sha256": "0d6e2998bc2aba7ec28a1b5f6a6016846ad293fc963ed284e37e93917a5d17f8"
+}

@@ -40,6 +40,12 @@ rapporterad Fmax är 50,56 MHz och kortets klocka 50 MHz. Alla 94 tester
 passerar. [Verifiering och begränsningar](artifacts/broad-h96-deployment-v2/)
 beskriver den bitexakta ändringen och bevarar det tidigare byggets fysiska fel.
 
+Den nya [interaktiva 3D-vyn för H96](docs/orientation-demo.md) finns separat på
+`http://127.0.0.1:8766`. Du roterar ett virtuellt sensorobjekt och jämför dess
+orientering med samma provs uppskattning från det fysiska chipet via USB.
+Vyn visar också nätverkets 96 uppmätta tillstånd och förklarar CfC-beräkningen.
+Sensorerna är simulerade; modellen och vikterna är de befintliga frysta H96-filerna.
+
 ### Tidigare milstolpar
 
 Provet för UART, signerad multiplikation, ROM och RAM är simulerat och byggt.

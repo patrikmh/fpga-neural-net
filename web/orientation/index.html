@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="/style.css">
+<title>Neuro / Orientering på FPGA</title>
+</head>
+<body>
+<main>
+<header class="masthead">
+  <div class="brand"><span class="brand-mark" aria-hidden="true">N</span><div><div class="eyebrow">TANG PRIMER 25K / LIQUID NEURAL NETWORK</div><h1>Rörelse in. Tillstånd ut.</h1></div></div>
+  <div class="connection"><span id="status-dot" class="status-dot"></span><span id="status" role="status">Frånkopplad</span><span class="hardware">CfC / H96</span></div>
+</header>
+<div class="toolbar">
+  <div class="actions"><button id="connect">Anslut</button><button id="step">Steg</button><button id="run" class="primary">Kör</button><button id="reset">Återställ</button><button id="disconnect" class="quiet">Koppla från</button></div>
+  <a class="learn-link" href="#principle">Förstå flödet <span aria-hidden="true">↗</span></a>
+</div>
+<p id="error" class="error" role="alert" hidden></p>
+<section class="hero" aria-label="Orienteringens väg genom den fysiska FPGA:n">
+  <div class="hero-labels"><div><span class="stage-number">01 / KÄLLA</span><strong>Simulerad rörelse</strong><small>Bearbetad kropp · cyan / mål · kontur</small></div><div><span class="stage-number">02 / FYSISK FPGA</span><strong>Ett återkommande nät</strong><small>96 uppmätta tillstånd · en logisk nivå</small></div><div><span class="stage-number">03 / UTDATA</span><strong>Uppskattad orientering</strong><small>Fyra råvärden → normalisering för 3D</small></div></div>
+  <canvas id="scene" tabindex="0" aria-label="Dra för att styra rörelsemålet. Sensorpod, nio indata, en CfC-krets och uppskattad sensorpod visas i samma tredimensionella flöde"></canvas>
+  <div id="estimate-empty" class="estimate-empty">Väntar på verifierad FPGA-utdata</div>
+  <div class="hero-footer"><span id="flow-status">Dra för att vrida målet · piltangenter + Q/E</span><span>Flöde &amp; pulstid är en principskiss, inte en mätning av chipets interna signaler.</span></div>
+</section>
+<section class="metrics" aria-label="Verifierad telemetri">
+  <div><span>VERIFIERADE STEG</span><strong id="count">—</strong><small id="stream-state">Ingen anslutning</small></div>
+  <div><span>FULL VINKELAVVIKELSE</span><strong id="error-value">—<i>°</i></strong><small>Hela vinkeln 0–180°, utan kapning</small></div>
+  <div><span>MODELLTID</span><strong id="model-time">—<i>s</i></strong><small>Fast steg: 3,5 ms · inte USB-takt</small></div>
+  <div><span>BERÄKNING PÅ FPGA</span><strong id="compute-time">—<i>ms</i></strong><small id="cycles">Väntar på cykelräknare</small></div>
+  <div><span>USB TUR OCH RETUR</span><strong id="roundtrip">—<i>ms</i></strong><small>Uppmätt väggtid per anrop</small></div>
+</section>
+<section class="state-layout">
+  <section class="panel measured" aria-label="Uppmätta tillstånd">
+    <div class="section-head"><h2><span class="section-index">H</span>96 uppmätta tillstånd</h2><span class="legend"><b class="positive">+</b> cyan <b class="negative">−</b> magenta · ljus = |h|</span></div>
+    <div id="states" class="state-grid"></div>
+    <p class="micro">Välj en cell eller nod på chipet. Verkliga Q13-värden från USB; matrisen är inget fysiskt kopplingsschema.</p>
+  </section>
+  <aside class="panel state-detail" role="region" aria-label="Uppmätt tillståndsdetalj">
+    <div class="section-head"><h2 id="state-name">h0</h2><span class="tag">UPPMÄTT / Q13</span></div>
+    <div class="state-values"><div><span>RÅVÄRDE</span><strong id="state-raw">—</strong></div><div><span>RÅ / 8192</span><strong id="state-value">—</strong></div><div><span>Δ SEDAN FÖRRA</span><strong id="state-delta">—</strong></div></div>
+    <canvas id="state-history" class="trace" aria-label="Historik för valt uppmätt tillstånd"></canvas>
+    <p id="state-history-label" class="micro">Historik · inga verifierade värden ännu</p>
+  </aside>
+</section>
+<section class="sensor-section" aria-label="Simulerade sensorvärden som skickas till FPGA">
+  <div class="section-head"><h2><span class="section-index">9</span>Sensorer i kroppens koordinatsystem</h2><span class="tag">SIMULERADE INDATA / FYSISKA ENHETER</span></div>
+  <div id="sensor-traces" class="sensor-grid"></div>
+  <div class="pose-line"><span id="target">Mål · roll X 0° / pitch Y 0° / yaw Z 0°</span><span id="quaternion">FPGA wxyz · —</span></div>
+  <p class="micro">Varje sensorkanal autoskalas för sina senaste 96 verifierade steg. Pilar: yaw/pitch · Q/E: roll · R: upprätt mål. Kroppen närmar sig målet med högst 6 rad/s. Sensorramar: ENU, kropp → jord. Demonstrationen är inget noggrannhetslöfte.</p>
+</section>
+<section id="principle" class="education" aria-label="Så fungerar ett liquid neural network">
+  <div class="education-intro"><div class="eyebrow">FÖRSTÅ MASKINEN</div><h2>Minnet är flytande.<br>Vikterna är fasta.</h2><p>En CfC-cell uppdaterar sitt inre tillstånd från sensorerna <em>och</em> föregående tillstånd. Den här modellen uppskattar orienteringen nu — den förutsäger inte en framtida pose.</p></div>
+  <div class="explanation">
+    <div class="formula-flow"><div><b>01</b><strong>Indata + minne</strong><span>9 sensorer + 96 tidigare h</span></div><span class="arrow">→</span><div><b>02</b><strong>Två förslag + en grind</strong><span>f₁, f₂: tanh · α: sigmoid</span></div><span class="arrow">→</span><div><b>03</b><strong>Blanda till nytt h</strong><span>h = f₁ + (f₂ − f₁) · α</span></div><span class="arrow">→</span><div><b>04</b><strong>Läs ut orientering</strong><span>96 nya h → 4 råvärden</span></div></div>
+    <p>Föregående tillstånd påverkar både förslagen och grinden: <code>α = sigmoid(time_a · tₛ + time_b)</code>. Här är <code>tₛ = 1</code> i modellens ekvation; sensorns nominella steg är 3,5 ms. USB gör demonstrationen långsammare i verklig tid.</p>
+    <p>Chippet återanvänder <strong>en multiplikator</strong> och räknar seriellt. De 96 noderna visar logiska tillstånd, inte 96 parallella processorer. Kopplingar och pulser är schematiska. Alla vikter är frysta; ingen inlärning sker på kortet.</p>
+    <p>CfC står för <em>Closed-form Continuous-time</em>: en analytisk återkommande uppdatering, utan en iterativ ODE-lösare i denna körning. <a href="https://www.nature.com/articles/s42256-022-00556-7" target="_blank" rel="noreferrer">Läs originalartikeln ↗</a></p>
+  </div>
+  <div class="toy panel"><div class="section-head"><h3>Prova en blandning</h3><span class="tag illustration">ILLUSTRATION / INTE UPPMÄTT</span></div><p>Två påhittade förslag: f₁ = −0,65 och f₂ = +0,85. Dra α och se hur det nya tillståndet hamnar mellan dem.</p><label for="blend">Illustrativ blandning <output id="blend-alpha">α = 0,50</output></label><input id="blend" type="range" min="0" max="100" value="50" aria-label="Illustrativ blandning"><div class="blend-track"><span>f₁ −0,65</span><strong id="blend-result">h = +0,100</strong><span>f₂ +0,85</span></div><p class="micro">Grindarna skickas inte över UART. Reglaget ändrar bara denna illustration — aldrig de uppmätta tillstånden, rörelsemålet eller FPGA:n.</p></div>
+</section>
+<footer><span>SIMULERADE SENSORER → VERIFIERAD USB → FYSISK FPGA</span><span>50 MHz · 96 CfC-tillstånd · frysta Q13-vikter</span></footer>
+</main>
+<script type="module" src="/app.js"></script>
+</body></html>
