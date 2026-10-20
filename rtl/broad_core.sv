@@ -102,6 +102,15 @@ module broad_core #(
         OUT_BIAS_WAIT=15, OUT_BIAS_USE=16, OUT_WEIGHT_WAIT=17,
         OUT_WEIGHT_LOAD=18, OUT_MAC=19, OUT_DONE=20, COMPLETE=21;
     reg [4:0] state = IDLE;
+    wire signed [15:0] blend_value = sat16(extended_f1 + round_shift(extended_product, 13));
+    genvar write_lane;
+    generate for (write_lane = 0; write_lane < HIDDEN_SIZE; write_lane = write_lane + 1) begin : hidden_writes
+        always @(posedge clk) begin
+            if (reset) new_hidden[write_lane] <= 0;
+            else if (state == BLEND && neuron == INDEX_WIDTH'(write_lane))
+                new_hidden[write_lane] <= blend_value;
+        end
+    end endgenerate
     integer i;
     always @(posedge clk) begin
         done <= 0;
@@ -112,7 +121,6 @@ module broad_core #(
             output_values <= 0;
             for (i = 0; i < HIDDEN_SIZE; i = i + 1) begin
                 old_hidden[i] <= 0;
-                new_hidden[i] <= 0;
             end
         end else begin
             if (busy) cycles <= cycles + 32'd1;
@@ -188,7 +196,6 @@ module broad_core #(
                     state <= BLEND;
                 end
                 BLEND: begin
-                    new_hidden[neuron] <= sat16(extended_f1 + round_shift(extended_product, 13));
                     if (neuron == INDEX_WIDTH'(HIDDEN_SIZE - 1)) begin
                         output_row <= 0;
                         row_base <= ADDRESS_WIDTH'(OUTPUT_BASE);

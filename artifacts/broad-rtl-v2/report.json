@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-10-20T19:06:49.448990+00:00",
+  "stage_manifest_sha256": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+  "sources": {
+    "rtl/broad_core.sv": "79879dd48f29aef59ca1cdc2f9d8b699357b72a00c45292fd569a574ae2152af",
+    "build/broad-rtl-v2/replay.cpp": "511e21c208bc24add342aecba5c0df39e6ccf5e686480d6ed325b781652244a9",
+    "build/broad-rtl-v2/run-replay.py": "2fd5dbd2b1fce32a72a849dd97b6154dc9b8914f53876f35b0b35a0c86d44c6e"
+  },
+  "verilator": "Verilator 5.053 devel rev v5.052-501-g770b7d009 (mod)",
+  "result": {
+    "matched_steps": 10000,
+    "cycles": 124046,
+    "reset_replay": true,
+    "simulation_seconds": 151.268
+  },
+  "core_time_us_at_50mhz": 2480.92,
+  "physical_verification": false,
+  "cycle_schedule_unchanged": true,
+  "previous_core_report_sha256": "97f119aa97f185050f0e07b0b837ede174d1bd1c822a8768d0bad22e407c4382",
+  "compile_log_sha256": "a2cdb45b02148b966a893fe055310161dc24126e87920f1b6d89d8140a37e9b2",
+  "replay_log_sha256": "deae470fe6d733ef288536b87f302eccc4f29647dbb2eaedb0e26404582a2ed4",
+  "binary_sha256": "43c1aaea2a8cec147ed9736b2006b0337e09c840c6ff6e958194ce3f63383842"
+}

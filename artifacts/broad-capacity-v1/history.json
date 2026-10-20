@@ -1,0 +1,27 @@
+{
+  "attempts": [
+    {
+      "label": "red",
+      "source_directory": "build/broad-capacity-scratch/h96-heap-seed1-n8_ke_41",
+      "result": "illegal placement",
+      "files": {
+        "nextpnr.log": "3a170b88bfb5c1d9154a1ffb536cf0862522fd725550b2ce4a5447ae52e8b9ef",
+        "test.stdout.log": "9781d960d2e3a5b5274bbb0d91d56a12641cca7731c48b04ecdfd58bf5f60cc9",
+        "test.stderr.log": "6d50e0ed62405f765af98bf3757744bb1dfdb765743d702a430de619e246f4d5",
+        "test-command.json": "a797d3c102e5894b50883f67fa683846f0ad4f689ebe9e7b3eda3105796bde65"
+      }
+    },
+    {
+      "label": "register-fix-600s",
+      "source_directory": "build/broad-capacity-scratch/h96-heap-seed1-f9da5nkl",
+      "result": "stage timeout; final timing unknown",
+      "files": {
+        "nextpnr.log": "f2349c8ea182561ba8cd0b9c6fc334293c9146a9c32a1bacec01673e3d957376",
+        "test.stdout.log": "3a81120edf3cd64ddfff3344ebbcb0a9cbbafd24ebc7e78dfc6ce02716bfa5cf",
+        "test.stderr.log": "7ba4f878750cfbca56334d541a50eb803bacab91e96019b4f85eba108c55bec2",
+        "test-command.json": "7693a82deaafc1513924dcf988103f4c2da4e55e53f98574c540969ce75299ea"
+      }
+    }
+  ],
+  "note": "Historical failures only. No routed timing or packed H96 success is implied."
+}

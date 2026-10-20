@@ -1,0 +1,47 @@
+{
+  "core_sha256": "0d4db9bb79444261cb1345dbd01999e1a95a62765780960b86676f343b9e9090",
+  "top_sha256": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+  "utilization_before_placement": {
+    "LUT4": {
+      "used": 22361,
+      "available": 23040
+    },
+    "DFF": {
+      "used": 4689,
+      "available": 23040
+    },
+    "BSRAM": {
+      "used": 48,
+      "available": 56
+    }
+  },
+  "failed_attempts": [
+    {
+      "directory": "top-preflight-v1",
+      "result": "illegal placement",
+      "exit_code": 125,
+      "log_sha256": "773bede518da231b4934517b54476cacad56a4a63b64d5d2bfc516f598fa8ee0"
+    },
+    {
+      "directory": "top-preflight-heap-density99-seed2",
+      "result": "illegal placement",
+      "exit_code": 125,
+      "log_sha256": "274419cd53b98d12604ee0bf0a7a0859ad0853cebf306669d58d6230d073727d"
+    },
+    {
+      "directory": "top-preflight-sa-seed1",
+      "result": "placer segmentation fault",
+      "exit_code": -11,
+      "log_sha256": "a974bea916fc05e7f036c0b661683e4f6f187dec52e7578649e2c51cf207cda7"
+    }
+  ],
+  "diagnosis": {
+    "logical_new_state_words": 96,
+    "mapped_new_state_words": 128,
+    "associated_new_state_LUT1_to_LUT4": 12447,
+    "all_synthesized_LUT1_to_LUT4": 20827,
+    "evidence": "Yosys memory_map dynamic write plus whole-array reset; synthesis-name association is diagnostic, not independent area measurement"
+  },
+  "proposed_fix": "Generate constant-lane reset/write register processes, one shared blend_value; retain existing two register banks, cycles, numerical format and ports",
+  "final_fit_established": false
+}

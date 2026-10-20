@@ -1,0 +1,14 @@
+{
+  "files": {
+    "report.json": "c708ae1e5bbd5f0f33da1d5a10d950306dd37042077ff0f0b2d6e9840a9b2086",
+    "simulation-freeze.json": "6f8ccbfbfda74aff9755e17b0f8a3832ca00e6776fe52a3c3ec19327a1d04816",
+    "stage-manifest.json": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+    "replay.cpp": "511e21c208bc24add342aecba5c0df39e6ccf5e686480d6ed325b781652244a9",
+    "run-replay.py": "2fd5dbd2b1fce32a72a849dd97b6154dc9b8914f53876f35b0b35a0c86d44c6e",
+    "stage-replay.py": "faefdeec81761477aebcf3f6a5130b82b01eaeb76697c3c1daceb4061a5baa88",
+    "replay.log": "deae470fe6d733ef288536b87f302eccc4f29647dbb2eaedb0e26404582a2ed4",
+    "compile.log": "a2cdb45b02148b966a893fe055310161dc24126e87920f1b6d89d8140a37e9b2"
+  },
+  "source_directory": "build/broad-rtl-v2",
+  "note": "All published files byte-identical to completed V2 run. Reproduction runner retains original build path and requires V1 reference report."
+}
