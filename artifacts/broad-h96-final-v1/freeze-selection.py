@@ -14,7 +14,7 @@ plan_path = root / 'experiments/broad-h96-final-study-v1.json'
 plan = json.loads(plan_path.read_text())
 build_path = root / 'artifacts/broad-capacity-v1/final/report.json'
 build = json.loads(build_path.read_text())
-rtl_path = root / 'artifacts/broad-rtl-v2/report.json'
+rtl_path = root / 'artifacts/broad-rtl-v3/report.json'
 rtl = json.loads(rtl_path.read_text())
 bitstream = build_path.parent / build['bitstream']['file']
 assert build['top'] == 'broad_top' and build['hidden_size'] == 96

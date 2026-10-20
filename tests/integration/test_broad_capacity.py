@@ -55,6 +55,7 @@ class BroadCapacityTracerTests(unittest.TestCase):
         self.assertEqual(report["hidden_size"],96)
         self.assertEqual(report["clock_mhz"],50)
         self.assertEqual(report["placement"],{"placer":"heap","seed":1,"heap_beta":.9})
+        self.assertEqual(report["router"],"router2")
         self.assertEqual(report["stage_timeout_s"],1200)
         self.assertEqual(report["timing"]["constrained_mhz"],50)
         self.assertTrue(math.isfinite(report["timing"]["achieved_mhz"]))

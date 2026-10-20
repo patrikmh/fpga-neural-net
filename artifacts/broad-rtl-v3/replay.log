@@ -1,0 +1,11 @@
+matched 1000 continuous steps; cycles=124046
+matched 2000 continuous steps; cycles=124046
+matched 3000 continuous steps; cycles=124046
+matched 4000 continuous steps; cycles=124046
+matched 5000 continuous steps; cycles=124046
+matched 6000 continuous steps; cycles=124046
+matched 7000 continuous steps; cycles=124046
+matched 8000 continuous steps; cycles=124046
+matched 9000 continuous steps; cycles=124046
+matched 10000 continuous steps; cycles=124046
+RESULT {"matched_steps":10000,"cycles":124046,"reset_replay":true,"simulation_seconds":152.049}

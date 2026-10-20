@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/nextpnr-himbaechel",
+    "--json",
+    "/Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-7h94bn01/synth.json",
+    "--device",
+    "GW5A-LV25MG121NC1/I0",
+    "--vopt",
+    "family=GW5A-25A",
+    "--vopt",
+    "cst=/Users/patrikandersson/Downloads/tang-cfc/constraints/primer25k.cst",
+    "--freq",
+    "50",
+    "--placer",
+    "heap",
+    "--seed",
+    "1",
+    "--placer-heap-beta",
+    "0.9",
+    "--router",
+    "router2",
+    "--report",
+    "/Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/router2-diagnostic-v1/timing.json",
+    "--detailed-timing-report",
+    "--write",
+    "/Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/router2-diagnostic-v1/routed.json"
+  ],
+  "core_sha256": "79879dd48f29aef59ca1cdc2f9d8b699357b72a00c45292fd569a574ae2152af",
+  "synth_sha256": "97ced3d91853c57ff161348accafeb8779ed198ec76c0b0fed0d1439fce093c5",
+  "scope": "Diagnostic route only; not a public-builder capacity pass or physical acceptance"
+}

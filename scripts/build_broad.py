@@ -122,7 +122,8 @@ def build(args):
         f'write_json {json.dumps(str(synth))}'], output, args.stage_timeout)
     command = [tools['nextpnr-himbaechel'], '--json', str(synth), '--device', DEVICE,
         '--vopt', 'family=GW5A-25A', '--vopt', f'cst={ROOT / SOURCES[3]}', '--freq', '50',
-        '--placer', args.placer, '--seed', str(args.seed), '--report', str(timing_path), '--write', str(routed)]
+        '--placer', args.placer, '--router', 'router2', '--seed', str(args.seed),
+        '--report', str(timing_path), '--write', str(routed)]
     if args.placer == 'heap':
         command.extend(['--placer-heap-beta', str(args.heap_beta)])
     run_stage('nextpnr', command, output, args.stage_timeout)
@@ -141,7 +142,7 @@ def build(args):
         raise RuntimeError('Frozen export or staged ROM banks changed during build')
     if tool_hashes != {name: sha256(Path(path)) for name, path in tools.items()}:
         raise RuntimeError('Tool executable changed during build')
-    report = {'top': 'broad_top', 'device': DEVICE, 'hidden_size': size, 'clock_mhz': 50,
+    report = {'top': 'broad_top', 'device': DEVICE, 'hidden_size': size, 'clock_mhz': 50, 'router': 'router2',
         'placement': {'placer': args.placer, 'seed': args.seed, 'heap_beta': args.heap_beta},
         'stage_timeout_s': args.stage_timeout, 'timing': timing, 'memories': memories,
         'utilization': raw_timing['utilization'], 'sources': source_hashes, 'banks': banks,

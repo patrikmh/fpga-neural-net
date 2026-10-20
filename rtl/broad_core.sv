@@ -54,6 +54,7 @@ module broad_core #(
     reg signed [15:0] new_hidden [0:HIDDEN_SIZE-1];
     reg signed [15:0] raw_outputs [0:3];
     reg signed [47:0] ff1_acc, ff2_acc, time_a_acc, time_b_acc;
+    reg signed [47:0] gate_sum;
     reg signed [47:0] accumulator;
     reg signed [15:0] f1, f2, mul_a, mul_b;
     wire signed [31:0] product = mul_a * mul_b;
@@ -174,6 +175,7 @@ module broad_core #(
                     end
                 end
                 ACTIVATE: begin
+                    gate_sum <= time_a_acc + time_b_acc;
                     tanh_address <= lookup_index(ff1_acc);
                     state <= F1_WAIT;
                 end
@@ -186,7 +188,7 @@ module broad_core #(
                 F2_WAIT: state <= F2_READ;
                 F2_READ: begin
                     f2 <= tanh_q;
-                    sigmoid_address <= lookup_index(time_a_acc + time_b_acc);
+                    sigmoid_address <= lookup_index(gate_sum);
                     state <= GATE_WAIT;
                 end
                 GATE_WAIT: state <= GATE_READ;

@@ -1,0 +1,14 @@
+{
+  "result": "nextpnr stage timeout1200s",
+  "test_elapsed_s": 1221.432,
+  "last_router_s": 1142.38,
+  "last_remaining_arcs": 500,
+  "final_timing_known": false,
+  "bitstream_produced": false,
+  "files": {
+    "nextpnr.log": "4f8aa5ca41776520ba3e23d2db9f66c0eb62e03f5a9346da576277c4473a517d",
+    "test.stdout.log": "113f393e480037e71f42692f0b0bf57966051c3df6efda9d153b9a1512619932",
+    "test.stderr.log": "fec84e2245a21838905624384a4cdf3b13c9747e5465c2f998a9bac3c6851c54",
+    "test-command.json": "5f7b6b5029144f6af11dc701dea5b1cee9e54f6b7b0fe958805703a18333d6ef"
+  }
+}

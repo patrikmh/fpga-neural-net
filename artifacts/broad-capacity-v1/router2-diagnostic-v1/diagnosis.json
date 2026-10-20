@@ -1,0 +1,21 @@
+{
+  "result": "routed diagnostic fails strict50MHz; not accepted or packed",
+  "returncode": 1,
+  "elapsed_s": 87.44146458400064,
+  "frequency_lines": [
+    "Info: Max frequency for clock 'core.clk': 27.96 MHz (FAIL at 50.00 MHz)",
+    "ERROR: Max frequency for clock 'core.clk': 36.19 MHz (FAIL at 50.00 MHz)"
+  ],
+  "critical_source": "Info:   clk-to-q  0.23  0.23 Source core.time_a_acc_DFFRE_Q_7.Q",
+  "critical_sink": "Info:                          Sink core.sigmoid_address_DFFRE_Q_9.D",
+  "path_delay_ns": 27.63,
+  "logic_ns": 9.79,
+  "routing_ns": 17.84,
+  "physical_verification": false,
+  "files": {
+    "freeze.json": "0259c57286904d816a489f6dae7da462b6705d45b4dfb6ec4737fa489ab90cde",
+    "result.json": "1c89d590f037ef322c42b9af3b8b484c849d811c0361acdcc077b95d1835c501",
+    "nextpnr.log": "b217185947c3315ca1d75385ad13e39a51ff2117f2ca06534bcc66c7d660c2c6",
+    "timing.json": "90575aa26d70474a1128eeb3b38a6035be06971fc3434acf502bf0c86b773d28"
+  }
+}

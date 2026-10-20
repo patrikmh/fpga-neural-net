@@ -1,0 +1,14 @@
+{
+  "files": {
+    "report.json": "75e3b34c53d9107271ffe7519a1972c0f4c79809150ad791c15c9d0877d49a76",
+    "simulation-freeze.json": "cf853359a1f8832b72ad9f215a8b0e838c08c7d298e9c6ab9046c1b90633ebeb",
+    "stage-manifest.json": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+    "replay.cpp": "511e21c208bc24add342aecba5c0df39e6ccf5e686480d6ed325b781652244a9",
+    "run-replay.py": "379c28c8248c0858dc34b5ef5a88b398fbac0a31917e5580ae478aab328e4f50",
+    "stage-replay.py": "faefdeec81761477aebcf3f6a5130b82b01eaeb76697c3c1daceb4061a5baa88",
+    "replay.log": "446df7c76ae4046074b9f16e06f058af5b2718c5a686a620082d41f3637c1dd1",
+    "compile.log": "916d39ea27c7f63d38df81055769d9be1151e8d78dac798eaaf584c95d6d02b6"
+  },
+  "source_directory": "build/broad-rtl-v3",
+  "note": "Byte-identical completed V3 evidence; same core as final strict50MHz build. Runner retains original build path and V2 reference report."
+}

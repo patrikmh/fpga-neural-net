@@ -1,0 +1,7 @@
+yosys: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-tq3z97d5/yosys.log)
+yosys: completed
+nextpnr: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-tq3z97d5/nextpnr.log)
+nextpnr: completed
+gowin_pack: running (log: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-tq3z97d5/gowin_pack.log)
+gowin_pack: completed
+Verified BROAD H96: 59.60 MHz; report: /Users/patrikandersson/Downloads/tang-cfc/build/broad-capacity-scratch/h96-heap-seed1-tq3z97d5/report.json
