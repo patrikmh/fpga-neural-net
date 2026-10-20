@@ -13,7 +13,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = (
     "rtl/uart.sv", "rtl/probe_top.sv", "rtl/probe_rom.hex",
-    "constraints/primer25k.cst",
+    "constraints/primer25k.cst", "scripts/build.py",
 )
 DEVICE = "GW5A-LV25MG121NC1/I0"
 
@@ -70,10 +70,19 @@ def timing_evidence(timing):
     }
 
 
+def positive_integer(value):
+    number = int(value)
+    if number <= 0:
+        raise argparse.ArgumentTypeError("Expected a positive integer")
+    return number
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--build-dir", type=Path, default=ROOT / "build/probe")
-    output = parser.parse_args().build_dir.resolve()
+    parser.add_argument("--uart-divisor", type=positive_integer, default=434)
+    args = parser.parse_args()
+    output = args.build_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
     source_hashes = {name: sha256(ROOT / name) for name in SOURCES}
     tools = {}
@@ -99,6 +108,7 @@ def main():
     bitstream = output / "probe.fs"
     run_stage("yosys", [tools["yosys"], "-p",
         "read_verilog -sv rtl/uart.sv rtl/probe_top.sv; "
+        f"chparam -set UART_DIVISOR {args.uart_divisor} probe_top; "
         "synth_gowin -top probe_top -family gw5a -nolutram; "
         f"write_json {json.dumps(str(synth))}"], output)
     run_stage("nextpnr", [tools["nextpnr-himbaechel"],
@@ -119,6 +129,8 @@ def main():
         raise RuntimeError("Build sources changed while the build was running")
     report = {
         "top": "probe_top", "device": DEVICE, "clock_mhz": 50,
+        "uart_divisor": args.uart_divisor,
+        "expected_fpga_baudrate": 50_000_000 / args.uart_divisor,
         "memories": memories, "timing": timing,
         "utilization": raw_timing["utilization"],
         "bitstream": {"file": bitstream.name, "sha256": sha256(bitstream)},

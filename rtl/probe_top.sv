@@ -1,4 +1,6 @@
-module probe_top(input wire clk, rst, uart_rx, output wire uart_tx);
+module probe_top #(parameter integer UART_DIVISOR = 434)(
+    input wire clk, rst, uart_rx, output wire uart_tx
+);
     reg [7:0] startup = 0;
     always @(posedge clk) begin
         if (startup != 255) startup <= startup + 1;
@@ -9,8 +11,8 @@ module probe_top(input wire clk, rst, uart_rx, output wire uart_tx);
     reg tx_start = 0;
     reg [7:0] tx_data;
     wire tx_busy;
-    uart_rx receiver(.clk(clk), .rst(reset), .rx(uart_rx), .data(rx_data), .valid(rx_valid));
-    uart_tx transmitter(.clk(clk), .rst(reset), .start(tx_start), .data(tx_data), .tx(uart_tx), .busy(tx_busy));
+    uart_rx #(.CLKS_PER_BIT(UART_DIVISOR)) receiver(.clk(clk), .rst(reset), .rx(uart_rx), .data(rx_data), .valid(rx_valid));
+    uart_tx #(.CLKS_PER_BIT(UART_DIVISOR)) transmitter(.clk(clk), .rst(reset), .start(tx_start), .data(tx_data), .tx(uart_tx), .busy(tx_busy));
     reg [7:0] request [0:8];
     reg [3:0] rx_index = 0;
     reg [7:0] checksum = 0;
