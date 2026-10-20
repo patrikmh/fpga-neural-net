@@ -23,8 +23,10 @@ Första [CfC-försöket med BROAD](docs/broad-results.md) är genomfört på CPU
 41,98° fullständigt orienteringsfel och 19,39° lutningsfel på fyra låsta
 testinspelningar, jämfört med baslinjens 4,67° lutningsfel. Åtta-neuronsmodellen
 är därför inte redo för FPGA-steget. Checkpoint och frysta rapporter finns
-i `artifacts/broad-cfc8-v1/`. Nästa beställda steg är större nät med noggrannhet
-som högsta prioritet, inom kortets faktiska kapacitet.
+i `artifacts/broad-cfc8-v1/`. En [större CPU-studie](docs/broad-width-study.md) har därefter valt 96 neuroner
+med 41 092 parametrar: 26,43° valideringsfel, 23,8 % lägre än H8 på samma
+valideringsmått. Faktisk FPGA-passning och ett nytt sluttest återstår.
+Noggrannhet har högsta prioritet.
 
 ### Tidigare milstolpar
 

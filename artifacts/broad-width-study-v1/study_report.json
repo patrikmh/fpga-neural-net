@@ -1,0 +1,266 @@
+{
+  "source_commit": "721b44a",
+  "plan_path": "experiments/broad-width-study-v1.json",
+  "plan_sha256": "a854219cf4609da02ae4b0c294d92ca86e00d80c3952ba40cfc2208e3fa49045",
+  "runs": [
+    {
+      "hidden_size": 32,
+      "seed": 7,
+      "epochs": 50,
+      "best_epoch": 50,
+      "parameter_count": 5508,
+      "metrics": {
+        "full_rmse_deg": 29.734058422415437,
+        "inclination_rmse_deg": 14.722697103605146,
+        "heading_rmse_deg": 26.072948390139643
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.39207943253447,
+          "inclination_rmse_deg": 8.911400050670903,
+          "heading_rmse_deg": 19.54546460386018,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 38.07603741229641,
+          "inclination_rmse_deg": 20.53399415653939,
+          "heading_rmse_deg": 32.600432176419105,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/screen-h32-seed7/checkpoint.pt",
+      "checkpoint_sha256": "a83bea60a8a9a1be95e43d26346494bacbcfe18b5a21c222590b11186b4971d5",
+      "training_report_sha256": "30e743627ef64018e85bd5c25bc71ad48261d8a046bdbdd6de728c2209bba5b8",
+      "physical_fit": "not yet established"
+    },
+    {
+      "hidden_size": 64,
+      "seed": 7,
+      "epochs": 50,
+      "best_epoch": 20,
+      "parameter_count": 19204,
+      "metrics": {
+        "full_rmse_deg": 28.919734202741374,
+        "inclination_rmse_deg": 14.90486068200765,
+        "heading_rmse_deg": 24.835601724010132
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.78145281404878,
+          "inclination_rmse_deg": 8.25236063465588,
+          "heading_rmse_deg": 20.199630353922267,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 36.05801559143397,
+          "inclination_rmse_deg": 21.55736072935942,
+          "heading_rmse_deg": 29.471573094098,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/screen-h64-seed7/checkpoint.pt",
+      "checkpoint_sha256": "56ae56c59a5cba86f87bab1f985fda943b764f0d2de338a811b292c9dfa44097",
+      "training_report_sha256": "21458c6dc4cc1c0b5de1cc7f4bfc3b20e70717c7c2a111f69326a10c8bf45b8c",
+      "physical_fit": "not yet established"
+    },
+    {
+      "hidden_size": 96,
+      "seed": 7,
+      "epochs": 50,
+      "best_epoch": 50,
+      "parameter_count": 41092,
+      "metrics": {
+        "full_rmse_deg": 26.433936383466115,
+        "inclination_rmse_deg": 11.82796686157303,
+        "heading_rmse_deg": 23.794986568539862
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.123785831206806,
+          "inclination_rmse_deg": 8.602195262589794,
+          "heading_rmse_deg": 19.46131603410859,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 31.744086935725424,
+          "inclination_rmse_deg": 15.053738460556266,
+          "heading_rmse_deg": 28.128657102971133,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/screen-h96-seed7/checkpoint.pt",
+      "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+      "training_report_sha256": "b9ae6b52e515ff9b39353b153e94413947a7356fabc1bca2910a17f5fe6b9fd4",
+      "physical_fit": "not yet established"
+    },
+    {
+      "hidden_size": 104,
+      "seed": 7,
+      "epochs": 50,
+      "best_epoch": 50,
+      "parameter_count": 47844,
+      "metrics": {
+        "full_rmse_deg": 26.48015329247535,
+        "inclination_rmse_deg": 13.941001042348145,
+        "heading_rmse_deg": 22.700405595097866
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.84783662817882,
+          "inclination_rmse_deg": 11.8708657477665,
+          "heading_rmse_deg": 18.477209520098064,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 31.112469956771882,
+          "inclination_rmse_deg": 16.011136336929788,
+          "heading_rmse_deg": 26.923601670097668,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/screen-h104-seed7/checkpoint.pt",
+      "checkpoint_sha256": "6d284fc9b9a3efb4f7c1919865efddd6e20542bce583e436fc73a71ed34b4647",
+      "training_report_sha256": "616d42b38340e43d130c4bdb8bec3b02d125debb8540fc42ec758990816bc229",
+      "physical_fit": "not yet established"
+    },
+    {
+      "hidden_size": 96,
+      "seed": 7,
+      "epochs": 200,
+      "best_epoch": 50,
+      "parameter_count": 41092,
+      "metrics": {
+        "full_rmse_deg": 26.433936383466115,
+        "inclination_rmse_deg": 11.82796686157303,
+        "heading_rmse_deg": 23.794986568539862
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.123785831206806,
+          "inclination_rmse_deg": 8.602195262589794,
+          "heading_rmse_deg": 19.46131603410859,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 31.744086935725424,
+          "inclination_rmse_deg": 15.053738460556266,
+          "heading_rmse_deg": 28.128657102971133,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/refine-h96-seed7/checkpoint.pt",
+      "checkpoint_sha256": "2c62d945f2431f72fa46db036266c0909a70ca0c61c5b19f89c01296d7130fca",
+      "training_report_sha256": "62f2fb283f02a55acffe57dcfc7775f985e9a5cfab68ffa4a453894928e0e5b8",
+      "physical_fit": "not yet established"
+    },
+    {
+      "hidden_size": 96,
+      "seed": 17,
+      "epochs": 200,
+      "best_epoch": 70,
+      "parameter_count": 41092,
+      "metrics": {
+        "full_rmse_deg": 29.071845050336727,
+        "inclination_rmse_deg": 13.301970379873724,
+        "heading_rmse_deg": 26.06835668368533
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.912848030128163,
+          "inclination_rmse_deg": 8.566221234664862,
+          "heading_rmse_deg": 20.34566463733989,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 36.23084207054529,
+          "inclination_rmse_deg": 18.037719525082586,
+          "heading_rmse_deg": 31.79104873003077,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-width-study-v1/refine-h96-seed17/checkpoint.pt",
+      "checkpoint_sha256": "31b393040e27244a4b95ea2348d26e9025e0755d4df383d23700750383907808",
+      "training_report_sha256": "b13327a9ca7f9f07b78a1cce1e500c662739d7d95b820bf7adfff752d5630e5a",
+      "physical_fit": "not yet established"
+    }
+  ],
+  "selection": {
+    "source_commit": "721b44a",
+    "frozen_at_utc": "2026-10-20T17:30:11.893786+00:00",
+    "plan_sha256": "a854219cf4609da02ae4b0c294d92ca86e00d80c3952ba40cfc2208e3fa49045",
+    "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+    "training_prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+    "hidden_size": 96,
+    "parameter_count": 41092,
+    "seed": 7,
+    "best_epoch": 50,
+    "metrics": {
+      "full_rmse_deg": 26.433936383466115,
+      "inclination_rmse_deg": 11.82796686157303,
+      "heading_rmse_deg": 23.794986568539862
+    },
+    "selection": "Validation-only best full-orientation mean-trial RMSE across all six predeclared runs",
+    "new_holdout_not_opened": [
+      4,
+      8,
+      12,
+      31
+    ],
+    "physical_fit": "not established; no larger FPGA bitstream built",
+    "sources": {
+      "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+      "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+      "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+      "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+      "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+    },
+    "versions": {
+      "python": "3.11.14",
+      "torch": "2.14.1",
+      "numpy": "2.4.6",
+      "ncps": "1.0.1"
+    }
+  },
+  "baseline_h8_validation_full_rmse_deg": 34.70530545318803,
+  "relative_full_validation_rmse_reduction": 0.2383315450393798,
+  "training_recipe_limit": "Hidden state reset every0.896s training window; validation runs175\u2013186s continuously. Potential effect inferred, not established.",
+  "completed_epochs": 600,
+  "physical_fit_estimate": "H96 ideal41weight+7activation BSRAM=48/56; actual synthesis/routing not yet performed",
+  "decision_pending": "Longer state-carrying training recommended, physics/CfC alternative, or proceed with current model to FPGA"
+}

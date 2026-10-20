@@ -1,0 +1,37 @@
+{
+  "source_commit": "721b44a",
+  "frozen_at_utc": "2026-10-20T17:30:11.893786+00:00",
+  "plan_sha256": "a854219cf4609da02ae4b0c294d92ca86e00d80c3952ba40cfc2208e3fa49045",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "training_prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "hidden_size": 96,
+  "parameter_count": 41092,
+  "seed": 7,
+  "best_epoch": 50,
+  "metrics": {
+    "full_rmse_deg": 26.433936383466115,
+    "inclination_rmse_deg": 11.82796686157303,
+    "heading_rmse_deg": 23.794986568539862
+  },
+  "selection": "Validation-only best full-orientation mean-trial RMSE across all six predeclared runs",
+  "new_holdout_not_opened": [
+    4,
+    8,
+    12,
+    31
+  ],
+  "physical_fit": "not established; no larger FPGA bitstream built",
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+    "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  }
+}

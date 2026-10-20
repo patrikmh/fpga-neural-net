@@ -1,0 +1,52 @@
+{
+  "config": {
+    "seed": 7,
+    "epochs": 50,
+    "updates_per_epoch": 16,
+    "batch_size": 16,
+    "window": 256,
+    "warmup": 32,
+    "validation_every": 10,
+    "learning_rate": 0.003,
+    "gradient_clip": 1.0,
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0,
+    "loss": "1-squared_normalized_quaternion_dot"
+  },
+  "parameter_count": 41092,
+  "training_loss": 0.025290885474532843,
+  "best_epoch": 50,
+  "validation": [
+    {
+      "trial_id": 2,
+      "samples_scored": 32280,
+      "rmse_deg": 21.123785831206806,
+      "predictions_file": "validation/02.npz"
+    },
+    {
+      "trial_id": 30,
+      "samples_scored": 27458,
+      "rmse_deg": 31.744086935725424,
+      "predictions_file": "validation/30.npz"
+    }
+  ],
+  "validation_rmse_deg": 26.433936383466115,
+  "prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "provenance": {
+    "sources": {
+      "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+      "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+      "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+    },
+    "versions": {
+      "python": "3.11.14",
+      "torch": "2.14.1",
+      "numpy": "2.4.6",
+      "ncps": "1.0.1"
+    }
+  }
+}
