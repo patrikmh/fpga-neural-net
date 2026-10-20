@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-20T22:48:17.865057+00:00",
+  "source_commit": "f935482",
+  "files": {
+    "1m/physical-result.json": {
+      "sha256": "188e68dc2c735bd221591d78ddef7a30f8a2fba558a6c17489e2d9202d106bd0",
+      "original_path": "build/orientation-baud-probe-1m-physical.json"
+    },
+    "1m/driver.py": {
+      "sha256": "0e6e56265b2cc5cd42d47c7b60359cbed985d9c32f31269b5f3fc412b642524c",
+      "original_path": "build/orientation-baud-probe-1m-physical.py"
+    },
+    "1m/build-report.json": {
+      "sha256": "d668399f92979e2e578d176b2036a82d7a2c17f0770339c642684b2dbebaade6",
+      "original_path": "build/orientation-study-v1/physical-baud-probe-1m/report.json"
+    },
+    "1m/probe.fs": {
+      "sha256": "a710e6b4ff0851d9797921063b397c5f0a74fcbd7186b67c95ea579eccc208d6",
+      "original_path": "build/orientation-study-v1/physical-baud-probe-1m/probe.fs"
+    },
+    "2m/physical-result.json": {
+      "sha256": "6d7de871f3e6564cc67c750c3c474362b9789d1ba7a3d71ff865c25f4c89f374",
+      "original_path": "build/orientation-baud-probe-physical.json"
+    },
+    "2m/driver.py": {
+      "sha256": "6870b4b0de312acb329588a4572bb707c9401561393da5138c3d406a8605f725",
+      "original_path": "build/orientation-baud-probe-physical.py"
+    },
+    "2m/build-report.json": {
+      "sha256": "b4183f7c6b0f44029ab220d5415a37121d32d0f724b96850d58e8ce1bc4a640f",
+      "original_path": "build/orientation-study-v1/physical-baud-probe-2m/report.json"
+    },
+    "2m/probe.fs": {
+      "sha256": "aeedc1cd07120b3c28f94d3831f9457adecb01d23e88bf3986eadf6197039ae1",
+      "original_path": "build/orientation-study-v1/physical-baud-probe-2m/probe.fs"
+    },
+    "post-restore-browser-e2e.log": {
+      "sha256": "8c1e793a0c5a285a7c125a2edc6cbb4be00ab9514b3924fa73bcc3d9fb88fc4b",
+      "original_path": "build/orientation-post-probe-e2e.log"
+    }
+  },
+  "driver_execution_note": "Drivers were executed from original build/ paths. Their root resolution depends on that location; archived copies preserve exact source bytes.",
+  "diagnostic_1m_passed": true,
+  "diagnostic_2m_passed": false,
+  "H96_higher_sampling_rate_verified": false,
+  "accuracy_gate_passed": false,
+  "original_H96_restored": true,
+  "post_restore_browser_e2e": {
+    "verified_steps": 3,
+    "states": 96,
+    "illustration": "isolated",
+    "reset": "verified"
+  },
+  "url": "http://127.0.0.1:8766/",
+  "browser_final_state": "disconnected"
+}

@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-10-20T22:42:06.856329+00:00",
+  "source_commit": "f935482",
+  "usb_serial": "2023112818",
+  "probe_build_report_sha256": "b4183f7c6b0f44029ab220d5415a37121d32d0f724b96850d58e8ce1bc4a640f",
+  "usb_requested_baudrate": 8000000,
+  "fpga_nominal_uart_baudrate": 2000000,
+  "fpga_clock_mhz": 50,
+  "uart_divisor": 25,
+  "checksum": "XOR8",
+  "count_requested": 1000,
+  "count_verified": 0,
+  "flash_written": false,
+  "higher_H96_sampling_rate_verified": false,
+  "probe_load": {
+    "argv": [
+      "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+      "--board",
+      "tangprimer25k",
+      "--usb-serial-num",
+      "2023112818",
+      "--write-sram",
+      "/Users/patrikandersson/Downloads/tang-cfc/build/orientation-study-v1/physical-baud-probe-2m/probe.fs"
+    ],
+    "exit_code": 0,
+    "bitstream_sha256": "aeedc1cd07120b3c28f94d3831f9457adecb01d23e88bf3986eadf6197039ae1"
+  },
+  "probe_error": "Probe response mismatch 0:  != 5aa50000ed4300c091",
+  "restore_load": {
+    "argv": [
+      "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+      "--board",
+      "tangprimer25k",
+      "--usb-serial-num",
+      "2023112818",
+      "--write-sram",
+      "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-h96-deployment-v2/build/broad.fs"
+    ],
+    "exit_code": 0,
+    "bitstream_sha256": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988"
+  },
+  "original_H96_restored": true,
+  "restore_verified_steps": 16,
+  "restore_hidden_states_per_step": 96,
+  "restore_raw_outputs_per_step": 4
+}

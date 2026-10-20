@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-10-20T22:53:04.526268+00:00",
+  "tested_software_source_commit": "f935482",
+  "software_checks": {
+    "tests": 122,
+    "duration_s": 460.1,
+    "passed": true,
+    "compileall_passed": true
+  },
+  "later_change": "mobile-only CSS; no model, RTL, host or protocol changes",
+  "served_style_sha256": "18a9880a980f71e87ef242b64bb129944298eb1ee508e7fb537e85180beafc3b",
+  "url": "http://127.0.0.1:8766/",
+  "physical_browser_e2e": {
+    "verified_steps": 3,
+    "states": 96,
+    "illustration": "isolated",
+    "reset": "verified"
+  },
+  "original_H96_deployed": true,
+  "under_5_degree_gate_passed": false,
+  "higher_H96_sampling_rate_verified": false,
+  "files": {
+    "responsive-1440.png": "1189ed09b1277e6526de56ee16ec12b0e310430edc6ac9c50cb5d0b0c5c5bc78",
+    "responsive-600.png": "89503951d2482f0fc711302b7d4d767249b65b9d0c285174bd25ca5bd22ad30c",
+    "physical-browser-e2e.log": "8c1e793a0c5a285a7c125a2edc6cbb4be00ab9514b3924fa73bcc3d9fb88fc4b",
+    "software-check.log": "5e236301be5fc2ed8ce95963b90361c52091ffc3fef45d4f13c13f4fe92fe726",
+    "responsive-320.png": "0070800826acb7c71187fdf7d81232e0ce68864884b4352620576e154b6fb153",
+    "responsive-390.png": "1c820f7b370274f585e0cd65b84e9c2d35cace05d468307b1a399c8696dafe80",
+    "responsive-audit.json": "21480f92d409901e018355df8b216dcb2553575d3642426fa1e71478ab4db6a2"
+  },
+  "responsive_audit_passed": true,
+  "viewports": [
+    320,
+    390,
+    600,
+    1440
+  ]
+}

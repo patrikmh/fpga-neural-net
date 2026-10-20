@@ -1,0 +1,150 @@
+{
+  "top": "probe_top",
+  "device": "GW5A-LV25MG121NC1/I0",
+  "clock_mhz": 50,
+  "uart_divisor": 50,
+  "expected_fpga_baudrate": 1000000.0,
+  "memories": {
+    "rom": {
+      "block_count": 1,
+      "cell_types": [
+        "SP"
+      ],
+      "origins": [
+        "rom.0.0"
+      ]
+    },
+    "ram": {
+      "block_count": 2,
+      "cell_types": [
+        "SDP"
+      ],
+      "origins": [
+        "ram.0.0",
+        "ram.0.0_AUX"
+      ]
+    }
+  },
+  "timing": {
+    "constrained_mhz": 50,
+    "achieved_mhz": 82.19628143310547
+  },
+  "utilization": {
+    "ADC": {
+      "available": 1,
+      "used": 0
+    },
+    "ALU": {
+      "available": 17280,
+      "used": 124
+    },
+    "BSRAM": {
+      "available": 56,
+      "used": 3
+    },
+    "BUFG": {
+      "available": 5,
+      "used": 0
+    },
+    "CLKDIV": {
+      "available": 16,
+      "used": 0
+    },
+    "CLKDIV2": {
+      "available": 16,
+      "used": 0
+    },
+    "DCS": {
+      "available": 8,
+      "used": 0
+    },
+    "DFF": {
+      "available": 23040,
+      "used": 308
+    },
+    "GND": {
+      "available": 1,
+      "used": 1
+    },
+    "GSR": {
+      "available": 1,
+      "used": 1
+    },
+    "IOB": {
+      "available": 240,
+      "used": 4
+    },
+    "IOLOGICI": {
+      "available": 230,
+      "used": 0
+    },
+    "IOLOGICO": {
+      "available": 230,
+      "used": 0
+    },
+    "LUT4": {
+      "available": 23040,
+      "used": 2408
+    },
+    "MULT12X12": {
+      "available": 56,
+      "used": 0
+    },
+    "MULTADDALU12X12": {
+      "available": 28,
+      "used": 0
+    },
+    "MULTALU27X18": {
+      "available": 28,
+      "used": 0
+    },
+    "MUX2_LUT5": {
+      "available": 11520,
+      "used": 830
+    },
+    "MUX2_LUT6": {
+      "available": 5760,
+      "used": 333
+    },
+    "MUX2_LUT7": {
+      "available": 2880,
+      "used": 142
+    },
+    "MUX2_LUT8": {
+      "available": 2880,
+      "used": 52
+    },
+    "OSCA": {
+      "available": 1,
+      "used": 0
+    },
+    "PINCFG": {
+      "available": 1,
+      "used": 1
+    },
+    "PLLA": {
+      "available": 6,
+      "used": 0
+    },
+    "VCC": {
+      "available": 1,
+      "used": 1
+    }
+  },
+  "bitstream": {
+    "file": "probe.fs",
+    "sha256": "a710e6b4ff0851d9797921063b397c5f0a74fcbd7186b67c95ea579eccc208d6"
+  },
+  "sources": {
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "rtl/probe_top.sv": "033d12954bfbcbfdd6cd8f4c5f718e0406f41051e14a13b440e7b35d1f9f6ae6",
+    "rtl/probe_rom.hex": "6fede8645cc464ed903a45bebbd8c66674e432b33a723f01003344f05ce4435f",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "scripts/build.py": "508b8265c99c238fa731c40bb5efbd5ac5e503fc7498142d7c764314d2988c56"
+  },
+  "tools": {
+    "yosys": "Yosys 0.70+157 (git sha1 af9f71e51, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)",
+    "nextpnr-himbaechel": "\"nextpnr-himbaechel\" -- Next Generation Place and Route (Version nextpnr-0.11.1-65-ge677d5c3)",
+    "gowin_pack": "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/gowin_pack sha256:3c2e11f178bd60cdab4855d25c65eac4add1fd477d5bc76abf96f5f0a947b898"
+  }
+}

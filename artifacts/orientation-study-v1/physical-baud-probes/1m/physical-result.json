@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-20T22:44:10.353681+00:00",
+  "source_commit": "f935482",
+  "driver_sha256": "0e6e56265b2cc5cd42d47c7b60359cbed985d9c32f31269b5f3fc412b642524c",
+  "usb_serial": "2023112818",
+  "probe_build_report_sha256": "d668399f92979e2e578d176b2036a82d7a2c17f0770339c642684b2dbebaade6",
+  "usb_requested_baudrate": 4000000,
+  "fpga_nominal_uart_baudrate": 1000000,
+  "fpga_clock_mhz": 50,
+  "uart_divisor": 50,
+  "checksum": "XOR8",
+  "count_requested": 1000,
+  "count_verified": 1000,
+  "flash_written": false,
+  "higher_H96_sampling_rate_verified": false,
+  "probe_load": {
+    "argv": [
+      "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+      "--board",
+      "tangprimer25k",
+      "--usb-serial-num",
+      "2023112818",
+      "--write-sram",
+      "/Users/patrikandersson/Downloads/tang-cfc/build/orientation-study-v1/physical-baud-probe-1m/probe.fs"
+    ],
+    "exit_code": 0,
+    "bitstream_sha256": "a710e6b4ff0851d9797921063b397c5f0a74fcbd7186b67c95ea579eccc208d6"
+  },
+  "elapsed_s": 6.042556667001918,
+  "diagnostic_verified_transactions_per_s": 165.49286255947703,
+  "request_stream_sha256": "8a6f6a799e1864c26e5ce39d6c31293c18ea507f847416b33179b1970aab131f",
+  "response_stream_sha256": "e00c250fc8be148004ae9c0dbcd12f374ac371a23dc909ca6e14651242cda9a8",
+  "roundtrip_ms": {
+    "mean": 5.964092027003062,
+    "p50": 5.974375002551824,
+    "p95": 6.739739894692319,
+    "max": 9.567416986101307
+  },
+  "restore_load": {
+    "argv": [
+      "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/openFPGALoader",
+      "--board",
+      "tangprimer25k",
+      "--usb-serial-num",
+      "2023112818",
+      "--write-sram",
+      "/Users/patrikandersson/Downloads/tang-cfc/artifacts/broad-h96-deployment-v2/build/broad.fs"
+    ],
+    "exit_code": 0,
+    "bitstream_sha256": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988"
+  },
+  "original_H96_restored": true,
+  "restore_verified_steps": 16,
+  "restore_hidden_states_per_step": 96,
+  "restore_raw_outputs_per_step": 4
+}
