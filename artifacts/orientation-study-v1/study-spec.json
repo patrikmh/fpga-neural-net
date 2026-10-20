@@ -1,0 +1,83 @@
+{
+  "created_at_utc": "2026-10-20T21:55:13.068277+00:00",
+  "protocol_revision": 1,
+  "domain": "Interactive ideal virtual IMU with body-to-ENU wxyz quaternions, known fixed Earth magnetic field, gravity-only acceleration and native .0035 s timestep. This is not a new BROAD real-IMU accuracy claim.",
+  "architecture": {
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "cell": "default CfC",
+    "backbone_layers": 0,
+    "ts": 1.0,
+    "numeric": "existing Q11 inputs / Q13 state, weights and outputs / 48-bit accumulation"
+  },
+  "data": {
+    "seed": 20261020,
+    "train_sequences": 128,
+    "validation_sequences": 25,
+    "length": 2048,
+    "families": [
+      "hold",
+      "single_axis",
+      "mixed",
+      "stop_go",
+      "spin"
+    ],
+    "confirmation_sequences_generated_now": 0,
+    "confirmation_seed_reserved": 20261025,
+    "confirmation_sequences": 25,
+    "confirmation_length": 2048
+  },
+  "metrics": {
+    "orientation": "2*acos(abs(dot(unit predicted quaternion, unit target quaternion))) in degrees; no target alignment or correction",
+    "warmup_samples_per_sequence": 32,
+    "cold_start_reported_separately": true,
+    "selection_split": "validation only",
+    "confirmation_generated_only_after_candidate_checkpoint_export_recipe_freeze": true,
+    "required_integer_confirmation_full_rmse_deg_exclusive_upper": 5.0,
+    "required_each_family_full_rmse_deg_exclusive_upper": 5.0,
+    "report": [
+      "sample_count",
+      "full_rmse_deg",
+      "p50_deg",
+      "p95_deg",
+      "max_deg",
+      "above_5_deg_count",
+      "stationary",
+      "moving",
+      "cold_start",
+      "input_clipping_count",
+      "zero_output_count",
+      "invalid_output_count"
+    ]
+  },
+  "throughput": {
+    "initial_required_sustained_verified_browser_hz": 100.0,
+    "all_hidden_states_verified_each_step": 96,
+    "all_raw_outputs_verified_each_step": 4,
+    "native_model_samples_per_second": 285.7142857142857,
+    "current_measured_verified_browser_hz": 33.18846305807981,
+    "no_sample_dropping_or_cpu_estimate_fallback": true
+  },
+  "iteration_policy": {
+    "initial_strategies": [
+      "same H96 trained from scratch with all-valid-frame synthetic supervision",
+      "same H96 fine-tuned from the frozen original checkpoint on the new coverage"
+    ],
+    "max_initial_epochs_per_strategy": 200,
+    "candidate_choices_use_validation_only": true,
+    "after_two_nonimproving_strategies": "diagnose error by orientation, rate and hold regime before another batch; architectural alternatives require a design decision",
+    "previously_seen_BROAD_test_trials_not_used_for_selection": [
+      "03",
+      "07",
+      "11",
+      "29",
+      "04",
+      "08",
+      "12",
+      "31"
+    ]
+  },
+  "rollback_app_commit": "384ff0c",
+  "generator_commit": "44a2145"
+}
