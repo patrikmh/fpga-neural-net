@@ -1,0 +1,140 @@
+{
+  "created_at_utc": "2026-10-20T22:35:58.459922+00:00",
+  "source_commit": "60680a3",
+  "actual_running_clock_mhz": 50,
+  "actual_running_nominal_uart_baudrate": 115200,
+  "higher_physical_throughput_verified": false,
+  "new_bitstream_programmed": false,
+  "best_routed_fast_transport_fmax_mhz": 48.581424713134766,
+  "required_clock_mhz": 50,
+  "valid_fast_H96_bitstreams": 0,
+  "results": [
+    {
+      "build": "div25-seed5",
+      "uart_divisor": 25,
+      "seed": 5,
+      "heap_beta": 0.9,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 48.581424713134766,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "div25-seed11",
+      "uart_divisor": 25,
+      "seed": 11,
+      "heap_beta": 0.9,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 44.410888671875,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "div25-seed1",
+      "uart_divisor": 25,
+      "seed": 1,
+      "heap_beta": 0.9,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 44.86518096923828,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "div25-seed7",
+      "uart_divisor": 25,
+      "seed": 7,
+      "heap_beta": 0.9,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 47.71675109863281,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "div25-seed5-beta08",
+      "uart_divisor": 25,
+      "seed": 5,
+      "heap_beta": 0.8,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 45.894718170166016,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "div25-seed5-beta07",
+      "uart_divisor": 25,
+      "seed": 5,
+      "heap_beta": 0.7,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 42.098175048828125,
+          "constraint": 50
+        }
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "BSRAM-placement-reuse",
+      "seed": 3,
+      "uart_divisor": 25,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 45.93477249145508,
+          "constraint": 50
+        }
+      },
+      "memory_placement_checks": {
+        "count_verified": 48,
+        "all_placements_match": true,
+        "all_locations_legal": true
+      },
+      "timing_pass": false
+    },
+    {
+      "build": "BSRAM-placement-reuse",
+      "seed": 5,
+      "uart_divisor": 25,
+      "target_mhz": 50,
+      "fmax": {
+        "core.clk": {
+          "achieved": 47.11425018310547,
+          "constraint": 50
+        }
+      },
+      "memory_placement_checks": {
+        "count_verified": 48,
+        "all_placements_match": true,
+        "all_locations_legal": true
+      },
+      "timing_pass": false
+    }
+  ],
+  "additional_attempts": {
+    "seed5_heap_beta_1_fmax_mhz": 47.276851654052734,
+    "sa_seed3": "tool crash -11; no timing result",
+    "reuse_all_matching_cells": "rejected by native placement legality",
+    "reuse_registers_and_memories": "rejected by native placement legality"
+  },
+  "decision": "Do not program timing-failing designs at the actual 50 MHz clock. Investigate a real 46 MHz PLL with an independent small hardware probe under the existing 46 MHz authorization; PLL output and higher USB sampling remain unproven."
+}
