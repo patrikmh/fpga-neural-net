@@ -29,6 +29,9 @@ valideringsmått. Faktisk FPGA-passning och ett nytt sluttest återstår.
 Noggrannhet har högsta prioritet.
 Ett efterföljande [försök med sammanhängande träning](docs/broad-stateful-study.md)
 förbättrade inte modellen; samma H96-checkpoint är fortsatt vald.
+[Heltalskontrollen](docs/broad-integer.md) passerar med 26,43630° fel,
+cirka 0,0024° mer än flyttalsmodellen. [RTL-kärnan](docs/broad-rtl.md) matchar
+10 000 sammanhängande steg exakt. Faktisk FPGA-passning och USB-prov återstår.
 
 ### Tidigare milstolpar
 

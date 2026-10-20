@@ -1,0 +1,7 @@
+{
+  "stage_script_sha256": "faefdeec81761477aebcf3f6a5130b82b01eaeb76697c3c1daceb4061a5baa88",
+  "byte_identical_reconstructed_files": 45,
+  "stage_manifest_sha256": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+  "full_board_fit_established": false,
+  "physical_verification": false
+}

@@ -1,0 +1,10 @@
+{
+  "started_at_utc": "2026-10-20T18:41:03.436605+00:00",
+  "stage_manifest_sha256": "d795180f87847135d5cfc898a09f2f587f4979e7ed8464a6da35e906ac95cedb",
+  "sources": {
+    "rtl/broad_core.sv": "0d4db9bb79444261cb1345dbd01999e1a95a62765780960b86676f343b9e9090",
+    "build/broad-rtl-v1/replay.cpp": "511e21c208bc24add342aecba5c0df39e6ccf5e686480d6ed325b781652244a9",
+    "build/broad-rtl-v1/run-replay.py": "f9749088a39d76854377b6d1f48d87ace3967a4146ca1e901f3c6d14041f9579"
+  },
+  "verilator": "Verilator 5.053 devel rev v5.052-501-g770b7d009 (mod)"
+}
