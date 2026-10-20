@@ -1,0 +1,24 @@
+{
+  "source": "fpga_usb",
+  "initial_count": 0,
+  "final_count": 168,
+  "accepted_steps": 168,
+  "replies": 168,
+  "elapsed_s": 5.062,
+  "verified_hz": 33.18846305807981,
+  "browser_fps": 120.1106282101936,
+  "latency_ms": {
+    "p50": 26.280124991899356,
+    "p95": 27.090749994385988,
+    "p99": 27.193000001716428
+  },
+  "missing_or_invalid": 0,
+  "all_hidden_states": 96,
+  "raw_outputs": 4,
+  "operating_clock_mhz": 50,
+  "uart_physical_baud": 115200,
+  "libftdi_requested_baud": 460800,
+  "source_commit": "384ff0c",
+  "recorded_at_utc": "2026-10-20T21:36:58.843395+00:00",
+  "scope": "Visible desktop browser at 1200x760, full telemetry and chip verification on every sample. Native model dt remains .0035 s. Roundtrip timing excludes sensor/reference/HTTP/rendering; verified_hz includes the complete browser run."
+}
