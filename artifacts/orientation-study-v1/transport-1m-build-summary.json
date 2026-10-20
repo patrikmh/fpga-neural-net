@@ -1,0 +1,180 @@
+{
+  "source_commit": "f93548206f0c2df0748d6725a0cfca5af431da1a",
+  "sources": {
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "f436f884ba1454b6beb8a4af0f61a017e85ed7788fa1dddf07f1eea4fb29f1d1",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "scripts/build_broad.py": "2b3320927f5b06b3d39ebf5403d13578586fb1cb832e03ae72a75cb7e299ba17",
+    "scripts/build.py": "508b8265c99c238fa731c40bb5efbd5ac5e503fc7498142d7c764314d2988c56",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b"
+  },
+  "source_files_match_commit": true,
+  "export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "clock_mhz": 50,
+  "uart_divisor": 50,
+  "expected_fpga_baudrate": 1000000,
+  "hidden_size": 96,
+  "accepted_fs": false,
+  "accepted_fs_count": 0,
+  "best_seed": 17,
+  "bounded_search_complete": true,
+  "authorized_seeds": [
+    5,
+    7,
+    11,
+    17
+  ],
+  "attempt_count": 4,
+  "maximum_concurrent_builds": 2,
+  "production_source_changes": false,
+  "physical_usb_operations": false,
+  "sampling_rate_claim": null,
+  "results": [
+    {
+      "seed": 5,
+      "placer": "heap",
+      "heap_beta": 0.9,
+      "router": "router2",
+      "uart_divisor": 50,
+      "status": "routed_timing_failed",
+      "timeout": false,
+      "target_mhz": 50,
+      "achieved_mhz": 32.210269927978516,
+      "stage_timeout_s": 600,
+      "accepted_fs": false,
+      "bitstream_exists": false,
+      "memory_evidence": {
+        "total_bsrams": 48,
+        "block_counts": {
+          "weights": 41,
+          "tanh": 4,
+          "sigmoid": 3
+        },
+        "routed_mapping_verified": true
+      },
+      "critical_path_summary": [
+        "Info:   clk-to-q  0.23  0.23 Source core.mul_b_DFFRE_Q_5.Q",
+        "Info:      setup  0.04  31.05 Source core.new_hidden[0]_DFFRE_Q_11.D",
+        "Info: 7.37 ns logic, 23.68 ns routing"
+      ],
+      "files": {
+        "build/orientation-study-v1/transport-search-1m/div50-seed5.log": "1aaa20f6f1a3298b9e5c6073b1c1a0dff67fbf1c21c5ee70a2d907af10d15456",
+        "build/orientation-study-v1/transport-search-1m/div50-seed5/yosys.log": "1fa0416e9965023cbc326110b2ed6f346f200345b392cb2a6dc777616ebab669",
+        "build/orientation-study-v1/transport-search-1m/div50-seed5/nextpnr.log": "3bcee4fae6c97ef1cfd88a9a2366c53a0dfa4e4541dc78fa40d6cea24af6b19b",
+        "build/orientation-study-v1/transport-search-1m/div50-seed5/timing.json": "e023a710544387341ce1b2e0d35b8859ee6bd19f663b0b2f9baa9c3b652687f8",
+        "build/orientation-study-v1/transport-search-1m/div50-seed5/synth.json": "445139e3bbde3c1f229f88862ce50cd0ae37415ba8c8320fc562134ba117a667",
+        "build/orientation-study-v1/transport-search-1m/div50-seed5/routed.json": "b45c007d2bd5ef8bdf86208e618c9d5cb27685dd2a79556a537f47da2129e30d"
+      }
+    },
+    {
+      "seed": 7,
+      "placer": "heap",
+      "heap_beta": 0.9,
+      "router": "router2",
+      "uart_divisor": 50,
+      "status": "routed_timing_failed",
+      "timeout": false,
+      "target_mhz": 50,
+      "achieved_mhz": 45.03895950317383,
+      "stage_timeout_s": 600,
+      "accepted_fs": false,
+      "bitstream_exists": false,
+      "memory_evidence": {
+        "total_bsrams": 48,
+        "block_counts": {
+          "weights": 41,
+          "tanh": 4,
+          "sigmoid": 3
+        },
+        "routed_mapping_verified": true
+      },
+      "critical_path_summary": [
+        "Info:   clk-to-q  0.23  0.23 Source core.mul_b_DFFRE_Q_9.Q",
+        "Info:      setup  0.04  22.20 Source core.new_hidden[0]_DFFRE_Q.D",
+        "Info: 9.27 ns logic, 12.94 ns routing"
+      ],
+      "files": {
+        "build/orientation-study-v1/transport-search-1m/div50-seed7.log": "71cc9aa40762632c856c56379684ab435172d74490c93e01260c8e45723d569f",
+        "build/orientation-study-v1/transport-search-1m/div50-seed7/yosys.log": "6dfae8c926497ab51fc6b3f6fcef1e8180f29868e2061c835537c0980915e06e",
+        "build/orientation-study-v1/transport-search-1m/div50-seed7/nextpnr.log": "1d6aa12ca7a27a9b260ab94e8e18af410957416f9a30012b512dda8d8387323a",
+        "build/orientation-study-v1/transport-search-1m/div50-seed7/timing.json": "f62730c10dc9183abf0278f8755b7196d196e839ca69d41f9ed4942dd7ca4f01",
+        "build/orientation-study-v1/transport-search-1m/div50-seed7/synth.json": "c749b08afd558be50047ee07eabd9f883d2a6808b088c4d4344d6ed23eda915f",
+        "build/orientation-study-v1/transport-search-1m/div50-seed7/routed.json": "ab72277617bd4b56902e170980d6a945acc8c183f0ac191c0c1fcea01650498a"
+      }
+    },
+    {
+      "seed": 11,
+      "placer": "heap",
+      "heap_beta": 0.9,
+      "router": "router2",
+      "uart_divisor": 50,
+      "status": "routed_timing_failed",
+      "timeout": false,
+      "target_mhz": 50,
+      "achieved_mhz": 45.4008903503418,
+      "stage_timeout_s": 600,
+      "accepted_fs": false,
+      "bitstream_exists": false,
+      "memory_evidence": {
+        "total_bsrams": 48,
+        "block_counts": {
+          "weights": 41,
+          "tanh": 4,
+          "sigmoid": 3
+        },
+        "routed_mapping_verified": true
+      },
+      "critical_path_summary": [
+        "Info:   clk-to-q  0.23  0.23 Source core.mul_a_DFFRE_Q_6.Q",
+        "Info:      setup  0.04  22.03 Source core.new_hidden[0]_DFFRE_Q_14.D",
+        "Info: 8.35 ns logic, 13.68 ns routing"
+      ],
+      "files": {
+        "build/orientation-study-v1/transport-search-1m/div50-seed11.log": "9ac0210a12d00fc95a6d57ef933a3451bb709aa2d9d075d61ca7495023807d75",
+        "build/orientation-study-v1/transport-search-1m/div50-seed11/yosys.log": "852530a771da325c5504d8b2261e2414341eba688f762fefde613ae8ad12a117",
+        "build/orientation-study-v1/transport-search-1m/div50-seed11/nextpnr.log": "643b80258e2f3fe371468632840dce39e4ab7d47e1abb2a4ef89384ea1bf7632",
+        "build/orientation-study-v1/transport-search-1m/div50-seed11/timing.json": "64800d2690f3e459b2bd6148e54b785378c9de44e772eccc7e9edd105b46ccd7",
+        "build/orientation-study-v1/transport-search-1m/div50-seed11/synth.json": "df5ec411ed69ab86cc3b1c55ba3a59c7786774eca00e1497a29865d6ef4fa7bf",
+        "build/orientation-study-v1/transport-search-1m/div50-seed11/routed.json": "3f6ac69c0640fb7ce6c7e851cebd35b039873b83550f1852a6c0ce8719e6302c"
+      }
+    },
+    {
+      "seed": 17,
+      "placer": "heap",
+      "heap_beta": 0.9,
+      "router": "router2",
+      "uart_divisor": 50,
+      "status": "routed_timing_failed",
+      "timeout": false,
+      "target_mhz": 50,
+      "achieved_mhz": 48.1811637878418,
+      "stage_timeout_s": 600,
+      "accepted_fs": false,
+      "bitstream_exists": false,
+      "memory_evidence": {
+        "total_bsrams": 48,
+        "block_counts": {
+          "weights": 41,
+          "tanh": 4,
+          "sigmoid": 3
+        },
+        "routed_mapping_verified": true
+      },
+      "critical_path_summary": [
+        "Info:   clk-to-q  0.23  0.23 Source core.mul_b_DFFRE_Q_6.Q",
+        "Info:      setup  0.04  20.75 Source core.new_hidden[0]_DFFRE_Q_12.D",
+        "Info: 8.94 ns logic, 11.81 ns routing"
+      ],
+      "files": {
+        "build/orientation-study-v1/transport-search-1m/div50-seed17.log": "ba32f9a8e66a97393ee71321b10f7690fa2cb4290960a85c9f415b39fc274f99",
+        "build/orientation-study-v1/transport-search-1m/div50-seed17/yosys.log": "2416c308418c4a1d0f37376eb7c340fb79e15f9417cd2b388450eceb9aab996a",
+        "build/orientation-study-v1/transport-search-1m/div50-seed17/nextpnr.log": "859bc47cb9fee3240ffb377a5a23733c91d1ab63a92f47ef378f0ab94e4b5a5a",
+        "build/orientation-study-v1/transport-search-1m/div50-seed17/timing.json": "331d03cf1665aad2504d0359a0fdd6ef505af5d902c0044cf8b01d5e554b6442",
+        "build/orientation-study-v1/transport-search-1m/div50-seed17/synth.json": "604d4a7cc71997f8b19af6dfbc2edb63164d6fe3c235482d6d6d1213a9bb1046",
+        "build/orientation-study-v1/transport-search-1m/div50-seed17/routed.json": "cc5e372e6e942e7b326d210fe935a525ea9c84b7ad1f7f6590ce214b023141da"
+      }
+    }
+  ]
+}
