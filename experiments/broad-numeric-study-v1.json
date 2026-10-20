@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "input_fractional_bits": 11,
+  "weight_state_output_fractional_bits": 13,
+  "word_bits": 16,
+  "accumulator_bits": 48,
+  "rounding": "half-away-from-zero",
+  "validation_trials": [
+    2,
+    30
+  ],
+  "maximum_full_rmse_increase_deg": 0.25,
+  "required_zero_counts": [
+    "input_clipping",
+    "state_clipping",
+    "raw_output_clipping",
+    "zero_raw_quaternions"
+  ],
+  "lut_domain_clamping": "report separately",
+  "new_holdout_access": "forbidden during numeric selection",
+  "frozen_before_numeric_evaluation": true
+}

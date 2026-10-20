@@ -1,0 +1,8 @@
+{
+  "checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "validation_full_rmse_deg": 26.433936383466115,
+  "stateful_study_improved": false,
+  "new_holdout_accessed": false,
+  "reason": "Neither seed improved the initial checkpoint; preserve the original selected weights and provenance."
+}

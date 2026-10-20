@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "approved_by_user": "State-carrying chronological training, accuracy first",
+  "architecture": {
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0
+  },
+  "initial_checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+  "initial_checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "training_prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "seeds": [
+    7,
+    17
+  ],
+  "epochs_per_run": 10,
+  "chunk_size": 256,
+  "warmup_samples_per_trial": 32,
+  "learning_rate": 0.0003,
+  "optimizer": "new Adam, weights warmstart only; no optimizer resume",
+  "gradient_clip": 1.0,
+  "trial_order": "NumPy default_rng(seed).permutation once per epoch; one trial at a time",
+  "state_policy": "Carry hidden through every chronological chunk, detach at chunk boundaries, reset only between trials and epochs",
+  "loss": "1-squared normalized quaternion dot; movement and valid reference only; no labels or reference initialization in forward inputs",
+  "unscored_chunks": "Forward all sensor timesteps, carry detached hidden, do not step optimizer",
+  "normalization": "Retain initial checkpoint normalization, verify exact prepared manifest binding",
+  "validation": "Full continuous trials 02/30 before training and after each full pass; equal-trial mean full-orientation RMSE in degrees",
+  "selection": "Lowest validation score including epoch zero; preserve original weights if no improvement",
+  "baseline_validation_rmse_deg": 26.433936383466115,
+  "new_unopened_holdout_trials": [
+    4,
+    8,
+    12,
+    31
+  ],
+  "previously_inspected_tests": [
+    3,
+    7,
+    11,
+    29
+  ],
+  "test_use": "None during training or checkpoint selection",
+  "max_total_full_passes": 20
+}

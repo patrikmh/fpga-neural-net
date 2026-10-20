@@ -1,0 +1,182 @@
+{
+  "freeze": {
+    "plan": {
+      "schema": 1,
+      "approved_by_user": "State-carrying chronological training, accuracy first",
+      "architecture": {
+        "input_size": 9,
+        "hidden_size": 96,
+        "output_size": 4,
+        "mode": "default",
+        "backbone_layers": 0,
+        "dt": 1.0
+      },
+      "initial_checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+      "initial_checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+      "training_prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+      "seeds": [
+        7,
+        17
+      ],
+      "epochs_per_run": 10,
+      "chunk_size": 256,
+      "warmup_samples_per_trial": 32,
+      "learning_rate": 0.0003,
+      "optimizer": "new Adam, weights warmstart only; no optimizer resume",
+      "gradient_clip": 1.0,
+      "trial_order": "NumPy default_rng(seed).permutation once per epoch; one trial at a time",
+      "state_policy": "Carry hidden through every chronological chunk, detach at chunk boundaries, reset only between trials and epochs",
+      "loss": "1-squared normalized quaternion dot; movement and valid reference only; no labels or reference initialization in forward inputs",
+      "unscored_chunks": "Forward all sensor timesteps, carry detached hidden, do not step optimizer",
+      "normalization": "Retain initial checkpoint normalization, verify exact prepared manifest binding",
+      "validation": "Full continuous trials 02/30 before training and after each full pass; equal-trial mean full-orientation RMSE in degrees",
+      "selection": "Lowest validation score including epoch zero; preserve original weights if no improvement",
+      "baseline_validation_rmse_deg": 26.433936383466115,
+      "new_unopened_holdout_trials": [
+        4,
+        8,
+        12,
+        31
+      ],
+      "previously_inspected_tests": [
+        3,
+        7,
+        11,
+        29
+      ],
+      "test_use": "None during training or checkpoint selection",
+      "max_total_full_passes": 20
+    },
+    "plan_sha256": "c588c8135778da69f017ebfec16d63f99e4392c31ec8b86a552829118b270f60",
+    "provenance": {
+      "sources": {
+        "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+        "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+        "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+      },
+      "versions": {
+        "python": "3.11.14",
+        "torch": "2.14.1",
+        "numpy": "2.4.6",
+        "ncps": "1.0.1"
+      }
+    },
+    "training_recipe_sources": {
+      "model/broad_train_stateful.py": "0ba94c060bee223806577d3da8a54fede65367d433e1c4ba145f2cd9868003cf"
+    },
+    "script_sha256": "68e77e3de7cd6ad00bc706fcbe8a23db00eadbc79f228746b126045f47184661",
+    "started_at_utc": "2026-10-20T18:14:13.720556+00:00"
+  },
+  "results": [
+    {
+      "seed": 7,
+      "best_epoch": 0,
+      "optimizer_steps": 5390,
+      "best_optimizer_steps": 0,
+      "parameter_count": 41092,
+      "metrics": {
+        "full_rmse_deg": 26.433936383466115,
+        "inclination_rmse_deg": 11.82796686157303,
+        "heading_rmse_deg": 23.794986568539862
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.123785831206806,
+          "inclination_rmse_deg": 8.602195262589794,
+          "heading_rmse_deg": 19.46131603410859,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 31.744086935725424,
+          "inclination_rmse_deg": 15.053738460556266,
+          "heading_rmse_deg": 28.128657102971133,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-stateful-v1/seed7/checkpoint.pt",
+      "checkpoint_sha256": "dc8a53809568ad1585ee895e285bde8013053869f1471ea7193c4b9112e57ebe",
+      "training_report_sha256": "d09adfef11c679595a78ed9d13851c2bbb6387f35a98cd87add84a5b2c016dee"
+    },
+    {
+      "seed": 17,
+      "best_epoch": 0,
+      "optimizer_steps": 5390,
+      "best_optimizer_steps": 0,
+      "parameter_count": 41092,
+      "metrics": {
+        "full_rmse_deg": 26.433936383466115,
+        "inclination_rmse_deg": 11.82796686157303,
+        "heading_rmse_deg": 23.794986568539862
+      },
+      "trials": [
+        {
+          "trial_id": 2,
+          "full_rmse_deg": 21.123785831206806,
+          "inclination_rmse_deg": 8.602195262589794,
+          "heading_rmse_deg": 19.46131603410859,
+          "samples": 32280,
+          "heading_samples": 32280,
+          "heading_singular_samples": 0
+        },
+        {
+          "trial_id": 30,
+          "full_rmse_deg": 31.744086935725424,
+          "inclination_rmse_deg": 15.053738460556266,
+          "heading_rmse_deg": 28.128657102971133,
+          "samples": 27458,
+          "heading_samples": 27458,
+          "heading_singular_samples": 0
+        }
+      ],
+      "checkpoint": "build/broad-stateful-v1/seed17/checkpoint.pt",
+      "checkpoint_sha256": "3c957875d35f0a19b9e289a9f26dc39c327d1cfa40e4f451acbabc7bc69e6656",
+      "training_report_sha256": "e0aee752e7cd96210a3de948f8644b89fede3e8593651604cb5ca653141d4d27"
+    }
+  ],
+  "improved": false,
+  "selected_checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+  "selected": {
+    "seed": 7,
+    "best_epoch": 0,
+    "optimizer_steps": 5390,
+    "best_optimizer_steps": 0,
+    "parameter_count": 41092,
+    "metrics": {
+      "full_rmse_deg": 26.433936383466115,
+      "inclination_rmse_deg": 11.82796686157303,
+      "heading_rmse_deg": 23.794986568539862
+    },
+    "trials": [
+      {
+        "trial_id": 2,
+        "full_rmse_deg": 21.123785831206806,
+        "inclination_rmse_deg": 8.602195262589794,
+        "heading_rmse_deg": 19.46131603410859,
+        "samples": 32280,
+        "heading_samples": 32280,
+        "heading_singular_samples": 0
+      },
+      {
+        "trial_id": 30,
+        "full_rmse_deg": 31.744086935725424,
+        "inclination_rmse_deg": 15.053738460556266,
+        "heading_rmse_deg": 28.128657102971133,
+        "samples": 27458,
+        "heading_samples": 27458,
+        "heading_singular_samples": 0
+      }
+    ],
+    "checkpoint": "build/broad-stateful-v1/seed7/checkpoint.pt",
+    "checkpoint_sha256": "dc8a53809568ad1585ee895e285bde8013053869f1471ea7193c4b9112e57ebe",
+    "training_report_sha256": "d09adfef11c679595a78ed9d13851c2bbb6387f35a98cd87add84a5b2c016dee"
+  },
+  "steps_per_pass": 539,
+  "new_holdout_accessed": false,
+  "physical_fit": "not yet established"
+}
