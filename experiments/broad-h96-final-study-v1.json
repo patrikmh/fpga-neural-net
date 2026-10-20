@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/dlaidig/broad",
+  "source_revision": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+  "license": "CC-BY-4.0",
+  "checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "export_dir": "artifacts/broad-integer-v1/export",
+  "training_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "trials": [
+    {
+      "id": "04",
+      "file": "04_undisturbed_slow_rotation_with_breaks_A.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857
+    },
+    {
+      "id": "08",
+      "file": "08_undisturbed_fast_rotation_with_breaks_A.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857
+    },
+    {
+      "id": "12",
+      "file": "12_undisturbed_slow_translation_C.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857
+    },
+    {
+      "id": "31",
+      "file": "31_disturbed_stationary_magnet_D.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857
+    }
+  ],
+  "training_trial_ids": [
+    1,
+    6,
+    10,
+    28
+  ],
+  "validation_trial_ids": [
+    2,
+    30
+  ],
+  "previously_used_tests_for_regression_only": [
+    3,
+    7,
+    11,
+    29
+  ],
+  "warmup": 32,
+  "baseline_tau_s": 0.5,
+  "heading_epsilon": 1e-12,
+  "scoring": "Full continuous native-rate trials; movement and valid reference; initial32samples excluded; equal-trial mean RMSE for full orientation/inclination/heading. No reference labels initialize inference.",
+  "selection": "No test-driven model, precision, hyperparameter or architecture selection",
+  "raw_data_policy": "Model, integer format, evaluator recipe and build frozen before download; pinned raw SHA recorded before parsing",
+  "physical_prefix_steps_per_trial": 1000,
+  "physical_trials": [
+    4,
+    8,
+    12,
+    31
+  ],
+  "physical_scope": "Four separate RESET plus1000continuoussteps; compare96states/4raw/sequence/CRC/status/cycles. Held-out full-trial accuracy uses the verified CPU integer reference; entire heldout is not replayed overUSB.",
+  "validation_precision_tolerance_deg": 0.25,
+  "test_precision_policy": "Report measured change and clipping/zero counts; do not retune on test outcomes"
+}
