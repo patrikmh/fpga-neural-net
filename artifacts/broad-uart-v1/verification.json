@@ -1,0 +1,27 @@
+{
+  "physical_verification": false,
+  "boundary_test": "Actual UART pins and core, captured replies through external native FTDI fixture into real verifier CLI",
+  "full_suite": {
+    "tests": 87,
+    "seconds": 172.694,
+    "compileall": true,
+    "strict_verilator_lint": [
+      "H3",
+      "H96"
+    ]
+  },
+  "additional_fault_checks": [
+    "bad request CRC is silent and leaves recurrence unchanged",
+    "malformed response length/magic/CRC/status rejected",
+    "native sequence mismatch and incomplete reply reject success and release resources"
+  ],
+  "production_changed_after_full_suite": false,
+  "sources": {
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "host/broad_protocol.py": "81c35dd24941cede0b3aae688357ca39eeb011bf33c0eb3e55c7ef90f95c4fbe",
+    "host/verify_broad.py": "73a5f8e85fca760c20b255bc0d13c8e5ec31a2799ddb7728db56ead4ba646b02",
+    "tests/integration/test_broad_uart.py": "93085f9c2a0a7e92ada874796ddd0603983991a8904d7c61bbafc3a82eb7b79b",
+    "tests/test_broad_protocol.py": "d17a63d45616e98105fe645183f937b59cd9964512c8dc48a7898c02e64036fa"
+  },
+  "vector_package_reproduction": "manifest.json and vectors.hex byte-identical"
+}
