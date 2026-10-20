@@ -1,0 +1,82 @@
+{
+  "numeric": {
+    "word_bits": 16,
+    "input_fractional_bits": 11,
+    "state_fractional_bits": 13,
+    "weight_fractional_bits": 13,
+    "output_fractional_bits": 13,
+    "accumulator_bits": 48,
+    "accumulator_fractional_bits": 26,
+    "rounding": "half_away_from_zero",
+    "activation_entries": 4096,
+    "activation_fractional_bits": 8,
+    "activation_zero_index": 2048
+  },
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "config": {
+    "seed": 7,
+    "epochs": 50,
+    "updates_per_epoch": 16,
+    "batch_size": 16,
+    "window": 256,
+    "warmup": 32,
+    "validation_every": 10,
+    "learning_rate": 0.003,
+    "gradient_clip": 1.0,
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0,
+    "loss": "1-squared_normalized_quaternion_dot"
+  },
+  "normalization": {
+    "mean": [
+      0.10687395228224765,
+      -0.46724989863120364,
+      7.214992659349793,
+      -0.12629043383743335,
+      -0.41214293976210875,
+      -0.08666519921525621,
+      -1.5729327478126804,
+      11.792992761758677,
+      -27.7251644532734
+    ],
+    "std": [
+      3.992177539555562,
+      3.573579258912239,
+      5.295280676857322,
+      2.434413347961162,
+      1.5547784150713813,
+      1.2191405893086784,
+      16.431001978238783,
+      13.327203566309397,
+      23.569541894267633
+    ],
+    "constant_channels": []
+  },
+  "files": {
+    "weights.hex": "54be02d467f95721a225bf86e0b84c680ff6caffdc533e69dfcd93132e579d81",
+    "tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+    "sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+    "float_checkpoint.pt": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9"
+  },
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "weight_order": "ff1,ff2,time_a,time_b: H rows of 9 inputs,H hidden,bias; readout: 4 rows of H hidden,bias",
+  "vector_order": "nine inputs, H new hidden states, four raw outputs; signed16 words, most significant first"
+}

@@ -1,0 +1,39 @@
+{
+  "plan": {
+    "schema": 1,
+    "checkpoint": "artifacts/broad-width-study-v1/checkpoint.pt",
+    "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+    "input_fractional_bits": 11,
+    "weight_state_output_fractional_bits": 13,
+    "word_bits": 16,
+    "accumulator_bits": 48,
+    "rounding": "half-away-from-zero",
+    "validation_trials": [
+      2,
+      30
+    ],
+    "maximum_full_rmse_increase_deg": 0.25,
+    "required_zero_counts": [
+      "input_clipping",
+      "state_clipping",
+      "raw_output_clipping",
+      "zero_raw_quaternions"
+    ],
+    "lut_domain_clamping": "report separately",
+    "new_holdout_access": "forbidden during numeric selection",
+    "frozen_before_numeric_evaluation": true
+  },
+  "plan_sha256": "38eaf97d3f08ad408849c2423969b805a7ce724e24a403ae13a489ab962ac094",
+  "sources": {
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "tests/integration/test_broad_integer.py": "ce9d9147d6ee009b29adcc3ef7e7b8d2385c81cf4522621d5f52d3b2266ac9d5",
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9"
+  },
+  "runner_sha256": "6e8dd7971de0fe01a4eb1213cb029f1f67a9bb402e2e3760d135d826017145c6",
+  "prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "started_at_utc": "2026-10-20T18:34:51.728931+00:00"
+}

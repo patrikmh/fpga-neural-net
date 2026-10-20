@@ -1,0 +1,110 @@
+{
+  "split": "validation",
+  "warmup": 32,
+  "trials": [
+    {
+      "trial_id": 2,
+      "predictions_file": "validation/02.npz",
+      "vectors_file": "validation/02.hex",
+      "float": {
+        "full_rmse_deg": 21.123785831206806,
+        "inclination_rmse_deg": 8.602195262589794,
+        "heading_rmse_deg": 19.46131603410859,
+        "samples": 32280,
+        "heading_samples": 32280,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 21.124872983697802,
+        "inclination_rmse_deg": 8.601364793692335,
+        "heading_rmse_deg": 19.460337061338375,
+        "samples": 32280,
+        "heading_samples": 32280,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 107,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0
+    },
+    {
+      "trial_id": 30,
+      "predictions_file": "validation/30.npz",
+      "vectors_file": "validation/30.hex",
+      "float": {
+        "full_rmse_deg": 31.744086935725424,
+        "inclination_rmse_deg": 15.053738460556266,
+        "heading_rmse_deg": 28.128657102971133,
+        "samples": 27458,
+        "heading_samples": 27458,
+        "heading_singular_samples": 0
+      },
+      "integer": {
+        "full_rmse_deg": 31.747730199136782,
+        "inclination_rmse_deg": 15.052619904620078,
+        "heading_rmse_deg": 28.133414875535074,
+        "samples": 27458,
+        "heading_samples": 27458,
+        "heading_singular_samples": 0
+      },
+      "lut_clamp_count": 12978,
+      "state_clipping_count": 0,
+      "raw_clipping_count": 0,
+      "input_clipping_count": 0,
+      "zero_quaternion_count": 0
+    }
+  ],
+  "mean_trial_metrics": {
+    "float": {
+      "full_rmse_deg": 26.433936383466115,
+      "inclination_rmse_deg": 11.82796686157303,
+      "heading_rmse_deg": 23.794986568539862
+    },
+    "integer": {
+      "full_rmse_deg": 26.43630159141729,
+      "inclination_rmse_deg": 11.826992349156207,
+      "heading_rmse_deg": 23.796875968436723
+    }
+  },
+  "acceptance": {
+    "max_full_rmse_increase_deg": 0.25,
+    "required_zero_counts": [
+      "input_clipping_count",
+      "state_clipping_count",
+      "raw_clipping_count",
+      "zero_quaternion_count"
+    ]
+  },
+  "meets_precision_target": true,
+  "input_clipping_count": 0,
+  "lut_clamp_count": 13085,
+  "state_clipping_count": 0,
+  "raw_clipping_count": 0,
+  "zero_quaternion_count": 0,
+  "outputs": {
+    "validation/02.npz": "e40f91122dde943819df1648e43788f4b3a8c959f0753b85cba0ce571aad8512",
+    "validation/02.hex": "052bd1e82e2813636b368dbb91e04b5077b353dd6d3ec2a244c3e004b299c2d4",
+    "validation/30.npz": "a96ee3d51edcbf517033860563935adbcdee1f8dd04999c62e4bb7b2f3557de2",
+    "validation/30.hex": "8c9b10d40ab2e16cb2c26dd59f9c9a955a8798a4808ed63880ae2dd35990e5dd"
+  },
+  "export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "prepared_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "vector_order": "nine inputs, H new hidden states, four raw outputs; signed16 MSB-first words"
+}

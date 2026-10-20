@@ -1,0 +1,11 @@
+{
+  "independent_scalar_checked_steps": 160,
+  "mean_full_rmse_deg": {
+    "float": 26.433936383466115,
+    "integer": 26.43630159141729
+  },
+  "meets_precision_target": true,
+  "report_sha256": "979ad2008f716dc175807a76371d381e971a61379b2022a166d9fb9224dd9b89",
+  "export_manifest_sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459",
+  "new_holdout_accessed": false
+}
