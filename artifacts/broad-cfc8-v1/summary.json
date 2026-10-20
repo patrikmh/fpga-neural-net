@@ -1,0 +1,55 @@
+{
+  "scope": "CPU float CfC orientation experiment; four held-out BROAD trials, not the complete benchmark",
+  "fpga_promotion_accepted": false,
+  "reason": "CfC mean-trial inclination RMSE 19.3865 degrees exceeds causal gyro/accelerometer baseline 4.6723 degrees; full orientation RMSE 41.9758 degrees. No test-driven tuning.",
+  "mean_trial_metrics": {
+    "cfc": {
+      "full_rmse_deg": 41.97581666110481,
+      "inclination_rmse_deg": 19.386501621011124,
+      "heading_rmse_deg": 38.00775205904753
+    },
+    "baselines": {
+      "accelerometer_only": {
+        "incl_rmse_deg": 19.170246190376062
+      },
+      "gyro_only_acc_initialization": {
+        "incl_rmse_deg": 24.756026357997147
+      },
+      "gyro_acc_complementary": {
+        "incl_rmse_deg": 4.672283663906873
+      }
+    }
+  },
+  "counts": [
+    {
+      "trial_id": 3,
+      "total_samples": 58412,
+      "movement_samples": 34385,
+      "invalid_reference_movement_samples": 0,
+      "samples_scored": 34385
+    },
+    {
+      "trial_id": 7,
+      "total_samples": 52518,
+      "movement_samples": 33617,
+      "invalid_reference_movement_samples": 0,
+      "samples_scored": 33617
+    },
+    {
+      "trial_id": 11,
+      "total_samples": 54214,
+      "movement_samples": 34726,
+      "invalid_reference_movement_samples": 0,
+      "samples_scored": 34726
+    },
+    {
+      "trial_id": 29,
+      "total_samples": 52444,
+      "movement_samples": 34365,
+      "invalid_reference_movement_samples": 513,
+      "samples_scored": 33852
+    }
+  ],
+  "test_report_sha256": "efe0f231224675ceafb3b419f1e7657c891584b3bf55120d5b86e7f4171c657f",
+  "training_preparation_byte_reproduction_verified": true
+}

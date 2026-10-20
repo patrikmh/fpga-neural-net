@@ -1,0 +1,102 @@
+{
+  "spec": {
+    "schema": 1,
+    "repository": "https://github.com/dlaidig/broad",
+    "source_revision": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+    "license": "CC-BY-4.0",
+    "trials": [
+      {
+        "id": "03",
+        "file": "03_undisturbed_slow_rotation_C.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "389e1ff9dae1f6f9e2703bf136e12475dcf498be0edc8eae533bd263c7b61e05"
+      },
+      {
+        "id": "07",
+        "file": "07_undisturbed_fast_rotation_B.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "bff6444d38b836482040a328d6060741816ed0150cf2640db94550c6a796b3d8"
+      },
+      {
+        "id": "11",
+        "file": "11_undisturbed_slow_translation_B.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "ea4ecb8a27d040cecdfb97cdee45023ea461e065bfc402ce7fe6a7c9a0f325e0"
+      },
+      {
+        "id": "29",
+        "file": "29_disturbed_stationary_magnet_B.hdf5",
+        "split": "test",
+        "rate_hz": 285.7142857142857,
+        "sha256": "bb2c50b127b8a2e86aaec804f41feb5a2efb7d60165902c43799fb85d8fba3ea"
+      }
+    ],
+    "checkpoint_sha256": "0bda4aca837dbe69d4781fbee8aa750e6529db052de179301ca61d32583b3119",
+    "training_manifest_sha256": "185eb1d91e30a9a0e3a81394afcbe89479ab265afb3887165ae212320656bfb0",
+    "selection_sha256": "2072424fe2b8856631bc4762b073469745466e8fba4f7980dfd929d83c1e8beb",
+    "sources": {
+      "model/broad_train.py": "d1a68ea361be6398f55e0d3bc6afe9f4b9d3b7a7ec63ae9f9cd7eccfd9465007",
+      "model/broad_network.py": "f51fa28ee907fbd217773330a71d97500d76bd96fe46ff3050db09c04da1ae36",
+      "model/broad_evaluate.py": "2939704afc0488bdbc3559ccb4b9641c97a4321e17eb5133e49dca4a8be47610",
+      "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06",
+      "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+    },
+    "versions": {
+      "python": "3.11.14",
+      "torch": "2.14.1",
+      "numpy": "2.4.6",
+      "ncps": "1.0.1"
+    },
+    "warmup": 32,
+    "baseline_tau_s": 0.5,
+    "heading_epsilon": 1e-12,
+    "frozen_at_utc": "2026-10-20T16:59:57.594510+00:00",
+    "training_trial_ids": [
+      1,
+      6,
+      10,
+      28
+    ],
+    "validation_trial_ids": [
+      2,
+      30
+    ],
+    "scoring": "Native-rate continuous state; movement and finite nonzero optical references; 32 initial samples excluded. Earth-frame q_pred * inverse(q_ref), sign invariant. Equal-trial mean RMSE in degrees. Heading singularities excluded and counted.",
+    "scope": "One predeclared held-out evaluation; no checkpoint reselection or test-driven tuning"
+  },
+  "spec_sha256": "8613ce525cf212a7cfd7a9ba76c4b7c2f56109b6d2fa45ed8a75a219ed2e3fd6",
+  "inputs": {
+    "03_undisturbed_slow_rotation_C.hdf5": "389e1ff9dae1f6f9e2703bf136e12475dcf498be0edc8eae533bd263c7b61e05",
+    "07_undisturbed_fast_rotation_B.hdf5": "bff6444d38b836482040a328d6060741816ed0150cf2640db94550c6a796b3d8",
+    "11_undisturbed_slow_translation_B.hdf5": "ea4ecb8a27d040cecdfb97cdee45023ea461e065bfc402ce7fe6a7c9a0f325e0",
+    "29_disturbed_stationary_magnet_B.hdf5": "bb2c50b127b8a2e86aaec804f41feb5a2efb7d60165902c43799fb85d8fba3ea"
+  },
+  "outputs": {
+    "test/03.npz": "5a14c757c7d0211b17ed7e5e876f8f5e08ccd6afd1332916fb9e30898f1026fd",
+    "test/07.npz": "bfc6b1363e6d52e964f951ce5644b25b8e134fda31de1d16350c2fa3d9878007",
+    "test/11.npz": "087931a310b0c794e3adae2559ac966ac29c3e5e17690f6595aae17eabd80bcf",
+    "test/29.npz": "db86c90a62fc082898e7d68e1ae2152dc25180ddf2b68cce12a43b529cf4a622"
+  },
+  "sources": {
+    "experiments/broad_prepare.py": "1a767c6471b6d46a281b852df506c61d6ca869447a63aa5bfb27fd762ebbdd06"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "numpy": "2.4.6",
+    "h5py": "3.16.0"
+  },
+  "sensor_order": [
+    "imu_acc_x",
+    "imu_acc_y",
+    "imu_acc_z",
+    "imu_gyr_x",
+    "imu_gyr_y",
+    "imu_gyr_z",
+    "imu_mag_x",
+    "imu_mag_y",
+    "imu_mag_z"
+  ]
+}

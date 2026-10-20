@@ -19,8 +19,12 @@ Den lokala appen visar signal, nästa-värdesprognos, heltalsreferens, åtta
 interna tillstånd och verifieringsstatus. Live och sparad verifierad körning
 är tydligt separerade. Se [appens startguide](docs/dashboard.md).
 
-Nästa undersökning gäller [sensorfusion med BROAD](docs/sensor-fusion-next.md).
-Det första försöket är en separat CPU-baslinje, utan ändring av FPGA-modellen.
+Första [CfC-försöket med BROAD](docs/broad-results.md) är genomfört på CPU:
+41,98° fullständigt orienteringsfel och 19,39° lutningsfel på fyra låsta
+testinspelningar, jämfört med baslinjens 4,67° lutningsfel. Åtta-neuronsmodellen
+är därför inte redo för FPGA-steget. Checkpoint och frysta rapporter finns
+i `artifacts/broad-cfc8-v1/`. Nästa beställda steg är större nät med noggrannhet
+som högsta prioritet, inom kortets faktiska kapacitet.
 
 ### Tidigare milstolpar
 

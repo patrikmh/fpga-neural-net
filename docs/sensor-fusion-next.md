@@ -25,8 +25,9 @@ felpoäng räknas på rörelsefas med giltigt facit.
 | 28 magnet/rotation/translation | 37,20° | 12,87° | **9,60°** |
 
 Måttet är lutnings-RMSE i grader, inte heading eller fullständigt
-orienteringsfel. Baslinjen använder inte magnetometern. Ingen ny CfC-modell
-har tränats och inget sensorfusionsnät har laddats på FPGA:n.
+orienteringsfel. Baslinjen använder inte magnetometern. Vid detta förhandsförsök tränades ingen CfC-modell. Det efterföljande
+[CfC-försöket och dess slutresultat](broad-results.md) finns nu dokumenterade;
+sensorfusion har ännu inte laddats på FPGA:n.
 Fullständiga mätningar och versioner finns i
 [försöksrapporten](../reports/broad-preview-v1-2026-10-20.json).
 
@@ -46,8 +47,10 @@ har accelerometer och gyro vid 50 Hz. Det är ett enklare första demonstrations
 men klassificerar aktiviteter i stället för att skatta fysisk orientering.
 Även det kräver ny modell och flerkanalsindata.
 
-Valet av mål är fortfarande öppet. FPGA-arkitekturen ändras först när Patrik
-har valt; den verifierade skalära modellen behålls som fungerande referens.
+Patrik valde BROAD-orientering. Det första CPU-försöket är klart enligt
+[resultatrapporten](broad-results.md). Därefter beställdes en större modell,
+med noggrannhet som högsta prioritet och faktisk FPGA-kapacitet som gräns.
+Den verifierade skalära modellen behålls som fungerande referens.
 För en framtida BROAD-modell måste normalisering tränas enbart på träningsdata,
 hela inspelningar hållas isär mellan träning/validering/test och facitluckor
 maskeras utan att tidslinjen kollapsas. Publicerade algoritmparametrar valda

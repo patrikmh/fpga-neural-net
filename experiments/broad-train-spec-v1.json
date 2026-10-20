@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/dlaidig/broad",
+  "source_revision": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+  "license": "CC-BY-4.0",
+  "trials": [
+    {
+      "id": "01",
+      "file": "01_undisturbed_slow_rotation_A.hdf5",
+      "split": "train",
+      "rate_hz": 285.7142857142857,
+      "sha256": "46b3e75599d9783077d64245ddd1e898e8b3e813443aff13dc50698bc9f89ad0"
+    },
+    {
+      "id": "06",
+      "file": "06_undisturbed_fast_rotation_A.hdf5",
+      "split": "train",
+      "rate_hz": 285.7142857142857,
+      "sha256": "064c47668570f1d8234956fe45922af2ec6ef6bbf64fd3bb27d642f745109574"
+    },
+    {
+      "id": "10",
+      "file": "10_undisturbed_slow_translation_A.hdf5",
+      "split": "train",
+      "rate_hz": 285.7142857142857,
+      "sha256": "bbe80427429f27d0adfffa6720d0b1371a42138290999d1992066e1b9c64ef30"
+    },
+    {
+      "id": "28",
+      "file": "28_disturbed_stationary_magnet_A.hdf5",
+      "split": "train",
+      "rate_hz": 285.7142857142857,
+      "sha256": "0ff68165dd5838372acbab329bfb9115b38eff038b9bb8030e1e0b02fe1b22ac"
+    },
+    {
+      "id": "02",
+      "file": "02_undisturbed_slow_rotation_B.hdf5",
+      "split": "validation",
+      "rate_hz": 285.7142857142857,
+      "sha256": "33ed3432ece89cfbd8c5c069a176106a05dad019302759353244c71d70d7e5f5"
+    },
+    {
+      "id": "30",
+      "file": "30_disturbed_stationary_magnet_C.hdf5",
+      "split": "validation",
+      "rate_hz": 285.7142857142857,
+      "sha256": "a4e14a8671c7d0a38c4d41c1883ea2ea471937dfe61ad1bdbee042cea3040808"
+    },
+    {
+      "id": "03",
+      "file": "03_undisturbed_slow_rotation_C.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857,
+      "sha256": null
+    },
+    {
+      "id": "07",
+      "file": "07_undisturbed_fast_rotation_B.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857,
+      "sha256": null
+    },
+    {
+      "id": "11",
+      "file": "11_undisturbed_slow_translation_B.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857,
+      "sha256": null
+    },
+    {
+      "id": "29",
+      "file": "29_disturbed_stationary_magnet_B.hdf5",
+      "split": "test",
+      "rate_hz": 285.7142857142857,
+      "sha256": null
+    }
+  ]
+}
