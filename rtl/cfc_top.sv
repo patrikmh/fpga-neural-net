@@ -13,13 +13,14 @@ module cfc_top #(
     uart_rx receiver(.clk(clk), .rst(reset), .rx(uart_rx), .data(rx_data), .valid(rx_valid));
     uart_tx transmitter(.clk(clk), .rst(reset), .start(tx_start), .data(tx_data), .tx(uart_tx), .busy(tx_busy));
     reg core_start = 0;
+    reg core_reset = 0;
     wire core_busy, core_done;
     wire signed [15:0] core_y;
     wire [127:0] core_hidden;
     wire [31:0] core_cycles;
     reg [7:0] request [0:6];
     cfc_core #(.WEIGHTS_FILE(WEIGHTS_FILE), .TANH_FILE(TANH_FILE), .SIGMOID_FILE(SIGMOID_FILE))
-        core(.clk(clk), .rst(reset), .start(core_start), .sample({request[6],request[5]}),
+        core(.clk(clk), .rst(reset || core_reset), .start(core_start), .sample({request[6],request[5]}),
              .busy(core_busy), .done(core_done), .y(core_y), .hidden(core_hidden), .cycles(core_cycles));
     wire [215:0] payload = {core_cycles, core_hidden, core_y, 8'h00, request[3], request[2], 16'ha55a};
     reg [7:0] response_checksum;
@@ -36,6 +37,7 @@ module cfc_top #(
     always @(posedge clk) begin
         tx_start <= 0;
         core_start <= 0;
+        core_reset <= 0;
         if (reset) begin
             rx_index <= 0;
             tx_index <= 0;
@@ -65,6 +67,9 @@ module cfc_top #(
                         if (checksum == rx_data && request[4] == 1) begin
                             core_start <= 1;
                             state <= 1;
+                        end else if (checksum == rx_data && request[4] == 2) begin
+                            core_reset <= 1;
+                            state <= 3;
                         end
                     end else begin
                         request[rx_index] <= rx_data;
@@ -81,6 +86,10 @@ module cfc_top #(
                     tx_start <= 1;
                     if (tx_index == 27) state <= 0;
                     else tx_index <= tx_index + 1;
+                end
+                3: begin
+                    tx_index <= 0;
+                    state <= 2;
                 end
             endcase
         end

@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/dlaidig/broad",
+  "commit": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+  "license": "CC-BY-4.0",
+  "purpose": "Exploratory sensor-fusion preview, not a held-out test",
+  "files": {
+    "data_hdf5/01_undisturbed_slow_rotation_A.hdf5": {
+      "bytes": 4255783,
+      "sha256": "46b3e75599d9783077d64245ddd1e898e8b3e813443aff13dc50698bc9f89ad0",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/01_undisturbed_slow_rotation_A.hdf5"
+    },
+    "data_hdf5/06_undisturbed_fast_rotation_A.hdf5": {
+      "bytes": 4296083,
+      "sha256": "064c47668570f1d8234956fe45922af2ec6ef6bbf64fd3bb27d642f745109574",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/06_undisturbed_fast_rotation_A.hdf5"
+    },
+    "data_hdf5/28_disturbed_stationary_magnet_A.hdf5": {
+      "bytes": 4222971,
+      "sha256": "0ff68165dd5838372acbab329bfb9115b38eff038b9bb8030e1e0b02fe1b22ac",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/28_disturbed_stationary_magnet_A.hdf5"
+    },
+    "data_hdf5/trials.json": {
+      "bytes": 12177,
+      "sha256": "9f4a680062fd5b6b500653fe7f8e7dd774dedbf4fe573210328ec8d0d263c2fd",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/data_hdf5/trials.json"
+    },
+    "LICENSE": {
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/LICENSE"
+    },
+    "README.md": {
+      "bytes": 3820,
+      "sha256": "a7e191b4016a7ba1c035ecc2a8dcf53562c294ef7c30e397938e752f94c12e68",
+      "url": "https://raw.githubusercontent.com/dlaidig/broad/7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad/README.md"
+    }
+  }
+}

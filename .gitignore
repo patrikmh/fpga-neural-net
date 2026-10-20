@@ -4,6 +4,7 @@ __pycache__/
 .cache/
 .tools/
 build/
+.playwright-cli/
 .DS_Store
 .env
 .env.*
@@ -18,3 +19,5 @@ reports/*
 !reports/numeric-calibration-2026-10-19.json
 !reports/probe-summary-2026-10-19.json
 !reports/rtl-summary-2026-10-19.json
+!reports/cfc-summary-2026-10-20.json
+!reports/broad-preview-v1-2026-10-20.json

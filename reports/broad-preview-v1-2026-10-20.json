@@ -1,0 +1,60 @@
+{
+  "scope": "Exploratory CPU six-axis tilt baseline; no CfC training, heading estimate, or FPGA sensor fusion",
+  "source": "https://github.com/dlaidig/broad",
+  "dataset_commit": "7e2f8189bb4a3ac91eae32c69b6bc87f08a6e2ad",
+  "license": "CC-BY-4.0",
+  "complementary_time_constant_s": 0.5,
+  "reference_convention": "opt_quat wxyz body-to-ENU; compare Earth-up expressed in sensor coordinates",
+  "scoring": "angular inclination RMSE on movement and finite nonzero reference quaternions; retain all time steps",
+  "model_selection": "No tuning; these preview trials are not held-out tests",
+  "versions": {
+    "h5py": "3.16.0",
+    "numpy": "2.4.6"
+  },
+  "analysis_source_sha256": "db66c32846d2070ec3f2a35aa847a46d3e89850a7eb7a0cc3fecf541aae8e5d9",
+  "download_manifest_sha256": "89b94fecf6af0b3ab3a68e22c0557f70760adf48a590c2b4cef0ae1e02eadca0",
+  "trials": [
+    {
+      "trial": "01_undisturbed_slow_rotation_A",
+      "samples": 56940,
+      "sampling_rate_hz": 285.7142857142857,
+      "movement_samples_scored": 35855,
+      "invalid_optical_samples_excluded": 152,
+      "sensor_values_finite": true,
+      "quaternion_norm_max_deviation": 6.661338147750939e-16,
+      "inclination_rmse_deg": {
+        "accelerometer_only": 5.647727749345999,
+        "gyro_only_acc_initialization": 17.27160188676018,
+        "gyro_acc_complementary": 0.7786554515805634
+      }
+    },
+    {
+      "trial": "06_undisturbed_fast_rotation_A",
+      "samples": 56380,
+      "sampling_rate_hz": 285.7142857142857,
+      "movement_samples_scored": 34882,
+      "invalid_optical_samples_excluded": 137,
+      "sensor_values_finite": true,
+      "quaternion_norm_max_deviation": 6.661338147750939e-16,
+      "inclination_rmse_deg": {
+        "accelerometer_only": 14.615927416551502,
+        "gyro_only_acc_initialization": 3.084619552881642,
+        "gyro_acc_complementary": 2.4408740172274124
+      }
+    },
+    {
+      "trial": "28_disturbed_stationary_magnet_A",
+      "samples": 52628,
+      "sampling_rate_hz": 285.7142857142857,
+      "movement_samples_scored": 30790,
+      "invalid_optical_samples_excluded": 363,
+      "sensor_values_finite": true,
+      "quaternion_norm_max_deviation": 6.661338147750939e-16,
+      "inclination_rmse_deg": {
+        "accelerometer_only": 37.204906743753945,
+        "gyro_only_acc_initialization": 12.873716656961983,
+        "gyro_acc_complementary": 9.60239274031538
+      }
+    }
+  ]
+}

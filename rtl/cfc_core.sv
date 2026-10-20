@@ -5,7 +5,8 @@ module cfc_core #(
 )(
     input wire clk, rst, start,
     input wire signed [15:0] sample,
-    output reg busy = 0, done = 0,
+    output reg busy = 0,
+    output reg done = 0,
     output reg signed [15:0] y,
     output wire [127:0] hidden,
     output reg [31:0] cycles

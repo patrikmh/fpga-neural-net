@@ -1,15 +1,33 @@
 # FPGA Neural Net – Tang Primer 25K
 
 Ett stegvis projekt för signalprediktion med ett litet CfC-nät på Tang Primer 25K.
-Modellen tränas på datorn. FPGA:n ska köra inferens med fasta vikter.
+Modellen tränas på datorn. FPGA:n kör inferens med fasta vikter.
 
 ## Status
 
+**Neuronnätet kör nu på det fysiska kortet.** RESET och 10 000 sammanhängande
+USB-steg är verifierade mot heltalsreferensen, inklusive alla åtta tillstånd.
+Beräkningen tar 1 052 cykler vid 50 MHz: **21,04 µs**. USB tur och retur tog
+i snitt **5,89 ms**, med cirka **165 sampel/s** över hela körningen.
+Bygget klarar 50 MHz med rapporterade 50,21 MHz och använder 7 541 LUT4,
+2 206 register och åtta blockminnen. Endast SRAM har laddats; flash är orörd.
+Långprovet på 600 sekunder är ännu inte godkänt: USB-läsfel avbröt längre
+körningar. Som längst matchade 90 047 steg exakt före avbrottet. Se
+[den fysiska resultatrapporten](reports/cfc-summary-2026-10-20.json).
+
+Den lokala appen visar signal, nästa-värdesprognos, heltalsreferens, åtta
+interna tillstånd och verifieringsstatus. Live och sparad verifierad körning
+är tydligt separerade. Se [appens startguide](docs/dashboard.md).
+
+Nästa undersökning gäller [sensorfusion med BROAD](docs/sensor-fusion-next.md).
+Det första försöket är en separat CPU-baslinje, utan ändring av FPGA-modellen.
+
+### Tidigare milstolpar
+
 Provet för UART, signerad multiplikation, ROM och RAM är simulerat och byggt.
 FPGA:n är identifierad genom JTAG som Gowin GW5A-25, ID `0x1281b`, och provet
-har laddats i SRAM. Det ordinarie USB-kommandot har verifierat 1 000 av
-1 000 riktiga svar. CfC-modellen är tränad och testad på datorn; nätets
-FPGA-inferens återstår.
+har laddats i SRAM. Det ordinarie USB-kommandot verifierade 1 000 av
+1 000 riktiga svar innan modell- och neuralkärnearbetet fortsatte.
 
 PyTorch 2.14.1, ncps 1.0.1 och NumPy 2.4.6 är versionslåsta.
 Den verifierade cellen har tillsammans med
@@ -26,14 +44,14 @@ beräkning inklusive USB tur och retur är 6,00 ms (p95 6,04 ms).
 
 Den sekventiella CfC-kärnan matchar alla åtta tillstånd och utvärdet exakt under
 10 000 sammanhängande steg i RTL-simulering. Beräkningen tar 1 052 klockcykler,
-vilket motsvarar 21,04 µs vid simulatorns 50 MHz. Detta är ännu ingen
-timingrapport eller fysisk körning av neuronnätet.
+vilket motsvarar 21,04 µs vid simulatorns 50 MHz. Den äldre RTL-rapporten
+omfattar bara simulering; senare fysisk verifiering sammanfattas ovan.
 
 Se [genomförandeplanen](docs/implementation-plan.md),
 [det fysiska provet](reports/probe-summary-2026-10-19.json) och
 [RTL-resultatet](reports/rtl-summary-2026-10-19.json).
-Återstår: resetkommandot i CfC-protokollet, CfC-byggets timingkontroll,
-verklig nätinferens och den längre demonstrationen på kortet.
+Den rapporten beskriver det tidigare simuleringssteget. RESET, timingkontroll
+och fysisk inferens är nu verifierade enligt statusen ovan.
 
 Ett prov med signerad 16x16-multiplikation visar att installerad Yosys använder
 vanlig logik och inga DSP-block för `-family gw5a`. Första versionen använder
@@ -168,5 +186,5 @@ operationsordning finns i `build/integer-v1/manifest.json`.
 
 På låsta testdata ökade heltalsmodellens MSE med 0,061 % jämfört med
 flyttalsmodellen, utan klippning. [Heltalstestet](reports/integer-heldout-2026-10-19.json)
-är körning på datorn. Bitexakt RTL-simulering är också verifierad; fysisk
-FPGA-inferens med nätet återstår.
+är körning på datorn. Bitexakt RTL-simulering och fysisk FPGA-inferens är också
+verifierade enligt statusen ovan.

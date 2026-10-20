@@ -1,0 +1,220 @@
+{
+  "scope": "Physical neural inference and local visualization; long-duration acceptance still open",
+  "model_manifest_sha256": "bd1caf3197965b0b3525062bbd8b94cb38665357259e19f708e64c76ac67b84e",
+  "build": {
+    "top": "cfc_top",
+    "device": "GW5A-LV25MG121NC1/I0",
+    "clock_mhz": 50,
+    "timing": {
+      "constrained_mhz": 50,
+      "achieved_mhz": 50.21340560913086
+    },
+    "memories": {
+      "weights": {
+        "block_count": 1,
+        "cell_types": [
+          "SP"
+        ],
+        "origins": [
+          "core.weights.0.0"
+        ]
+      },
+      "tanh": {
+        "block_count": 4,
+        "cell_types": [
+          "SP"
+        ],
+        "origins": [
+          "core.tanh_rom.0.0",
+          "core.tanh_rom.0.1",
+          "core.tanh_rom.0.2",
+          "core.tanh_rom.0.3"
+        ]
+      },
+      "sigmoid": {
+        "block_count": 3,
+        "cell_types": [
+          "SP"
+        ],
+        "origins": [
+          "core.sigmoid_rom.0.0",
+          "core.sigmoid_rom.0.1",
+          "core.sigmoid_rom.0.2"
+        ]
+      }
+    },
+    "utilization": {
+      "ADC": {
+        "available": 1,
+        "used": 0
+      },
+      "ALU": {
+        "available": 17280,
+        "used": 1096
+      },
+      "BSRAM": {
+        "available": 56,
+        "used": 8
+      },
+      "BUFG": {
+        "available": 5,
+        "used": 0
+      },
+      "CLKDIV": {
+        "available": 16,
+        "used": 0
+      },
+      "CLKDIV2": {
+        "available": 16,
+        "used": 0
+      },
+      "DCS": {
+        "available": 8,
+        "used": 0
+      },
+      "DFF": {
+        "available": 23040,
+        "used": 2206
+      },
+      "GND": {
+        "available": 1,
+        "used": 1
+      },
+      "GSR": {
+        "available": 1,
+        "used": 1
+      },
+      "IOB": {
+        "available": 240,
+        "used": 4
+      },
+      "IOLOGICI": {
+        "available": 230,
+        "used": 0
+      },
+      "IOLOGICO": {
+        "available": 230,
+        "used": 0
+      },
+      "LUT4": {
+        "available": 23040,
+        "used": 7541
+      },
+      "MULT12X12": {
+        "available": 56,
+        "used": 0
+      },
+      "MULTADDALU12X12": {
+        "available": 28,
+        "used": 0
+      },
+      "MULTALU27X18": {
+        "available": 28,
+        "used": 0
+      },
+      "MUX2_LUT5": {
+        "available": 11520,
+        "used": 1754
+      },
+      "MUX2_LUT6": {
+        "available": 5760,
+        "used": 636
+      },
+      "MUX2_LUT7": {
+        "available": 2880,
+        "used": 275
+      },
+      "MUX2_LUT8": {
+        "available": 2880,
+        "used": 51
+      },
+      "OSCA": {
+        "available": 1,
+        "used": 0
+      },
+      "PINCFG": {
+        "available": 1,
+        "used": 1
+      },
+      "PLLA": {
+        "available": 6,
+        "used": 0
+      },
+      "VCC": {
+        "available": 1,
+        "used": 1
+      }
+    },
+    "bitstream": {
+      "file": "cfc.fs",
+      "sha256": "d78512ca344253c4d4ae6fc2633afc2143100f040962d6a8f29c0c0575c535df"
+    },
+    "sources": {
+      "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+      "rtl/cfc_core.sv": "7907263db95dada6b5c346636d871cf256a7afd731de5b75bf9e89d2e972dc84",
+      "rtl/cfc_top.sv": "1a143b304a4de806a648f1b4b10dc0a2928d51cd739eda67cd91a9fda4a2e129",
+      "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521"
+    }
+  },
+  "physical_10000": {
+    "count_requested": 10000,
+    "count_verified": 10000,
+    "reset_verified": true,
+    "elapsed_s": 60.43921316599881,
+    "compute_us": {
+      "min": 21.04,
+      "mean": 21.04,
+      "p95": 21.04,
+      "max": 21.04
+    },
+    "roundtrip_ms": {
+      "min": 3.5917089990107343,
+      "mean": 5.893089097738266,
+      "p95": 6.299750006292015,
+      "max": 14.421999992919154
+    },
+    "export_manifest_sha256": "bd1caf3197965b0b3525062bbd8b94cb38665357259e19f708e64c76ac67b84e",
+    "vectors_manifest_sha256": "fbf51e88f131928daa338cd4f3a43840d89f05c74a4198d34e50c170bc1a9a26",
+    "checkpoint_sha256": "d428e6b5c6ec43ed52a079cc31f54567f0da4fb85e4bbe254f96612ef923c19d"
+  },
+  "physical_report_sha256": "e46255662f91cbfecf61215a58b3490fdbfc34b1de3d9e1dc93d83220d5b0423",
+  "long_run": {
+    "accepted": false,
+    "target_duration_s": 600,
+    "target_throughput_hz": 100,
+    "attempts": [
+      {
+        "status": "failed",
+        "count_verified": 90047,
+        "duration_s": 545.7079401250085,
+        "throughput_hz": 165.00951036074795,
+        "error": "ftdi_read_data failed (-7): usb bulk read failed"
+      },
+      {
+        "status": "failed",
+        "count_verified": 1798,
+        "duration_s": 11.316423791999114,
+        "throughput_hz": 158.88411684186073,
+        "error": "ftdi_read_data failed (-7): usb bulk read failed"
+      },
+      {
+        "status": "failed",
+        "count_verified": 70900,
+        "duration_s": 430.7620983749948,
+        "throughput_hz": 164.592010920791,
+        "error": "ftdi_read_data failed (-1): usb bulk read failed"
+      }
+    ],
+    "remaining": "Investigate USB transport stability. Earlier failures coincided with macOS sleep; the latest also failed while sleep protection was active. No accepted 600-second run."
+  },
+  "programming": {
+    "sram_only": true,
+    "flash_written": false
+  },
+  "software_validation": {
+    "tests_passed": 62,
+    "compileall_passed": true,
+    "browser_smoke": "PASS: live, recorded, cursor, pause/resume, download, 390px layout, no JavaScript errors"
+  },
+  "display_scope": "End-of-step states and predictions, not individual FPGA clock events"
+}
