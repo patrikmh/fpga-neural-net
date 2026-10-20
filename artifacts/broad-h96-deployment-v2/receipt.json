@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "kind": "Equivalent implementation repair; unchanged accuracy study",
+  "created_at_utc": "2026-10-20T20:40:07.272437+00:00",
+  "source_commit": "71ca95e41a49b8259c8f02230d22863201fb6f14",
+  "parent_selection": {
+    "file": "artifacts/broad-h96-final-v1/selection.json",
+    "sha256": "e51cf1732bafbbda793cd1b9cf4c837d9fef53e3b6518e1faa1d9c9d43aeacc3"
+  },
+  "parent_cpu_report": {
+    "file": "artifacts/broad-h96-final-v1/report.json",
+    "sha256": "67a7181825c25f8222ca32b576a573a645c7e7b4d8682f98b1a84ee14160479e"
+  },
+  "parent_test_spec": {
+    "file": "artifacts/broad-h96-final-v1/test-spec.json",
+    "sha256": "1dfdb33e96077898a1a0f88d7465d5d90dcb99e1b20a1c379903f8e0805c1200"
+  },
+  "checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+  "integer_export_manifest": {
+    "file": "artifacts/broad-integer-v1/export/manifest.json",
+    "sha256": "b91b4197090f0edbeb802f8026d775201607f2ae39bf1304ab149859ecc7d459"
+  },
+  "implementation_sources": {
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "1f23e08d23c32723d52d1bfe647aff5ec6720844c771b87218aed90cf82f3f60",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "scripts/build_broad.py": "974b78d216263e8b63808f335a04ac05e9b46464300145b912092ab5f9501f96",
+    "scripts/build.py": "5bc781d311b63635f5bbbadcaa9c91dbd125ce0d8c706ba82fe6f31ba1c9a763",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b"
+  },
+  "source_change_from_selection": {
+    "rtl/broad_core.sv": {
+      "before": "7ed85265a63e07bc327daa652b4067f5e7f1b72683f3296470a4605c643a07d8",
+      "after": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885"
+    }
+  },
+  "all_other_selected_project_sources_unchanged": true,
+  "model_reselected": false,
+  "numeric_format_changed": false,
+  "cycle_schedule_changed": false,
+  "clock_mhz": 50,
+  "expected_cycles": 124046,
+  "placement": {
+    "placer": "heap",
+    "seed": 3,
+    "heap_beta": 0.9
+  },
+  "evidence": [
+    {
+      "file": "artifacts/broad-h96-deployment-v2/build/report.json",
+      "sha256": "8c1fd433eed915e07817a8c3e2314dabf698537fbc07024bfd0cab9eb58f72e8"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/build/broad.fs",
+      "sha256": "3564b2c2ac90d1a38b2d505df4df7945ac665dc17db042ba477274322e463988"
+    },
+    {
+      "file": "artifacts/broad-rtl-v4/report.json",
+      "sha256": "fc27fd4e09cef53decd24f3ff7868c62ccb20aafcd088b99952c3834bc3d524c"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/physical/report.json",
+      "sha256": "c31f9865ea0b7530a59cd5f50ad1bb404be5f70c81c8fee6dbf97a84da6bc1b7"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/verification.json",
+      "sha256": "e438c2116042818394e451266c73ca481784123fd4a3846d55325c2deedec7e7"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/quick-physical/report.json",
+      "sha256": "db948554b9b3772d8ea104f84fb6f6e11f94afd030afbf25fa43c25b0dae8c22"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/smoke.json",
+      "sha256": "355f53df3718350141189ff8f60a877c7bfa9cd31a947829ccef40ff871851c1"
+    },
+    {
+      "file": "artifacts/broad-h96-deployment-v2/history.json",
+      "sha256": "812ef4fb361a77025a364db80fc1dc4f81adaa4555ff0fce50674d05dc7ba9ec"
+    }
+  ],
+  "verification": {
+    "main_physical_steps": 15000,
+    "main_reset_sequences": 6,
+    "movement_steps_with_reset_window": 1000,
+    "simulation_steps": 10000,
+    "simulation_reset_replay": true,
+    "unique_tests": 94,
+    "quick_diagnostic_steps": 16,
+    "runtime_smoke_steps": 4,
+    "diagnostic_and_smoke_not_added_to_main_count": true
+  },
+  "limits": [
+    "Full physical heldout-trial orientation accuracy not measured",
+    "All four new-test USB prefixes are stationary",
+    "Movement window resets at sample11449 instead of continuing full-trial history",
+    "Original physical root cause not established",
+    "Earlier scalar600sUSB endurance gate remains open",
+    "Existing app still shows scalar8-state model"
+  ],
+  "independent_release_review": "PASS; source, scientific identities, published evidence, numeric scopes and staged byte identities reviewed"
+}

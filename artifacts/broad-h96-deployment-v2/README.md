@@ -8,6 +8,8 @@ were not retuned. The deployment runner binds the repaired build to those
 parent hashes and permits only the recorded core source change.
 The unchanged CPU mathematics did not require another heldout accuracy run;
 this is not a new accuracy-based model selection.
+The [deployment receipt](receipt.json) binds the published evidence to the
+source commit and the immutable study parent.
 
 The original loaded design failed physical equivalence: the first trial-04
 step differed by +512 at hidden lane 9. Separate validation-02 diagnostics
