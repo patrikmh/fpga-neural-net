@@ -1,0 +1,361 @@
+{
+  "created_at_utc": "2026-10-20T22:17:37.819441+00:00",
+  "split": "validation",
+  "dataset_manifest_sha256": "11612970a1bb12914355a668f3c3e26f6c1e2ecb3123339eac3c158923b7f8e6",
+  "confirmation_generated": false,
+  "candidates": [
+    {
+      "candidate": "scratch-s23",
+      "checkpoint_sha256": "715ac6bf8e4d5ca81c238f616dabacd2b58e8c9b159c7526f6947bfde633c556",
+      "export_manifest_sha256": "43db4c9bb417e6f1671d331096e29e8bd3c0bff36cfe1170ec21d36d8664c942",
+      "selected_epoch": 159,
+      "training_config": {
+        "input_size": 9,
+        "hidden_size": 96,
+        "output_size": 4,
+        "mode": "default",
+        "backbone_layers": 0,
+        "dt": 1.0,
+        "warmup": 32,
+        "epochs": 200,
+        "chunk_size": 128,
+        "batch_size": 16,
+        "seed": 23,
+        "learning_rate": 0.001,
+        "method": "chronological_detached_tbptt"
+      },
+      "normalization_origin": "train",
+      "initial_checkpoint_sha256": null,
+      "optimizer_steps": 25600,
+      "training_samples_scored": 51609600,
+      "float": {
+        "sample_count": 50400,
+        "full_rmse_deg": 7.979634944193779,
+        "p50_deg": 4.809461460014829,
+        "p95_deg": 13.856072892443613,
+        "max_deg": 172.44755446909537,
+        "above_5_deg_count": 23615,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2018,
+            "full_rmse_deg": 4.641739803083528,
+            "p50_deg": 3.8745838734255242,
+            "p95_deg": 7.661308528482401,
+            "max_deg": 8.01419110005623
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4270,
+            "full_rmse_deg": 7.04735497513115,
+            "p50_deg": 4.711652618633094,
+            "p95_deg": 9.862774679664442,
+            "max_deg": 152.08333075528208
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 6277,
+            "full_rmse_deg": 8.381375689121596,
+            "p50_deg": 5.820219434834936,
+            "p95_deg": 13.225250871426148,
+            "max_deg": 172.44755446909537
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4044,
+            "full_rmse_deg": 7.542436041726659,
+            "p50_deg": 4.1380018090766315,
+            "p95_deg": 15.568595479723069,
+            "max_deg": 143.72408794888722
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 7006,
+            "full_rmse_deg": 10.955642782704299,
+            "p50_deg": 7.170437672270667,
+            "p95_deg": 16.750366198259655,
+            "max_deg": 169.01079486879635
+          }
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 480,
+          "full_rmse_deg": 20.98673021633907,
+          "p50_deg": 5.9734345202759,
+          "p95_deg": 30.838214226779815,
+          "max_deg": 168.98002296648372
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 6050,
+          "full_rmse_deg": 5.402086527295312,
+          "p50_deg": 3.874584753385947,
+          "p95_deg": 9.831160605041587,
+          "max_deg": 18.697854309670237
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 17565,
+          "full_rmse_deg": 9.293368717976536,
+          "p50_deg": 5.574670193405589,
+          "p95_deg": 15.47351320196241,
+          "max_deg": 172.44755446909537
+        }
+      },
+      "integer": {
+        "sample_count": 50400,
+        "full_rmse_deg": 8.154638462731485,
+        "p50_deg": 4.985482033668991,
+        "p95_deg": 13.795012884249651,
+        "max_deg": 179.4917953779716,
+        "above_5_deg_count": 25142,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2030,
+            "full_rmse_deg": 4.6542059864422285,
+            "p50_deg": 3.909478410111275,
+            "p95_deg": 7.721176407133831,
+            "max_deg": 8.090113309874727
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4391,
+            "full_rmse_deg": 7.22962799045507,
+            "p50_deg": 4.716786697310342,
+            "p95_deg": 10.369231584155457,
+            "max_deg": 151.82408030230184
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 6584,
+            "full_rmse_deg": 8.553975015400322,
+            "p50_deg": 6.026318586772833,
+            "p95_deg": 13.318141567448988,
+            "max_deg": 179.4917953779716
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 4838,
+            "full_rmse_deg": 7.97704629520087,
+            "p50_deg": 4.76536140388983,
+            "p95_deg": 15.493064509082757,
+            "max_deg": 158.0181784816409
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 7299,
+            "full_rmse_deg": 11.034388604939636,
+            "p50_deg": 7.1524974246483914,
+            "p95_deg": 16.604484006840444,
+            "max_deg": 176.04397660424198
+          }
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 497,
+          "full_rmse_deg": 20.98651036022457,
+          "p50_deg": 6.078177743904252,
+          "p95_deg": 30.78652331887154,
+          "max_deg": 168.92486099075228
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 6563,
+          "full_rmse_deg": 5.578553004759128,
+          "p50_deg": 3.926721023960861,
+          "p95_deg": 9.85174329210546,
+          "max_deg": 18.59356550857365
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 18579,
+          "full_rmse_deg": 9.47486390983017,
+          "p50_deg": 5.8363791636401245,
+          "p95_deg": 15.239705180929835,
+          "max_deg": 179.4917953779716
+        },
+        "input_clipping_count": 0
+      },
+      "integer_minus_float_rmse_deg": 0.17500351853770635,
+      "accuracy_gate_passed": false
+    },
+    {
+      "candidate": "warm-s29",
+      "checkpoint_sha256": "07ee197bcfe9b3948a3dc9b4658e565fc9a12274ee83caf157ef1ef42e79be49",
+      "export_manifest_sha256": "27bcd121c19e0fda89cbfdb9542a725e39aa0a0c723af71f3941d31def3fab69",
+      "selected_epoch": 149,
+      "training_config": {
+        "input_size": 9,
+        "hidden_size": 96,
+        "output_size": 4,
+        "mode": "default",
+        "backbone_layers": 0,
+        "dt": 1.0,
+        "warmup": 32,
+        "epochs": 200,
+        "chunk_size": 128,
+        "batch_size": 16,
+        "seed": 29,
+        "learning_rate": 0.0003,
+        "method": "chronological_detached_tbptt"
+      },
+      "normalization_origin": "initial_checkpoint",
+      "initial_checkpoint_sha256": "a936cd787bf0db0969621a0da548bb044b384e0f1679bdc83bdf611d5f8e1ba9",
+      "optimizer_steps": 25600,
+      "training_samples_scored": 51609600,
+      "float": {
+        "sample_count": 50400,
+        "full_rmse_deg": 7.946191080384542,
+        "p50_deg": 4.359543316845151,
+        "p95_deg": 11.345099461402183,
+        "max_deg": 176.60470379792412,
+        "above_5_deg_count": 21714,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2016,
+            "full_rmse_deg": 3.4443362229817467,
+            "p50_deg": 2.7379742459115346,
+            "p95_deg": 5.1237543600954325,
+            "max_deg": 5.125912128431386
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3885,
+            "full_rmse_deg": 7.5565682905524065,
+            "p50_deg": 4.176930736162331,
+            "p95_deg": 8.751296503593391,
+            "max_deg": 160.85122850831368
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 5326,
+            "full_rmse_deg": 10.307941216312466,
+            "p50_deg": 5.216567184285889,
+            "p95_deg": 14.44709381478177,
+            "max_deg": 176.60470379792412
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3548,
+            "full_rmse_deg": 6.795927545947421,
+            "p50_deg": 4.291000179933027,
+            "p95_deg": 8.476629700919538,
+            "max_deg": 173.1369975676486
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 6939,
+            "full_rmse_deg": 9.711143277414237,
+            "p50_deg": 5.987369639368122,
+            "p95_deg": 15.174900819462106,
+            "max_deg": 170.7887947139466
+          }
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 478,
+          "full_rmse_deg": 31.39653412977852,
+          "p50_deg": 6.04899534271613,
+          "p95_deg": 78.3644716027759,
+          "max_deg": 179.0400463836456
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 4829,
+          "full_rmse_deg": 3.835314937095079,
+          "p50_deg": 3.6964871442139935,
+          "p95_deg": 5.585077300066201,
+          "max_deg": 14.059811099328497
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 16885,
+          "full_rmse_deg": 9.747067038681978,
+          "p50_deg": 5.355709801494734,
+          "p95_deg": 13.966289400781026,
+          "max_deg": 176.60470379792412
+        }
+      },
+      "integer": {
+        "sample_count": 50400,
+        "full_rmse_deg": 7.942716116339974,
+        "p50_deg": 4.36729738541006,
+        "p95_deg": 11.339265393546567,
+        "max_deg": 174.12578109692265,
+        "above_5_deg_count": 21653,
+        "families": {
+          "hold": {
+            "sample_count": 10080,
+            "above_5_deg_count": 2013,
+            "full_rmse_deg": 3.438413525836743,
+            "p50_deg": 2.723866555455097,
+            "p95_deg": 5.13160505947245,
+            "max_deg": 5.279441013293723
+          },
+          "single_axis": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3850,
+            "full_rmse_deg": 7.522810904821166,
+            "p50_deg": 4.170872168700896,
+            "p95_deg": 8.731675549691749,
+            "max_deg": 159.2526375872998
+          },
+          "mixed": {
+            "sample_count": 10080,
+            "above_5_deg_count": 5318,
+            "full_rmse_deg": 10.3098998230343,
+            "p50_deg": 5.2120344039093,
+            "p95_deg": 14.422309293117367,
+            "max_deg": 174.12578109692265
+          },
+          "stop_go": {
+            "sample_count": 10080,
+            "above_5_deg_count": 3535,
+            "full_rmse_deg": 6.800515641667939,
+            "p50_deg": 4.275706768170718,
+            "p95_deg": 8.500617684245613,
+            "max_deg": 167.83121063208202
+          },
+          "spin": {
+            "sample_count": 10080,
+            "above_5_deg_count": 6937,
+            "full_rmse_deg": 9.719942267622146,
+            "p50_deg": 5.995377397531408,
+            "p95_deg": 15.179648205797735,
+            "max_deg": 172.9739836724414
+          }
+        },
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 481,
+          "full_rmse_deg": 31.3739549662181,
+          "p50_deg": 6.1053594328669325,
+          "p95_deg": 78.31763217693265,
+          "max_deg": 178.53956429353488
+        },
+        "stationary": {
+          "sample_count": 20000,
+          "above_5_deg_count": 4780,
+          "full_rmse_deg": 3.833427874375244,
+          "p50_deg": 3.725893575678537,
+          "p95_deg": 5.610128251920912,
+          "max_deg": 13.975495344070694
+        },
+        "moving": {
+          "sample_count": 30400,
+          "above_5_deg_count": 16873,
+          "full_rmse_deg": 9.742858848380045,
+          "p50_deg": 5.364086793133772,
+          "p95_deg": 13.964108206927921,
+          "max_deg": 174.12578109692265
+        },
+        "input_clipping_count": 0
+      },
+      "integer_minus_float_rmse_deg": -0.003474964044568374,
+      "accuracy_gate_passed": false
+    }
+  ],
+  "decision": "Neither candidate meets the predeclared accuracy gate; diagnose remaining error before refinement. No new model is deployed."
+}

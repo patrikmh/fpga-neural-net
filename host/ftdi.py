@@ -28,7 +28,10 @@ class ContextPrefix(ctypes.Structure):
 
 
 class Ftdi:
-    def __init__(self, serial_number, library=None):
+    def __init__(self, serial_number, library=None, *, requested_baudrate=460800):
+        if type(requested_baudrate) is not int or not 0 < requested_baudrate <= 2147483647:
+            raise ValueError('Requested baudrate must be a positive signed-32-bit integer')
+        self.requested_baudrate = requested_baudrate
         self.serial_number = serial_number
         self.context = None
         self.opened = False
@@ -89,7 +92,7 @@ class Ftdi:
             self.checked("ftdi_usb_open_desc", 0x0403, 0x6010, None, self.serial_number.encode())
             self.opened = True
             self.checked("ftdi_set_bitmode", 0, 0)
-            self.checked("ftdi_set_baudrate", 460800)
+            self.checked("ftdi_set_baudrate", self.requested_baudrate)
             self.checked("ftdi_set_line_property", 8, 0, 0)
             self.checked("ftdi_setflowctrl", 0)
             self.checked("ftdi_set_latency_timer", 2)

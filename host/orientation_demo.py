@@ -14,6 +14,7 @@ from host.broad_protocol import build_request, parse_response
 from host.ftdi import Ftdi
 from host.orientation_sim import MODEL_DT_S, advance_pose, normalize_quaternion, sensors_for_step
 from host.verify_probe import usb_serial_number
+from host.verify_broad import positive_integer
 from model.broad_integer import GoldenBroadPredictor, quantize_inputs
 
 
@@ -46,6 +47,7 @@ class OrientationSession:
 
     def snapshot(self, status, count, reset_verified, sample=None):
         return {'status': status, 'source': 'fpga_usb', 'count_verified': count,
+                'usb_requested_baudrate': self.args.usb_requested_baudrate,
                 'reset_verified': reset_verified, 'fixed_model_dt_s': MODEL_DT_S,
                 'sensor_units': {'acc': 'm/s^2', 'gyr': 'rad/s', 'mag': 'uT'},
                 'target_wxyz': self.target.copy(), 'sample': sample}
@@ -61,7 +63,8 @@ class OrientationSession:
         self.predictor = GoldenBroadPredictor.from_export(self.args.export_dir)
         if self.predictor.hidden_size != 96:
             raise ValueError('Orientation demo requires the frozen 96-state BROAD export')
-        self.connection = Ftdi(self.args.usb_serial, self.args.libftdi).__enter__()
+        self.connection = Ftdi(self.args.usb_serial, self.args.libftdi,
+                               requested_baudrate=self.args.usb_requested_baudrate).__enter__()
         try:
             return self.reset()
         except Exception:
@@ -138,6 +141,7 @@ def main():
     parser.add_argument('--port', type=int, default=8766)
     parser.add_argument('--export-dir', type=Path, default=ROOT / 'artifacts/broad-integer-v1/export')
     parser.add_argument('--libftdi')
+    parser.add_argument('--usb-requested-baudrate', type=positive_integer, default=460800)
     args = parser.parse_args()
     if not 0 <= args.port <= 65535:
         parser.error('port must be between 0 and 65535')

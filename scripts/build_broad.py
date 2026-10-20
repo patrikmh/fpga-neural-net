@@ -23,6 +23,13 @@ SOURCES = ('rtl/uart.sv', 'rtl/broad_core.sv', 'rtl/broad_top.sv',
            'model/broad_integer.py')
 
 
+def positive_integer(value):
+    number = int(value)
+    if number <= 0:
+        raise argparse.ArgumentTypeError('Expected a positive integer')
+    return number
+
+
 def positive_finite(value):
     number = float(value)
     if not math.isfinite(number) or number <= 0:
@@ -112,7 +119,8 @@ def build(args):
     staged_hashes = file_hashes(rom_dir)
     synth, routed = output / 'synth.json', output / 'routed.json'
     timing_path, bitstream = output / 'timing.json', output / 'broad.fs'
-    parameters = (f'-set HIDDEN_SIZE {size} -set WEIGHTS_DIR {json.dumps(str(rom_dir))} '
+    parameters = (f'-set HIDDEN_SIZE {size} -set UART_DIVISOR {args.uart_divisor} '
+                  f'-set WEIGHTS_DIR {json.dumps(str(rom_dir))} '
                   f'-set TANH_FILE {json.dumps(str(export_dir / "tanh.hex"))} '
                   f'-set SIGMOID_FILE {json.dumps(str(export_dir / "sigmoid.hex"))}')
     run_stage('yosys', [tools['yosys'], '-p',
@@ -143,6 +151,7 @@ def build(args):
     if tool_hashes != {name: sha256(Path(path)) for name, path in tools.items()}:
         raise RuntimeError('Tool executable changed during build')
     report = {'top': 'broad_top', 'device': DEVICE, 'hidden_size': size, 'clock_mhz': 50, 'router': 'router2',
+        'uart_divisor': args.uart_divisor, 'expected_fpga_baudrate': 50000000 / args.uart_divisor,
         'placement': {'placer': args.placer, 'seed': args.seed, 'heap_beta': args.heap_beta},
         'stage_timeout_s': args.stage_timeout, 'timing': timing, 'memories': memories,
         'utilization': raw_timing['utilization'], 'sources': source_hashes, 'banks': banks,
@@ -160,6 +169,7 @@ def main():
     parser.add_argument('--build-dir', type=Path, default=ROOT / 'build/broad')
     parser.add_argument('--placer', choices=('heap', 'sa'), default='heap')
     parser.add_argument('--seed', type=int, default=1)
+    parser.add_argument('--uart-divisor', type=positive_integer, default=434)
     parser.add_argument('--heap-beta', type=heap_beta, default=.9)
     parser.add_argument('--stage-timeout', type=positive_finite, default=600)
     args = parser.parse_args()

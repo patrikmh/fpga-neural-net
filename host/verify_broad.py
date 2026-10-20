@@ -91,7 +91,7 @@ def verify(args):
     before = snapshot(args.export_dir, args.vectors_dir, library)
     roundtrips, compute = [], []
     started = time.perf_counter()
-    with Ftdi(args.usb_serial, str(library)) as connection:
+    with Ftdi(args.usb_serial, str(library), requested_baudrate=args.usb_requested_baudrate) as connection:
         hidden, raw, cycles = exchange(connection, 65535, [0] * 9, size, command=2)
         if (hidden, raw, cycles) != ((0,) * size, (0,) * 4, 0):
             raise ValueError('BROAD RESET acknowledgement did not clear state, output and cycles')
@@ -112,7 +112,9 @@ def verify(args):
         raise ValueError('Code or artifact SHA256 identity changed during verification')
     return {'count_requested': args.count, 'count_verified': len(roundtrips), 'hidden_size': size,
             'reset_verified': True, 'expected_cycles': args.expected_cycles, 'transport': 'libftdi',
-            'usb_serial': args.usb_serial, 'usb_requested_baudrate': 460800, 'baudrate': 115200,
+            'usb_serial': args.usb_serial, 'usb_requested_baudrate': args.usb_requested_baudrate,
+            'uart_divisor': args.uart_divisor, 'expected_fpga_baudrate': 50000000 / args.uart_divisor,
+            'baudrate': 115200 if args.uart_divisor == 434 else 50000000 / args.uart_divisor,
             'clock_mhz': 50, 'elapsed_s': time.perf_counter() - started,
             'compute_us': summary(compute), 'roundtrip_ms': summary(roundtrips),
             'export_manifest_sha256': before['export/manifest.json'],
@@ -129,6 +131,8 @@ def main():
     parser.add_argument('--count', type=positive_integer, default=10000)
     parser.add_argument('--expected-cycles', type=positive_integer, required=True)
     parser.add_argument('--libftdi')
+    parser.add_argument('--usb-requested-baudrate', type=positive_integer, default=460800)
+    parser.add_argument('--uart-divisor', type=positive_integer, default=434)
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
     try:

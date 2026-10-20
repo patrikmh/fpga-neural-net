@@ -1,5 +1,6 @@
 module broad_top #(
     parameter integer HIDDEN_SIZE = 96,
+    parameter integer UART_DIVISOR = 434,
     parameter WEIGHTS_DIR = "build/broad-rtl-v1/rom",
     parameter TANH_FILE = "build/broad-rtl-v1/rom/tanh.hex",
     parameter SIGMOID_FILE = "build/broad-rtl-v1/rom/sigmoid.hex"
@@ -12,8 +13,10 @@ module broad_top #(
     wire rx_valid, tx_busy;
     reg tx_start = 0;
     reg [7:0] tx_data;
-    uart_rx receiver(.clk(clk), .rst(reset), .rx(uart_rx), .data(rx_data), .valid(rx_valid));
-    uart_tx transmitter(.clk(clk), .rst(reset), .start(tx_start), .data(tx_data), .tx(uart_tx), .busy(tx_busy));
+    uart_rx #(.CLKS_PER_BIT(UART_DIVISOR)) receiver(
+        .clk(clk), .rst(reset), .rx(uart_rx), .data(rx_data), .valid(rx_valid));
+    uart_tx #(.CLKS_PER_BIT(UART_DIVISOR)) transmitter(
+        .clk(clk), .rst(reset), .start(tx_start), .data(tx_data), .tx(uart_tx), .busy(tx_busy));
     reg [7:0] request [0:21];
     wire [143:0] samples;
     genvar i;
