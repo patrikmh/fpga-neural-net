@@ -27,6 +27,8 @@ i `artifacts/broad-cfc8-v1/`. En [större CPU-studie](docs/broad-width-study.md)
 med 41 092 parametrar: 26,43° valideringsfel, 23,8 % lägre än H8 på samma
 valideringsmått. Faktisk FPGA-passning och ett nytt sluttest återstår.
 Noggrannhet har högsta prioritet.
+Ett efterföljande [försök med sammanhängande träning](docs/broad-stateful-study.md)
+förbättrade inte modellen; samma H96-checkpoint är fortsatt vald.
 
 ### Tidigare milstolpar
 

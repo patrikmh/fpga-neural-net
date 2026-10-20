@@ -43,9 +43,10 @@ inte ett färdigt bevis för kvantiserad noggrannhet.
 
 Träningen återställer minnet efter 256 prov, cirka 0,896 s, medan valideringen
 kör hela inspelningar på cirka 175–186 s. Detta är en konstaterad skillnad i
-upplägg; dess betydelse för felet är ännu en hypotes. Nästa metodval stäms av
-med Patrik: längre sammanhängande träning, fysikstödd CfC-korrigering eller
-att gå vidare med nuvarande modell till FPGA.
+upplägg; dess betydelse för felet är ännu en hypotes. Det godkända
+[försöket med sammanhängande träning](broad-stateful-study.md) är nu genomfört.
+Ingen av två körningar förbättrade startmodellen. Samma H96-checkpoint går
+därför vidare till heltalskontroll och FPGA-bygge.
 
 Nya sluttestinspelningar **04, 08, 12 och 31 är inte öppnade**. De tidigare
 03/07/11/29 får bara kallas återanvända regressionstest. Inga testinspelningar
