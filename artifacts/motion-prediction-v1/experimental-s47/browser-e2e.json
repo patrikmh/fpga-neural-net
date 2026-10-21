@@ -1,0 +1,16 @@
+{
+  "verified_steps": 47,
+  "hidden_states": 96,
+  "horizon_s": 0.05,
+  "matched_forecasts": "32",
+  "rolling_model_rmse": "28.7\u00b0",
+  "rolling_cv_rmse": "4.7\u00b0",
+  "quality_claim": "interactive demonstration only; not held-out qualification",
+  "status": "passed_engineering_only",
+  "accuracy_accepted": false,
+  "scope": "Physical FPGA with virtual sensors; abrupt keyboard-controlled motion including cold start. Not held-out qualification.",
+  "reset_verified": true,
+  "disconnect_verified": true,
+  "mobile_width_px": 390,
+  "reduced_motion": true
+}

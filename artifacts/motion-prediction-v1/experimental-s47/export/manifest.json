@@ -1,0 +1,93 @@
+{
+  "numeric": {
+    "word_bits": 16,
+    "input_fractional_bits": 11,
+    "state_fractional_bits": 13,
+    "weight_fractional_bits": 13,
+    "output_fractional_bits": 13,
+    "accumulator_bits": 48,
+    "accumulator_fractional_bits": 26,
+    "rounding": "half_away_from_zero",
+    "activation_entries": 4096,
+    "activation_fractional_bits": 8,
+    "activation_zero_index": 2048
+  },
+  "checkpoint_sha256": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8",
+  "config": {
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "backbone_layers": 0,
+    "dt": 1.0,
+    "warmup": 32,
+    "epochs": 200,
+    "chunk_size": 128,
+    "batch_size": 16,
+    "seed": 47,
+    "learning_rate": 0.0005,
+    "method": "chronological_detached_tbptt",
+    "task": {
+      "kind": "motion_prediction",
+      "horizon_s": 0.05,
+      "model_dt_s": 0.0035,
+      "target": "absolute_body_to_enu_wxyz"
+    },
+    "initial_pose": "identity",
+    "loss_definition": "1-abs(dot(unit_raw,unit_target)) + raw_norm_penalty*(norm(raw)-1)^2",
+    "raw_norm_penalty": 0.01
+  },
+  "normalization": {
+    "mean": [
+      0.15157219135575237,
+      0.08340736030976038,
+      5.476124365691038,
+      0.06430647079222271,
+      0.15270093108420324,
+      0.11873027169629714,
+      -0.4895807490821544,
+      8.47715805400461,
+      -23.283784286810487
+    ],
+    "std": [
+      4.114850776543421,
+      4.462647880667229,
+      5.419502559701288,
+      2.1958956736030384,
+      1.962946494809326,
+      2.0923985185810374,
+      18.9985699242976,
+      21.20803235084963,
+      24.495656674995516
+    ]
+  },
+  "files": {
+    "weights.hex": "d3f09c2a17955a1f68c237247c768b7542060807a0b8bc7aaef2581f503133b4",
+    "tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+    "sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+    "float_checkpoint.pt": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8"
+  },
+  "sources": {
+    "model/broad_train.py": "606ff08ad2370b648862eb2b52235ae887c7373b7ba95a0f8f4848bb1098a536",
+    "model/broad_network.py": "657f539601fa7f6e13584715bcb27c0d93e65826b2095b56f38167d6330d1c0e",
+    "ncps/torch/cfc_cell.py": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "model/broad_export_integer.py": "283c9591f240b74e24fed245355cdc5f63a3016c023fe8da0c421d08e3b0aa54",
+    "model/broad_evaluate_integer.py": "70a5e1e8590f1e9b3d35d4e42e43f4be9af26f0121bc2cdfb6e26f6106baa45b",
+    "model/broad_evaluate.py": "a9fbbe80ffa3c4284e99637083103b487bcba60f331e31a067695cf21eb504b9",
+    "model/motion_generate.py": "46bebf702ffad66f26e68d06d6b69f2c341379cf39dc7e88a85542505ab8a7f0",
+    "model/motion_train.py": "da536e608605da5706965bd34abd2b7a80416291cc91278b4e38a704cba78bac",
+    "model/motion_evaluate.py": "fb234b20c13da3f206db5169442a61038dd264d3b33dd2123cb2c84645923444",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  },
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "weight_order": "ff1,ff2,time_a,time_b: H rows of 9 inputs,H hidden,bias; readout: 4 rows of H hidden,bias",
+  "vector_order": "nine inputs, H new hidden states, four raw outputs; signed16 words, most significant first"
+}

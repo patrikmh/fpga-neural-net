@@ -46,6 +46,12 @@ orientering med samma provs uppskattning från det fysiska chipet via USB.
 Vyn visar också nätverkets 96 uppmätta tillstånd och förklarar CfC-beräkningen.
 Sensorerna är simulerade; modellen och vikterna är de befintliga frysta H96-filerna.
 
+En separat [anpassning för rörelseprognoser](docs/motion-prediction.md) tränar samma
+9→96→4-nätverk för orienteringen 50 ms framåt. Den använder fördröjd jämförelse
+mot facit vid prognosens måltid och visar två sensorbaserade referenser.
+De första kandidaterna klarar inte noggrannhetsmålet; bitexakthet och låg
+prognosavvikelse är separata krav.
+
 ### Tidigare milstolpar
 
 Provet för UART, signerad multiplikation, ROM och RAM är simulerat och byggt.

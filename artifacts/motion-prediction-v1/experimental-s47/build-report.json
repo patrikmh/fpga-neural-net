@@ -1,0 +1,434 @@
+{
+  "top": "broad_top",
+  "device": "GW5A-LV25MG121NC1/I0",
+  "hidden_size": 96,
+  "clock_mhz": 50,
+  "router": "router2",
+  "uart_divisor": 434,
+  "expected_fpga_baudrate": 115207.3732718894,
+  "placement": {
+    "placer": "heap",
+    "seed": 3,
+    "heap_beta": 0.9
+  },
+  "stage_timeout_s": 600,
+  "timing": {
+    "constrained_mhz": 50,
+    "achieved_mhz": 50.556114196777344
+  },
+  "memories": {
+    "weights": {
+      "block_count": 41,
+      "origins": [
+        "core.weight_banks[0].memory.0.0",
+        "core.weight_banks[10].memory.0.0",
+        "core.weight_banks[11].memory.0.0",
+        "core.weight_banks[12].memory.0.0",
+        "core.weight_banks[13].memory.0.0",
+        "core.weight_banks[14].memory.0.0",
+        "core.weight_banks[15].memory.0.0",
+        "core.weight_banks[16].memory.0.0",
+        "core.weight_banks[17].memory.0.0",
+        "core.weight_banks[18].memory.0.0",
+        "core.weight_banks[19].memory.0.0",
+        "core.weight_banks[1].memory.0.0",
+        "core.weight_banks[20].memory.0.0",
+        "core.weight_banks[21].memory.0.0",
+        "core.weight_banks[22].memory.0.0",
+        "core.weight_banks[23].memory.0.0",
+        "core.weight_banks[24].memory.0.0",
+        "core.weight_banks[25].memory.0.0",
+        "core.weight_banks[26].memory.0.0",
+        "core.weight_banks[27].memory.0.0",
+        "core.weight_banks[28].memory.0.0",
+        "core.weight_banks[29].memory.0.0",
+        "core.weight_banks[2].memory.0.0",
+        "core.weight_banks[30].memory.0.0",
+        "core.weight_banks[31].memory.0.0",
+        "core.weight_banks[32].memory.0.0",
+        "core.weight_banks[33].memory.0.0",
+        "core.weight_banks[34].memory.0.0",
+        "core.weight_banks[35].memory.0.0",
+        "core.weight_banks[36].memory.0.0",
+        "core.weight_banks[37].memory.0.0",
+        "core.weight_banks[38].memory.0.0",
+        "core.weight_banks[39].memory.0.0",
+        "core.weight_banks[3].memory.0.0",
+        "core.weight_banks[40].memory.0.0",
+        "core.weight_banks[4].memory.0.0",
+        "core.weight_banks[5].memory.0.0",
+        "core.weight_banks[6].memory.0.0",
+        "core.weight_banks[7].memory.0.0",
+        "core.weight_banks[8].memory.0.0",
+        "core.weight_banks[9].memory.0.0"
+      ],
+      "cell_types": [
+        "SP"
+      ]
+    },
+    "tanh": {
+      "block_count": 4,
+      "origins": [
+        "core.tanh_rom.0.0",
+        "core.tanh_rom.0.1",
+        "core.tanh_rom.0.2",
+        "core.tanh_rom.0.3"
+      ],
+      "cell_types": [
+        "SP"
+      ]
+    },
+    "sigmoid": {
+      "block_count": 3,
+      "origins": [
+        "core.sigmoid_rom.0.0",
+        "core.sigmoid_rom.0.1",
+        "core.sigmoid_rom.0.2"
+      ],
+      "cell_types": [
+        "SP"
+      ]
+    }
+  },
+  "utilization": {
+    "ADC": {
+      "available": 1,
+      "used": 0
+    },
+    "ALU": {
+      "available": 17280,
+      "used": 1016
+    },
+    "BSRAM": {
+      "available": 56,
+      "used": 48
+    },
+    "BUFG": {
+      "available": 5,
+      "used": 0
+    },
+    "CLKDIV": {
+      "available": 16,
+      "used": 0
+    },
+    "CLKDIV2": {
+      "available": 16,
+      "used": 0
+    },
+    "DCS": {
+      "available": 8,
+      "used": 0
+    },
+    "DFF": {
+      "available": 23040,
+      "used": 4218
+    },
+    "GND": {
+      "available": 1,
+      "used": 1
+    },
+    "GSR": {
+      "available": 1,
+      "used": 1
+    },
+    "IOB": {
+      "available": 240,
+      "used": 4
+    },
+    "IOLOGICI": {
+      "available": 230,
+      "used": 0
+    },
+    "IOLOGICO": {
+      "available": 230,
+      "used": 0
+    },
+    "LUT4": {
+      "available": 23040,
+      "used": 11361
+    },
+    "MULT12X12": {
+      "available": 56,
+      "used": 0
+    },
+    "MULTADDALU12X12": {
+      "available": 28,
+      "used": 0
+    },
+    "MULTALU27X18": {
+      "available": 28,
+      "used": 0
+    },
+    "MUX2_LUT5": {
+      "available": 11520,
+      "used": 1344
+    },
+    "MUX2_LUT6": {
+      "available": 5760,
+      "used": 384
+    },
+    "MUX2_LUT7": {
+      "available": 2880,
+      "used": 154
+    },
+    "MUX2_LUT8": {
+      "available": 2880,
+      "used": 55
+    },
+    "OSCA": {
+      "available": 1,
+      "used": 0
+    },
+    "PINCFG": {
+      "available": 1,
+      "used": 1
+    },
+    "PLLA": {
+      "available": 6,
+      "used": 0
+    },
+    "VCC": {
+      "available": 1,
+      "used": 1
+    }
+  },
+  "sources": {
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "f436f884ba1454b6beb8a4af0f61a017e85ed7788fa1dddf07f1eea4fb29f1d1",
+    "constraints/primer25k.cst": "436064c3c0cd7300d179a851a052e1ccc8124b936fb4d5dbc8afe33b35eb5521",
+    "scripts/build_broad.py": "2b3320927f5b06b3d39ebf5403d13578586fb1cb832e03ae72a75cb7e299ba17",
+    "scripts/build.py": "508b8265c99c238fa731c40bb5efbd5ac5e503fc7498142d7c764314d2988c56",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b"
+  },
+  "banks": [
+    {
+      "file": "rom/weights_000.hex",
+      "sha256": "5bb992e685447bcad67ac01b7cd73b7fa0c6688bfcdce1e06d54d36f350a3635",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_001.hex",
+      "sha256": "2a0cd349c1aa345f9ceab678bd6a339f3cb34c1f8b4e64d6d94f3a7f8cce6680",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_002.hex",
+      "sha256": "4a8e24984e3e8e70d625d40b9039daeb1c24f2ce5ec901d1b0c4a84e98e02e1a",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_003.hex",
+      "sha256": "8d5aeafbdf6d2ad88e9ef02840fc510e66631c14c8a85874d3ef5fb7b1e0d533",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_004.hex",
+      "sha256": "ba23bb76ef1efa150482cf614fce8c8deddb50313f7cf7e291015ee6a71bc192",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_005.hex",
+      "sha256": "5857106639fd8f8a904be8a4137822a212566528a990fd918d34aa408524f755",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_006.hex",
+      "sha256": "040b925cc42b05d8de2171c7ca63d680c03beaa411f78199c914c53604da2510",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_007.hex",
+      "sha256": "710f02df290ff9fd14befaa6d1409be7f341359917ffe49d685fe29b28c50fcb",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_008.hex",
+      "sha256": "b4ac9d20d32cdc3ccebcbb128dec5129a07f99ce36c391060cbef89f5577b8b5",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_009.hex",
+      "sha256": "39ec34a38036596b1e914e6351edaa5f217eb24bdf10128ab566d4ef1bd65d41",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_010.hex",
+      "sha256": "5549545d3b37f60db21895604a4b304f0ace1e23ae189130701dfb38a5ce9bb8",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_011.hex",
+      "sha256": "c84dff04b742518f7dce48d0465accb355a4fbe760ae963d5b55de59e56662f4",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_012.hex",
+      "sha256": "373e03f16e522b688a3d5613d2181296ab7cd6364c9f8bb6848e5abcdd91fa3d",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_013.hex",
+      "sha256": "f0896d8938050121e51b9abd74b96b6e407b566bb533fd350fbd295aece2e880",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_014.hex",
+      "sha256": "ea45fe84e7e5d26d66ef8da3cb32d4a716b7a5cea085650800a3cbfc2e87d6b0",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_015.hex",
+      "sha256": "4a2ee5c5f0e9d436182d2a55bd6f6e6ee7cc245ecbf3ca46ba6ed0029d14fa86",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_016.hex",
+      "sha256": "c089b41e33c296bfd3e8378585477979efe83fc2b11b2521181f675c8af98efb",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_017.hex",
+      "sha256": "7921b0904baf4819bc2a017ed55bc7439a3ce358d595715778644f21ce982452",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_018.hex",
+      "sha256": "c0ac79bb978f94b64ab4fe3a6b1140220c5d80edb6bba54bde8472c83d571461",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_019.hex",
+      "sha256": "5f3c1f7fa855147d4cebd550c04fd75ab727e452c4597e93d49619f23e236e89",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_020.hex",
+      "sha256": "610cc502f0f6a0e09260c99729b76842a15af4b68e5f519d6e08410af5293f1a",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_021.hex",
+      "sha256": "5f5e023e7a93ceec31e5938747886b62a7400a638fbebb2496b422a52eff7e67",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_022.hex",
+      "sha256": "d987d595cdd2ee1c71b663ca722f54d512827076e85390f3f7bfffb51f4df933",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_023.hex",
+      "sha256": "b9d41d1cc33b6b4d709aaa875b0794905835b360a4bf6553ada413ffcf65ca69",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_024.hex",
+      "sha256": "cff10a9b8b1601621bfde845b7f4ab10afc8f7d39d388bfe98c17b11b272da4f",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_025.hex",
+      "sha256": "12d13fd642adb1db491305fba12176bbfffd6b855459e65685f91a1dc5550f48",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_026.hex",
+      "sha256": "f3b585d68ce582a17fe52a94b6ce6dd04cc09270ad6350922aed991b4488e5b1",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_027.hex",
+      "sha256": "91bca8c430706550e3c7729223c8c095d72e3d25d8402f1d0be1adac992863fc",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_028.hex",
+      "sha256": "e889e42e63868bc1e1a85b0ba4560e61608908fed0e5b2a580b96b24a96099ac",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_029.hex",
+      "sha256": "ffc8526d480064da20328c36fd191a4a00abb2095f143e3c00e506e84488c141",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_030.hex",
+      "sha256": "d0304d87672e21ec5700c2aad1d3027775b15bbf65f72dd186eb3633626add08",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_031.hex",
+      "sha256": "d849350c6de2eb312600b0247a8cfedf56586562fadee2466405de2096989cf7",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_032.hex",
+      "sha256": "82936df8e50963d2b9c65b1167887cfa3b837198b4f8023b68c3a677c2eb6121",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_033.hex",
+      "sha256": "e1cc52291679e04adf6403efb3b2b0299fa5c0049d10f6c3e195b6722f80c2f8",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_034.hex",
+      "sha256": "719889c5324d5de6985bba9fccc034877cc89020aa55132672926059d853b138",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_035.hex",
+      "sha256": "ff13fe85a355a80c9f5487f21d0d90202834fcf0dd6452b22c4e871894e79c69",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_036.hex",
+      "sha256": "6176e1c4b6dea020f703c49ef27bb61ef6033f41f911754756ffcdea6d38affa",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_037.hex",
+      "sha256": "b154220bce389abec36aa5b24710cefbda153c68cc3b0486218c1e8f711ad067",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_038.hex",
+      "sha256": "a91e1eb66f810afd63b6c5eb78b6881410540b3555af9a5a86d5c23d22a7c369",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_039.hex",
+      "sha256": "8936d889731b80d35f4740c07e3f6b8228eeb081a85e1ce516caa01b2053e6d2",
+      "valid_words": 1024
+    },
+    {
+      "file": "rom/weights_040.hex",
+      "sha256": "32b1307d5a0d0b51f05b4ad923850b53b7757fc63e31963d9dfc4cd241c1b77c",
+      "valid_words": 132
+    }
+  ],
+  "tools": {
+    "yosys": "Yosys 0.70+157 (git sha1 af9f71e51, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)",
+    "nextpnr-himbaechel": "\"nextpnr-himbaechel\" -- Next Generation Place and Route (Version nextpnr-0.11.1-65-ge677d5c3)",
+    "gowin_pack": "/Users/patrikandersson/Downloads/tang-cfc/.tools/tang-toolchain/oss-cad-suite/bin/gowin_pack sha256:3c2e11f178bd60cdab4855d25c65eac4add1fd477d5bc76abf96f5f0a947b898"
+  },
+  "tool_sha256": {
+    "yosys": "8a6175ee88d6412c3d792c47d0750b8707a8e12cc2222c1322546d47cd85edb9",
+    "nextpnr-himbaechel": "e6e71a614589a35785b2f199234f1451ceb2e27c2fed1bc53b253e11bec12fbd",
+    "gowin_pack": "3c2e11f178bd60cdab4855d25c65eac4add1fd477d5bc76abf96f5f0a947b898"
+  },
+  "export": {
+    "manifest_sha256": "3b04f05de75d61bce2786b77bc04696004fffd5327e15907a24c8a48b878689f",
+    "files": {
+      "weights.hex": "d3f09c2a17955a1f68c237247c768b7542060807a0b8bc7aaef2581f503133b4",
+      "tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+      "sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+      "float_checkpoint.pt": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8"
+    }
+  },
+  "bitstream": {
+    "file": "broad.fs",
+    "sha256": "78d4b9378b5167aae8f7a66f52fecfae23930bd19115542eeb8b1e6f59666719"
+  }
+}

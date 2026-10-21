@@ -1,0 +1,54 @@
+{
+  "count_requested": 1000,
+  "count_verified": 1000,
+  "hidden_size": 96,
+  "reset_verified": true,
+  "expected_cycles": 124046,
+  "transport": "libftdi",
+  "usb_serial": "2023112818",
+  "usb_requested_baudrate": 460800,
+  "uart_divisor": 434,
+  "expected_fpga_baudrate": 115207.3732718894,
+  "baudrate": 115200,
+  "clock_mhz": 50,
+  "elapsed_s": 24.088143999993918,
+  "compute_us": {
+    "min": 2480.92,
+    "mean": 2480.92,
+    "p95": 2480.92,
+    "max": 2480.92
+  },
+  "roundtrip_ms": {
+    "min": 23.371083996607922,
+    "mean": 23.862657376914285,
+    "p95": 23.91374998842366,
+    "max": 29.247665996081196
+  },
+  "export_manifest_sha256": "3b04f05de75d61bce2786b77bc04696004fffd5327e15907a24c8a48b878689f",
+  "vectors_manifest_sha256": "f02e99ac71d05e433e7e9c10947e6502809d187b977c85addd05d0803cb1d49e",
+  "checkpoint_sha256": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8",
+  "versions": {
+    "python": "3.11.14",
+    "torch": "2.14.1",
+    "numpy": "2.4.6",
+    "ncps": "1.0.1"
+  },
+  "provenance": {
+    "export/float_checkpoint.pt": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8",
+    "export/weights.hex": "d3f09c2a17955a1f68c237247c768b7542060807a0b8bc7aaef2581f503133b4",
+    "export/sigmoid.hex": "dcc62ff80aa351f86a376d2d8ee01b14f94b2fb152d40f320d955fd6beaded36",
+    "export/manifest.json": "3b04f05de75d61bce2786b77bc04696004fffd5327e15907a24c8a48b878689f",
+    "export/tanh.hex": "d905aa7eec3779ff451706e4b7a251f3676c7328ac707853e6945bbf41a00e59",
+    "vectors/manifest.json": "f02e99ac71d05e433e7e9c10947e6502809d187b977c85addd05d0803cb1d49e",
+    "vectors/vectors.hex": "baf174407c1cf795439eaf24790a9bd0b12498fe7c67b0286b168df8827618fa",
+    "host/verify_broad.py": "938f20451aaa3c92dd129751e83253c664611ad36c344e999b5deaf8e18e080f",
+    "host/broad_protocol.py": "81c35dd24941cede0b3aae688357ca39eeb011bf33c0eb3e55c7ef90f95c4fbe",
+    "host/ftdi.py": "43e4fb7445d51bd9b9abdda76029c34f1b0966f0f82528896b2bbabd11782e2e",
+    "host/verify_probe.py": "966dbda1d5ea35b76d76d3c1738a026287b41ab0ec2ddcf697fa331ebe414412",
+    "model/broad_integer.py": "0d8c18133f90d1fb8c3ad615cd880da2bc8d18c6daefdc9b36c7c050ff93410b",
+    "rtl/broad_core.sv": "a9accd3ae37c2b9a97f76061756acc89bfd643e51e410147028e353932f74885",
+    "rtl/broad_top.sv": "f436f884ba1454b6beb8a4af0f61a017e85ed7788fa1dddf07f1eea4fb29f1d1",
+    "rtl/uart.sv": "3cfd957fe34ab0093260d287ad89a9cfa63a895851f7467240dbb7976e61b408",
+    "libftdi": "baf44acf9b1a0ca4aee9f7b7e0f4e02145ca053b2813d122bbad863a44d6b8e8"
+  }
+}
