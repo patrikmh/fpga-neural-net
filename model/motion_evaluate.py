@@ -94,6 +94,13 @@ def evaluate(args):
     task = dataset_manifest['task']
     if checkpoint['config'].get('task') != task:
         raise ValueError('Checkpoint and dataset motion task/horizon mismatch')
+    initial_pose = dataset_manifest['initial_pose']
+    training_initial_pose = checkpoint['config'].get('initial_pose')
+    if training_initial_pose not in ('random', 'identity'):
+        raise ValueError('Checkpoint must declare its initial-pose domain')
+    domain_match = initial_pose == training_initial_pose
+    if not domain_match and not args.allow_initial_pose_mismatch:
+        raise ValueError('Initial-pose domain mismatch; explicit stress-test override required')
     warmup = checkpoint['config']['warmup']
     if not any(len(sensors) > warmup for _, sensors, _ in sequences):
         raise ValueError('No scored samples remain after per-sequence warmup')
@@ -152,7 +159,8 @@ def evaluate(args):
         families.setdefault(entry['family'], []).extend(errors[scored].tolist())
         total += len(errors)
     report = metrics(all_errors)
-    report.update(task=task, split=args.split, mode=mode, total_sample_count=total, warmup_samples=warmup,
+    report.update(task=task, initial_pose=initial_pose, training_initial_pose=training_initial_pose,
+                  domain_match=domain_match, qualification_eligible=domain_match, split=args.split, mode=mode, total_sample_count=total, warmup_samples=warmup,
                   sequences=results, cold_start=metrics(cold_errors), moving=metrics(moving_errors),
                   stationary=metrics(stationary_errors), families={name: metrics(values) for name, values in families.items()},
                   baselines={name: {**metrics(values), 'cold_start': metrics(baseline_cold[name]),
@@ -176,6 +184,8 @@ def main():
     source.add_argument('--export-dir', type=Path)
     source.add_argument('--checkpoint', type=Path)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--allow-initial-pose-mismatch', action='store_true',
+                        help='Allow a reset-domain stress test that is ineligible for qualification')
     args = parser.parse_args()
     try:
         evaluate(args)

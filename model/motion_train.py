@@ -93,7 +93,9 @@ def train(args):
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
         raise ValueError('Output directory must be empty')
     manifest_hash = sha256(args.dataset_dir / 'manifest.json')
-    task = json.loads((args.dataset_dir / 'manifest.json').read_text())['task']
+    dataset_manifest = json.loads((args.dataset_dir / 'manifest.json').read_text())
+    task = dataset_manifest['task']
+    initial_pose = dataset_manifest['initial_pose']
     training = load_sequences(args.dataset_dir, 'train')
     validation = load_sequences(args.dataset_dir, 'validation')
     if not sum(max(0, len(item[1]) - args.warmup) for item in training):
@@ -111,6 +113,8 @@ def train(args):
         if validate_checkpoint(initial) != args.hidden_size:
             raise ValueError('Initial checkpoint hidden size mismatch')
         artifact_sources(initial)
+        if initial['config'].get('initial_pose') != initial_pose:
+            raise ValueError('Initial checkpoint initial-pose domain mismatch')
         if initial['config'].get('task') != task:
             raise ValueError('Initial checkpoint motion task/horizon mismatch')
         network.load_state_dict(initial['state_dict'])
@@ -183,7 +187,7 @@ def train(args):
               'mode': 'default', 'backbone_layers': 0, 'dt': 1., 'warmup': args.warmup,
               'epochs': args.epochs, 'chunk_size': args.chunk_size, 'batch_size': args.batch_size,
               'seed': args.seed, 'learning_rate': args.learning_rate,
-              'method': 'chronological_detached_tbptt', 'task': task,
+              'method': 'chronological_detached_tbptt', 'task': task, 'initial_pose': initial_pose,
               'loss_definition': '1-abs(dot(unit_raw,unit_target)) + raw_norm_penalty*(norm(raw)-1)^2',
               'raw_norm_penalty': .01}
     checkpoint = {'state_dict': selected_state, 'config': config,

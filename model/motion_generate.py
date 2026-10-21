@@ -52,9 +52,13 @@ def future_targets(quaternions, horizon_s):
 
 
 
-def trajectory(rng, family, length):
+def trajectory(rng, family, length, initial_pose='random'):
     """Sample body angular velocity from time, independently of sequence length."""
     pose = normalize_quaternion(rng.normal(size=4))
+    if initial_pose == 'identity':
+        pose = np.array([1., 0., 0., 0.])
+    elif initial_pose != 'random':
+        raise ValueError('Initial pose must be random or identity')
     axis = rng.normal(size=3)
     axis /= np.linalg.norm(axis)
     second_axis = rng.normal(size=3)
@@ -102,7 +106,7 @@ def generate(args):
         for index in range(count):
             rng = np.random.default_rng(np.random.SeedSequence([args.seed, split_index, index]))
             family = args.families[index % len(args.families)]
-            sensors, poses = trajectory(rng, family, args.length)
+            sensors, poses = trajectory(rng, family, args.length, args.initial_pose)
             targets = future_targets(poses, horizon)
             sequence_id = f'{split}-{index:04d}'
             path = output / f'{sequence_id}.npz'
@@ -111,7 +115,7 @@ def generate(args):
             entries.append({'split': split, 'sequence_id': sequence_id, 'family': family,
                             'path': path.name, 'sha256': sha256(path)})
     manifest = {'dt_s': MODEL_DT_S, 'seed': args.seed, 'length': args.length,
-                'task': task_identity(horizon), 'sensor_source': 'virtual_body',
+                'task': task_identity(horizon), 'initial_pose': args.initial_pose, 'sensor_source': 'virtual_body',
                 'first_sample_time_s': MODEL_DT_S, 'sensor_units': SENSOR_UNITS,
                 'sensor_order': SENSOR_ORDER, 'max_angular_rate_rad_s': 6,
                 'config': {'families': args.families},
@@ -127,7 +131,8 @@ def load_sequences(directory, split):
             or manifest.get('sensor_units') != SENSOR_UNITS
             or manifest.get('sensor_order') != SENSOR_ORDER
             or manifest.get('quaternion_convention') != 'wxyz_body_to_ENU'
-            or manifest.get('sensor_source') != 'virtual_body'):
+            or manifest.get('sensor_source') != 'virtual_body'
+            or manifest.get('initial_pose') not in ('random', 'identity')):
         raise ValueError('Dataset timing, units, sensor order or quaternion convention mismatch')
     task = manifest.get('task', {})
     horizon = task.get('horizon_s')
@@ -174,6 +179,7 @@ def main():
     parser.add_argument('--families', nargs='+', choices=FAMILIES, default=FAMILIES)
     parser.add_argument('--length', type=positive_integer, default=1000)
     parser.add_argument('--horizon-ms', type=float, default=50.)
+    parser.add_argument('--initial-pose', choices=('random', 'identity'), default='random')
     args = parser.parse_args()
     if args.seed < 0:
         parser.error('Seed must be nonnegative')
