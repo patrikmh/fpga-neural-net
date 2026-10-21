@@ -22,6 +22,22 @@
   <div id="estimate-empty" class="estimate-empty">Väntar på verifierad FPGA-utdata</div>
   <div class="hero-footer"><span id="flow-status">Dra för att vrida målet · piltangenter + Q/E</span><span>Flöde &amp; pulstid är en principskiss, inte en mätning av chipets interna signaler.</span></div>
 </section>
+<section id="forecast-panel" class="forecast-panel panel" aria-label="Rörelseprognos och jämförelse" hidden>
+  <div class="section-head"><h2><span class="section-index">+50</span>Från prognos till uppmätt facit</h2><span class="tag">MODELLTID / USB ÄR LÅNGSAMMARE</span></div>
+  <div class="forecast-timeline">
+    <div><span>UTFÄRDAD VID</span><strong id="forecast-current-time">—</strong></div><span class="forecast-arrow" aria-hidden="true">→</span>
+    <div><span>FRAMTIDA MÅLTID</span><strong id="forecast-target-time">—</strong></div>
+    <div><span>PROGNOSER UTAN FACIT</span><strong id="forecast-pending-count">0</strong></div>
+  </div>
+  <p class="micro">Magenta visar chipets senaste prognos. Felen nedan gäller en äldre prognos vars framtida pose nu har inträffat: <strong id="forecast-scored-time">—</strong></p>
+  <div class="forecast-comparison" role="table" aria-label="Samma mogna prognoser för modell och baslinjer">
+    <div class="comparison-heading" role="row"><span role="columnheader">METOD</span><span role="columnheader">SENASTE FEL</span><span role="columnheader">RULLANDE RMSE</span></div>
+    <div class="neural-comparison" role="row"><strong role="rowheader">CfC / FPGA</strong><span>Se prognosfel nedan</span><strong id="forecast-rmse">—</strong></div>
+    <div role="row"><span role="rowheader">Behåll sensorpose</span><strong id="baseline-hold-error">—</strong><strong id="baseline-hold-rmse">—</strong></div>
+    <div role="row"><span role="rowheader">Konstant vinkelhastighet</span><strong id="baseline-cv-error">—</strong><strong id="baseline-cv-rmse">—</strong></div>
+  </div>
+  <p class="micro">Samma senaste <strong id="forecast-score-count">0</strong> mogna prognoser för alla tre metoder · högst 96 · baslinjerna får samma kvantiserade sensorinformation. Lägre RMSE är bättre.</p>
+</section>
 <section class="metrics" aria-label="Verifierad telemetri">
   <div><span>VERIFIERADE STEG</span><strong id="count">—</strong><small id="stream-state">Ingen anslutning</small></div>
   <div><span id="error-label">FULL VINKELAVVIKELSE</span><strong id="error-value">—<i>°</i></strong><small id="forecast-status">Hela vinkeln 0–180°, utan kapning</small></div>

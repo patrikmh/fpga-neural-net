@@ -8,6 +8,7 @@ const sensorColors = ['#5be6e9', '#eac279', '#869dff'];
 let running = false, connected = false, busy = false, loopActive = false;
 let pendingRequest = Promise.resolve(), resetPending = false;
 let lastSample = null, lastSignature = null, selectedState = 0;
+let motionMode = false, forecastWindow = [], lastScoredIndex = -1, lastMatured = null;
 let previousHidden = null, deltas = Array(96).fill(null);
 let stateHistory = Array.from({length: 96}, () => []);
 let sensorHistory = Array.from({length: 9}, () => []);
@@ -90,7 +91,43 @@ function metric(id, value, unit = '') {
   const suffix = document.createElement('i'); suffix.textContent = unit;
   element(id).replaceChildren(document.createTextNode(value), suffix);
 }
+function clearForecasts() {
+  element('forecast-status').textContent = motionMode ? 'Väntar på framtida verklig pose' : 'Hela vinkeln 0–180°, utan kapning';
+  forecastWindow = []; lastScoredIndex = -1; lastMatured = null;
+  for (const id of ['forecast-current-time', 'forecast-target-time', 'forecast-scored-time',
+    'forecast-rmse', 'baseline-hold-error', 'baseline-cv-error', 'baseline-hold-rmse', 'baseline-cv-rmse']) {
+    element(id).textContent = '—';
+  }
+  element('forecast-score-count').textContent = '0';
+  element('forecast-pending-count').textContent = '0';
+}
+function showForecast(sample, pendingCount) {
+  const forecast = sample.forecast;
+  element('forecast-current-time').textContent = `${forecast.issued_at_s.toFixed(4)} s`;
+  element('forecast-target-time').textContent = `${forecast.target_time_s.toFixed(4)} s`;
+  element('forecast-pending-count').textContent = String(pendingCount);
+  const scored = sample.scored_forecast;
+  if (scored && scored.issued_index > lastScoredIndex) {
+    lastScoredIndex = scored.issued_index;
+    lastMatured = scored;
+    forecastWindow.push(scored);
+    if (forecastWindow.length > 96) forecastWindow.shift();
+  }
+  if (!lastMatured) return;
+  metric('error-value', lastMatured.error_deg.toFixed(1), '°');
+  element('forecast-scored-time').textContent = `${lastMatured.target_time_s.toFixed(4)} s`;
+  element('forecast-status').textContent = `Äldre prognos · facit vid ${lastMatured.target_time_s.toFixed(4)} s`;
+  element('forecast-score-count').textContent = String(forecastWindow.length);
+  const methods = [['forecast', null], ['baseline-hold', 'sensor_hold'], ['baseline-cv', 'sensor_constant_velocity']];
+  for (const [id, baseline] of methods) {
+    const error = row => baseline ? row.baselines[baseline].error_deg : row.error_deg;
+    const rmse = Math.sqrt(forecastWindow.reduce((sum, row) => sum + error(row) ** 2, 0) / forecastWindow.length);
+    element(`${id}-rmse`).textContent = `${rmse.toFixed(1)}°`;
+    if (baseline) element(`${id}-error`).textContent = `${error(lastMatured).toFixed(1)}°`;
+  }
+}
 function clearMeasurements() {
+  clearForecasts();
   lastSample = null; lastSignature = null; previousHidden = null;
   deltas = Array(96).fill(null);
   stateHistory = Array.from({length: 96}, () => []);
@@ -103,7 +140,7 @@ function clearMeasurements() {
   element('estimate-empty').hidden = false;
   view?.clear(); selectedDetail();
 }
-function measuredSample(sample, count, animate) {
+function measuredSample(sample, count, animate, pendingCount = 0) {
   const signature = `${count}:${sample.index}`;
   const fresh = signature !== lastSignature;
   if (fresh) {
@@ -124,7 +161,10 @@ function measuredSample(sample, count, animate) {
   }
   lastSample = sample;
   metric('error-value', (sample.forecast?.error_deg ?? sample.error_deg)?.toFixed(1) ?? '—', '°');
-  if (sample.forecast) element('forecast-status').textContent = sample.forecast.status === 'pending' ? 'Väntar på framtida verklig pose' : 'Verifierad framtida vinkelavvikelse';
+  if (sample.forecast) {
+    element('forecast-status').textContent = 'Väntar på framtida verklig pose';
+    showForecast(sample, pendingCount);
+  }
   metric('model-time', sample.model_time_s.toFixed(3), 's');
   metric('compute-time', (sample.compute_us / 1000).toFixed(3), 'ms');
   metric('roundtrip', sample.roundtrip_ms.toFixed(1), 'ms');
@@ -181,13 +221,15 @@ window.addEventListener('keydown', event => {
   if (event.key.toLowerCase() === 'r') { target.identity(); targetChanged(); }
 });
 function show(state, animate = false) {
-  if (state.task?.kind === 'motion_prediction') {
+  motionMode = state.task?.kind === 'motion_prediction';
+  element('forecast-panel').hidden = !motionMode;
+  if (motionMode) {
     const horizon = state.task.horizon_s * 1000;
     document.title = 'Neuro / Rörelseprognos på FPGA';
     element('output-label').textContent = `Prognos +${horizon} ms`;
     element('estimate-empty').textContent = 'Ingen verifierad rörelseprognos ännu';
     element('error-label').textContent = `PROGNOSFEL +${horizon} ms`;
-    element('task-explanation').textContent = `En CfC-cell uppdaterar sitt inre tillstånd från sensorerna och föregående tillstånd. Den här modellen förutsäger kroppens orientering ${horizon} ms framåt i modelltid. Framtida verklig pose och prognosfel inväntas tills rörelsen har inträffat.`;
+    element('task-explanation').textContent = `En CfC-cell uppdaterar sitt inre tillstånd från sensorerna och föregående tillstånd. Den här modellen förutsäger kroppens orientering ${horizon} ms framåt i modelltid. Demonstrationen börjar upprätt efter verifierad återställning. Horisonten gäller modelltid, inte väggtid. Framtida abrupta muskommandon är okända och kan inte förutsägas. Verklig framtida pose och prognosfel inväntas tills rörelsen har inträffat.`;
     canvas.setAttribute('aria-label', `Dra för att styra rörelsemålet. Sensorpod, nio indata, en CfC-krets och en rörelseprognos ${horizon} ms framåt visas.`);
   }
   connected = ['connected', 'running'].includes(state.status);
@@ -200,9 +242,9 @@ function show(state, animate = false) {
     clearMeasurements();
     target.identity(); targetChanged();
   } else if (state.sample?.verified) {
-    measuredSample(state.sample, state.count_verified, animate && state.status !== 'error');
+    measuredSample(state.sample, state.count_verified, animate && state.status !== 'error', state.pending_forecast_count);
   }
-  metric('count', connected || state.status === 'error' ? String(state.count_verified) : '—');
+  metric('count', motionMode || connected || state.status === 'error' ? String(state.count_verified) : '—');
   if (state.status === 'disconnected') {
     running = false; view?.pause();
     element('stream-state').textContent = 'Inga aktiva mätvärden';
