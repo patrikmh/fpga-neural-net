@@ -1,0 +1,398 @@
+{
+  "created_at_utc": "2026-10-21T00:48:21.307259+00:00",
+  "protocol_sha256": "0034b3be3a7b6096ae6f2eb49e94391b5bfb050ef1de1bfbbf632034d70faa3f",
+  "split": "validation",
+  "loss": "signed_raw_quaternion_mse",
+  "initial_pose": "identity",
+  "confirmation_generated": false,
+  "accepted": false,
+  "deployed": false,
+  "sources": {
+    "model/motion_train_lifted.py": "629b22d4dd8d7ff664d59847aa9c19181f2b256e42d0795212f8a9668a4b7c07",
+    "model/motion_generate.py": "46bebf702ffad66f26e68d06d6b69f2c341379cf39dc7e88a85542505ab8a7f0",
+    "model/motion_train.py": "da536e608605da5706965bd34abd2b7a80416291cc91278b4e38a704cba78bac",
+    "model/motion_evaluate.py": "fb234b20c13da3f206db5169442a61038dd264d3b33dd2123cb2c84645923444",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  },
+  "candidates": [
+    {
+      "name": "lifted-s53-c128",
+      "chunk_size": 128,
+      "epochs_completed": 200,
+      "selected_epoch": 51,
+      "checkpoint_sha256": "5007af85bf00b4385cdbc10e284a86c36b2587166cb92714d82b00d93ba4b81c",
+      "training_report_sha256": "bef54590165701daa9a4edd744bab57446c22c86bcfce41bce46abbaca0cf2fb",
+      "evaluation_report_sha256": "8558f1f76ab5e611219ef1e0f8daef8a9a0ea7a9ba70ca397f839d5e01f57bb4",
+      "accepted": false,
+      "exported": false,
+      "reason": "Floating-point validation is substantially worse than the initial candidate and exceeds the5degreegoal.",
+      "float": {
+        "full_rmse_deg": 48.74763775760238,
+        "sample_count": 50025,
+        "p50_deg": 12.215771615853996,
+        "p95_deg": 123.45713624017012,
+        "max_deg": 179.96249439960783,
+        "above_5_deg_count": 49261,
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 755,
+          "full_rmse_deg": 14.70036952224023,
+          "p50_deg": 8.822111099373997,
+          "p95_deg": 30.412072503633645,
+          "max_deg": 58.345243106559806
+        },
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 10005,
+            "full_rmse_deg": 8.178134168580996,
+            "p50_deg": 8.178070967722661,
+            "p95_deg": 8.17807989241972,
+            "max_deg": 8.431568134019827
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9976,
+            "full_rmse_deg": 68.42050569722656,
+            "p50_deg": 38.74833766182777,
+            "p95_deg": 150.59949692278983,
+            "max_deg": 179.90452396101452
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9796,
+            "full_rmse_deg": 64.14375410423868,
+            "p50_deg": 28.010696500237746,
+            "p95_deg": 155.8206891712312,
+            "max_deg": 179.93642059164222
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9731,
+            "full_rmse_deg": 54.022619184286626,
+            "p50_deg": 18.912471271720385,
+            "p95_deg": 136.39736947242784,
+            "max_deg": 179.96249439960783
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9753,
+            "full_rmse_deg": 10.02740655768437,
+            "p50_deg": 9.404584882016682,
+            "p95_deg": 13.721879357402756,
+            "max_deg": 19.183806705362507
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34467,
+            "full_rmse_deg": 10.359101949489713,
+            "p50_deg": 8.349999081997092,
+            "p95_deg": 17.188734434238,
+            "max_deg": 17.18874107380643,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.790817468144674,
+              "p50_deg": 1.3349152165790585,
+              "p95_deg": 17.188734012810365,
+              "max_deg": 17.18873550187925
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.1887338497453,
+                "p50_deg": 17.188733849356286,
+                "p95_deg": 17.188735857343165,
+                "max_deg": 17.18874107380643
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7035,
+                "full_rmse_deg": 9.3514720988122,
+                "p50_deg": 8.342844392240533,
+                "p95_deg": 14.222790395009913,
+                "max_deg": 14.315272925006532
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9959,
+                "full_rmse_deg": 8.418327586959846,
+                "p50_deg": 8.349998276071831,
+                "p95_deg": 11.19451581542809,
+                "max_deg": 11.194528892982014
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7468,
+                "full_rmse_deg": 9.098578178264766,
+                "p50_deg": 9.116764566444765,
+                "p95_deg": 12.804816692856638,
+                "max_deg": 12.871955607564757
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892054255822276,
+            "p50_deg": 0.4021349088449829,
+            "p95_deg": 2.164900560975016,
+            "max_deg": 2.5809396798451165,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.5679478357445054,
+              "p50_deg": 0.35264869050554765,
+              "p95_deg": 1.945787251413477,
+              "max_deg": 17.188733891371548
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 2.6191925307592647e-06,
+                "p50_deg": 0.0,
+                "p95_deg": 5.915117333884393e-06,
+                "max_deg": 1.6989881043060962e-05
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6277843397823517,
+                "p50_deg": 0.5311066662402496,
+                "p95_deg": 1.1007695714994485,
+                "max_deg": 2.289642545567815
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.579377150399787,
+                "p50_deg": 1.1759724417584687,
+                "p95_deg": 2.1649016164627217,
+                "max_deg": 2.241162442038706
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156593903615395,
+                "p50_deg": 1.2293617745559788,
+                "p95_deg": 2.3899606220819742,
+                "max_deg": 2.5809396798451165
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "lifted-s53-c512",
+      "chunk_size": 512,
+      "epochs_completed": 200,
+      "selected_epoch": 44,
+      "checkpoint_sha256": "efd16406d48463333f19686b6fc5c158f7848dd0ed796014c2c698892b6bae96",
+      "training_report_sha256": "b316aa2855e92dbfa5b2b42f37a005140c0da8e56db9cae4a2619766910c7a40",
+      "evaluation_report_sha256": "12fed3654bd6b46f2fd29866020f7154ee7f84c848f51c41d4b3c2d106919055",
+      "accepted": false,
+      "exported": false,
+      "reason": "Floating-point validation is substantially worse than the initial candidate and exceeds the5degreegoal.",
+      "float": {
+        "full_rmse_deg": 52.46869617901829,
+        "sample_count": 50025,
+        "p50_deg": 16.24810862824496,
+        "p95_deg": 127.58547266201758,
+        "max_deg": 179.94913442719806,
+        "above_5_deg_count": 36164,
+        "cold_start": {
+          "sample_count": 800,
+          "above_5_deg_count": 391,
+          "full_rmse_deg": 14.912085584553093,
+          "p50_deg": 4.876602503318097,
+          "p95_deg": 26.868789016690485,
+          "max_deg": 68.65628467084485
+        },
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 2.2856649649085212,
+            "p50_deg": 2.285617770715655,
+            "p95_deg": 2.285624659238435,
+            "max_deg": 2.476694793282803
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 10005,
+            "full_rmse_deg": 79.52109764013383,
+            "p50_deg": 49.768719939133376,
+            "p95_deg": 151.9515778117217,
+            "max_deg": 179.94913442719806
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9403,
+            "full_rmse_deg": 62.12579800968969,
+            "p50_deg": 35.043287750044776,
+            "p95_deg": 136.32139109660065,
+            "max_deg": 179.83130589601245
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 9527,
+            "full_rmse_deg": 55.23428216078835,
+            "p50_deg": 25.654088366734353,
+            "p95_deg": 132.53331474410817,
+            "max_deg": 179.8774787295697
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 7229,
+            "full_rmse_deg": 22.924887246152032,
+            "p50_deg": 7.614384843207142,
+            "p95_deg": 34.18582511065746,
+            "max_deg": 179.84583546193824
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34467,
+            "full_rmse_deg": 10.359101949489713,
+            "p50_deg": 8.349999081997092,
+            "p95_deg": 17.188734434238,
+            "max_deg": 17.18874107380643,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.790817468144674,
+              "p50_deg": 1.3349152165790585,
+              "p95_deg": 17.188734012810365,
+              "max_deg": 17.18873550187925
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.1887338497453,
+                "p50_deg": 17.188733849356286,
+                "p95_deg": 17.188735857343165,
+                "max_deg": 17.18874107380643
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7035,
+                "full_rmse_deg": 9.3514720988122,
+                "p50_deg": 8.342844392240533,
+                "p95_deg": 14.222790395009913,
+                "max_deg": 14.315272925006532
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9959,
+                "full_rmse_deg": 8.418327586959846,
+                "p50_deg": 8.349998276071831,
+                "p95_deg": 11.19451581542809,
+                "max_deg": 11.194528892982014
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7468,
+                "full_rmse_deg": 9.098578178264766,
+                "p50_deg": 9.116764566444765,
+                "p95_deg": 12.804816692856638,
+                "max_deg": 12.871955607564757
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892054255822276,
+            "p50_deg": 0.4021349088449829,
+            "p95_deg": 2.164900560975016,
+            "max_deg": 2.5809396798451165,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.5679478357445054,
+              "p50_deg": 0.35264869050554765,
+              "p95_deg": 1.945787251413477,
+              "max_deg": 17.188733891371548
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 2.6191925307592647e-06,
+                "p50_deg": 0.0,
+                "p95_deg": 5.915117333884393e-06,
+                "max_deg": 1.6989881043060962e-05
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6277843397823517,
+                "p50_deg": 0.5311066662402496,
+                "p95_deg": 1.1007695714994485,
+                "max_deg": 2.289642545567815
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.579377150399787,
+                "p50_deg": 1.1759724417584687,
+                "p95_deg": 2.1649016164627217,
+                "max_deg": 2.241162442038706
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156593903615395,
+                "p50_deg": 1.2293617745559788,
+                "p95_deg": 2.3899606220819742,
+                "max_deg": 2.5809396798451165
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "conclusion": "Neither longer-history continuous-sign candidate improves the initial sign-invariant candidate. Architecture and output semantics remain unchanged; relative-rotation redesign awaits user choice."
+}

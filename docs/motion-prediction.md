@@ -10,8 +10,13 @@ The first two full training runs failed the accuracy goal: their integer
 validation RMSE was 11.71° and 10.13°. The sensor-only constant-velocity baseline
 was approximately 0.99° on the same effective inputs. These results do not show
 a benefit from the neural network. See the [frozen validation record](../artifacts/motion-prediction-v1/initial-validation-v1.json).
-A separately declared continuous-quaternion experiment tests signed raw-output
-supervision and longer history windows. No candidate is qualified by this guide.
+A separately declared continuous-quaternion experiment tested signed raw-output
+supervision and longer history windows. Its best floating-point validation RMSE
+was 48.75° and 52.47°; both candidates were rejected without export or deployment.
+See the [frozen follow-up results](../artifacts/motion-prediction-v1/lifted-validation-v1.json).
+No candidate is accuracy-qualified. The
+[experimental hardware package](../artifacts/motion-prediction-v1/experimental-s47/)
+preserves the original candidate's successful engineering tests and rollback.
 
 ## What the app compares
 
@@ -98,3 +103,8 @@ acknowledgment before clearing history. The original
 The browser integration tests train and export a small real model, then exercise
 the native USB fixture, HTTP server and browser. This tests connectivity and
 timestamp semantics; it does not establish physical hardware accuracy.
+
+The final `make check` passed all 142 tests and compilation checks. The physical
+trial passed 1,000 full-state USB comparisons and 47 browser-controlled steps;
+the original model and viewer were restored afterward. See the
+[verification record](../artifacts/motion-prediction-v1/verification-v1.json).
