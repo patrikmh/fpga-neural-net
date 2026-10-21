@@ -193,7 +193,8 @@ class OrientationDemoTracerTests(unittest.TestCase):
 
 
 @contextmanager
-def rotated_native_app(workspace,requests,replies,native_fault="",delay_ms=10,fault_after_steps=0):
+def rotated_native_app(workspace,requests,replies,native_fault="",delay_ms=10,fault_after_steps=0,
+                       *,module="host.orientation_demo",export_dir=EXPORT):
     source=(ROOT/"tests/integration/fixtures/fake_cfc_ftdi.c").read_text()
     source=re.sub(r"\b28\b","210",source)
     for old,new in (("expected[8]","expected[24]"),("size != 8","size != 24"),
@@ -223,8 +224,8 @@ def rotated_native_app(workspace,requests,replies,native_fault="",delay_ms=10,fa
         reserved.bind(("127.0.0.1",0))
         port=reserved.getsockname()[1]
     process=subprocess.Popen(
-        [str(ROOT/".venv/bin/python"),"-m","host.orientation_demo","--usb-serial","2023112818",
-         "--port",str(port),"--export-dir",str(EXPORT),"--libftdi",str(library)],
+        [str(ROOT/".venv/bin/python"),"-m",module,"--usb-serial","2023112818",
+         "--port",str(port),"--export-dir",str(export_dir),"--libftdi",str(library)],
         cwd=ROOT,env={**os.environ,"FAKE_CFC_REQUESTS":str(request_path),"FAKE_CFC_REPLIES":str(reply_path),
                       "FAKE_CFC_TRACE":str(trace),"FAKE_CFC_FAULT":native_fault,"FAKE_CFC_DELAY_MS":str(delay_ms),
                       "FAKE_CFC_FAULT_AFTER_STEPS":str(fault_after_steps)},

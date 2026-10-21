@@ -17,14 +17,14 @@
 </div>
 <p id="error" class="error" role="alert" hidden></p>
 <section class="hero" aria-label="Orienteringens väg genom den fysiska FPGA:n">
-  <div class="hero-labels"><div><span class="stage-number">01 / KÄLLA</span><strong>Simulerad rörelse</strong><small>Bearbetad kropp · cyan / mål · kontur</small></div><div><span class="stage-number">02 / FYSISK FPGA</span><strong>Ett återkommande nät</strong><small>96 uppmätta tillstånd · en logisk nivå</small></div><div><span class="stage-number">03 / UTDATA</span><strong>Uppskattad orientering</strong><small>Fyra råvärden → normalisering för 3D</small></div></div>
+  <div class="hero-labels"><div><span class="stage-number">01 / KÄLLA</span><strong>Simulerad rörelse</strong><small>Bearbetad kropp · cyan / mål · kontur</small></div><div><span class="stage-number">02 / FYSISK FPGA</span><strong>Ett återkommande nät</strong><small>96 uppmätta tillstånd · en logisk nivå</small></div><div><span class="stage-number">03 / UTDATA</span><strong id="output-label">Uppskattad orientering</strong><small>Fyra råvärden → normalisering för 3D</small></div></div>
   <canvas id="scene" tabindex="0" aria-label="Dra för att styra rörelsemålet. Sensorpod, nio indata, en CfC-krets och uppskattad sensorpod visas i samma tredimensionella flöde"></canvas>
   <div id="estimate-empty" class="estimate-empty">Väntar på verifierad FPGA-utdata</div>
   <div class="hero-footer"><span id="flow-status">Dra för att vrida målet · piltangenter + Q/E</span><span>Flöde &amp; pulstid är en principskiss, inte en mätning av chipets interna signaler.</span></div>
 </section>
 <section class="metrics" aria-label="Verifierad telemetri">
   <div><span>VERIFIERADE STEG</span><strong id="count">—</strong><small id="stream-state">Ingen anslutning</small></div>
-  <div><span>FULL VINKELAVVIKELSE</span><strong id="error-value">—<i>°</i></strong><small>Hela vinkeln 0–180°, utan kapning</small></div>
+  <div><span id="error-label">FULL VINKELAVVIKELSE</span><strong id="error-value">—<i>°</i></strong><small id="forecast-status">Hela vinkeln 0–180°, utan kapning</small></div>
   <div><span>MODELLTID</span><strong id="model-time">—<i>s</i></strong><small>Fast steg: 3,5 ms · inte USB-takt</small></div>
   <div><span>BERÄKNING PÅ FPGA</span><strong id="compute-time">—<i>ms</i></strong><small id="cycles">Väntar på cykelräknare</small></div>
   <div><span>USB TUR OCH RETUR</span><strong id="roundtrip">—<i>ms</i></strong><small>Uppmätt väggtid per anrop</small></div>
@@ -49,7 +49,7 @@
   <p class="micro">Varje sensorkanal autoskalas för sina senaste 96 verifierade steg. Pilar: yaw/pitch · Q/E: roll · R: upprätt mål. Kroppen närmar sig målet med högst 6 rad/s. Sensorramar: ENU, kropp → jord. Demonstrationen är inget noggrannhetslöfte.</p>
 </section>
 <section id="principle" class="education" aria-label="Så fungerar ett liquid neural network">
-  <div class="education-intro"><div class="eyebrow">FÖRSTÅ MASKINEN</div><h2>Minnet är flytande.<br>Vikterna är fasta.</h2><p>En CfC-cell uppdaterar sitt inre tillstånd från sensorerna <em>och</em> föregående tillstånd. Den här modellen uppskattar orienteringen nu — den förutsäger inte en framtida pose.</p></div>
+  <div class="education-intro"><div class="eyebrow">FÖRSTÅ MASKINEN</div><h2>Minnet är flytande.<br>Vikterna är fasta.</h2><p id="task-explanation">En CfC-cell uppdaterar sitt inre tillstånd från sensorerna <em>och</em> föregående tillstånd. Den här modellen uppskattar orienteringen nu — den förutsäger inte en framtida pose.</p></div>
   <div class="explanation">
     <div class="formula-flow"><div><b>01</b><strong>Indata + minne</strong><span>9 sensorer + 96 tidigare h</span></div><span class="arrow">→</span><div><b>02</b><strong>Två förslag + en grind</strong><span>f₁, f₂: tanh · α: sigmoid</span></div><span class="arrow">→</span><div><b>03</b><strong>Blanda till nytt h</strong><span>h = f₁ + (f₂ − f₁) · α</span></div><span class="arrow">→</span><div><b>04</b><strong>Läs ut orientering</strong><span>96 nya h → 4 råvärden</span></div></div>
     <p>Föregående tillstånd påverkar både förslagen och grinden: <code>α = sigmoid(time_a · tₛ + time_b)</code>. Här är <code>tₛ = 1</code> i modellens ekvation; sensorns nominella steg är 3,5 ms. USB gör demonstrationen långsammare i verklig tid.</p>

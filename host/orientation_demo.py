@@ -135,7 +135,7 @@ class OrientationSession:
         self.state = {**self.state, 'status': 'error', 'reset_verified': False, 'error': str(error)}
 
 
-def main():
+def main(session_factory=OrientationSession):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--usb-serial', required=True, type=usb_serial_number)
     parser.add_argument('--port', type=int, default=8766)
@@ -145,7 +145,7 @@ def main():
     args = parser.parse_args()
     if not 0 <= args.port <= 65535:
         parser.error('port must be between 0 and 65535')
-    session = OrientationSession(args)
+    session = session_factory(args)
     assets = {'/': ('index.html', 'text/html; charset=utf-8'),
               '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
               '/scene.js': ('scene.js', 'text/javascript; charset=utf-8'),

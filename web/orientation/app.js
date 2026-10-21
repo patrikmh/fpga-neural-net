@@ -123,7 +123,8 @@ function measuredSample(sample, count, animate) {
     previousHidden = [...sample.hidden]; lastSignature = signature;
   }
   lastSample = sample;
-  metric('error-value', sample.error_deg.toFixed(1), '°');
+  metric('error-value', (sample.forecast?.error_deg ?? sample.error_deg)?.toFixed(1) ?? '—', '°');
+  if (sample.forecast) element('forecast-status').textContent = sample.forecast.status === 'pending' ? 'Väntar på framtida verklig pose' : 'Verifierad framtida vinkelavvikelse';
   metric('model-time', sample.model_time_s.toFixed(3), 's');
   metric('compute-time', (sample.compute_us / 1000).toFixed(3), 'ms');
   metric('roundtrip', sample.roundtrip_ms.toFixed(1), 'ms');
@@ -180,6 +181,15 @@ window.addEventListener('keydown', event => {
   if (event.key.toLowerCase() === 'r') { target.identity(); targetChanged(); }
 });
 function show(state, animate = false) {
+  if (state.task?.kind === 'motion_prediction') {
+    const horizon = state.task.horizon_s * 1000;
+    document.title = 'Neuro / Rörelseprognos på FPGA';
+    element('output-label').textContent = `Prognos +${horizon} ms`;
+    element('estimate-empty').textContent = 'Ingen verifierad rörelseprognos ännu';
+    element('error-label').textContent = `PROGNOSFEL +${horizon} ms`;
+    element('task-explanation').textContent = `En CfC-cell uppdaterar sitt inre tillstånd från sensorerna och föregående tillstånd. Den här modellen förutsäger kroppens orientering ${horizon} ms framåt i modelltid. Framtida verklig pose och prognosfel inväntas tills rörelsen har inträffat.`;
+    canvas.setAttribute('aria-label', `Dra för att styra rörelsemålet. Sensorpod, nio indata, en CfC-krets och en rörelseprognos ${horizon} ms framåt visas.`);
+  }
   connected = ['connected', 'running'].includes(state.status);
   const labels = {disconnected: 'Frånkopplad', connected: 'Ansluten', running: 'Ansluten', error: 'USB-fel · stoppad'};
   element('status').textContent = labels[state.status] || state.status;
