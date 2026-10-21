@@ -1,0 +1,701 @@
+{
+  "created_at_utc": "2026-10-21T00:35:52.132377+00:00",
+  "split": "validation",
+  "confirmation_opened": false,
+  "accepted": false,
+  "deployed": false,
+  "candidates": [
+    {
+      "seed": 43,
+      "selected_epoch": 114,
+      "checkpoint_sha256": "ac68d23f63474b2e8152132910d78c81d161c67552fd411aeaf9d4a24ac24894",
+      "export_manifest_sha256": "0e7153fbd77a9582c4b5b7ae29b6e9454d65ea006fe8f4610e47e11f9a8037bb",
+      "float": {
+        "full_rmse_deg": 11.609127136205737,
+        "p50_deg": 4.8204258196589915,
+        "p95_deg": 22.257708359098217,
+        "max_deg": 179.62596624443236,
+        "above_5_deg_count": 24430,
+        "sample_count": 50025,
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 1.4332541888575772,
+            "p50_deg": 1.4328032050255912,
+            "p95_deg": 1.4328140329674408,
+            "max_deg": 1.7865144195869487
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 7971,
+            "full_rmse_deg": 17.006057731461055,
+            "p50_deg": 8.936698649974268,
+            "p95_deg": 32.72188828642485,
+            "max_deg": 179.62596624443236
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6890,
+            "full_rmse_deg": 13.792357195274306,
+            "p50_deg": 8.157236113537028,
+            "p95_deg": 24.675740306458643,
+            "max_deg": 173.9245848002574
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6511,
+            "full_rmse_deg": 12.96352919181017,
+            "p50_deg": 6.893755923416599,
+            "p95_deg": 20.085040636162212,
+            "max_deg": 175.51362198458295
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 3058,
+            "full_rmse_deg": 4.931200774489777,
+            "p50_deg": 3.831605767939599,
+            "p95_deg": 9.310205086103425,
+            "max_deg": 12.284970022281307
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34467,
+            "full_rmse_deg": 10.359101949489713,
+            "p50_deg": 8.349999081997092,
+            "p95_deg": 17.188734434238,
+            "max_deg": 17.18874107380643,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.790817468144674,
+              "p50_deg": 1.3349152165790585,
+              "p95_deg": 17.188734012810365,
+              "max_deg": 17.18873550187925
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.1887338497453,
+                "p50_deg": 17.188733849356286,
+                "p95_deg": 17.188735857343165,
+                "max_deg": 17.18874107380643
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7035,
+                "full_rmse_deg": 9.3514720988122,
+                "p50_deg": 8.342844392240533,
+                "p95_deg": 14.222790395009913,
+                "max_deg": 14.315272925006532
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9959,
+                "full_rmse_deg": 8.418327586959846,
+                "p50_deg": 8.349998276071831,
+                "p95_deg": 11.19451581542809,
+                "max_deg": 11.194528892982014
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7468,
+                "full_rmse_deg": 9.098578178264766,
+                "p50_deg": 9.116764566444765,
+                "p95_deg": 12.804816692856638,
+                "max_deg": 12.871955607564757
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892054255822276,
+            "p50_deg": 0.4021349088449829,
+            "p95_deg": 2.164900560975016,
+            "max_deg": 2.5809396798451165,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.5679478357445054,
+              "p50_deg": 0.35264869050554765,
+              "p95_deg": 1.945787251413477,
+              "max_deg": 17.188733891371548
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 2.6191925307592647e-06,
+                "p50_deg": 0.0,
+                "p95_deg": 5.915117333884393e-06,
+                "max_deg": 1.6989881043060962e-05
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6277843397823517,
+                "p50_deg": 0.5311066662402496,
+                "p95_deg": 1.1007695714994485,
+                "max_deg": 2.289642545567815
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.579377150399787,
+                "p50_deg": 1.1759724417584687,
+                "p95_deg": 2.1649016164627217,
+                "max_deg": 2.241162442038706
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156593903615395,
+                "p50_deg": 1.2293617745559788,
+                "p95_deg": 2.3899606220819742,
+                "max_deg": 2.5809396798451165
+              }
+            }
+          }
+        },
+        "input_clipping_count": null,
+        "raw_clipping_count": null
+      },
+      "integer": {
+        "full_rmse_deg": 11.709710617689748,
+        "p50_deg": 4.84072954588233,
+        "p95_deg": 22.389488207296164,
+        "max_deg": 179.73256274423963,
+        "above_5_deg_count": 24440,
+        "sample_count": 50025,
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 1.4587078942600438,
+            "p50_deg": 1.456560028475878,
+            "p95_deg": 1.6096711609184564,
+            "max_deg": 1.9494975191070687
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 7933,
+            "full_rmse_deg": 17.091865322404132,
+            "p50_deg": 9.08808415793459,
+            "p95_deg": 32.53024017549226,
+            "max_deg": 179.73256274423963
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6869,
+            "full_rmse_deg": 13.857943179273926,
+            "p50_deg": 8.07244853954493,
+            "p95_deg": 24.577359481305027,
+            "max_deg": 172.7267405736721
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6579,
+            "full_rmse_deg": 13.223869787575863,
+            "p50_deg": 6.979449166175494,
+            "p95_deg": 20.684809989553923,
+            "max_deg": 179.2707784477153
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 3059,
+            "full_rmse_deg": 4.941012397419803,
+            "p50_deg": 3.8469089809640615,
+            "p95_deg": 9.25601892264115,
+            "max_deg": 12.687512552453262
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34463,
+            "full_rmse_deg": 10.359103379989087,
+            "p50_deg": 8.354735534941737,
+            "p95_deg": 17.193054394274302,
+            "max_deg": 17.234954453662024,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.791392301931753,
+              "p50_deg": 1.3388127178293407,
+              "p95_deg": 17.192590635758464,
+              "max_deg": 17.2182596545414
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.006244977629292408,
+                "p50_deg": 0.006244977629292408,
+                "p95_deg": 0.006244977629292408,
+                "max_deg": 0.006244977629292408
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.18870710636702,
+                "p50_deg": 17.18869812602437,
+                "p95_deg": 17.20393521374772,
+                "max_deg": 17.234954453662024
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7034,
+                "full_rmse_deg": 9.351403951400055,
+                "p50_deg": 8.343443640078466,
+                "p95_deg": 14.22623017171463,
+                "max_deg": 14.326974483699507
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9958,
+                "full_rmse_deg": 8.418356650551665,
+                "p50_deg": 8.349433883875552,
+                "p95_deg": 11.199183277605481,
+                "max_deg": 11.229682628110695
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7466,
+                "full_rmse_deg": 9.098677851212276,
+                "p50_deg": 9.119471751939185,
+                "p95_deg": 12.80476135458544,
+                "max_deg": 12.884199400806141
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892271663563017,
+            "p50_deg": 0.40208080311537675,
+            "p95_deg": 2.162269332663114,
+            "max_deg": 2.5865780641201446,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.568083306797705,
+              "p50_deg": 0.3542918000484731,
+              "p95_deg": 1.9378692514389626,
+              "max_deg": 17.193901391935785
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.005550397380712311,
+                "p50_deg": 0.005550397380712311,
+                "p95_deg": 0.005550397380712311,
+                "max_deg": 0.005550397380712311
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.015533645910726286,
+                "p50_deg": 0.01152299447492481,
+                "p95_deg": 0.02855004973592588,
+                "max_deg": 0.05034845147690965
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6280183225059488,
+                "p50_deg": 0.5315316736120337,
+                "p95_deg": 1.1001815174304375,
+                "max_deg": 2.2818456701221033
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.5793103286878096,
+                "p50_deg": 1.1761610900176103,
+                "p95_deg": 2.170081581463922,
+                "max_deg": 2.2499553532586853
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156100114498504,
+                "p50_deg": 1.229136002271971,
+                "p95_deg": 2.389272941919284,
+                "max_deg": 2.5865780641201446
+              }
+            }
+          }
+        },
+        "input_clipping_count": 0,
+        "raw_clipping_count": 0
+      }
+    },
+    {
+      "seed": 47,
+      "selected_epoch": 159,
+      "checkpoint_sha256": "12ee4e801c3234db3235e7fd91e80ab182ed4e0adcd3f277f29284ea8023c4f8",
+      "export_manifest_sha256": "3b04f05de75d61bce2786b77bc04696004fffd5327e15907a24c8a48b878689f",
+      "float": {
+        "full_rmse_deg": 10.103935631055226,
+        "p50_deg": 4.22402647461593,
+        "p95_deg": 18.62102132473906,
+        "max_deg": 176.69371007832862,
+        "above_5_deg_count": 21483,
+        "sample_count": 50025,
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 2.905337022069457,
+            "p50_deg": 2.905308689403835,
+            "p95_deg": 2.9053202794317414,
+            "max_deg": 3.115459822816956
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6606,
+            "full_rmse_deg": 13.567419719963029,
+            "p50_deg": 7.155664533495269,
+            "p95_deg": 25.243316574854973,
+            "max_deg": 173.4203185844285
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 5305,
+            "full_rmse_deg": 12.35907745138076,
+            "p50_deg": 5.3782977066575075,
+            "p95_deg": 24.698570277184544,
+            "max_deg": 169.40536668298364
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6034,
+            "full_rmse_deg": 12.04910496983875,
+            "p50_deg": 5.8941302935472715,
+            "p95_deg": 20.033603741337217,
+            "max_deg": 176.69371007832862
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 3538,
+            "full_rmse_deg": 4.472581926546061,
+            "p50_deg": 4.125939344538443,
+            "p95_deg": 6.563463293841322,
+            "max_deg": 7.024494997120457
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34467,
+            "full_rmse_deg": 10.359101949489713,
+            "p50_deg": 8.349999081997092,
+            "p95_deg": 17.188734434238,
+            "max_deg": 17.18874107380643,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.790817468144674,
+              "p50_deg": 1.3349152165790585,
+              "p95_deg": 17.188734012810365,
+              "max_deg": 17.18873550187925
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.1887338497453,
+                "p50_deg": 17.188733849356286,
+                "p95_deg": 17.188735857343165,
+                "max_deg": 17.18874107380643
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7035,
+                "full_rmse_deg": 9.3514720988122,
+                "p50_deg": 8.342844392240533,
+                "p95_deg": 14.222790395009913,
+                "max_deg": 14.315272925006532
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9959,
+                "full_rmse_deg": 8.418327586959846,
+                "p50_deg": 8.349998276071831,
+                "p95_deg": 11.19451581542809,
+                "max_deg": 11.194528892982014
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7468,
+                "full_rmse_deg": 9.098578178264766,
+                "p50_deg": 9.116764566444765,
+                "p95_deg": 12.804816692856638,
+                "max_deg": 12.871955607564757
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892054255822276,
+            "p50_deg": 0.4021349088449829,
+            "p95_deg": 2.164900560975016,
+            "max_deg": 2.5809396798451165,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.5679478357445054,
+              "p50_deg": 0.35264869050554765,
+              "p95_deg": 1.945787251413477,
+              "max_deg": 17.188733891371548
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.0,
+                "p50_deg": 0.0,
+                "p95_deg": 0.0,
+                "max_deg": 0.0
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 2.6191925307592647e-06,
+                "p50_deg": 0.0,
+                "p95_deg": 5.915117333884393e-06,
+                "max_deg": 1.6989881043060962e-05
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6277843397823517,
+                "p50_deg": 0.5311066662402496,
+                "p95_deg": 1.1007695714994485,
+                "max_deg": 2.289642545567815
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.579377150399787,
+                "p50_deg": 1.1759724417584687,
+                "p95_deg": 2.1649016164627217,
+                "max_deg": 2.241162442038706
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156593903615395,
+                "p50_deg": 1.2293617745559788,
+                "p95_deg": 2.3899606220819742,
+                "max_deg": 2.5809396798451165
+              }
+            }
+          }
+        },
+        "input_clipping_count": null,
+        "raw_clipping_count": null
+      },
+      "integer": {
+        "full_rmse_deg": 10.13288921105291,
+        "p50_deg": 4.243883737157331,
+        "p95_deg": 18.863974114211214,
+        "max_deg": 177.9045320422083,
+        "above_5_deg_count": 21561,
+        "sample_count": 50025,
+        "families": {
+          "hold": {
+            "sample_count": 10005,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 2.9404376018844594,
+            "p50_deg": 2.9382790530683587,
+            "p95_deg": 3.1505879129325987,
+            "max_deg": 3.4381556781895624
+          },
+          "spin": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6616,
+            "full_rmse_deg": 13.588068443986682,
+            "p50_deg": 7.1599750057414955,
+            "p95_deg": 25.30157868550843,
+            "max_deg": 177.9045320422083
+          },
+          "smooth_acceleration": {
+            "sample_count": 10005,
+            "above_5_deg_count": 5351,
+            "full_rmse_deg": 12.404512975359882,
+            "p50_deg": 5.403444909888192,
+            "p95_deg": 24.87257233655507,
+            "max_deg": 174.7973649078891
+          },
+          "changing_axis": {
+            "sample_count": 10005,
+            "above_5_deg_count": 6044,
+            "full_rmse_deg": 12.084679548012561,
+            "p50_deg": 5.918655608315544,
+            "p95_deg": 20.366965097235255,
+            "max_deg": 176.08033819220825
+          },
+          "reversal": {
+            "sample_count": 10005,
+            "above_5_deg_count": 3550,
+            "full_rmse_deg": 4.4926628578489,
+            "p50_deg": 4.158345725399775,
+            "p95_deg": 6.583992619594835,
+            "max_deg": 7.30677181754458
+          }
+        },
+        "baselines": {
+          "sensor_hold": {
+            "sample_count": 50025,
+            "above_5_deg_count": 34463,
+            "full_rmse_deg": 10.359103379989087,
+            "p50_deg": 8.354735534941737,
+            "p95_deg": 17.193054394274302,
+            "max_deg": 17.234954453662024,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 178,
+              "full_rmse_deg": 7.791392301931753,
+              "p50_deg": 1.3388127178293407,
+              "p95_deg": 17.192590635758464,
+              "max_deg": 17.2182596545414
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.006244977629292408,
+                "p50_deg": 0.006244977629292408,
+                "p95_deg": 0.006244977629292408,
+                "max_deg": 0.006244977629292408
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 10005,
+                "full_rmse_deg": 17.18870710636702,
+                "p50_deg": 17.18869812602437,
+                "p95_deg": 17.20393521374772,
+                "max_deg": 17.234954453662024
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7034,
+                "full_rmse_deg": 9.351403951400055,
+                "p50_deg": 8.343443640078466,
+                "p95_deg": 14.22623017171463,
+                "max_deg": 14.326974483699507
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 9958,
+                "full_rmse_deg": 8.418356650551665,
+                "p50_deg": 8.349433883875552,
+                "p95_deg": 11.199183277605481,
+                "max_deg": 11.229682628110695
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 7466,
+                "full_rmse_deg": 9.098677851212276,
+                "p50_deg": 9.119471751939185,
+                "p95_deg": 12.80476135458544,
+                "max_deg": 12.884199400806141
+              }
+            }
+          },
+          "sensor_constant_velocity": {
+            "sample_count": 50025,
+            "above_5_deg_count": 0,
+            "full_rmse_deg": 0.9892271663563017,
+            "p50_deg": 0.40208080311537675,
+            "p95_deg": 2.162269332663114,
+            "max_deg": 2.5865780641201446,
+            "cold_start": {
+              "sample_count": 800,
+              "above_5_deg_count": 20,
+              "full_rmse_deg": 2.568083306797705,
+              "p50_deg": 0.3542918000484731,
+              "p95_deg": 1.9378692514389626,
+              "max_deg": 17.193901391935785
+            },
+            "families": {
+              "hold": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.005550397380712311,
+                "p50_deg": 0.005550397380712311,
+                "p95_deg": 0.005550397380712311,
+                "max_deg": 0.005550397380712311
+              },
+              "spin": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.015533645910726286,
+                "p50_deg": 0.01152299447492481,
+                "p95_deg": 0.02855004973592588,
+                "max_deg": 0.05034845147690965
+              },
+              "smooth_acceleration": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 0.6280183225059488,
+                "p50_deg": 0.5315316736120337,
+                "p95_deg": 1.1001815174304375,
+                "max_deg": 2.2818456701221033
+              },
+              "changing_axis": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.5793103286878096,
+                "p50_deg": 1.1761610900176103,
+                "p95_deg": 2.170081581463922,
+                "max_deg": 2.2499553532586853
+              },
+              "reversal": {
+                "sample_count": 10005,
+                "above_5_deg_count": 0,
+                "full_rmse_deg": 1.4156100114498504,
+                "p50_deg": 1.229136002271971,
+                "p95_deg": 2.389272941919284,
+                "max_deg": 2.5865780641201446
+              }
+            }
+          }
+        },
+        "input_clipping_count": 0,
+        "raw_clipping_count": 0
+      }
+    }
+  ]
+}

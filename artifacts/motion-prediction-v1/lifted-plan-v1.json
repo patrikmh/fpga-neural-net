@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-10-21T00:35:52.139423+00:00",
+  "source_commit": "439cdfe6ba4ba4e755c94086ff10f5a99394c20a",
+  "source": {
+    "model/motion_train_lifted.py": "629b22d4dd8d7ff664d59847aa9c19181f2b256e42d0795212f8a9668a4b7c07"
+  },
+  "base_ml_sources": {
+    "model/motion_generate.py": "46bebf702ffad66f26e68d06d6b69f2c341379cf39dc7e88a85542505ab8a7f0",
+    "model/motion_train.py": "da536e608605da5706965bd34abd2b7a80416291cc91278b4e38a704cba78bac",
+    "model/motion_evaluate.py": "fb234b20c13da3f206db5169442a61038dd264d3b33dd2123cb2c84645923444",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  },
+  "reason": "Initial sign-invariant candidates miss5degreegate; test continuous signed identity-anchored raw-quaternion MSE before hardware changes.",
+  "architecture_unchanged": true,
+  "loss": "signed_raw_quaternion_mse",
+  "initial_pose": "identity",
+  "dataset_manifest_sha256": "35ebe50a2972c3e2829cf6c9196216f41cc4d0b659030403eee5042c08e4ebd0",
+  "epochs": 200,
+  "seed": 53,
+  "learning_rate": 0.001,
+  "batch_size": 16,
+  "warmup": 32,
+  "candidates": [
+    {
+      "name": "lifted-s53-c128",
+      "chunk_size": 128
+    },
+    {
+      "name": "lifted-s53-c512",
+      "chunk_size": 512
+    }
+  ],
+  "comparison_limit": "Equal data exposure and epochs, different optimizer update counts; does not isolate memory horizon alone.",
+  "selection": "validation RMSE only; same original under5degree and per-family goals plus paired baseline report",
+  "confirmation_generated_now": false
+}
