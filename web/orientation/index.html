@@ -30,6 +30,14 @@
     <div><span>PROGNOSER UTAN FACIT</span><strong id="forecast-pending-count">0</strong></div>
   </div>
   <p class="micro">Magenta visar chipets senaste prognos. Felen nedan gäller en äldre prognos vars framtida pose nu har inträffat: <strong id="forecast-scored-time">—</strong></p>
+  <div id="forecast-comparison" class="matched-poses" role="region" aria-label="Prognos och facit vid samma måltid">
+    <div class="matched-pose-heading"><strong>Samma ögonblick. Två poser.</strong><span id="forecast-comparison-time">—</span></div>
+    <div class="matched-pose-labels"><span>MAGENTA / UTFÄRDAD FPGA-PROGNOS</span><span>CYAN / SENARE OBSERVERAT FACIT</span></div>
+    <canvas id="forecast-comparison-scene" aria-label="Samma måltid: den ursprungliga FPGA-prognosen i magenta och senare observerad pose i cyan"></canvas>
+    <p id="forecast-comparison-fallback" class="micro" hidden>3D-jämförelsen kräver WebGL. De verifierade quaternionerna visas som text nedan.</p>
+    <div class="matched-pose-values"><output id="forecast-issued-quaternion" aria-label="Utfärdad FPGA-prognos wxyz">—</output><output id="forecast-observed-quaternion" aria-label="Observerat facit wxyz">—</output></div>
+    <p class="micro">Båda objekten gäller exakt samma mogna måltid. Prognosen är den som chippet faktiskt gav tidigare; facit visas först när rörelsen har inträffat.</p>
+  </div>
   <div class="forecast-comparison" role="table" aria-label="Samma mogna prognoser för modell och baslinjer">
     <div class="comparison-heading" role="row"><span role="columnheader">METOD</span><span role="columnheader">SENASTE FEL</span><span role="columnheader">RULLANDE RMSE</span></div>
     <div class="neural-comparison" role="row"><strong role="rowheader">CfC / FPGA</strong><span>Se prognosfel nedan</span><strong id="forecast-rmse">—</strong></div>

@@ -49,6 +49,17 @@ class MotionPresentationTests(unittest.TestCase):
                       };
                       await page.setViewportSize({width: 390, height: 844});
                       check(await page.locator('#forecast-panel').isVisible(), 'Motion mode needs a visible forecast comparison panel');
+                      const comparison = page.locator('#forecast-comparison');
+                      check(await comparison.isVisible(), 'Motion mode needs a visible same-target-time 3D comparison');
+                      check(await comparison.getAttribute('role') === 'region'
+                        && /same|samma/i.test(await comparison.getAttribute('aria-label') || ''),
+                        '3D comparison needs an accessible region naming its shared time');
+                      check(await comparison.locator('canvas').count() === 1, 'Same-time comparison must include a real 3D canvas');
+                      const checkQuaternion = async (id, expected) => {
+                        const values = (await text(id)).replaceAll(',', '.').match(/[-+]?\d+(?:\.\d+)?/g)?.map(Number);
+                        check(values?.length === 4 && values.every((value, index) => Math.abs(value - expected[index]) < 1e-6),
+                          `${id} must expose the actual matched wxyz values`);
+                      };
                       const explanation = await page.locator('#task-explanation').innerText();
                       check(/50\s*ms/i.test(explanation), 'Explain prediction horizon in model time');
                       check(/upprätt|upright|identity|identitet/i.test(explanation), 'Explain known upright reset domain');
@@ -68,12 +79,18 @@ class MotionPresentationTests(unittest.TestCase):
                           check((await text('forecast-target-time')).replace(',', '.').includes(targetTime), 'Future target timestamp must retain four decimal places');
                           check(await number('forecast-pending-count') === Math.min(step, 15), 'Display actual pending queue count');
                           if (step <= 15) {
+                            for (const id of ['forecast-issued-quaternion', 'forecast-observed-quaternion', 'forecast-comparison-time'])
+                              check((await text(id)).includes('—'), `Before future truth arrives, ${id} must wait`);
                             check((await text('error-value')).includes('—'), 'No current-pose error may stand in for unavailable future truth');
                             check(await number('forecast-score-count') === 0, 'No scores before the horizon matures');
                             continue;
                           }
                           const matured = state.sample.scored_forecast;
                           scored.push(matured);
+                          await checkQuaternion('forecast-issued-quaternion', matured.quaternion_wxyz);
+                          await checkQuaternion('forecast-observed-quaternion', matured.truth_wxyz);
+                          check((await text('forecast-comparison-time')).replace(',', '.').includes(matured.target_time_s.toFixed(4)),
+                            'Both comparison objects must refer to the same exact matured target time');
                           check((await text('forecast-scored-time')).replace(',', '.').includes(matured.target_time_s.toFixed(4)),
                             'Older scored target needs its own exact timestamp');
                           check(near(await number('error-value'), matured.error_deg), 'Main error must refer to the older matured forecast');
@@ -107,6 +124,8 @@ class MotionPresentationTests(unittest.TestCase):
                           'Verified RESET clears comparison window and pending count');
                         for (const id of ['error-value', 'forecast-rmse', 'baseline-hold-rmse', 'baseline-cv-rmse'])
                           check((await text(id)).includes('—'), `RESET clears ${id}`);
+                        for (const id of ['forecast-issued-quaternion', 'forecast-observed-quaternion', 'forecast-comparison-time'])
+                          check((await text(id)).includes('—'), `RESET clears matched comparison ${id}`);
                         check(errors.length === 0, `Browser errors: ${errors.join('; ')}`);
                         return {motion_presentation: 'passed', matched_scores: 2, mobile_width: 390};
                       } finally {

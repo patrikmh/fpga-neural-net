@@ -207,3 +207,46 @@ export function createOrientationScene(canvas, onSelect) {
     }
   };
 }
+
+export function createForecastComparisonScene(canvas) {
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(-5, 5, 2, -2, .1, 50);
+  camera.up.set(0, 0, 1); camera.position.set(0, -9, 8); camera.lookAt(0, 0, .2);
+  const renderer = new THREE.WebGLRenderer({canvas, antialias: true, alpha: true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setClearColor(0x080f19, 0);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  scene.add(new THREE.HemisphereLight(0xb5e9ff, 0x0a0c18, 2.6));
+  const light = new THREE.DirectionalLight(0xc9f9ff, 3.2);
+  light.position.set(-3, -5, 9); scene.add(light);
+  const issued = pod(PINK), observed = pod(CYAN);
+  const issuedAnchor = new THREE.Group(), observedAnchor = new THREE.Group();
+  issuedAnchor.add(issued); observedAnchor.add(observed); scene.add(issuedAnchor, observedAnchor);
+  issued.visible = false; observed.visible = false;
+  const grid = new THREE.GridHelper(20, 40, 0x274253, 0x172b39);
+  grid.rotation.x = Math.PI / 2; grid.position.z = -.65; scene.add(grid);
+  function render() { renderer.render(scene, camera); }
+  function resize() {
+    const width = canvas.clientWidth, height = canvas.clientHeight;
+    if (!width || !height) return;
+    renderer.setSize(width, height, false);
+    camera.top = Math.max(1.7, 5 * height / width); camera.bottom = -camera.top;
+    camera.right = camera.top * width / height; camera.left = -camera.right;
+    camera.updateProjectionMatrix();
+    const offset = camera.right / 2;
+    issuedAnchor.position.set(-offset, 0, .3); observedAnchor.position.set(offset, 0, .3);
+    render();
+  }
+  new ResizeObserver(resize).observe(canvas); resize();
+  return {
+    sample(value) {
+      const [w, x, y, z] = value.quaternion_wxyz;
+      issued.quaternion.set(x, y, z, w);
+      const [a, b, c, d] = value.truth_wxyz;
+      observed.quaternion.set(b, c, d, a);
+      issued.visible = true; observed.visible = true;
+      render();
+    },
+    clear() { issued.visible = false; observed.visible = false; render(); }
+  };
+}

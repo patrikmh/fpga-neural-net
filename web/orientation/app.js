@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import {createOrientationScene} from './scene.js';
+import {createOrientationScene, createForecastComparisonScene} from './scene.js';
 
 const element = id => document.getElementById(id);
 const target = new THREE.Quaternion();
@@ -33,7 +33,7 @@ const sensorCards = sensorNames.map((name, index) => {
   return card;
 });
 const canvas = element('scene');
-let view, sceneError = '';
+let view, comparisonView, comparisonAttempted = false, sceneError = '';
 try {
   view = createOrientationScene(canvas, selectState);
 } catch (error) {
@@ -91,15 +91,23 @@ function metric(id, value, unit = '') {
   const suffix = document.createElement('i'); suffix.textContent = unit;
   element(id).replaceChildren(document.createTextNode(value), suffix);
 }
+function ensureComparisonView() {
+  if (comparisonAttempted) return;
+  comparisonAttempted = true;
+  try { comparisonView = createForecastComparisonScene(element('forecast-comparison-scene')); }
+  catch { element('forecast-comparison-fallback').hidden = false; }
+}
 function clearForecasts() {
   element('forecast-status').textContent = motionMode ? 'Väntar på framtida verklig pose' : 'Hela vinkeln 0–180°, utan kapning';
   forecastWindow = []; lastScoredIndex = -1; lastMatured = null;
   for (const id of ['forecast-current-time', 'forecast-target-time', 'forecast-scored-time',
-    'forecast-rmse', 'baseline-hold-error', 'baseline-cv-error', 'baseline-hold-rmse', 'baseline-cv-rmse']) {
+    'forecast-rmse', 'baseline-hold-error', 'baseline-cv-error', 'baseline-hold-rmse', 'baseline-cv-rmse',
+    'forecast-issued-quaternion', 'forecast-observed-quaternion', 'forecast-comparison-time']) {
     element(id).textContent = '—';
   }
   element('forecast-score-count').textContent = '0';
   element('forecast-pending-count').textContent = '0';
+  comparisonView?.clear();
 }
 function showForecast(sample, pendingCount) {
   const forecast = sample.forecast;
@@ -110,6 +118,10 @@ function showForecast(sample, pendingCount) {
   if (scored && scored.issued_index > lastScoredIndex) {
     lastScoredIndex = scored.issued_index;
     lastMatured = scored;
+    element('forecast-issued-quaternion').textContent = scored.quaternion_wxyz.map(value => value.toFixed(6)).join(' / ');
+    element('forecast-observed-quaternion').textContent = scored.truth_wxyz.map(value => value.toFixed(6)).join(' / ');
+    element('forecast-comparison-time').textContent = `${scored.target_time_s.toFixed(4)} s`;
+    comparisonView?.sample(scored);
     forecastWindow.push(scored);
     if (forecastWindow.length > 96) forecastWindow.shift();
   }
@@ -224,6 +236,7 @@ function show(state, animate = false) {
   motionMode = state.task?.kind === 'motion_prediction';
   element('forecast-panel').hidden = !motionMode;
   if (motionMode) {
+    ensureComparisonView();
     const horizon = state.task.horizon_s * 1000;
     document.title = 'Neuro / Rörelseprognos på FPGA';
     element('output-label').textContent = `Prognos +${horizon} ms`;
