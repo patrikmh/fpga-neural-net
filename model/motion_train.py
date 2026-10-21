@@ -11,7 +11,7 @@ import torch
 
 from model.broad_integer import artifact_sources, validate_checkpoint
 from model.broad_network import BroadPredictor
-from model.broad_train import positive_integer, quaternion_loss, sha256
+from model.broad_train import positive_integer, sha256
 from model.broad_train_stateful import current_provenance, positive_rate
 from model.orientation_evaluate import metrics
 from model.motion_generate import load_sequences
@@ -19,6 +19,35 @@ from model.motion_generate import load_sequences
 
 ROOT = Path(__file__).resolve().parents[1]
 
+
+
+def forecast_loss(raw, targets, mask):
+    """Sign-invariant chordal direction loss with a small unit-norm penalty."""
+    if raw.shape != targets.shape or raw.shape[-1] != 4 or mask.shape != raw.shape[:-1]:
+        raise ValueError('Forecast loss requires matching quaternion arrays and frame mask')
+    raw, targets = raw[mask], targets[mask]
+    if not len(raw):
+        raise ValueError('Forecast loss requires at least one scored frame')
+    raw_norm = torch.linalg.vector_norm(raw, dim=-1)
+    target_norm = torch.linalg.vector_norm(targets, dim=-1)
+    if (not bool(torch.isfinite(raw).all()) or not bool(torch.isfinite(targets).all())
+            or bool((raw_norm == 0).any()) or bool((target_norm == 0).any())):
+        raise ValueError('Scored forecast and target quaternions must be finite and nonzero')
+    alignment = torch.sum((raw / raw_norm[:, None]) * (targets / target_norm[:, None]), dim=-1)
+    return (1 - alignment.abs().clamp(max=1) + .01 * (raw_norm - 1).square()).mean()
+
+
+def raw_sequence(network, inputs, hidden=None):
+    if hidden is None:
+        hidden = inputs.new_zeros((inputs.shape[0], network.hidden_size))
+    outputs = []
+    for step in range(inputs.shape[1]):
+        values, hidden = network.cell(inputs[:, step], hidden, 1.)
+        raw = network.readout(values)
+        if not bool(torch.isfinite(hidden).all()) or not bool(torch.isfinite(raw).all()):
+            raise ValueError('Nonfinite training hidden state or quaternion')
+        outputs.append(raw)
+    return torch.stack(outputs, dim=1), hidden
 
 def batches(sequences, batch_size):
     for _, group in groupby(sequences, key=lambda item: len(item[1])):
@@ -82,6 +111,8 @@ def train(args):
         if validate_checkpoint(initial) != args.hidden_size:
             raise ValueError('Initial checkpoint hidden size mismatch')
         artifact_sources(initial)
+        if initial['config'].get('task') != task:
+            raise ValueError('Initial checkpoint motion task/horizon mismatch')
         network.load_state_dict(initial['state_dict'])
         normalization = initial['normalization']
         initial_hash = sha256(args.initial_checkpoint)
@@ -117,8 +148,8 @@ def train(args):
                     stop = min(start + args.chunk_size, values.shape[1])
                     mask = (torch.arange(start, stop) >= args.warmup)[None].expand(len(batch), -1)
                     if bool(mask.any()):
-                        prediction, hidden = network(values[:, start:stop], hidden)
-                        loss = quaternion_loss(prediction, targets[:, start:stop], mask)
+                        prediction, hidden = raw_sequence(network, values[:, start:stop], hidden)
+                        loss = forecast_loss(prediction, targets[:, start:stop], mask)
                         if not bool(torch.isfinite(loss)):
                             raise ValueError('Nonfinite training loss')
                         optimizer.zero_grad()
@@ -132,7 +163,7 @@ def train(args):
                         loss_sum += float(loss.detach()) * count
                     else:
                         with torch.no_grad():
-                            _, hidden = network(values[:, start:stop], hidden)
+                            _, hidden = raw_sequence(network, values[:, start:stop], hidden)
                     hidden = hidden.detach()
         result = validation_metrics(network, validation, args.batch_size, args.warmup)
         history.append({'epoch': epoch, 'trajectory_order': order,
@@ -146,13 +177,15 @@ def train(args):
               f'validation_rmse_deg={result["full_rmse_deg"]:.6f} selected={selected_epoch}',
               file=sys.stderr, flush=True)
     recipe = {name: sha256(ROOT / name) for name in (
-        'model/motion_generate.py', 'model/motion_train.py',
+        'model/motion_generate.py', 'model/motion_train.py', 'model/motion_evaluate.py',
         'model/orientation_generate.py', 'model/orientation_evaluate.py', 'host/orientation_sim.py')}
     config = {'input_size': 9, 'hidden_size': args.hidden_size, 'output_size': 4,
               'mode': 'default', 'backbone_layers': 0, 'dt': 1., 'warmup': args.warmup,
               'epochs': args.epochs, 'chunk_size': args.chunk_size, 'batch_size': args.batch_size,
               'seed': args.seed, 'learning_rate': args.learning_rate,
-              'method': 'chronological_detached_tbptt', 'task': task}
+              'method': 'chronological_detached_tbptt', 'task': task,
+              'loss_definition': '1-abs(dot(unit_raw,unit_target)) + raw_norm_penalty*(norm(raw)-1)^2',
+              'raw_norm_penalty': .01}
     checkpoint = {'state_dict': selected_state, 'config': config,
                   'normalization': normalization, 'provenance': current_provenance(),
                   'training_recipe_sources': recipe, 'dataset_manifest_sha256': manifest_hash,
