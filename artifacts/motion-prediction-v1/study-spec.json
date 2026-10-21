@@ -1,0 +1,84 @@
+{
+  "created_at_utc": "2026-10-21T00:21:19.403344+00:00",
+  "source_commit": "903518c5ed6e0b0080888904260463662aa07d41",
+  "task": {
+    "kind": "motion_prediction",
+    "horizon_s": 0.05,
+    "model_dt_s": 0.0035,
+    "target": "absolute_body_to_enu_wxyz"
+  },
+  "initial_pose": "identity",
+  "domain": "Ideal virtual IMU; known identity pose at verified reset, arbitrary subsequent rotations. Not real-sensor or unknown-initial-pose qualification.",
+  "architecture": {
+    "input_size": 9,
+    "hidden_size": 96,
+    "output_size": 4,
+    "mode": "default",
+    "dt": 1,
+    "uart_protocol": "unchanged full-state debug transport"
+  },
+  "target_alignment": "Shortest-arc SLERP at14+2/7 sensor intervals, final15 unavailable frames omitted, whole-trajectory splits.",
+  "data": {
+    "seed": 20261021,
+    "train_sequences": 128,
+    "validation_sequences": 25,
+    "raw_length": 2048,
+    "warmup": 32,
+    "dataset_manifest_sha256": "35ebe50a2972c3e2829cf6c9196216f41cc4d0b659030403eee5042c08e4ebd0",
+    "confirmation_seed_reserved": 20261026,
+    "confirmation_sequences": 25,
+    "confirmation_generated_now": false,
+    "random_start_stress_seed_reserved": 20261027,
+    "stress_is_not_matching_domain_qualification": true
+  },
+  "candidates": [
+    {
+      "name": "scratch-s43",
+      "seed": 43,
+      "learning_rate": 0.001,
+      "epochs": 200
+    },
+    {
+      "name": "scratch-s47",
+      "seed": 47,
+      "learning_rate": 0.0005,
+      "epochs": 200
+    }
+  ],
+  "training": {
+    "batch_size": 16,
+    "chunk_size": 128,
+    "cpu_threads_per_candidate": 1,
+    "loss": "1-abs(normalized quaternion dot)+0.01*(raw norm-1)^2",
+    "checkpoint_selection": "sample-weighted validation orientation RMSE only; never confirmation"
+  },
+  "quality": {
+    "required_rmse_deg_exclusive_upper": 5,
+    "required_each_family_rmse_deg_exclusive_upper": 5,
+    "zero_input_and_raw_clipping_required": true,
+    "baselines": "sensor-only TRIAD hold and constant-body-angular-velocity, using same effective inputs as model",
+    "dynamic_skill_goal": "Report paired improvement on smooth_acceleration/changing_axis/reversal; controls alone cannot establish benefit.",
+    "report": [
+      "RMSE",
+      "p50",
+      "p95",
+      "max",
+      "above5count",
+      "coldstart",
+      "perfamily",
+      "baseline_skill",
+      "actualintegerclippingcounters"
+    ]
+  },
+  "no_future_inputs": true,
+  "no_CPU_replacement_of_FPGA_prediction": true,
+  "real_time_claim": false,
+  "sources": {
+    "model/motion_generate.py": "46bebf702ffad66f26e68d06d6b69f2c341379cf39dc7e88a85542505ab8a7f0",
+    "model/motion_train.py": "da536e608605da5706965bd34abd2b7a80416291cc91278b4e38a704cba78bac",
+    "model/motion_evaluate.py": "fb234b20c13da3f206db5169442a61038dd264d3b33dd2123cb2c84645923444",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  }
+}

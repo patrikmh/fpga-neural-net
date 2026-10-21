@@ -1,0 +1,104 @@
+{
+  "purpose": "Training-only single-trajectory overfit diagnostic; not held-out qualification or deployable checkpoint",
+  "sequence_id": "train-0003",
+  "family": "changing_axis",
+  "sample_count": 512,
+  "warmup": 32,
+  "seed": 53,
+  "learning_rate": 0.003,
+  "history": [
+    {
+      "epoch": 0,
+      "rmse_deg": 97.30202595700656
+    },
+    {
+      "epoch": 25,
+      "rmse_deg": 15.000852002581897,
+      "loss": 0.009371547028422356
+    },
+    {
+      "epoch": 50,
+      "rmse_deg": 10.231221535048771,
+      "loss": 0.004040836356580257
+    },
+    {
+      "epoch": 75,
+      "rmse_deg": 11.354633880807741,
+      "loss": 0.005131623242050409
+    },
+    {
+      "epoch": 100,
+      "rmse_deg": 9.515495249924388,
+      "loss": 0.002465967321768403
+    },
+    {
+      "epoch": 125,
+      "rmse_deg": 2.6093084255512937,
+      "loss": 0.0006864669267088175
+    },
+    {
+      "epoch": 150,
+      "rmse_deg": 1.5749995201969436,
+      "loss": 0.0004612840712070465
+    },
+    {
+      "epoch": 175,
+      "rmse_deg": 1.2308067964309768,
+      "loss": 0.00038670003414154053
+    },
+    {
+      "epoch": 200,
+      "rmse_deg": 1.089543256810562,
+      "loss": 0.0003394183877389878
+    },
+    {
+      "epoch": 225,
+      "rmse_deg": 0.964744244317766,
+      "loss": 0.00031664929701946676
+    },
+    {
+      "epoch": 250,
+      "rmse_deg": 0.8583368989797321,
+      "loss": 0.00027823864365927875
+    },
+    {
+      "epoch": 275,
+      "rmse_deg": 0.768785556968408,
+      "loss": 0.0002516311942599714
+    },
+    {
+      "epoch": 300,
+      "rmse_deg": 0.6997987314687313,
+      "loss": 0.00023216144472826272
+    },
+    {
+      "epoch": 325,
+      "rmse_deg": 0.6467698898100808,
+      "loss": 0.000216892542084679
+    },
+    {
+      "epoch": 350,
+      "rmse_deg": 0.6041446849795528,
+      "loss": 0.0002041355037363246
+    },
+    {
+      "epoch": 375,
+      "rmse_deg": 0.569701633027975,
+      "loss": 0.00019314669771119952
+    },
+    {
+      "epoch": 400,
+      "rmse_deg": 0.5423669676005886,
+      "loss": 0.00018345688295084983
+    }
+  ],
+  "best_training_rmse_deg": 0.5423669676005886,
+  "sources": {
+    "model/motion_generate.py": "46bebf702ffad66f26e68d06d6b69f2c341379cf39dc7e88a85542505ab8a7f0",
+    "model/motion_train.py": "da536e608605da5706965bd34abd2b7a80416291cc91278b4e38a704cba78bac",
+    "model/motion_evaluate.py": "fb234b20c13da3f206db5169442a61038dd264d3b33dd2123cb2c84645923444",
+    "model/orientation_generate.py": "b7f003f7c0c4b5dcf88ead4b8966a6a83756b3d31f8ecb20f57aae894c57565f",
+    "model/orientation_evaluate.py": "32ab4cd0f19202afd9d6dc729cae2019128cec98c7ea3cb33232dc0a0a1cfd53",
+    "host/orientation_sim.py": "d4d85532dadd13ebaee9348d495d59d1cc7f64914a4e65c838222167ff313c50"
+  }
+}
